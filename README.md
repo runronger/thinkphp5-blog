@@ -1,10 +1,10 @@
 thinkphp5-blog
 ===============
-本博客使用thinkphp5.0.19为核心框架开发
+本博客使用thinkphp5.0.19为核心框架开发，多语言设计，ajax响应式交互
 
 
 
-####[以下转自官方框架介绍]
+####以下转自官方框架介绍
 ####ThinkPHP 5.0框架介绍
 [![Total Downloads](https://poser.pugx.org/topthink/think/downloads)](https://packagist.org/packages/topthink/think)
 [![Latest Stable Version](https://poser.pugx.org/topthink/think/v/stable)](https://packagist.org/packages/topthink/think)
