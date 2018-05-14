@@ -3,15 +3,133 @@
 {block name="keywords"}文章列表{/block}
 {block name="description"}文章列表{/block}
 {block name="navi"}文章列表{/block}
-{block name="content-title"}文章列表{/block}
+
 {block name="content-description"}文章列表描述{/block}
 {block name="main-content"}
     <div class="row">
+       <div class="col-lg-12">
+           <div class="box border blue">
+               <div class="box-title">
+                   <h4><i class="fa fa-bars"></i>搜索</h4>
+
+               </div>
+               <div class="box-body big">
+                   <div class="row">
+                       <div class="widget-body floatleft">
+                           <form role="form">
+
+                               <div class="col-sm-3 no-padding">
+                                   <div class="form-group">
+                                       <label >编号</label>
+                                       <input type="text" class="form-control" placeholder="编号" name="filter[order.id]" value="">
+                                   </div>
+                               </div>
+
+                               <div class="col-sm-3">
+                                   <div class="form-group">
+                                       <label >标题</label>
+                                       <input type="text" class="form-control" placeholder="标题" name="filter[order.order_sn]" value="">
+                                   </div>
+                               </div>
+
+                               <div class="col-sm-3">
+                                   <div class="form-group">
+                                       <label >描述</label>
+                                       <input type="text" class="form-control" placeholder="描述" name="filter[order.sign]" value="">
+                                   </div>
+                               </div>
+
+                               <div class="col-sm-3 no-padding">
+                                   <div class="form-group">
+                                       <label >作者</label>
+                                       <input type="email" class="form-control" placeholder="作者" name="filter[user.email]" value="">
+                                   </div>
+                               </div>
+
+                               <div class="col-sm-3 no-padding">
+
+                                   <div class="form-group">
+                                       <label >添加时间</label>
+
+                                       <div class="controls">
+                                           <div class="input-group">
+                                            <span class="input-group-addon">
+                                                <i class="fa fa-calendar"></i>
+                                            </span><input type="text" class="form-control" id="reservation" placeholder="添加时间" name="filter[order.add_times]" value="">
+                                           </div>
+                                       </div>
+
+                                       <!--Basic Scripts-->
+                                       <script src="/Assets/js/jquery-2.0.3.min.js"></script>
+                                       <!--Bootstrap Date Range Picker-->
+                                       <script src="/Assets/js/datetime/moment.js"></script>
+                                       <script src="/Assets/js/datetime/daterangepicker.js"></script>
+
+                                       <script type="text/javascript">
+                                           //--Bootstrap Date Range Picker--
+                                           $('#reservation').daterangepicker();
+                                       </script>
+
+                                   </div>
+
+                               </div>
+
+                               <div class="col-sm-3">
+
+                                   <div class="form-group">
+                                       <label >修改时间</label>
+
+                                       <div class="controls">
+                                           <div class="input-group">
+                                            <span class="input-group-addon">
+                                                <i class="fa fa-calendar"></i>
+                                            </span><input type="text" class="form-control" id="order-time" placeholder="修改时间" name="filter[order.pay_times]" value="">
+                                           </div>
+                                       </div>
+
+                                       <script type="text/javascript">
+                                           //--Bootstrap Date Range Picker--
+                                           $('#order-time').daterangepicker();
+                                       </script>
+
+                                   </div>
+                               </div>
+
+
+
+                               <div class="col-sm-3">
+                                   <div class="form-group">
+                                       <label >置顶</label>
+                                       <!--<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">-->
+                                       <select id="e1" class="form-control" style="width:100%;" name="filter[order.status]">
+                                           <option value="0">未置顶</option>
+                                           <option value="1">已置顶</option>
+                                       </select>
+
+                                   </div>
+                               </div>
+
+
+
+                               <div class="col-sm-12 no-padding">
+                                   <button type="submit" name="doSearch" class="btn btn-primary">搜索</button>
+                               </div>
+                           </form>
+                       </div>
+                   </div>
+               </div>
+           </div>
+       </div>
+
+    </div>
+
+
+    <div class="row">
         <div class="col-md-12">
             <!-- BOX -->
-            <div class="box border inverse">
+            <div class="box border blue">
                 <div class="box-title">
-                    <h4><i class="fa fa-table"></i>Bordered Table</h4>
+                    <h4><i class="fa fa-table"></i>文章列表</h4>
                     <div class="tools">
                         <a href="#box-config" data-toggle="modal" class="config">
                             <i class="fa fa-cog"></i>
@@ -31,31 +149,102 @@
                     <table class="table table-bordered">
                         <thead>
                         <tr>
-                            <th>#</th>
-                            <th>First Name</th>
-                            <th>Last Name</th>
-                            <th>Username</th>
+                            <th width="3%">编号</th>
+                            <th width="20%">标题</th>
+                            <th width="40%">描述</th>
+                            <th width="5%">置顶</th>
+                            <th width="5%">作者</th>
+                            <th width="8%">添加时间</th>
+                            <th width="8%">修改时间</th>
+                            <th width="15%">操作</th>
                         </tr>
                         </thead>
                         <tbody>
                         <tr>
                             <td>1</td>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
+                            <td>Laravel 的 Blade 模板引擎</td>
+                            <td>Blade 是 Laravel 提供的一个简单而又强大的模板引擎。和其他流行的 PHP 模板引擎不同，Blade 并不限制你在视图中使用原生 PHP 代码。</td>
+                            <td>admin</td>
+                            <td>admin</td>
+                            <td>2018-05-12 16:30:23</td>
+                            <td>2018-05-12 16:30:23</td>
+                            <td>
+                                <a class="btn btn-primary">置顶</a>
+                                <a class="btn btn-success">编辑</a>
+                                <a class="btn btn-warning">删除</a>
+                            </td>
                         </tr>
                         <tr>
-                            <td>2</td>
-                            <td>Jacob</td>
-                            <td>Thornton</td>
-                            <td>@fat</td>
+                            <td>1</td>
+                            <td>Laravel 的 Blade 模板引擎</td>
+                            <td>Blade 是 Laravel 提供的一个简单而又强大的模板引擎。和其他流行的 PHP 模板引擎不同，Blade 并不限制你在视图中使用原生 PHP 代码。</td>
+                            <td>admin</td>
+                            <td>admin</td>
+                            <td>2018-05-12 16:30:23</td>
+                            <td>2018-05-12 16:30:23</td>
+                            <td>
+                                <a class="btn btn-primary">置顶</a>
+                                <a class="btn btn-success">编辑</a>
+                                <a class="btn btn-warning">删除</a>
+                            </td>
                         </tr>
                         <tr>
-                            <td>3</td>
-                            <td>Larry</td>
-                            <td>the Bird</td>
-                            <td>@twitter</td>
+                            <td>1</td>
+                            <td>Laravel 的 Blade 模板引擎</td>
+                            <td>Blade 是 Laravel 提供的一个简单而又强大的模板引擎。和其他流行的 PHP 模板引擎不同，Blade 并不限制你在视图中使用原生 PHP 代码。</td>
+                            <td>admin</td>
+                            <td>admin</td>
+                            <td>2018-05-12 16:30:23</td>
+                            <td>2018-05-12 16:30:23</td>
+                            <td>
+                                <a class="btn btn-primary">置顶</a>
+                                <a class="btn btn-success">编辑</a>
+                                <a class="btn btn-warning">删除</a>
+                            </td>
                         </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Laravel 的 Blade 模板引擎</td>
+                            <td>Blade 是 Laravel 提供的一个简单而又强大的模板引擎。和其他流行的 PHP 模板引擎不同，Blade 并不限制你在视图中使用原生 PHP 代码。</td>
+                            <td>admin</td>
+                            <td>admin</td>
+                            <td>2018-05-12 16:30:23</td>
+                            <td>2018-05-12 16:30:23</td>
+                            <td>
+                                <a class="btn btn-primary">置顶</a>
+                                <a class="btn btn-success">编辑</a>
+                                <a class="btn btn-warning">删除</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Laravel 的 Blade 模板引擎</td>
+                            <td>Blade 是 Laravel 提供的一个简单而又强大的模板引擎。和其他流行的 PHP 模板引擎不同，Blade 并不限制你在视图中使用原生 PHP 代码。</td>
+                            <td>admin</td>
+                            <td>admin</td>
+                            <td>2018-05-12 16:30:23</td>
+                            <td>2018-05-12 16:30:23</td>
+                            <td>
+                                <a class="btn btn-primary">置顶</a>
+                                <a class="btn btn-success">编辑</a>
+                                <a class="btn btn-warning">删除</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Laravel 的 Blade 模板引擎</td>
+                            <td>Blade 是 Laravel 提供的一个简单而又强大的模板引擎。和其他流行的 PHP 模板引擎不同，Blade 并不限制你在视图中使用原生 PHP 代码。</td>
+                            <td>admin</td>
+                            <td>admin</td>
+                            <td>2018-05-12 16:30:23</td>
+                            <td>2018-05-12 16:30:23</td>
+                            <td>
+                                <a class="btn btn-primary">置顶</a>
+                                <a class="btn btn-success">编辑</a>
+                                <a class="btn btn-warning">删除</a>
+                            </td>
+                        </tr>
+
                         </tbody>
                     </table>
                 </div>
