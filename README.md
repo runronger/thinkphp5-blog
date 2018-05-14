@@ -1,6 +1,11 @@
-ThinkPHP 5.0
+thinkphp5-blog
 ===============
+本博客使用thinkphp5.0.19为核心框架开发
 
+
+
+####[以下转自官方框架介绍]
+####ThinkPHP 5.0框架介绍
 [![Total Downloads](https://poser.pugx.org/topthink/think/downloads)](https://packagist.org/packages/topthink/think)
 [![Latest Stable Version](https://poser.pugx.org/topthink/think/v/stable)](https://packagist.org/packages/topthink/think)
 [![Latest Unstable Version](https://poser.pugx.org/topthink/think/v/unstable)](https://packagist.org/packages/topthink/think)
@@ -127,4 +132,4 @@ All rights reserved。
 ThinkPHP® 商标和著作权所有者为上海顶想信息科技有限公司。
 
 更多细节参阅 [LICENSE.txt](LICENSE.txt)
-# thinkphp5-blog
+
