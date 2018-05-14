@@ -1,0 +1,52 @@
+body{
+	background-color: #F3F3F3;
+}
+.spacer{
+	height: 50px;
+}
+.pricing_tbls{
+	text-align: center;
+}
+.for_header{
+	margin-top: 20px;
+
+	color: white;
+}
+	.for_header h4{
+		margin: 0;
+		padding: 10px;
+
+		background-color: #3F3F3F;
+	}
+.price p{
+	margin:0;
+	padding-top: 10px;
+	padding-bottom: 10px;
+
+	font-size: 30px;
+	font-weight: 100;
+
+	background-color: #636363;
+}
+	.price p span{
+		font-size: 13px;
+		font-weight: 200;
+	}
+.for_border p{
+	margin:0;
+	padding: 7px;
+
+	font-size: 13px;
+
+	background-color: white;
+}
+	.for_border p:nth-child(even){
+		color: #888;
+	}
+	.for_border p span{
+		font-weight: bold;
+		color: black;
+	}
+	.for_border .btn{
+		border-radius: 0px;
+	}

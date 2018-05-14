@@ -1,0 +1,54 @@
+@import url(http://fonts.googleapis.com/css?family=Abel);
+fonts{
+	font-family: 'Abel', sans-serif;
+}
+
+.spacer{
+	height: 50px;
+}
+.pricing_tbls{
+	font-family: 'Abel', sans-serif;
+}
+.for_header{
+	padding-left: 20px;
+
+	font-family: 'Abel', sans-serif;
+
+	background: #ecc523; /* Old browsers */
+	background: -moz-linear-gradient(top,  #ecc523 0%, #e4be22 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ecc523), color-stop(100%,#e4be22)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #ecc523 0%,#e4be22 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #ecc523 0%,#e4be22 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #ecc523 0%,#e4be22 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #ecc523 0%,#e4be22 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ecc523', endColorstr='#e4be22',GradientType=0 ); /* IE6-9 */
+}
+.for_header h4{
+	margin: 0;
+	padding-top: 13px;
+
+	font-size: 22px;
+
+	font-variant: small-caps;
+}
+.for_header p{
+	margin:0;
+	padding-bottom: 13px;
+}
+.price p{
+	padding-top: 5px;
+
+	font-size: 15px;
+}
+	.price p span{
+		font-size: 10px;
+	}
+.for_border p{
+	margin:0;
+	padding: 5px 20px;
+
+	background-color: #FAFAFA;
+}
+	.for_border .btn{
+		border-radius: 0;
+	}

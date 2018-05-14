@@ -1,0 +1,58 @@
+@import url(http://fonts.googleapis.com/css?family=McLaren);
+fonts{
+	font-family: 'McLaren', cursive;
+}
+body{
+	background-color: #F3F3F3;
+}
+.spacer{
+	height: 50px;
+}
+.pricing_tbls{
+	text-align: center;
+	font-family: 'McLaren', cursive;
+}
+.for_header{
+	margin-top: 20px;
+
+	color: white;
+
+	background-color: #DF7857;
+}
+	.for_header h4{
+		margin: 0;
+		padding-top: 15px;
+	}
+.price p{
+	margin:0;
+	padding-bottom: 15px;
+	padding-top: 10px;
+
+	font-size: 26px;
+}
+	.price p span{
+		font-size: 12px;
+	}
+.for_border{
+	border-top: 2px dashed #E3755C;
+
+	background: #3c3b39; /* Old browsers */
+	background: -moz-linear-gradient(top,  #3c3b39 0%, #534f4c 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#3c3b39), color-stop(100%,#534f4c)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #3c3b39 0%,#534f4c 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #3c3b39 0%,#534f4c 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #3c3b39 0%,#534f4c 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #3c3b39 0%,#534f4c 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3c3b39', endColorstr='#534f4c',GradientType=0 ); /* IE6-9 */
+}
+.for_border p{
+	margin:0;
+	padding: 11px 0px;
+
+	color: white;
+}
+	.for_border p span{
+		font-weight: bold;
+
+		color: #B1C7C4;
+	}

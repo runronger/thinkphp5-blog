@@ -1,0 +1,762 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>MORE_PAGES</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+/* GitHub stylesheet for MarkdownPad (http://markdownpad.com) */
+/* Author: Nicolas Hery - http://nicolashery.com */
+/* Version: b13fe65ca28d2e568c6ed5d7f06581183df8f2ff */
+/* Source: https://github.com/nicolahery/markdownpad-github */
+
+/* RESET
+=============================================================================*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* BODY
+=============================================================================*/
+
+body {
+  font-family: Helvetica, arial, freesans, clean, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+  padding: 20px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+body>*:first-child {
+  margin-top: 0 !important;
+}
+
+body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* BLOCKS
+=============================================================================*/
+
+p, blockquote, ul, ol, dl, table, pre {
+  margin: 15px 0;
+}
+
+/* HEADERS
+=============================================================================*/
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 tt, h1 code, h2 tt, h2 code, h3 tt, h3 code, h4 tt, h4 code, h5 tt, h5 code, h6 tt, h6 code {
+  font-size: inherit;
+}
+
+h1 {
+  font-size: 28px;
+  color: #000;
+}
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #ccc;
+  color: #000;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+h6 {
+  color: #777;
+  font-size: 14px;
+}
+
+body>h2:first-child, body>h1:first-child, body>h1:first-child+h2, body>h3:first-child, body>h4:first-child, body>h5:first-child, body>h6:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+h1+p, h2+p, h3+p, h4+p, h5+p, h6+p {
+  margin-top: 10px;
+}
+
+/* LINKS
+=============================================================================*/
+
+a {
+  color: #4183C4;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* LISTS
+=============================================================================*/
+
+ul, ol {
+  padding-left: 30px;
+}
+
+ul li > :first-child, 
+ol li > :first-child, 
+ul li ul:first-of-type, 
+ol li ol:first-of-type, 
+ul li ol:first-of-type, 
+ol li ul:first-of-type {
+  margin-top: 0px;
+}
+
+ul ul, ul ol, ol ol, ol ul {
+  margin-bottom: 0;
+}
+
+dl {
+  padding: 0;
+}
+
+dl dt {
+  font-size: 14px;
+  font-weight: bold;
+  font-style: italic;
+  padding: 0;
+  margin: 15px 0 5px;
+}
+
+dl dt:first-child {
+  padding: 0;
+}
+
+dl dt>:first-child {
+  margin-top: 0px;
+}
+
+dl dt>:last-child {
+  margin-bottom: 0px;
+}
+
+dl dd {
+  margin: 0 0 15px;
+  padding: 0 15px;
+}
+
+dl dd>:first-child {
+  margin-top: 0px;
+}
+
+dl dd>:last-child {
+  margin-bottom: 0px;
+}
+
+/* CODE
+=============================================================================*/
+
+pre, code, tt {
+  font-size: 12px;
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+}
+
+code, tt {
+  margin: 0 0px;
+  padding: 0px 0px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px;
+}
+
+pre>code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent;
+}
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px;
+}
+
+pre code, pre tt {
+  background-color: transparent;
+  border: none;
+}
+
+kbd {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #DDDDDD;
+    background-image: linear-gradient(#F1F1F1, #DDDDDD);
+    background-repeat: repeat-x;
+    border-color: #DDDDDD #CCCCCC #CCCCCC #DDDDDD;
+    border-image: none;
+    border-radius: 2px 2px 2px 2px;
+    border-style: solid;
+    border-width: 1px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 10px;
+    padding: 1px 4px;
+}
+
+/* QUOTES
+=============================================================================*/
+
+blockquote {
+  border-left: 4px solid #DDD;
+  padding: 0 15px;
+  color: #777;
+}
+
+blockquote>:first-child {
+  margin-top: 0px;
+}
+
+blockquote>:last-child {
+  margin-bottom: 0px;
+}
+
+/* HORIZONTAL RULES
+=============================================================================*/
+
+hr {
+  clear: both;
+  margin: 15px 0;
+  height: 0px;
+  overflow: hidden;
+  border: none;
+  background: transparent;
+  border-bottom: 4px solid #ddd;
+  padding: 0;
+}
+
+/* TABLES
+=============================================================================*/
+
+table th {
+  font-weight: bold;
+}
+
+table th, table td {
+  border: 1px solid #ccc;
+  padding: 6px 13px;
+}
+
+table tr {
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+}
+
+table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+/* IMAGES
+=============================================================================*/
+
+img {
+  max-width: 100%
+}
+</style>
+<link type="text/css" rel="stylesheet" href="tocify/css/jquery.tocify.css" />
+<link type="text/css" rel="stylesheet" href="bootstrap-dist/css/bootstrap.css" />
+<link rel="stylesheet" type="text/css" href="prettify/prettify.css" /><script type="text/javascript" src="prettify/prettify.js"></script></head><body onload="prettyPrint();">
+<div class="row">
+	<div class="container">
+	<div class="col-md-4">
+		<div id="toc"></div>
+	</div>
+	<div class="col-md-8">
+<h1>More Pages</h1>
+<p>Documentation regarding pages under <strong><em>More Pages</em></strong> section can be found here</p>
+<h2>Login &amp; Register Option 1</h2>
+<p>The login page consists of the following 3 sections</p>
+<ol>
+<li>Login section</li>
+<li>Register section</li>
+<li>Reset Password section</li>
+</ol>
+<p><strong><em>Please note:</em></strong> To make a section visible by default add <code>class=&quot;visible&quot;</code> to it. E.g. the sign-in page is made visible by default in the theme.</p>
+<h2>Login &amp; Register Option 2</h2>
+<p>This page is similar to Option 1, but the only difference being it powered by <em>BACKSTRETCH</em> plugin </p>
+<ul>
+<li>Include <code>handleBackstretch();</code> in <strong><em>script.js</em></strong></li>
+<li>
+<p>The basic syntax is as follows:</p>
+<pre class="prettyprint linenums"><code>$.backstretch([
+    &quot;img/login/1.jpg&quot;
+    , &quot;img/login/2.jpg&quot;
+    , &quot;img/login/3.jpg&quot;
+    , &quot;img/login/4.jpg&quot;
+    ], {duration: 3000, fade: 750});
+</code></pre>
+
+</li>
+<li>
+<p>Mention your image names here</p>
+</li>
+</ul>
+<h2>User Profile</h2>
+<h3>Overview section</h3>
+<ul>
+<li>The left section with image and links is a Bootstrap list-group section.</li>
+<li>
+<p>The basic syntax is as follows:</p>
+<pre class="prettyprint linenums"><code>&lt;div class=&quot;list-group&quot;&gt;
+  &lt;li class=&quot;list-group-item zero-padding&quot;&gt;
+    &lt;img alt=&quot;&quot; class=&quot;img-responsive&quot; src=&quot;img/profile/avatar.jpg&quot;&gt;
+  &lt;/li&gt;
+  &lt;a href=&quot;#&quot; class=&quot;list-group-item&quot;&gt;Projects&lt;/a&gt;
+  &lt;a href=&quot;#&quot; class=&quot;list-group-item&quot;&gt;
+    &lt;span class=&quot;badge&quot;&gt;9&lt;/span&gt;
+    Messages
+  &lt;/a&gt;
+  &lt;a href=&quot;#&quot; class=&quot;list-group-item&quot;&gt;Friends&lt;/a&gt;
+  &lt;a href=&quot;#&quot; class=&quot;list-group-item&quot;&gt;Settings&lt;/a&gt;
+&lt;/div&gt;
+</code></pre>
+
+</li>
+<li>Visit <a href="http://getbootstrap.com/components/#list-group">Bootstrap list-group doc</a> for more details</li>
+<li>
+<p>The profile details section is as follows:</p>
+<pre class="prettyprint linenums"><code>&lt;div class=&quot;col-md-7 profile-details&quot;&gt;
+    &lt;h1&gt;Jennifer Doe&lt;/h1&gt;
+    &lt;p&gt;&lt;i class=&quot;fa fa-circle text-green&quot;&gt;&lt;/i&gt; Online&lt;/p&gt;
+    &lt;p&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt laoreet dolore magna aliquam tincidunt erat volutpat laoreet dolore magna aliquam tincidunt erat volutpat.&lt;/p&gt;
+    &lt;p&gt;&lt;a href=&quot;#&quot;&gt;www.jenniferblogs.com&lt;/a&gt;&lt;/p&gt;
+    &lt;ul class=&quot;list-inline&quot;&gt;
+       &lt;li&gt;&lt;i class=&quot;fa fa-map-marker&quot;&gt;&lt;/i&gt; Poland&lt;/li&gt;
+       &lt;li&gt;&lt;i class=&quot;fa fa-calendar&quot;&gt;&lt;/i&gt; 21 Sep 1986&lt;/li&gt;
+       &lt;li&gt;&lt;i class=&quot;fa fa-suitcase&quot;&gt;&lt;/i&gt; Design Head&lt;/li&gt;
+       &lt;li&gt;&lt;i class=&quot;fa fa-trophy&quot;&gt;&lt;/i&gt; Star Seller&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;h3&gt;My Skills&lt;/h3&gt;
+    &lt;div class=&quot;row&quot;&gt;
+        &lt;div class=&quot;col-md-4 text-center&quot;&gt;
+            &lt;div id=&quot;pie_1&quot; class=&quot;piechart&quot; data-percent=&quot;76&quot;&gt;
+                &lt;span class=&quot;percent&quot;&gt;&lt;/span&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;skill-name&quot;&gt;Graphic Design&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;col-md-4 text-center&quot;&gt;
+            &lt;div id=&quot;pie_2&quot; class=&quot;piechart&quot; data-percent=&quot;82&quot;&gt;
+                &lt;span class=&quot;percent&quot;&gt;&lt;/span&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;skill-name&quot;&gt;Web Design&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;col-md-4 text-center&quot;&gt;
+            &lt;div id=&quot;pie_3&quot; class=&quot;piechart&quot; data-percent=&quot;66&quot;&gt;
+                &lt;span class=&quot;percent&quot;&gt;&lt;/span&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;skill-name&quot;&gt;Javascript&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+</li>
+<li>
+<p>For <strong><em>My Skills</em></strong> dials refer to <strong>EasyPieChart</strong> in <strong><em>others.html</em></strong> documentation.</p>
+</li>
+<li>For <strong><em>Sales</em></strong> chart refer to <strong>Growing Charts</strong> in <strong><em>others.html</em></strong> documentation.</li>
+<li>
+<p>For <strong><em>Sales Table</em></strong> refer to <strong><em>simple_tables.html</em></strong> documentation.</p>
+</li>
+<li>
+<p>For <strong><em>Recent Activity</em></strong> do the following to add a new item:</p>
+<pre class="prettyprint linenums"><code>&lt;div class=&quot;feed-activity clearfix&quot;&gt;
+    &lt;div&gt;
+        &lt;i class=&quot;pull-left roundicon fa fa-check btn btn-info&quot;&gt;&lt;/i&gt;
+        &lt;a class=&quot;user&quot; href=&quot;#&quot;&gt; John Doe &lt;/a&gt;
+        accepted your connection request.
+        &lt;br&gt;
+        &lt;a href=&quot;#&quot;&gt;View profile&lt;/a&gt;
+
+    &lt;/div&gt;
+    &lt;div class=&quot;time&quot;&gt;
+        &lt;i class=&quot;fa fa-clock-o&quot;&gt;&lt;/i&gt;
+        5 hours ago
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+</li>
+</ul>
+<h2>Edit Account section</h2>
+<ul>
+<li>For details please refer to <strong><em>forms.html</em></strong> documentation</li>
+</ul>
+<h2>Help section</h2>
+<ul>
+<li>For details please refer to <strong><em>faq section</em></strong> in <strong><em>OTHER_PAGES</em></strong> documentation.</li>
+</ul>
+<h1>Chats</h1>
+<h2>Chat Window</h2>
+<ul>
+<li>Include <code>handleChat();</code> in <strong><em>script.js</em></strong></li>
+<li>Make sure to include <code>class=&quot;chat-window&quot;</code> e.g. <code>&lt;div class=&quot;box border green chat-window&quot;&gt;</code> as shown in the HTML.</li>
+</ul>
+<h2>Chat Widget</h2>
+<ul>
+<li>Include <code>handleChat();</code> in <strong><em>script.js</em></strong></li>
+<li>Make sure to wrap your widget with <code>&lt;div class=&quot;chat-widget&quot;&gt;</code> as shown in the HTML.</li>
+<li><strong>Don't</strong> include <code>class=&quot;chat-window&quot;</code></li>
+</ul>
+<h1>To Do &amp; Timeline</h1>
+<h2>To Do</h2>
+<h3>How it works</h3>
+<ol>
+<li>
+<p>Click on a todo to 'Mark as Complete'</p>
+</li>
+<li>
+<p>Add new tasks using the text box below</p>
+</li>
+<li>
+<p>New to-dos appear at the top.</p>
+</li>
+<li>
+<p>Items can be dragged and reordered.</p>
+</li>
+<li>
+<p>Click on a completed item to make it active again.</p>
+</li>
+</ol>
+<h3>How to display</h3>
+<p>The basic syntax is as follows:</p>
+<pre class="prettyprint linenums"><code>&lt;h4&gt;To Do&lt;/h4&gt;
+&lt;ul id=&quot;toDoList&quot;&gt;
+    &lt;li class=&quot;toDo&quot;&gt;Hi there!&lt;/li&gt;
+    &lt;li class=&quot;toDo&quot;&gt;This is awesome little to-do app.&lt;/li&gt;
+    &lt;li class=&quot;toDo&quot;&gt;It’s small yet powerful.&lt;/li&gt;
+    &lt;li class=&quot;toDo&quot;&gt;But it can do a few nifty things.&lt;/li&gt;
+    &lt;li class=&quot;toDo&quot;&gt;Click on a to-do to complete it.&lt;/li&gt;
+    &lt;li class=&quot;toDo&quot;&gt;Add new ones using the text box below. Just hit 'Return'.&lt;/li&gt;
+    &lt;li class=&quot;toDo&quot;&gt;New to-dos appear at the top.&lt;/li&gt;
+    &lt;li class=&quot;toDo&quot;&gt;But you can drag items to reorder them.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;Completed&lt;/h4&gt;
+&lt;ul id=&quot;completeList&quot;&gt;
+    &lt;li class=&quot;youCompleteMe&quot;&gt;This to-do has been completed. Click it to make it active again.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;form&gt;
+    &lt;div class=&quot;input-group&quot;&gt; 
+        &lt;input type=&quot;text&quot; id=&quot;newItem&quot; placeholder=&quot;Add a new todo&quot; class=&quot;form-control&quot;&gt; 
+        &lt;span class=&quot;input-group-btn&quot;&gt; &lt;button id=&quot;addItem&quot; class=&quot;btn btn-primary&quot; type=&quot;button&quot;&gt;&lt;i class=&quot;fa fa-plus-circle&quot;&gt;&lt;/i&gt; Add Todo&lt;/button&gt;&lt;/span&gt; 
+    &lt;/div&gt;
+&lt;/form&gt;
+</code></pre>
+
+<ul>
+<li>The script related to To Do can be found at <strong><em>Cloud Admin - js - jquery-todo - js - paddytodolist.js</em></strong></li>
+</ul>
+<h2>Timeline</h2>
+<h3>How to display</h3>
+<ul>
+<li>Include <code>&lt;div id=&quot;my-timeline&quot;&gt;&lt;/div&gt;</code> in your HTML.</li>
+<li>Include <code>handleTimeline();</code> in <strong><em>script.js</em></strong></li>
+<li><strong><em>Please note:</em></strong> The example uses JSON that can be found at <strong><em>Cloud Admin - js - timelinejs - example_json.json</em></strong>. You can create your own JSON or pull it dynamically at runtime.</li>
+<li>Please visit plugin website for more examples, usage &amp; syntax.</li>
+<li>Please check <strong><em>getting_started.html</em></strong> for link to plugin documentation.</li>
+</ul>
+<h1>Address Book</h1>
+<h2>How to display</h2>
+<ul>
+<li>Address book is powered by <strong><em>Slidernav</em></strong> plugin</li>
+<li>Include <code>&lt;div id=&quot;address-book&quot;&gt;</code> in your HTML.</li>
+<li>Include <code>handleSliderNav();</code> in <strong><em>script.js</em></strong></li>
+<li>Please visit plugin website for more examples, usage &amp; syntax.</li>
+<li>Please check <strong><em>getting_started.html</em></strong> for link to plugin documentation.</li>
+</ul>
+<h2>Contact card</h2>
+<p>The basic syntax of a contact card is as follows:</p>
+<pre class="prettyprint linenums"><code>&lt;div id=&quot;contact-card&quot; class=&quot;panel panel-default&quot;&gt;
+  &lt;div class=&quot;panel-heading&quot;&gt;
+    &lt;h2 class=&quot;panel-title&quot;&gt;John Doe&lt;/h2&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;panel-body&quot;&gt;
+    &lt;div id=&quot;card&quot; class=&quot;row&quot;&gt;
+        &lt;div class=&quot;col-md-6 headshot&quot;&gt;
+            &lt;img src=&quot;img/addressbook/1.jpg&quot; alt=&quot;&quot; /&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;col-md-6&quot;&gt;
+            &lt;table class=&quot;table table-hover&quot;&gt;
+                &lt;tbody&gt;
+                  &lt;tr&gt;                  
+                    &lt;td&gt;&lt;i class=&quot;fa fa-font&quot;&gt;&lt;/i&gt; Name&lt;/td&gt;
+                    &lt;td id=&quot;card-name&quot;&gt;John Doe&lt;/td&gt;
+                  &lt;/tr&gt;
+                  &lt;tr&gt;
+                    &lt;td&gt;&lt;i class=&quot;fa fa-home&quot;&gt;&lt;/i&gt; Address&lt;/td&gt;
+                    &lt;td&gt;795 Folsom Ave, Suite 600
+                        San Francisco, CA 94107
+                        P: (123) 456-7890 &lt;/td&gt;
+                  &lt;/tr&gt;
+                  &lt;tr&gt;
+                    &lt;td&gt;&lt;i class=&quot;fa fa-phone&quot;&gt;&lt;/i&gt; Phone&lt;/td&gt;
+                    &lt;td&gt;+001 8753-3648-002&lt;/td&gt;
+                  &lt;/tr&gt;
+                  &lt;tr&gt;
+                    &lt;td&gt;&lt;i class=&quot;fa fa-envelope&quot;&gt;&lt;/i&gt; Email&lt;/td&gt;
+                    &lt;td&gt;sampleemail@gmail.com&lt;/td&gt;
+                  &lt;/tr&gt;
+                &lt;/tbody&gt;
+              &lt;/table&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p>You can customize the display from jQuery function/HTML.</p>
+<h1>Vertical Timeline</h1>
+<p>Timeline shows a series of events in a vertically time-sorted structure.</p>
+<p>Timeline utilizes a handful of super cool libraries, including Tabletop.js (for the data storage) and Isotope for the layout.</p>
+<h2>How to use</h2>
+<h3>1) Set up your data using Tabletop.js</h3>
+<p>Create a Google Spreadsheet with the following columns:</p>
+<pre class="prettyprint linenums"><code>title
+date
+display date
+photo url
+caption
+body
+read more url
+</code></pre>
+
+<p><strong>Please note that the the display date column must be in the format Month day, Year (April 25, 2012) for proper javascript parsing. Also, all columns must be plain text format, including the two date columns.</strong></p>
+<p>Now follow the instructions over at Tabletop.js to publish the Spreadsheet.</p>
+<p>The Spreadsheet used in the example index.html file is at <a href="https://docs.google.com/spreadsheet/ccc?key=0AsmHVq28GtVJdG1fX3dsQlZrY18zTVA2ZG8wTXdtNHc">https://docs.google.com/spreadsheet/ccc?key=0AsmHVq28GtVJdG1fX3dsQlZrY18zTVA2ZG8wTXdtNHc</a></p>
+<h3>2) Insert the Spreadsheet key into script.js</h3>
+<ul>
+<li>
+<p>Find your Spreadsheet key (see <a href="https://github.com/jsoma/tabletop">Tabletop.js</a> for instructions), and replace the sample key on <strong>line 3</strong> of <code>Cloud-Admin/js/vertical-timeline/js/script.js</code> with the key to your Spreadsheet.</p>
+</li>
+<li>
+<p>You also need to update the name of the spreadsheet 'sheet' that holds the data on <strong>line 4</strong> of <code>Cloud-Admin/js/vertical-timeline/js/script.js</code>.</p>
+</li>
+</ul>
+<h3>3) Include the HTML markup</h3>
+<p>Include the following markup where you want the timeline to appear</p>
+<pre class="prettyprint linenums"><code>    &lt;div class=&quot;box-body vertical-timeline&quot;&gt;
+      &lt;h2 class=&quot;timeline-title text-center&quot;&gt;Vertical Timeline&lt;/h2&gt;
+      &lt;div role=&quot;main&quot; class=&quot;clearfix&quot;&gt;
+      &lt;div id=&quot;buttons&quot;&gt;
+        &lt;div id=&quot;expand-collapse-buttons&quot;&gt;
+          &lt;a class=&quot;expand-all active btn btn-danger&quot; href=&quot;#&quot;&gt;&lt;span&gt;EXPAND ALL &lt;i class=&quot;fa fa-caret-up&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/a&gt;
+          &lt;a class=&quot;collapse-all btn btn-danger&quot; href=&quot;#&quot;&gt;&lt;span&gt;COLLAPSE ALL &lt;i class=&quot;fa fa-caret-down&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/a&gt;
+        &lt;/div&gt;
+        &lt;div id=&quot;sort-buttons&quot;&gt;
+          &lt;a class=&quot;sort-newest active btn btn-success&quot; href=&quot;#&quot;&gt;&lt;span&gt;NEWEST FIRST &lt;i class=&quot;fa fa-caret-up&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/a&gt;
+          &lt;a class=&quot;sort-oldest btn btn-success&quot; href=&quot;#&quot;&gt;&lt;span&gt;OLDEST FIRST &lt;i class=&quot;fa fa-caret-down&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/a&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div id=&quot;timeline&quot;&gt;
+        &lt;div id=&quot;line-container&quot;&gt;
+          &lt;div id=&quot;line&quot;&gt;&lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;  
+</code></pre>
+
+<p>Include the template scripts just before <code>&lt;/body&gt;</code></p>
+<pre class="prettyprint linenums"><code>    &lt;!-- HANDLEBAR SCRIPT TEMPLATES --&gt;
+    &lt;script id=&quot;year-marker-template&quot; type=&quot;text/x-handlebars-template&quot;&gt;
+    &lt;div class=&quot;item year-marker&quot;&gt;
+      &lt;div class=&quot;inner&quot;&gt;
+        &lt;div class=&quot;inner2&quot;&gt;
+          &lt;div class=&quot;timestamp&quot;&gt;{{timestamp}}&lt;/div&gt;
+          &lt;div class=&quot;year&quot;&gt;{{year}}&lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/script&gt;
+
+  &lt;script id=&quot;post-template&quot; type=&quot;text/x-handlebars-template&quot;&gt;
+    &lt;div class=&quot;item post&quot;&gt;
+      &lt;div class=&quot;inner&quot;&gt;
+        &lt;div class=&quot;timestamp&quot;&gt;{{timestamp}}&lt;/div&gt;
+        &lt;div class=&quot;title&quot;&gt;&lt;h3&gt;{{title}}&lt;/h3&gt;&lt;/div&gt;
+        &lt;div class=&quot;date&quot;&gt;{{display_date}}&lt;/div&gt;
+        &lt;div class=&quot;body&quot;&gt;
+          {{#if photo_url}}
+            &lt;img src=&quot;{{photo_url}}&quot; alt=&quot;&quot;&gt;
+          {{/if}}
+          {{#if caption}}
+            &lt;div class=&quot;caption&quot;&gt;({{caption}})&lt;/div&gt;
+          {{/if}}
+          {{#if body}}
+            &lt;div class=&quot;text&quot;&gt;{{body}}&lt;/div&gt;
+          {{/if}}
+          &lt;div class=&quot;clearfix&quot;&gt;
+            {{#if read_more_url}}
+              &lt;a target=&quot;_blank&quot; class=&quot;btn btn-warning&quot; href=&quot;{{read_more_url}}&quot;&gt;READ MORE&lt;/a&gt;
+              &lt;div class=&quot;share&quot;&gt;
+                &lt;a href=&quot;#&quot; class=&quot;btn btn-info share-trigger tip&quot; title=&quot;Share this item&quot;&gt;&lt;i class=&quot;fa fa-retweet&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+              &lt;/div&gt;
+            {{/if}}
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/script&gt;
+    &lt;!-- CUSTOM SCRIPT --&gt;
+</code></pre>
+
+<h3>Please note</h3>
+<ul>
+<li>The timeline has been customized to work as a responsive timeline.</li>
+<li>jQuery Isotope has been extended to make it responsive. Please refer to <a href="http://isotope.metafizzy.co/docs/extending-isotope.html">Extending Isotopes</a> to customize it further.</li>
+<li>If you want a jQuery Plugin version of this implementation, kindly look at <a href="https://github.com/MinnPost/jquery-vertical-timeline">jQuery-vertical-timeline</a></li>
+<li>Please note that jQuery Isotope requires a one time <a href="http://isotope.metafizzy.co/docs/license.html">$25 license</a> for commercial projects.</li>
+</ul>
+<h1>Pricing Tables</h1>
+<h2>How to display</h2>
+<p>The basic syntax to display a single column is as follows</p>
+<pre class="prettyprint linenums"><code>&lt;li class=&quot;price_block col-md-3 col-xs-11&quot;&gt;
+    &lt;h3&gt;Starter&lt;/h3&gt;
+    &lt;div class=&quot;price green&quot;&gt;
+        &lt;div class=&quot;price_figure&quot;&gt;
+            &lt;span class=&quot;price_number&quot;&gt;FREE&lt;/span&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;ul class=&quot;features&quot;&gt;
+        &lt;li&gt;1GB Storage&lt;/li&gt;
+        &lt;li&gt;2 Clients&lt;/li&gt;
+        &lt;li&gt;5 Active Projects&lt;/li&gt;
+        &lt;li&gt;5 Colors&lt;/li&gt;
+        &lt;li&gt;Free Goodies&lt;/li&gt;
+        &lt;li&gt;24/7 Email support&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;div class=&quot;footer&quot;&gt;
+        &lt;a href=&quot;#&quot; class=&quot;btn btn-info&quot;&gt;Buy Now&lt;/a&gt;
+    &lt;/div&gt;
+&lt;/li&gt;
+</code></pre>
+
+<ul>
+<li>Here change colorname at <code>&lt;div class=&quot;price green&quot;&gt;</code> to change the hover color style.</li>
+</ul>
+<p>Available color options are:</p>
+<ul>
+<li>green</li>
+<li>orange</li>
+</ul>
+<h2>How to add more hover colors</h2>
+<p>You can always add a new color by adding the following CSS rule to <strong><em>my-bootstrap-theme.css</em></strong></p>
+<pre class="prettyprint linenums"><code>.price_block:hover .price.yourcolor {
+    background: #yourcolor-hex; 
+}
+</code></pre>
+
+<p>where #your-color-hex can be any color HEX.</p>
+<ul>
+<li>Now you can use <code>&lt;div class=&quot;price yourcolor&quot;&gt;</code> to change the hover color style.</li>
+</ul>
+<h2>How to display fixed/no-hover pricing table</h2>
+<p>The basic syntax to display a single column is as follows</p>
+<pre class="prettyprint linenums"><code>&lt;li class=&quot;price_block_static col-md-4 col-xs-11&quot;&gt;
+    &lt;h3&gt;Silver&lt;/h3&gt;
+    &lt;div class=&quot;price&quot;&gt;
+        &lt;div class=&quot;price_figure&quot;&gt;
+            &lt;span class=&quot;price_number&quot;&gt;$9.99&lt;/span&gt;
+            &lt;span class=&quot;price_tenure&quot;&gt;per month&lt;/span&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;ul class=&quot;features&quot;&gt;
+        &lt;li&gt;2GB Storage&lt;/li&gt;
+        &lt;li&gt;5 Clients&lt;/li&gt;
+        &lt;li&gt;10 Active Projects&lt;/li&gt;
+        &lt;li&gt;10 Colors&lt;/li&gt;
+        &lt;li&gt;Free Goodies&lt;/li&gt;
+        &lt;li&gt;24/7 Email support&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;div class=&quot;footer&quot;&gt;
+        &lt;a href=&quot;#&quot; class=&quot;btn btn-default&quot;&gt;Sign Up Now&lt;/a&gt;
+    &lt;/div&gt;
+&lt;/li&gt;
+</code></pre>
+
+<ul>
+<li>
+<p>To make a column bigger and stand out, just add <code>class=&quot;active&quot;</code> for the <code>&lt;li&gt;</code>. E.g. </p>
+<pre class="prettyprint linenums"><code>&lt;li class=&quot;price_block_static active col-md-4 col-xs-11&quot;&gt;
+    &lt;h3&gt;Gold&lt;/h3&gt;
+    &lt;div class=&quot;price&quot;&gt;
+        &lt;div class=&quot;price_figure&quot;&gt;
+            &lt;span class=&quot;price_number&quot;&gt;$9.99&lt;/span&gt;
+            &lt;span class=&quot;price_tenure&quot;&gt;per month&lt;/span&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;ul class=&quot;features&quot;&gt;
+        &lt;li&gt;2GB Storage&lt;/li&gt;
+        &lt;li&gt;5 Clients&lt;/li&gt;
+        &lt;li&gt;10 Active Projects&lt;/li&gt;
+        &lt;li&gt;10 Colors&lt;/li&gt;
+        &lt;li&gt;Free Goodies&lt;/li&gt;
+        &lt;li&gt;24/7 Email support&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;div class=&quot;footer&quot;&gt;
+        &lt;a href=&quot;#&quot; class=&quot;btn btn-default&quot;&gt;Sign Up Now&lt;/a&gt;
+    &lt;/div&gt;
+&lt;/li&gt;
+</code></pre>
+
+</li>
+</ul>
+<h1>Invoice</h1>
+<p>Please refer to HTML for self-explanatory commented HTML code.</p>
+<h1>Orders</h1>
+<p>Please refer to HTML for self-explanatory commented HTML code.</p>
+</div>
+	</div>
+</div>
+
+<!-- JAVASCRIPTS -->
+<script src="js/jquery-2.0.3.min.js"></script>
+<script src="js/jquery-ui-1.10.3.custom.min.js"></script>
+<script src="tocify/js/jquery.tocify.min.js""></script>
+<script>
+$(function() {
+    //Calls the tocify method on your HTML div.
+    $("#toc").tocify();
+});
+</script>
+</body>
+</html>
+<!-- This document was created with MarkdownPad, the Markdown editor for Windows (http://markdownpad.com) -->

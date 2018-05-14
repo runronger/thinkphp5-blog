@@ -1,0 +1,85 @@
+@import url(http://fonts.googleapis.com/css?family=Coda:400,800);
+fonts{
+	font-family: 'Coda', cursive;
+}
+body{
+	background-color: #F3F3F3;
+}
+.spacer{
+	height: 50px;
+}
+.pricing_tbls{
+	text-align: center;
+	font-family: 'Coda', cursive;
+}
+.for_header{
+	margin-top: 20px;
+
+	border: 1px solid #D6D6D6;
+	border-bottom: none;
+}
+	.for_header h4{
+		margin: 0;
+		padding-top: 20px;
+
+		font-weight: normal;
+		color: #6CA9E8;
+
+		background-color: white;
+	}
+.price p{
+	margin:0;
+	padding-bottom: 20px;
+	padding-top: 7px;
+
+	font-size: 18px;
+	font-weight: bold;
+
+	background-color: white;
+}
+	.price p span{
+		font-size: 12px;
+		font-weight: normal;
+	}
+.for_border{
+	border: 1px solid #D6D6D6;
+	border-top: none;
+}
+.for_border p{
+	margin:0;
+	padding: 3px 0px;
+
+	border-bottom: 1px dashed #efefef;
+
+	background-color: white;
+}
+	.for_border p:last-child{
+		padding-top: 20px;
+		padding-bottom: 20px;
+
+		border: none;
+	}
+	.for_border p span{
+		_font-weight: bold;
+	}
+	.pricing_tbls .span3:nth-child(3) .for_header h4{
+		color: #ffb02d;
+	}
+	.pricing_tbls .span3:nth-child(3) .for_header{
+		border: 3px solid #ffb02d;
+		border-bottom: none;
+	}
+	.pricing_tbls .span3:nth-child(3) .for_border{
+		border: 3px solid #ffb02d;
+		border-top: none;
+	}
+	.pricing_tbls .span3:nth-child(3) .for_border .btn{
+		background: #ffb02d; /* Old browsers */
+		background: -moz-linear-gradient(top,  #ffb02d 0%, #ec7e03 100%); /* FF3.6+ */
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffb02d), color-stop(100%,#ec7e03)); /* Chrome,Safari4+ */
+		background: -webkit-linear-gradient(top,  #ffb02d 0%,#ec7e03 100%); /* Chrome10+,Safari5.1+ */
+		background: -o-linear-gradient(top,  #ffb02d 0%,#ec7e03 100%); /* Opera 11.10+ */
+		background: -ms-linear-gradient(top,  #ffb02d 0%,#ec7e03 100%); /* IE10+ */
+		background: linear-gradient(to bottom,  #ffb02d 0%,#ec7e03 100%); /* W3C */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffb02d', endColorstr='#ec7e03',GradientType=0 ); /* IE6-9 */
+	}

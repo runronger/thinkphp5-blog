@@ -1,0 +1,27 @@
+body{
+	background-color: #F3F3F3;
+}
+.spacer{
+	height: 50px;
+}
+.pricing_tbls{
+	text-align: center;
+}
+.for_header{
+	margin-top: 20px;
+}
+	.for_header h4{
+		margin: 0;
+	}
+.price p{
+	margin:0;
+}
+	.price p span{
+
+	}
+.for_border p{
+	margin:0;
+}
+	.for_border p span{
+		font-weight: bold;
+	}

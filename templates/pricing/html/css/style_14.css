@@ -1,0 +1,54 @@
+@import url(http://fonts.googleapis.com/css?family=Shadows+Into+Light);
+fonts{
+	font-family: 'Shadows Into Light', cursive;
+}
+.spacer{
+	height: 50px;
+}
+.pricing_tbls{
+	text-align: center;
+	font-family: 'Shadows Into Light', cursive;
+}
+.for_header{
+	border-top-left-radius: 6px;
+	border-top-right-radius: 6px;
+	border-bottom: 2px solid #AF950F;
+
+background: #fce250; /* Old browsers */
+background: -moz-linear-gradient(top,  #fce250 0%, #d7aa41 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fce250), color-stop(100%,#d7aa41)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #fce250 0%,#d7aa41 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #fce250 0%,#d7aa41 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #fce250 0%,#d7aa41 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #fce250 0%,#d7aa41 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fce250', endColorstr='#d7aa41',GradientType=0 ); /* IE6-9 */
+
+}
+.for_header h4{
+	margin: 0;
+	padding: 20px 0px;
+	padding-bottom: 0;
+}
+	.price p{
+		padding: 20px 0px;
+
+		font-size: 23px;
+	}
+		.price span{
+			font-size: 14px;
+		}
+.for_header p{
+	margin:0;
+}
+.for_border{
+	border: 1px solid #efefef;
+	border-bottom-left-radius: 6px;
+	border-bottom-right-radius: 6px;
+}
+.for_border p{
+	margin:0;
+	padding: 6px 0px;
+}
+	.for_border p:nth-child(even){
+		background-color: #fafafa;
+	}

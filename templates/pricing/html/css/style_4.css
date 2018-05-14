@@ -1,0 +1,105 @@
+.spacer{
+	height: 40px;
+}
+
+.pricing_tbls{
+	text-align: center;
+}
+	.pricing_tbls h4{
+		font-size: 15px;
+		margin-top: -5px;
+		font-weight: 400;
+	}
+.pricing_tbls .span3:nth-child(1) .for_header{
+	background: #e2e2e2; /* Old browsers */
+	background: -moz-linear-gradient(top,  #e2e2e2 0%, #c6c6c6 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e2e2e2), color-stop(100%,#c6c6c6)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #e2e2e2 0%,#c6c6c6 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #e2e2e2 0%,#c6c6c6 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #e2e2e2 0%,#c6c6c6 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #e2e2e2 0%,#c6c6c6 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2e2e2', endColorstr='#c6c6c6',GradientType=0 ); /* IE6-9 */
+}
+.pricing_tbls .span3:nth-child(2) .for_header{
+	background: #b7e47e; /* Old browsers */
+	background: -moz-linear-gradient(top,  #b7e47e 0%, #90c847 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#b7e47e), color-stop(100%,#90c847)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #b7e47e 0%,#90c847 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #b7e47e 0%,#90c847 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #b7e47e 0%,#90c847 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #b7e47e 0%,#90c847 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b7e47e', endColorstr='#90c847',GradientType=0 ); /* IE6-9 */
+}
+.pricing_tbls .span3:nth-child(3) .for_header{
+	background: #80c7e6; /* Old browsers */
+	background: -moz-linear-gradient(top,  #80c7e6 0%, #63b4db 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#80c7e6), color-stop(100%,#63b4db)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #80c7e6 0%,#63b4db 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #80c7e6 0%,#63b4db 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #80c7e6 0%,#63b4db 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #80c7e6 0%,#63b4db 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80c7e6', endColorstr='#63b4db',GradientType=0 ); /* IE6-9 */
+}
+.pricing_tbls .span3:nth-child(4) .for_header{
+	background: #61c5b4; /* Old browsers */
+	background: -moz-linear-gradient(top,  #61c5b4 0%, #43baa5 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#61c5b4), color-stop(100%,#43baa5)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #61c5b4 0%,#43baa5 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #61c5b4 0%,#43baa5 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #61c5b4 0%,#43baa5 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #61c5b4 0%,#43baa5 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#61c5b4', endColorstr='#43baa5',GradientType=0 ); /* IE6-9 */
+}	
+
+.for_header{
+	margin-top: 20px;
+
+	color: white;
+	padding: 10px 0px;
+
+	border-top-left-radius: 6px;
+	border-top-right-radius: 6px;
+
+	text-shadow: 0px 1px 1px rgba(0,0,0,0.4);
+}
+.for_header p{
+	font-size: 30px;
+	font-weight: 100;
+	padding-top: 5px;
+}
+	.for_header p:first-letter{
+		margin-right: 2px;
+		font-size: 13px;
+	}
+	.for_header p span{
+		font-size: 11px;
+		position: relative;
+		left: -6px;
+	}
+.for_border{
+	border-bottom-left-radius: 6px;
+	border-bottom-right-radius: 6px;
+	border: 1px solid #eee;
+	border-top: none;
+
+	background-color: #FAFAFA;
+}
+	.for_border p{
+		margin: 0;
+		padding: 6px 0px;
+		border-bottom: 1px solid #eee;
+
+		font-weight: 200;
+	}
+	.for_border p:nth-child(odd){
+		background-color: #fcfcfc;
+	}
+	.for_border p:last-child{
+		border: none;
+	}
+	.for_border p:last-child:hover{
+		background-color: inherit;
+	}
+	.for_border p:hover{
+		background-color: white;
+	}

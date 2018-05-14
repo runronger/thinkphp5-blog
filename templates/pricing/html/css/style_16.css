@@ -1,0 +1,102 @@
+@import url(http://fonts.googleapis.com/css?family=Maven+Pro:400,500,700,900);
+fonts{
+	font-family: 'Maven Pro', sans-serif;
+}
+body{
+	background-color: #242520;
+}
+.spacer{
+	height: 50px;
+}
+.pricing_tbls{
+	text-align: center;
+	font-family: 'Maven Pro', sans-serif;
+}
+.for_header{
+	border: 1px solid black;
+	
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	color: white;
+
+	background: #494949; /* Old browsers */
+	background: -moz-linear-gradient(top,  #494949 0%, #3b3b3b 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#494949), color-stop(100%,#3b3b3b)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #494949 0%,#3b3b3b 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #494949 0%,#3b3b3b 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #494949 0%,#3b3b3b 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #494949 0%,#3b3b3b 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#494949', endColorstr='#3b3b3b',GradientType=0 ); /* IE6-9 */
+}
+.for_header h4{
+	margin: 0;
+	padding-top: 15px;
+
+	border-top: 1px solid #5A5A5A;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+.for_header p{
+	margin:0;
+	padding-top: 10px;
+	padding-bottom: 15px;
+}
+	.price p{
+		font-size: 22px;
+	}
+		.price span{
+			font-size: 12px;	
+			margin-left: -5px;
+		}
+.for_border{
+	border: 1px solid black;
+	border-top: 1px solid #666;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+
+	background: #3c3c3c; /* Old browsers */
+	background: -moz-linear-gradient(top,  #3c3c3c 0%, #262626 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#3c3c3c), color-stop(100%,#262626)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #3c3c3c 0%,#262626 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #3c3c3c 0%,#262626 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #3c3c3c 0%,#262626 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #3c3c3c 0%,#262626 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3c3c3c', endColorstr='#262626',GradientType=0 ); /* IE6-9 */
+}
+.for_border p{
+	margin:0;
+	padding: 5px 0px;
+
+	color: #eee;
+}
+.for_border p:hover{
+	background-color: rgba(0,0,0,0.1);
+}
+.for_border p:last-child:hover{
+	background-color: inherit;
+}
+	.for_border .btn{
+		color: white;
+		text-shadow:0px 1px 0px rgba(0,0,0,0.5);
+
+		background-image:none;
+
+		background: #26cf78; /* Old browsers */
+		background: -moz-linear-gradient(top,  #26cf78 0%, #009741 100%); /* FF3.6+ */
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#26cf78), color-stop(100%,#009741)); /* Chrome,Safari4+ */
+		background: -webkit-linear-gradient(top,  #26cf78 0%,#009741 100%); /* Chrome10+,Safari5.1+ */
+		background: -o-linear-gradient(top,  #26cf78 0%,#009741 100%); /* Opera 11.10+ */
+		background: -ms-linear-gradient(top,  #26cf78 0%,#009741 100%); /* IE10+ */
+		background: linear-gradient(to bottom,  #26cf78 0%,#009741 100%); /* W3C */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#26cf78', endColorstr='#009741',GradientType=0 ); /* IE6-9 */
+	}
+		.for_border .btn:hover{
+			background: #69ce9a; /* Old browsers */
+			background: -moz-linear-gradient(top,  #69ce9a 0%, #2a9657 100%); /* FF3.6+ */
+			background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#69ce9a), color-stop(100%,#2a9657)); /* Chrome,Safari4+ */
+			background: -webkit-linear-gradient(top,  #69ce9a 0%,#2a9657 100%); /* Chrome10+,Safari5.1+ */
+			background: -o-linear-gradient(top,  #69ce9a 0%,#2a9657 100%); /* Opera 11.10+ */
+			background: -ms-linear-gradient(top,  #69ce9a 0%,#2a9657 100%); /* IE10+ */
+			background: linear-gradient(to bottom,  #69ce9a 0%,#2a9657 100%); /* W3C */
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#69ce9a', endColorstr='#2a9657',GradientType=0 ); /* IE6-9 */
+		}

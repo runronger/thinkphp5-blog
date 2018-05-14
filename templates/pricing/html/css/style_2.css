@@ -1,0 +1,84 @@
+@import url(http://fonts.googleapis.com/css?family=Lato|Droid+Serif|Open+Sans);
+
+fonts{
+	font-family: 'Lato', sans-serif;
+	font-family: 'Droid Serif', serif;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.spacer{
+	height: 50px;
+}
+
+.pricing_tbls{
+	text-align: left;
+	font-family: 'Droid Serif', serif;
+}
+
+	.pricing_tbls h4{
+		padding:20px 10px;
+		margin: 0;
+		margin-top: 20px;
+
+		background-color: black;
+		color: white;
+	}
+
+.price{
+	padding-left: 10px;
+	padding-bottom: 5px;
+
+	background-color: black;
+	color: white;
+}
+	.price p{
+		font-size: 18px;
+	}
+
+	.pricing_tbls .span3:nth-child(2) .price{
+		color: #83CDC2;
+	}
+	.pricing_tbls .span3:nth-child(3) .price{
+		color: #BBD358;
+	}
+	.pricing_tbls .span3:nth-child(4) .price{
+		color: #FFCC33;
+	}
+
+	.price span{
+		font-size: 11px;
+		color: #aaa;
+	}
+
+.for_border{
+	border: 1px solid #eee;
+	border-top: none;
+	border-bottom: none;
+}
+	.for_border p{
+		font-size: 13px;
+		padding: 13px 10px;
+		margin: 0px;
+
+		border-bottom: 1px solid #eee;
+	}
+
+	.for_border p span{
+		font-weight:bold;
+	}
+
+	.pricing_tbls .span3:nth-child(2) .for_border p span {
+		color: #9FDCD3;
+	}
+
+	.pricing_tbls .span3:nth-child(3) .for_border p span {
+		color: #BBD358;
+	}
+
+	.pricing_tbls .span3:nth-child(4) .for_border p span {
+		color: #FFCC33;
+	}
+
+.pricing_tbls .btn{
+	border-radius: 0;
+}

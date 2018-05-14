@@ -1,0 +1,1871 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>GETTING_STARTED</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+/* GitHub stylesheet for MarkdownPad (http://markdownpad.com) */
+/* Author: Nicolas Hery - http://nicolashery.com */
+/* Version: b13fe65ca28d2e568c6ed5d7f06581183df8f2ff */
+/* Source: https://github.com/nicolahery/markdownpad-github */
+
+/* RESET
+=============================================================================*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* BODY
+=============================================================================*/
+
+body {
+  font-family: Helvetica, arial, freesans, clean, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+  padding: 20px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+body>*:first-child {
+  margin-top: 0 !important;
+}
+
+body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* BLOCKS
+=============================================================================*/
+
+p, blockquote, ul, ol, dl, table, pre {
+  margin: 15px 0;
+}
+
+/* HEADERS
+=============================================================================*/
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 tt, h1 code, h2 tt, h2 code, h3 tt, h3 code, h4 tt, h4 code, h5 tt, h5 code, h6 tt, h6 code {
+  font-size: inherit;
+}
+
+h1 {
+  font-size: 28px;
+  color: #000;
+}
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #ccc;
+  color: #000;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+h6 {
+  color: #777;
+  font-size: 14px;
+}
+
+body>h2:first-child, body>h1:first-child, body>h1:first-child+h2, body>h3:first-child, body>h4:first-child, body>h5:first-child, body>h6:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+h1+p, h2+p, h3+p, h4+p, h5+p, h6+p {
+  margin-top: 10px;
+}
+
+/* LINKS
+=============================================================================*/
+
+a {
+  color: #4183C4;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* LISTS
+=============================================================================*/
+
+ul, ol {
+  padding-left: 30px;
+}
+
+ul li > :first-child, 
+ol li > :first-child, 
+ul li ul:first-of-type, 
+ol li ol:first-of-type, 
+ul li ol:first-of-type, 
+ol li ul:first-of-type {
+  margin-top: 0px;
+}
+
+ul ul, ul ol, ol ol, ol ul {
+  margin-bottom: 0;
+}
+
+dl {
+  padding: 0;
+}
+
+dl dt {
+  font-size: 14px;
+  font-weight: bold;
+  font-style: italic;
+  padding: 0;
+  margin: 15px 0 5px;
+}
+
+dl dt:first-child {
+  padding: 0;
+}
+
+dl dt>:first-child {
+  margin-top: 0px;
+}
+
+dl dt>:last-child {
+  margin-bottom: 0px;
+}
+
+dl dd {
+  margin: 0 0 15px;
+  padding: 0 15px;
+}
+
+dl dd>:first-child {
+  margin-top: 0px;
+}
+
+dl dd>:last-child {
+  margin-bottom: 0px;
+}
+
+/* CODE
+=============================================================================*/
+
+pre, code, tt {
+  font-size: 12px;
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+}
+
+code, tt {
+  margin: 0 0px;
+  padding: 0px 0px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px;
+}
+
+pre>code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent;
+}
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px;
+}
+
+pre code, pre tt {
+  background-color: transparent;
+  border: none;
+}
+
+kbd {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #DDDDDD;
+    background-image: linear-gradient(#F1F1F1, #DDDDDD);
+    background-repeat: repeat-x;
+    border-color: #DDDDDD #CCCCCC #CCCCCC #DDDDDD;
+    border-image: none;
+    border-radius: 2px 2px 2px 2px;
+    border-style: solid;
+    border-width: 1px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 10px;
+    padding: 1px 4px;
+}
+
+/* QUOTES
+=============================================================================*/
+
+blockquote {
+  border-left: 4px solid #DDD;
+  padding: 0 15px;
+  color: #777;
+}
+
+blockquote>:first-child {
+  margin-top: 0px;
+}
+
+blockquote>:last-child {
+  margin-bottom: 0px;
+}
+
+/* HORIZONTAL RULES
+=============================================================================*/
+
+hr {
+  clear: both;
+  margin: 15px 0;
+  height: 0px;
+  overflow: hidden;
+  border: none;
+  background: transparent;
+  border-bottom: 4px solid #ddd;
+  padding: 0;
+}
+
+/* TABLES
+=============================================================================*/
+
+table th {
+  font-weight: bold;
+}
+
+table th, table td {
+  border: 1px solid #ccc;
+  padding: 6px 13px;
+}
+
+table tr {
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+}
+
+table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+/* IMAGES
+=============================================================================*/
+
+img {
+  max-width: 100%
+}
+</style>
+<link type="text/css" rel="stylesheet" href="tocify/css/jquery.tocify.css" />
+<link type="text/css" rel="stylesheet" href="bootstrap-dist/css/bootstrap.css" />
+<link rel="stylesheet" type="text/css" href="prettify/prettify.css" /><script type="text/javascript" src="prettify/prettify.js"></script></head><body onload="prettyPrint();">
+<div class="row">
+	<div class="container">
+	<div class="col-md-4">
+		<div id="toc"></div>
+	</div>
+	<div class="col-md-8">
+<h1>Cloud Admin v1.1.3 Documentation</h1>
+<p>Welcome to Cloud Admin - the responsive dashboard + frontend theme. This documentation will provide an in-depth explanation of tweaking this theme to suit your own needs. </p>
+<p>Please feel free to report errors, bugs, typos feature requests to be included in future versions.</p>
+<h1>Support</h1>
+<ul>
+<li>Support via <strong>email</strong>: <strong>fametaxi@gmail.com</strong></li>
+<li>Support via <strong>Twitter</strong>: <a href="http://twitter.com/fametaxi">http://twitter.com/fametaxi</a></li>
+<li>Subscribe to <strong>RSS Feed</strong> to get latest updates of the theme for free : <a href="feeds.feedburner.com/CloudAdminTheme">feeds.feedburner.com/CloudAdminTheme</a></li>
+<li>Support <strong>Forum</strong>: <em>Coming Soon (will notify via Twitter/Email/RSS)</em></li>
+</ul>
+<p>Follow us on Twitter to stay informed on latest updates. Register yourself on the support forum for the quicker response to queries &amp; access to latest release of Cloud Admin.</p>
+<h1>Changelog</h1>
+<h3>v1.1.3</h3>
+<ul>
+<li>NEW - Added Markdown Editor</li>
+<li>UPGRADE - Admin upgraded to Bootstrap 3.0.3</li>
+<li>UPGRADE - Frontend upgraded to Bootstrap 3.0.3</li>
+<li>FIXED - Nested Tab color issue</li>
+<li>FIXED - Mini Sidebar persists across pages</li>
+<li>FIXED - Learn More button on Frontend fixed</li>
+</ul>
+<h3>v1.1.2</h3>
+<ul>
+<li>Ajax powered Inbox</li>
+<li>Printer friendly Invoice (Try printing the Invoice page)</li>
+<li>Upgraded to Easy-Pie-Chart 2.1.1</li>
+<li>CKEditor bug fixed</li>
+<li>Easy-Pie-Chart IE9 bug fixed</li>
+<li>Miscelleneous bug fixes</li>
+</ul>
+<h3>v1.1.1</h3>
+<ul>
+<li>Upgraded to Bootstrap 3.0.2</li>
+<li>Upgraded to Font Awesome 4.0.3</li>
+<li>Fixed plugin links in documentation</li>
+</ul>
+<h3>v1.1</h3>
+<ul>
+<li>Responsive Vertical Timeline</li>
+<li>'Chrome' styled tabs on box header</li>
+<li>Fixed issues with sidebar toggle</li>
+<li>Improved User Profile</li>
+<li>Added new animated sliders</li>
+</ul>
+<h1>File and Folder structure</h1>
+<p>The files are arranged in the following generic structure. Please note that details regarding the contents of each folder is discussed under respective topics.
+<img src="img/folder.png" /></p>
+<ul>
+<li><strong><em>bootstrap</em></strong> - contains Bootstrap 3 source files</li>
+<li><strong><em>bootstrap-dist</em></strong> - contains Bootstrap 3 distribution files (Production ready)</li>
+<li><strong><em>css</em></strong> - contains the CSS files related to the theme</li>
+<li><strong><em>documentation</em></strong> - contains the documentation</li>
+<li><strong><em>email_templates</em></strong> - contains Mailchimp compatible email templates (can be found under &quot;Email Templates&quot; section in the dashboard)</li>
+<li><strong><em>font-awesome</em></strong> - contains Font Awesome 4.0.1 files</li>
+<li><strong><em>frontend_theme</em></strong> - contains the Cloud Frontend Theme and files (the folder structure of the one we're discussing)</li>
+<li><strong><em>img</em></strong> - contains all images related to the theme (maintained under separate folders in a  section-wise fashion inside)</li>
+<li><strong><em>js</em></strong> - contains all Javascript/jQuery related scripts. Also contains all jQuery plugins.</li>
+<li><strong><em>less</em></strong> - contains all LESS files</li>
+<li>*<strong><em>.html</em></strong> - all the HTML files </li>
+</ul>
+<h1>List of plugins</h1>
+<p>The plugins used for this template are as follows. Also included are the links to their respective websites.</p>
+<ol>
+<li><a href="daneden.me/animate/‎">Animate CSS</a></li>
+<li><a href="http://www.jacklmoore.com/autosize" title="Autosize v1.17.8">Autosize v1.17.8</a></li>
+<li><a href="http://srobbin.com/jquery-plugins/backstretch/">Backstretch - v2.0.4</a></li>
+<li><a href="http://bootboxjs.com">Bootbox.js v4.0.0</a></li>
+<li><a href="http://www.dangrossman.info/">Bootstrap Date Range Picker v1.2</a></li>
+<li><a href="http://momentjs.com">Moment.js 2.1.0</a></li>
+<li><a href="http://jasny.github.com/bootstrap/javascript.html#fileupload">Bootstrap-fileupload.js j2</a></li>
+<li><a href="http://twitter.github.com/bootstrap/javascript.html#tooltips">Bootstrap-inputmask.js j2</a></li>
+<li><a href="http://cameronspear.com/blog/twitter-bootstrap-dropdown-on-hover-plugin/">Bootstrap Hover Dropdown</a></li>
+<li><a href="http://www.larentis.eu/">BootstrapSwitch v1.8</a></li>
+<li><a href="http://github.com/VinceG/twitter-bootstrap-wizard">Bootstrap Wizard Plugin</a></li>
+<li><a href="http://github.com/mindmup/bootstrap-wysiwyg">Bootstrap WYSIWYG</a></li>
+<li><a href="https://github.com/jeresig/jquery.hotkeys">jQuery Hotkeys</a></li>
+<li><a href="http://ckeditor.com">CKEditor</a></li>
+<li><a href="http://www.jacklmoore.com/colorbox">Colorbox v1.4.31</a></li>
+<li><a href="http://www.eyecon.ro/bootstrap-colorpicker">Bootstrap Colorpicker</a></li>
+<li><a href="http://amsul.github.io/pickadate.js/date.htm">Date picker for pickadate.js v3.2.2</a></li>
+<li><a href="http://amsul.github.io/pickadate.js/time.htm">Time picker for pickadate.js v3.2.2</a></li>
+<li><a href="http://amsul.github.io/pickadate.js">pickadate.js v3.2.2</a></li>
+<li><a href="http://github.com/aaronrussell/jquery-simply-countable/">jQuery Simply Countable plugin</a></li>
+<li><a href="https://github.com/blueimp/Gallery">Blueimp Gallery</a></li>
+<li><a href="https://github.com/blueimp/JavaScript-Load-Image">Blueimp Load-Image</a></li>
+<li><a href="http://blueimp.github.io/JavaScript-Templates/">Blueimp Javascript-Templates</a></li>
+<li><a href="https://github.com/blueimp/JavaScript-Canvas-to-Blob">Blueimp Javascript Canvas-To-Blob</a></li>
+<li><a href="http://d3js.org/">d3 charts</a></li>
+<li><a href="http://www.datatables.net">Datatables</a></li>
+<li><a href="http://www.dropzonejs.com/‎">Dropzone Fileupload</a></li>
+<li><a href="http://robert-fleischmann.de">EasyPieChart</a></li>
+<li><a href="http://www.flotcharts.org">Flot Charts</a></li>
+<li><a href="http://thgreasi.github.io/growraf/growraf.html‎">Flot Growraf</a></li>
+<li><a href="https://github.com/ExactTarget/fuelux">Fuel UX Tree</a></li>
+<li><a href="http://arshaw.com/fullcalendar/">FullCalendar v1.6.4</a></li>
+<li><a href="http://hpneo.github.com/gmaps/">GMaps.js v0.4.6</a></li>
+<li><a href="https://github.com/HubSpot/messenger‎">Hubspot Messenger 1.3.6</a></li>
+<li><a href="http://isotope.metafizzy.co">Isotope v1.5.25</a></li>
+<li><a href="http://www.trirand.com/‎">jqGrid  4.5.4 - jQuery Grid</a></li>
+<li><a href="http://jquery.org">jQuery v2.0.3</a></li>
+<li><a href="http://malsup.com/jquery/block/">jQuery blockUI plugin</a></li>
+<li><a href="http://gsgd.co.uk/sandbox/jquery/easing/">jQuery Easing v1.3</a></li>
+<li><a href="https://github.com/aterrien/jQuery-Knob‎">jQuery Knob</a></li>
+<li><a href="https://github.com/wbotelhos/raty‎">jQuery Raty</a></li>
+<li><a href="http://rocha.la/jQuery-slimScroll">jQuery Slimscroll v1.3.0</a></li>
+<li><a href="https://github.com/paddyduke/jquery-todo">jQuery Todo</a></li>
+<li><a href="http://jqueryui.com/">jQuery UI 1.10.3</a></li>
+<li><a href="https://github.com/blueimp/jQuery-File-Upload">jQuery File Upload Plugin 5.32.6</a></li>
+<li><a href="http://bassistance.de/jquery-plugins/jquery-plugin-validation/">jQuery Validation Plugin 1.11.1</a></li>
+<li><a href="http://jqvmap.com">jQVMap Version 1.0</a></li>
+<li><a href="http://www.justgage.com">JustGage</a></li>
+<li><a href="http://raphaeljs.com">Raphael 2.1.0</a></li>
+<li><a href="http://lesscss.org">LESS - Leaner CSS v1.4.1</a></li>
+<li><a href="http://nicolasbize.github.io/magicsuggest/‎">Magic Suggest</a></li>
+<li><a href="http://dbushell.com/">Nestable jQuery Plugin</a></li>
+<li><a href="http://code.google.com/p/google-code-prettify/‎">Google Prettify</a></li>
+<li><a href="http://ivaynberg.github.io/select2/">Select2 3.4.4</a></li>
+<li><a href="http://devgrow.com/slidernav">SliderNav</a></li>
+<li><a href="http://omnipotent.net/jquery.sparkline/">Sparklines (jquery.sparkline.js)</a></li>
+<li><a href="https://github.com/bwsewell/tablecloth">Tablecloth.js</a></li>
+<li><a href="http://timeago.yarp.com/‎">Timeago</a></li>
+<li><a href="https://github.com/NUKnightLab/TimelineJS">TimelineJS - ver. 2.26.2</a></li>
+<li><a href="https://github.com/twitter/typeahead">Typeahead 0.9.3</a></li>
+<li><a href="http://pixelmatrixdesign.com">Uniform v2.1.0</a></li>
+<li><a href="http://github.com/tenXer/xcharts">xCharts v0.3.0</a></li>
+<li><a href="http://github.com/davist11/jQuery-One-Page-Nav">jQuery Navmaster</a></li>
+<li><a href="http://flesler.blogspot.com">jQuery ScrollTo</a></li>
+<li><a href="https://github.com/imakewebthings/jquery-waypoints">jQuery Waypoint</a></li>
+<li><a href="https://github.com/carhartl/jquery-cookie">jQuery Cookie</a></li>
+<li><a href="https://github.com/jboesch/Gritter">Gritter Notifications</a></li>
+<li><a href="http://handlebarsjs.com/">Handlebars.js</a> </li>
+<li><a href="http://github.com/jsoma/tabletop">Tabletop.js</a></li>
+<li><a href="http://benalman.com/projects/jquery-resize-plugin/">jQuery resize event</a></li>
+<li><a href="https://github.com/wnyc/Timeline">Timeline</a></li>
+<li><a href="http://toopay.github.io/bootstrap-markdown/">Bootstrap Markdown</a></li>
+</ol>
+<h1>Structure of HTML files</h1>
+<p>The basic structure of the HTML theme is as follows</p>
+<pre class="prettyprint linenums"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+&lt;meta http-equiv=&quot;content-type&quot; content=&quot;text/html; charset=UTF-8&quot;&gt;
+&lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;title&gt;Cloud Admin | Page Title&lt;/title&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+&lt;meta name=&quot;description&quot; content=&quot;&quot;&gt;
+&lt;meta name=&quot;author&quot; content=&quot;&quot;&gt;
+&lt;!-- STYLESHEETS --&gt;
+&lt;!-- FONTS --&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;!-- HEADER --&gt;
+    &lt;header id=&quot;header&quot;&gt;&lt;/header&gt;
+    &lt;!-- PAGE --&gt;
+    &lt;div id=&quot;page&quot;&gt;
+        &lt;!-- SIDEBAR --&gt;
+        &lt;!-- MAIN CONTENT --&gt;
+    &lt;/div&gt;
+&lt;!-- JAVASCRIPTS --&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<p>For convenience, a blank page has been added. It can be found under <strong><em>OTHER PAGES - BLANK PAGE</em></strong> in the Dashboard Sidebar.</p>
+<p><strong><em>Please note</em></strong>: Page content should go under <code>&lt;div id=&quot;main-content&quot;&gt;</code> after <code>&lt;!-- /PAGE HEADER --&gt;</code></p>
+<h1>Standards followed</h1>
+<ul>
+<li>In each HTML page start of each section is marked as <code>&lt;!-- SECTION NAME --&gt;</code></li>
+<li>In each HTML page end of each section is marked as <code>&lt;!-- /SECTION NAME --&gt;</code></li>
+</ul>
+<p>So it's easy to find a particular section inside an HTML. <em><strong>E.g.</strong> if you want to find the start of the sidebar, search for</em> <code>&lt;!-- SIDEBAR --&gt;</code></p>
+<h1>Including fonts</h1>
+<p>Include fonts under <code>&lt;head&gt;</code> as follows</p>
+<pre class="prettyprint linenums"><code>&lt;link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'&gt;
+</code></pre>
+
+<h1>Choosing Theme Skins</h1>
+<p>Theme skins are found under <strong><em>Cloud Admin - css - themes</em></strong></p>
+<ul>
+<li><strong>Deafult</strong> Skin - Add <code>&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot;  href=&quot;css/themes/default.less&quot; id=&quot;skin-switcher&quot; &gt;</code> under <code>&lt;head&gt;</code> </li>
+<li><strong>Earth</strong> Skin - Add <code>&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot;  href=&quot;css/themes/earth.less&quot; id=&quot;skin-switcher&quot; &gt;</code> under <code>&lt;head&gt;</code></li>
+<li><strong>Graphite</strong> Skin - Add <code>&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot;  href=&quot;css/themes/graphite.less&quot; id=&quot;skin-switcher&quot; &gt;</code> under <code>&lt;head&gt;</code></li>
+<li><strong>Nature</strong> Skin - Add <code>&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot;  href=&quot;css/themes/nature.less&quot; id=&quot;skin-switcher&quot; &gt;</code> under <code>&lt;head&gt;</code></li>
+<li><strong>Night</strong> Skin - Add <code>&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot;  href=&quot;css/themes/night.less&quot; id=&quot;skin-switcher&quot; &gt;</code> under <code>&lt;head&gt;</code></li>
+<li><strong>Utopia</strong> Skin - Add <code>&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot;  href=&quot;css/themes/utopia.less&quot; id=&quot;skin-switcher&quot; &gt;</code> under <code>&lt;head&gt;</code></li>
+</ul>
+<h1>Navbar</h1>
+<h2>Changing the logo</h2>
+<p>To change the logo</p>
+<ol>
+<li>Create a new logo preferably in 4x1 ratio and in transparent PNG for best display E.g. 400x100, 800x200 etc.</li>
+<li>Go to the folder <strong><em>Cloud Admin - img - logo</em></strong></li>
+<li>Save your logo as <em>logo.png</em></li>
+</ol>
+<p>A PSD file (<em>Cloud.psd</em>) has been included as a template under the same folder.</p>
+<h2>Make the Navbar fixed</h2>
+<ol>
+<li>Find <code>&lt;!-- HEADER --&gt;</code> </li>
+<li>Add the following line for header <code>&lt;header class=&quot;navbar clearfix navbar-fixed-top&quot; id=&quot;header&quot;&gt;</code></li>
+</ol>
+<h2>Add items to Navbar Left</h2>
+<p>Currently the Navbar Left sports the following items:</p>
+<ol>
+<li>Team Status</li>
+<li>Skins</li>
+</ol>
+<p>To add a new item</p>
+<ol>
+<li>Find <code>&lt;!-- NAVBAR LEFT --&gt;</code> or <code>&lt;ul class=&quot;nav navbar-nav pull-left hidden-xs&quot; id=&quot;navbar-left&quot;&gt;</code></li>
+<li>Add a new <code>&lt;li class=&quot;dropdown&gt;&quot;</code> </li>
+</ol>
+<p><strong>Help</strong>: Know more about <a href="http://getbootstrap.com/components/#dropdowns">Bootstrap Dropdowns</a></p>
+<h2>Add items to Navbar Right</h2>
+<p>Currently the Navbar Left sports the following items:</p>
+<ol>
+<li>Notifications</li>
+<li>Messages</li>
+<li>To Do</li>
+</ol>
+<p>To add a new item</p>
+<ol>
+<li>Find <code>&lt;!-- BEGIN TOP NAVIGATION MENU --&gt;</code> or <code>&lt;ul class=&quot;nav navbar-nav pull-right&quot;&gt;</code></li>
+<li>Add a new <code>&lt;li class=&quot;dropdown&gt;&quot;</code> </li>
+</ol>
+<p><strong>Help</strong>: Know more about <a href="http://getbootstrap.com/components/#dropdowns">Bootstrap Dropdowns</a></p>
+<h2>Add sub-items to Notification</h2>
+<p>The format of a new notification is as follows</p>
+<pre class="prettyprint linenums"><code>&lt;li&gt;
+    &lt;a href=&quot;#&quot;&gt;
+        &lt;span class=&quot;label label-success&quot;&gt;&lt;i class=&quot;fa fa-user&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+        &lt;span class=&quot;body&quot;&gt;
+            &lt;span class=&quot;message&quot;&gt;New user registered.&lt;/span&gt;
+            &lt;span class=&quot;time&quot;&gt;
+                &lt;i class=&quot;fa fa-clock-o&quot;&gt;&lt;/i&gt;
+                &lt;span&gt;Just now&lt;/span&gt;
+            &lt;/span&gt;
+        &lt;/span&gt;
+    &lt;/a&gt;
+&lt;/li&gt;
+</code></pre>
+
+<h2>Add sub-items to Messages</h2>
+<p>The format of a new message is as follows</p>
+<pre class="prettyprint linenums"><code>&lt;li&gt;
+    &lt;a href=&quot;#&quot;&gt;
+        &lt;img src=&quot;img/avatars/avatar2.jpg&quot; alt=&quot;&quot; /&gt;
+        &lt;span class=&quot;body&quot;&gt;
+            &lt;span class=&quot;from&quot;&gt;Lisa Wong&lt;/span&gt;
+            &lt;span class=&quot;message&quot;&gt;
+            Vivamus sed auctor nibh congue nibh.Nibh auctor nibh congue nibh...
+            &lt;/span&gt; 
+            &lt;span class=&quot;time&quot;&gt;
+                &lt;i class=&quot;fa fa-clock-o&quot;&gt;&lt;/i&gt;
+                &lt;span&gt;Just Now&lt;/span&gt;
+            &lt;/span&gt;
+        &lt;/span&gt;
+    &lt;/a&gt;
+&lt;/li&gt;
+</code></pre>
+
+<h2>Add sub-items to To Do</h2>
+<p>The format of a new todo is as follows</p>
+<pre class="prettyprint linenums"><code>&lt;li&gt;
+    &lt;a href=&quot;#&quot;&gt;
+        &lt;span class=&quot;header clearfix&quot;&gt;
+            &lt;span class=&quot;pull-left&quot;&gt;Software Update&lt;/span&gt;
+            &lt;span class=&quot;pull-right&quot;&gt;60%&lt;/span&gt;
+        &lt;/span&gt;
+        &lt;div class=&quot;progress&quot;&gt;
+          &lt;div class=&quot;progress-bar progress-bar-success&quot; role=&quot;progressbar&quot; aria-valuenow=&quot;60&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot; style=&quot;width: 60%;&quot;&gt;
+            &lt;span class=&quot;sr-only&quot;&gt;60% Complete&lt;/span&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/a&gt;
+&lt;/li&gt;
+</code></pre>
+
+<h2>Change image/details of dashboard owner</h2>
+<p>To change image of dashboard owner displayed on the navbar extreme right, do the following:</p>
+<ol>
+<li>Find <code>&lt;!-- BEGIN USER LOGIN DROPDOWN --&gt;</code></li>
+<li>
+<p>The basic markup is as follows</p>
+<pre class="prettyprint linenums"><code>&lt;li class=&quot;dropdown user&quot; id=&quot;header-user&quot;&gt;
+    &lt;a href=&quot;#&quot; class=&quot;dropdown-toggle&quot; data-toggle=&quot;dropdown&quot;&gt;
+        &lt;img alt=&quot;&quot; src=&quot;img/avatars/avatar3.jpg&quot; /&gt;
+        &lt;span class=&quot;username&quot;&gt;John Doe&lt;/span&gt;
+        &lt;i class=&quot;fa fa-angle-down&quot;&gt;&lt;/i&gt;
+    &lt;/a&gt;
+    &lt;ul class=&quot;dropdown-menu&quot;&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;i class=&quot;fa fa-user&quot;&gt;&lt;/i&gt; My Profile&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;i class=&quot;fa fa-cog&quot;&gt;&lt;/i&gt; Account Settings&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;i class=&quot;fa fa-eye&quot;&gt;&lt;/i&gt; Privacy Settings&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;login.html&quot;&gt;&lt;i class=&quot;fa fa-power-off&quot;&gt;&lt;/i&gt; Log Out&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/li&gt;
+</code></pre>
+
+</li>
+<li>Here change the avatar, username &amp; options. You may add/edit/delete items.</li>
+</ol>
+<h2>Managing the Team Status Slidedown Menu</h2>
+<p>The team status starts from <code>&lt;!-- TEAM STATUS --&gt;</code></p>
+<p>The basic markup of a single item inside the switcher is as follows:</p>
+<pre class="prettyprint linenums"><code>            &lt;li&gt;
+              &lt;a href=&quot;javascript:void(0);&quot;&gt;
+              &lt;span class=&quot;image&quot;&gt;
+                  &lt;img src=&quot;img/avatars/avatar1.jpg&quot; alt=&quot;&quot; /&gt;
+              &lt;/span&gt;
+              &lt;span class=&quot;title&quot;&gt;
+                Max Doe
+              &lt;/span&gt;
+                &lt;div class=&quot;progress&quot;&gt;
+                  &lt;div class=&quot;progress-bar progress-bar-success&quot; style=&quot;width: 15%&quot;&gt;
+                    &lt;span class=&quot;sr-only&quot;&gt;35% Complete (success)&lt;/span&gt;
+                  &lt;/div&gt;
+                  &lt;div class=&quot;progress-bar progress-bar-warning&quot; style=&quot;width: 40%&quot;&gt;
+                    &lt;span class=&quot;sr-only&quot;&gt;20% Complete (warning)&lt;/span&gt;
+                  &lt;/div&gt;
+                  &lt;div class=&quot;progress-bar progress-bar-danger&quot; style=&quot;width: 20%&quot;&gt;
+                    &lt;span class=&quot;sr-only&quot;&gt;10% Complete (danger)&lt;/span&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;span class=&quot;status&quot;&gt;
+                    &lt;div class=&quot;field&quot;&gt;
+                        &lt;span class=&quot;badge badge-green&quot;&gt;2&lt;/span&gt; completed
+                        &lt;span class=&quot;pull-right fa fa-check&quot;&gt;&lt;/span&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;field&quot;&gt;
+                        &lt;span class=&quot;badge badge-orange&quot;&gt;8&lt;/span&gt; in-progress
+                        &lt;span class=&quot;pull-right fa fa-adjust&quot;&gt;&lt;/span&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;field&quot;&gt;
+                        &lt;span class=&quot;badge badge-red&quot;&gt;4&lt;/span&gt; pending
+                        &lt;span class=&quot;pull-right fa fa-list-ul&quot;&gt;&lt;/span&gt;
+                    &lt;/div&gt;
+                &lt;/span&gt;
+              &lt;/a&gt;
+            &lt;/li&gt;
+</code></pre>
+
+<p><strong><em>Please Note:</em></strong> To mark an item as current change the top <code>&lt;li&gt;</code> to <code>&lt;li class=&quot;current&quot;&gt;</code></p>
+<h1>Sidebar</h1>
+<p>The sidebar can be found at <code>&lt;!-- SIDEBAR --&gt;</code></p>
+<h2>Adding a new top-level item to the sidebar</h2>
+<p>The basic structure of a top-level item is as follows:</p>
+<pre class="prettyprint linenums"><code>&lt;li&gt;
+    &lt;a href=&quot;index.html&quot;&gt;
+        &lt;i class=&quot;fa fa-tachometer fa-fw&quot;&gt;&lt;/i&gt; &lt;span class=&quot;menu-text&quot;&gt;Dashboard&lt;/span&gt;
+    &lt;/a&gt;                    
+&lt;/li&gt;
+</code></pre>
+
+<h3>To make active</h3>
+<pre class="prettyprint linenums"><code>&lt;li class=&quot;active&quot;&gt;
+    &lt;a href=&quot;index.html&quot;&gt;
+        &lt;i class=&quot;fa fa-tachometer fa-fw&quot;&gt;&lt;/i&gt; &lt;span class=&quot;menu-text&quot;&gt;Dashboard&lt;/span&gt;
+    &lt;/a&gt;                    
+&lt;/li&gt;
+</code></pre>
+
+<h2>Adding an top-level item that has a sub-item</h2>
+<pre class="prettyprint linenums"><code>&lt;li class=&quot;has-sub&quot;&gt;
+    &lt;a href=&quot;javascript:;&quot; class=&quot;&quot;&gt;
+        &lt;i class=&quot;fa fa-columns fa-fw&quot;&gt;&lt;/i&gt; &lt;span class=&quot;menu-text&quot;&gt;Layouts&lt;/span&gt;
+        &lt;span class=&quot;arrow&quot;&gt;&lt;/span&gt;
+    &lt;/a&gt;
+    &lt;ul class=&quot;sub&quot;&gt;
+        &lt;li&gt;&lt;a class=&quot;&quot; href=&quot;mini_sidebar.html&quot;&gt;&lt;span class=&quot;sub-menu-text&quot;&gt;Mini Sidebar&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a class=&quot;&quot; href=&quot;fixed_header.html&quot;&gt;&lt;span class=&quot;sub-menu-text&quot;&gt;Fixed Header&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a class=&quot;&quot; href=&quot;fixed_header_sidebar.html&quot;&gt;&lt;span class=&quot;sub-menu-text&quot;&gt;Fixed Header &amp; Sidebar&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/li&gt;
+</code></pre>
+
+<h3>To make a sub-item current</h3>
+<pre class="prettyprint linenums"><code>&lt;li class=&quot;has-sub active&quot;&gt;
+    &lt;a href=&quot;javascript:;&quot; class=&quot;&quot;&gt;
+        &lt;i class=&quot;fa fa-columns fa-fw&quot;&gt;&lt;/i&gt; &lt;span class=&quot;menu-text&quot;&gt;Layouts&lt;/span&gt;
+        &lt;span class=&quot;arrow open&quot;&gt;&lt;/span&gt;
+        &lt;span class=&quot;selected&quot;&gt;&lt;/span&gt;
+    &lt;/a&gt;
+    &lt;ul class=&quot;sub&quot;&gt;
+        &lt;li class=&quot;current&quot;&gt;&lt;a class=&quot;&quot; href=&quot;mini_sidebar.html&quot;&gt;&lt;span class=&quot;sub-menu-text&quot;&gt;Mini Sidebar&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a class=&quot;&quot; href=&quot;fixed_header.html&quot;&gt;&lt;span class=&quot;sub-menu-text&quot;&gt;Fixed Header&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a class=&quot;&quot; href=&quot;fixed_header_sidebar.html&quot;&gt;&lt;span class=&quot;sub-menu-text&quot;&gt;Fixed Header &amp; Sidebar&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/li&gt;
+</code></pre>
+
+<h2>Making the Sidebar fixed</h2>
+<ol>
+<li>Find <code>&lt;!-- HEADER --&gt;</code> </li>
+<li>Add the following line for header <code>&lt;header class=&quot;navbar clearfix navbar-fixed-top&quot; id=&quot;header&quot;&gt;</code></li>
+<li>Find <code>&lt;!-- SIDEBAR --&gt;</code></li>
+<li>Add the following line for sidebar <code>&lt;div id=&quot;sidebar&quot; class=&quot;sidebar sidebar-fixed&quot;&gt;</code></li>
+</ol>
+<h1>CSS Helper Utilities</h1>
+<p>Helper classes are written in CSS to make cosmetic changes to the theme a lot easier. These classes can be included anywhere in the theme HTML files to get the desired effect.</p>
+<p>p.s. Classes are included as <code>class=&quot;classname&quot;</code></p>
+<h2>Font Weights</h2>
+<p>To change the <code>font-weight</code> of any element, add the following classes</p>
+<ul>
+<li><code>font-300</code> for font-weight: 300</li>
+<li><code>font-400</code> for font-weight: 400</li>
+<li><code>font-600</code> for font-weight: 600</li>
+<li><code>font-700</code> for font-weight: 700</li>
+</ul>
+<h2>Font Size</h2>
+<p>To change the <code>font-size</code> of any element, add the following classes</p>
+<ul>
+<li><code>font-11</code> for font-size: 11</li>
+<li><code>font-13</code> for font-size: 13</li>
+<li><code>font-14</code> for font-size: 14</li>
+</ul>
+<h2>Font Colors</h2>
+<p>To change the <code>color</code> of any element, add the following classes</p>
+<ul>
+<li><code>text-dark</code> for dark color</li>
+<li><code>text-purple</code> for purple color</li>
+<li><code>text-pink</code> for pink color</li>
+<li><code>text-yellow</code> for yellow color</li>
+<li><code>text-green</code> for green color</li>
+</ul>
+<h2>Font Awesome Icons</h2>
+<p>To change the icon size to 1.5em use</p>
+<ul>
+<li><code>fa-1x</code> for font-size: 1.5em</li>
+<li>For official tweaks visit <a href="http://fortawesome.github.io/Font-Awesome/">Font Awesome Official Doc</a></li>
+</ul>
+<h2>Adding blank spaces</h2>
+<p>We have provided a quick and easy way to add spaces in the theme. Just add the following</p>
+<ul>
+<li><code>divide-10</code> to add 10px of horizontal blank space</li>
+<li><code>divide-12</code> to add 12px of horizontal blank space</li>
+<li><code>divide-20</code> to add 20px of horizontal blank space</li>
+<li><code>divide-40</code> to add 40px of horizontal blank space</li>
+<li><code>divide-100</code> to add 100px of horizontal blank space</li>
+</ul>
+<h2>Adding a separator</h2>
+<p>A separator is an enhanced <code>&lt;hr&gt;</code></p>
+<p>To add use <code>class=&quot;separator&quot;</code></p>
+<h2>Adding patterns</h2>
+<p>Two type of patterns can be added to elements viz. lines and dots</p>
+<ul>
+<li>Lines <code>class=&quot;pattern&quot;</code></li>
+<li>Dots <code>class=&quot;dots&quot;</code></li>
+</ul>
+<h2>Hiding HTML elements for smaller screens</h2>
+<ul>
+<li>
+<p>While Bootstrap's original <code>hidden-xs</code>, <code>hidden-sm</code> is great, they can sometime have alignment issues. Hence, you can use a custom class named <code>hidden-inline-mobile</code> that will fix it.</p>
+</li>
+<li>
+<p><code>hidden-inline-mobile</code> will hide any HTML element for screens smaller than width : 768px</p>
+</li>
+</ul>
+<h1>How to handle scripts (jQuery)</h1>
+<ul>
+<li>
+<p>At the bottom of each page, the following code can be found</p>
+<pre class="prettyprint linenums"><code>&lt;script&gt;
+    jQuery(document).ready(function() {     
+        App.setPage(&quot;page_name&quot;);  //Set current page
+        App.init(); //Initialise plugins and elements
+    });
+&lt;/script&gt;
+</code></pre>
+
+</li>
+<li>Here replace <code>page_name</code> with the current pagename.</li>
+</ul>
+<p>The main script can be found under <strong><em>Cloud Admin - js - script.js</em></strong></p>
+<p>Here under the <code>init</code> function, all page specific functions are specified.
+To add a new page or function to an existing page, do the following:</p>
+<ol>
+<li>Open <strong><em>script.js</em></strong></li>
+<li>Find <code>init: function ()</code></li>
+<li>
+<p>Under the <code>init</code> function, find your pagename or add a new block</p>
+<pre class="prettyprint linenums"><code>    if (App.isPage(&quot;page_name&quot;)) {
+        handleSomething(); //Function to handle something
+    }
+</code></pre>
+
+</li>
+<li>
+<p>Now add your function <code>handleSomething()</code> under <code>var App = function ()</code> (which is the first line of <strong><em>script.js</em></strong>. Add a new function in the following format</p>
+<pre class="prettyprint linenums"><code>/*-----------------------------------------------------------*/
+/*  Comment to identify function
+/*-----------------------------------------------------------*/
+var handleSomething = function () {
+    //Your javascript code goes here
+}
+</code></pre>
+
+</li>
+</ol>
+<h1>Buttons</h1>
+<h2>Button Colors</h2>
+<ul>
+<li><code>btn-default</code> - <button class="btn btn-default">Default Button</button></li>
+<li><code>btn-primary</code> - <button class="btn btn-primary">Primary Button</button></li>
+<li><code>btn-info</code> - <button class="btn btn-info">Info Button</button></li>
+<li><code>btn-success</code> - <button class="btn btn-success">Success Button</button></li>
+<li><code>btn-warning</code> - <button class="btn btn-warning">Warning Button</button></li>
+<li><code>btn-danger</code> - <button class="btn btn-danger">Danger Button</button></li>
+<li><code>btn-inverse</code> - <button class="btn btn-inverse">Inverse Button</button></li>
+<li><code>btn-link</code> - <button class="btn btn-link">Link Button</button></li>
+<li><code>btn-purple</code> - <button class="btn btn-purple">Purple Button</button></li>
+<li><code>btn-pink</code> - <button class="btn btn-pink">Pink Button</button></li>
+<li><code>btn-grey</code> - <button class="btn btn-grey">Grey Button</button></li>
+<li><code>btn-light-grey</code> - <button class="btn btn-light-grey">Light Grey Button</button></li>
+<li><code>btn-yellow</code> - <button class="btn btn-yellow">Gold Button</button></li>
+</ul>
+<h2>Button with Icons</h2>
+<p>Just add <code>&lt;i class=&quot;fa fa-pencil&quot;&gt;&lt;/i&gt;</code> before the button name to get Font Awesome Icons inside buttons. E.g.</p>
+<pre class="prettyprint linenums"><code>&lt;button class=&quot;btn btn-default&quot;&gt;&lt;i class=&quot;fa fa-pencil&quot;&gt;&lt;/i&gt; Write&lt;/button&gt;
+</code></pre>
+
+<h2>Stateful Buttons</h2>
+<p>Include <code>handleStatefulButtons();</code> in <strong><em>script.js</em></strong></p>
+<h2>Arrowed Labels</h2>
+<p>To add arrows do the following:</p>
+<ul>
+<li>The basic syntax of arrowed label is as follows <code>&lt;span class=&quot;label label-primary arrow-X arrow-X-right&quot;&gt;Notice&lt;/span&gt;</code> where <code>X</code> can be <code>in</code> or <code>out</code>.</li>
+<li>E.g. <code>&lt;span class=&quot;label label-info arrow-out arrow-out-right&quot;&gt;Notice&lt;/span&gt;</code></li>
+<li>E.g. <code>&lt;span class=&quot;label label-info arrow-out arrow-in-right&quot;&gt;Notice&lt;/span&gt;</code></li>
+<li>E.g. <code>&lt;span class=&quot;label label-info arrow-in arrow-out-right&quot;&gt;Notice&lt;/span&gt;</code> etc.</li>
+</ul>
+<h2>Handle Toggle Buttons</h2>
+<ul>
+<li>Include <code>handleToggle();</code> in <strong><em>script.js</em></strong></li>
+</ul>
+<h2>Left &amp; Right Labelled Big Buttons</h2>
+<ul>
+<li>
+<p>For Right Labeled Button</p>
+<pre class="prettyprint linenums"><code>&lt;a class=&quot;btn btn-danger btn-icon input-block-level&quot; href=&quot;javascript:void(0);&quot;&gt;
+    &lt;i class=&quot;fa fa-google-plus-square fa-2x&quot;&gt;&lt;/i&gt;
+    &lt;div&gt;Google Plus&lt;/div&gt;
+    &lt;span class=&quot;label label-right label-warning&quot;&gt;4&lt;/span&gt;
+&lt;/a&gt;
+</code></pre>
+
+</li>
+<li>
+<p>For Left Labeled Button</p>
+<pre class="prettyprint linenums"><code>&lt;a class=&quot;btn btn-light-grey btn-icon input-block-level&quot; href=&quot;javascript:void(0);&quot;&gt;
+    &lt;i class=&quot;fa fa-instagram fa-2x&quot;&gt;&lt;/i&gt;
+    &lt;div&gt;Instagram&lt;/div&gt;
+    &lt;span class=&quot;label label-left label-primary&quot;&gt;3&lt;/span&gt;
+&lt;/a&gt;
+</code></pre>
+
+</li>
+</ul>
+<h1>Calendar</h1>
+<h2>Initiate the calendar</h2>
+<p>To initiate the calendar do the following:</p>
+<ol>
+<li>Include <code>&lt;div id='calendar'&gt;&lt;/div&gt;</code> in your HTML where you want the calendar to appear.</li>
+<li>Include <code>handleCalendar();</code> in <strong><em>script.js</em></strong></li>
+</ol>
+<h2>Include draggable events</h2>
+<ol>
+<li>
+<p>Include the following code to display create event section</p>
+<pre class="prettyprint linenums"><code>&lt;div class=&quot;input-group&quot;&gt;
+     &lt;input type=&quot;text&quot; value=&quot;&quot; class=&quot;form-control&quot; placeholder=&quot;Event Event Title...&quot; id=&quot;event-title&quot; /&gt;
+     &lt;span class=&quot;input-group-btn&quot;&gt;
+        &lt;a href=&quot;javascript:;&quot; id=&quot;add-event&quot; class=&quot;btn btn-success&quot;&gt;Add Event&lt;/a&gt;
+     &lt;/span&gt;
+&lt;/div&gt;
+&lt;div class=&quot;divide-20&quot;&gt;&lt;/div&gt;
+&lt;div id='external-events'&gt;
+    &lt;h4&gt;Draggable Events&lt;/h4&gt;
+    &lt;div id=&quot;event-box&quot;&gt;
+        &lt;div class='external-event'&gt;My Event 1&lt;/div&gt;
+        &lt;div class='external-event'&gt;My Event 2&lt;/div&gt;
+        &lt;div class='external-event'&gt;My Event 3&lt;/div&gt;
+        &lt;div class='external-event'&gt;My Event 4&lt;/div&gt;
+        &lt;div class='external-event'&gt;My Event 5&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;p&gt;
+    &lt;input type='checkbox' id='drop-remove' class=&quot;uniform&quot;/&gt; &lt;label for='drop-remove'&gt;remove after drop&lt;/label&gt;
+    &lt;/p&gt;
+&lt;/div&gt;
+</code></pre>
+
+</li>
+<li>Include <code>handleUniform();</code> too in <strong><em>script.js</em></strong> if you want Uniform like styling.</li>
+</ol>
+<p><strong><em>Please Note</em></strong></p>
+<ul>
+<li>Please visit plugin website for more examples, usage &amp; syntax.</li>
+<li>Please check <strong><em>getting_started.html</em></strong> for link to plugin documentation.</li>
+</ul>
+<h1>Dropzone File Upload</h1>
+<ol>
+<li>
+<p>Include the following HTML</p>
+<pre class="prettyprint linenums"><code>&lt;form action=&quot;//file-arrow-circle-o-up&quot; class=&quot;dropzone&quot; id=&quot;my-awesome-dropzone&quot;&gt;
+    &lt;div class=&quot;fallback&quot;&gt;
+            &lt;input name=&quot;file&quot; type=&quot;file&quot; multiple=&quot;&quot; /&gt;
+    &lt;/div&gt;
+&lt;/form&gt;
+</code></pre>
+
+</li>
+<li>
+<p>Include <code>handleDropzone();</code> in <strong><em>script.js</em></strong></p>
+</li>
+</ol>
+<h1>Dynamic Tables</h1>
+<ul>
+<li>Please visit plugin website for more examples, usage &amp; syntax.</li>
+<li>Please check <strong><em>getting_started.html</em></strong> for link to plugin documentation.</li>
+</ul>
+<h1>Bootbox Modals</h1>
+<ol>
+<li>To call bootbox modals, simply call <code>bootbox.alert(&quot;Hello World&quot;);</code> from javascript.</li>
+<li>For more examples, visit Bootbox plugin website.</li>
+</ol>
+<h1>Tooltips</h1>
+<ul>
+<li>Include <code>handleHomePageTooltips();</code> to activate tooltips</li>
+</ul>
+<p>The following options are available</p>
+<ul>
+<li><code>tip</code> - At top</li>
+<li><code>tip-left</code> - Left</li>
+<li><code>tip-right</code> - Right</li>
+<li><code>tip-bottom</code> - Bottom</li>
+</ul>
+<p>Add these to your HTML element as e.g. <code>class=&quot;tip-left&quot;</code></p>
+<h1>Popovers</h1>
+<p>Normal <a href="http://getbootstrap.com/javascript/#popovers">Bootstrap popovers</a> are made simpler:</p>
+<ul>
+<li>Include <code>handlePopovers();</code> in your <strong><em>script.js</em></strong> </li>
+<li>Now add <code>class=&quot;pop-hover&quot;</code> in your element for On-Hover activation</li>
+<li>Now add <code>class=&quot;pop-left&quot;</code> in your element for left popover</li>
+<li>Now add <code>class=&quot;pop&quot;</code> in your element for right popover</li>
+<li>Now add <code>class=&quot;pop-top&quot;</code> in your element for top popover</li>
+<li>Now add <code>class=&quot;pop-bottom&quot;</code> in your element for bottom popover</li>
+</ul>
+<h1>Ajax Loaders</h1>
+<p>All the Ajax Loaders can be found under <strong><em>Cloud Admin - img - loaders</em></strong></p>
+<h1>Magic Suggest</h1>
+<p>Some examples are included under <code>handleMagicSuggest();</code> under <strong><em>script.js</em></strong></p>
+<p>Please refer to Magic Suggest website for more examples</p>
+<h1>Smart Timeago</h1>
+<p>Refer to <code>handleTimeAgo()</code> under <strong><em>script.js</em></strong> for examples</p>
+<ul>
+<li>The basic syntax to activate timeago is as follows: <code>jQuery(&quot;abbr.timeago&quot;).timeago();</code></li>
+<li>Mention the time inside <code>&lt;abbr&gt;&lt;/abbr&gt;</code> in your HTML code</li>
+</ul>
+<h1>Date and Time Picker</h1>
+<p>To activate datepicker do the following:</p>
+<ul>
+<li>Add input in your HTML e.g. <code>&lt;input  class=&quot;form-control datepicker&quot; type=&quot;text&quot; name=&quot;regular&quot; size=&quot;10&quot;&gt;</code></li>
+<li>
+<p>Initialize with jQuery as </p>
+<pre class="prettyprint linenums"><code>$(&quot;.datepicker&quot;).datepicker({
+    defaultDate: +7,
+    showOtherMonths: true,
+    autoSize: true,
+    appendText: '&lt;span class=&quot;help-block&quot;&gt;(dd-mm-yyyy)&lt;/span&gt;',
+    dateFormat: &quot;dd-mm-yy&quot;
+});
+</code></pre>
+
+</li>
+<li>
+<p>Inline example</p>
+<pre class="prettyprint linenums"><code>$(&quot;.datepicker&quot;).datepicker({
+    inline: true,
+    showOtherMonths: true
+});
+</code></pre>
+
+</li>
+<li>
+<p>Fullscreen datepicker : <code>$(&quot;.datepicker-fullscreen&quot;).pickadate();</code></p>
+</li>
+<li>Fullscreen timepicker : <code>$(&quot;.timepicker-fullscreen&quot;).pickatime();</code></li>
+</ul>
+<h1>Color Picker</h1>
+<p>To activate color picker do the following:</p>
+<ul>
+<li>Add input <code>&lt;input type=&quot;text&quot; name=&quot;regular&quot; class=&quot;form-control colorpicker&quot; value=&quot;#8fff00&quot; data-color-format=&quot;hex&quot;&gt;</code></li>
+<li>
+Init with jQuery as <code>$('.colorpicker').colorpicker();</code>
+`
+</li>
+</ul>
+<h1>Raty</h1>
+<p>There are various way in which Raty can be initialized. The basic syntax is <code>$('#id-name').raty({ score: 3 });</code>.</p>
+<p>Please check plugin website for more examples.</p>
+<h1>Fixed Header</h1>
+<p>To activate fixed header do the following:</p>
+<ol>
+<li>Include <code>&lt;header class=&quot;navbar clearfix navbar-fixed-top&quot; id=&quot;header&quot;&gt;</code> in the header section. </li>
+</ol>
+<h1>Fixed Header &amp; Sidebar</h1>
+<p>To activate fixed header &amp; sidebar do the following:</p>
+<ol>
+<li>Include <code>&lt;header class=&quot;navbar clearfix navbar-fixed-top&quot; id=&quot;header&quot;&gt;</code> in the header section.</li>
+<li>Include <code>handleFixedSidebar();</code> in <strong><em>script.js</em></strong></li>
+<li>Everything else will be taken care of automatically.</li>
+</ol>
+<h1>Flot Charts</h1>
+<ul>
+<li>The examples shown can be found under <strong><em>Cloud Admin - js - charts.js</em></strong></li>
+<li>Please visit plugin website for more examples, usage &amp; syntax.</li>
+<li>Please check <strong><em>getting_started.html</em></strong> for link to plugin documentation.</li>
+</ul>
+<h1>Forms</h1>
+<h1>Typeahead Autocomplete</h1>
+<ol>
+<li>Include <code>&lt;input type=&quot;text&quot; name=&quot;autocomplete&quot; class=&quot;form-control&quot; id=&quot;autocomplete-example&quot;&gt;</code> in your HTML</li>
+<li>Include <code>handleTypeahead();</code> in <strong><em>script.js</em></strong></li>
+</ol>
+<h1>Autosize textarea</h1>
+<ol>
+<li>Include <code>&lt;textarea rows=&quot;3&quot; cols=&quot;5&quot; name=&quot;textarea&quot; class=&quot;autosize form-control&quot;&gt;&lt;/textarea&gt;</code> in your HTML</li>
+<li>Include <code>handleAutosize();</code> in <strong><em>script.js</em></strong></li>
+</ol>
+<h1>Countable textarea</h1>
+<ol>
+<li>Include <code>&lt;textarea rows=&quot;3&quot; cols=&quot;5&quot; name=&quot;textarea&quot; class=&quot;countable form-control&quot; data-limit=&quot;100&quot;&gt;&lt;/textarea&gt; &lt;p class=&quot;help-block&quot;&gt;You have &lt;span id=&quot;counter&quot;&gt;&lt;/span&gt; characters left.&lt;/p&gt;</code> in your HTML</li>
+<li>Include <code>handleCountable();</code> in <strong><em>script.js</em></strong></li>
+</ol>
+<h1>Input Masks</h1>
+<p>Include masks in <code>data-mask=&quot;xyz&quot;</code> where <code>xyz</code> is the mask:</p>
+<pre class="prettyprint linenums"><code>&lt;input type=&quot;text&quot; class=&quot;form-control&quot; data-mask=&quot;99/99/9999&quot;&gt;
+</code></pre>
+
+<h1>Select2</h1>
+<ul>
+<li>Please visit plugin website for more examples, usage &amp; syntax.</li>
+<li>Please check <strong><em>getting_started.html</em></strong> for link to plugin documentation.</li>
+</ul>
+<h1>Uniform</h1>
+<ul>
+<li>Include <code>class=&quot;uniform&quot;</code> to activate Uniform on any element.</li>
+<li>Include <code>handleUniform();</code> in <strong><em>script.js</em></strong></li>
+</ul>
+<h1>Powerful file uplaod</h1>
+<ul>
+<li>Please visit plugin website(bootstrap-fileupload) for more examples, usage &amp; syntax.</li>
+<li>Please check <strong><em>getting_started.html</em></strong> for link to plugin documentation.</li>
+</ul>
+<h1>Gallery</h1>
+<p>The gallery is powered by <strong><em>jQuery Isotope</em></strong> plugin and <strong><em>jQuery Colorbox</em></strong> &amp; custom CSS.</p>
+<ul>
+<li>
+<p>The basic controls of gallery can be included as follows:</p>
+<pre class="prettyprint linenums"><code>&lt;div id=&quot;filter-controls&quot; class=&quot;btn-group&quot;&gt;
+  &lt;!-- LARGER SCREEN MENU --&gt;
+  &lt;div class=&quot;hidden-xs&quot;&gt;
+      &lt;a href=&quot;#&quot; class=&quot;btn btn-default&quot; data-filter=&quot;*&quot;&gt;All&lt;/a&gt;
+      &lt;a href=&quot;#&quot; class=&quot;btn btn-info&quot; data-filter=&quot;.category_1&quot;&gt;Android Apps&lt;/a&gt;
+      &lt;a href=&quot;#&quot; class=&quot;btn btn-danger&quot; data-filter=&quot;.category_2&quot;&gt;iPhone Apps&lt;/a&gt;
+      &lt;a href=&quot;#&quot; class=&quot;btn btn-success&quot; data-filter=&quot;.category_3&quot;&gt;Windows Apps&lt;/a&gt;
+      &lt;a href=&quot;#&quot; class=&quot;btn btn-warning&quot; data-filter=&quot;.category_4&quot;&gt;Web Apps&lt;/a&gt;
+  &lt;/div&gt;
+  &lt;!-- MOBILE MENU --&gt;
+  &lt;div class=&quot;visible-xs&quot;&gt;
+       &lt;select id=&quot;e1&quot; class=&quot;form-control&quot;&gt;
+            &lt;option value=&quot;*&quot;&gt;All&lt;/option&gt;
+            &lt;option value=&quot;.category_1&quot;&gt;Android Apps&lt;/option&gt;
+            &lt;option value=&quot;.category_2&quot;&gt;iPhone Apps&lt;/option&gt;
+            &lt;option value=&quot;.category_3&quot;&gt;Windows Apps&lt;/option&gt;
+            &lt;option value=&quot;.category_4&quot;&gt;Web Apps&lt;/option&gt;
+        &lt;/select&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+</li>
+<li>
+<p>Then include a <code>&lt;div&gt;</code> as follows <code>&lt;div id=&quot;filter-items&quot; class=&quot;row&quot;&gt;</code></p>
+</li>
+<li>
+<p>Under this <code>&lt;div&gt;</code>, each item syntax is as follows:</p>
+<pre class="prettyprint linenums"><code>&lt;div class=&quot;col-md-3 category_1 item&quot;&gt;
+    &lt;div class=&quot;filter-content&quot;&gt;
+        &lt;img src=&quot;img/gallery/1.png&quot; alt=&quot;&quot; class=&quot;img-responsive&quot; /&gt;
+        &lt;div class=&quot;hover-content&quot;&gt;
+            &lt;h4&gt;Image Title&lt;/h4&gt;
+            &lt;a class=&quot;btn btn-success hover-link&quot;&gt;
+                &lt;i class=&quot;fa fa-edit fa-1x&quot;&gt;&lt;/i&gt;
+            &lt;/a&gt;
+            &lt;a class=&quot;btn btn-warning hover-link colorbox-button&quot; href=&quot;img/gallery/1.png&quot; title=&quot;Image Title&quot;&gt;
+                &lt;i class=&quot;fa fa-search-plus fa-1x&quot;&gt;&lt;/i&gt;
+            &lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+</li>
+<li>
+<p>Here you can change the image, buttons etc.</p>
+</li>
+<li>The button <code>&lt;a class=&quot;btn btn-warning hover-link colorbox-button&quot; href=&quot;img/gallery/1.png&quot; title=&quot;Image Title&quot;&gt;</code> activates the Colorbox slideshow.</li>
+<li>Please visit plugin website for more examples, usage &amp; syntax.</li>
+<li>Please check <strong><em>getting_started.html</em></strong> for link to plugin documentation.</li>
+</ul>
+<h1>Google Maps</h1>
+<ul>
+<li>The examples shown in the theme can be accessed at <strong><em>Cloud Admin - js - googlemaps.js</em></strong></li>
+<li>Please visit plugin website for more examples, usage &amp; syntax.</li>
+<li>Please check <strong><em>getting_started.html</em></strong> for link to plugin documentation.</li>
+</ul>
+<h1>jqGrid Plugin</h1>
+<ul>
+<li>Please visit plugin website for more examples, usage &amp; syntax.</li>
+<li>Please check <strong><em>getting_started.html</em></strong> for link to plugin documentation.</li>
+</ul>
+<h1>Mini Sidebar</h1>
+<p>To activate mini sidebar do the following:</p>
+<ol>
+<li>Include <code>collapseSidebar();</code> in <strong><em>script.js</em></strong></li>
+</ol>
+<h1>Nestable Lists</h1>
+<p>The basic syntax of nestable lists is as follows:</p>
+<pre class="prettyprint linenums"><code>&lt;div class=&quot;dd&quot; id=&quot;nestable&quot;&gt;
+    &lt;ol class=&quot;dd-list&quot;&gt;
+        &lt;li class=&quot;dd-item&quot; data-id=&quot;1&quot;&gt;
+            &lt;div class=&quot;dd-handle&quot;&gt;Item 1&lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;dd-item&quot; data-id=&quot;2&quot;&gt;
+            &lt;div class=&quot;dd-handle&quot;&gt;Item 2&lt;/div&gt;
+            &lt;ol class=&quot;dd-list&quot;&gt;
+                &lt;li class=&quot;dd-item&quot; data-id=&quot;3&quot;&gt;&lt;div class=&quot;dd-handle&quot;&gt;Item 3&lt;/div&gt;&lt;/li&gt;
+                &lt;li class=&quot;dd-item&quot; data-id=&quot;4&quot;&gt;&lt;div class=&quot;dd-handle&quot;&gt;Item 4&lt;/div&gt;&lt;/li&gt;
+                &lt;li class=&quot;dd-item&quot; data-id=&quot;5&quot;&gt;
+                    &lt;div class=&quot;dd-handle&quot;&gt;Item 5&lt;/div&gt;
+                    &lt;ol class=&quot;dd-list&quot;&gt;
+                        &lt;li class=&quot;dd-item&quot; data-id=&quot;6&quot;&gt;&lt;div class=&quot;dd-handle&quot;&gt;Item 6&lt;/div&gt;&lt;/li&gt;
+                        &lt;li class=&quot;dd-item&quot; data-id=&quot;7&quot;&gt;&lt;div class=&quot;dd-handle&quot;&gt;Item 7&lt;/div&gt;&lt;/li&gt;
+                        &lt;li class=&quot;dd-item&quot; data-id=&quot;8&quot;&gt;&lt;div class=&quot;dd-handle&quot;&gt;Item 8&lt;/div&gt;&lt;/li&gt;
+                    &lt;/ol&gt;
+                &lt;/li&gt;
+                &lt;li class=&quot;dd-item&quot; data-id=&quot;9&quot;&gt;&lt;div class=&quot;dd-handle&quot;&gt;Item 9&lt;/div&gt;&lt;/li&gt;
+                &lt;li class=&quot;dd-item&quot; data-id=&quot;10&quot;&gt;&lt;div class=&quot;dd-handle&quot;&gt;Item 10&lt;/div&gt;&lt;/li&gt;
+            &lt;/ol&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;dd-item&quot; data-id=&quot;11&quot;&gt;
+            &lt;div class=&quot;dd-handle&quot;&gt;Item 11&lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;dd-item&quot; data-id=&quot;12&quot;&gt;
+            &lt;div class=&quot;dd-handle&quot;&gt;Item 12&lt;/div&gt;
+        &lt;/li&gt;
+    &lt;/ol&gt;
+&lt;/div&gt;
+</code></pre>
+
+<ul>
+<li>Include <code>handleNestableLists();</code> in <strong><em>script.js</em></strong></li>
+</ul>
+<h1>Hubspot Notifications</h1>
+<ul>
+<li>
+<p>Kindly check with the official plugin documentation for examples, usage and more.</p>
+</li>
+<li>
+<p>Please check <strong><em>getting_started.html</em></strong> for link to plugin documentation.</p>
+</li>
+</ul>
+<h1>Dynamic Pie Charts</h1>
+<ol>
+<li>
+<p>Include the following HTML</p>
+<div class="col-md-3 text-center">
+	<div id="pie_1" class="piechart padding-bottom-20" data-percent="86">
+		<span class="percent"></span>
+	</div>
+<pre class="prettyprint linenums"><code>&lt;div id=&quot;js_update_1&quot; class=&quot;btn btn-default&quot;&gt;Update chart&lt;/div&gt;
+&lt;div class=&quot;divide-12&quot;&gt;&lt;/div&gt;
+</code></pre>
+
+<p></div></p>
+</li>
+<li>
+<p>Include <code>handleEasyPie();</code> in <strong><em>script.js</em></strong></p>
+</li>
+</ol>
+<h1>Growing graph</h1>
+<ul>
+<li>The graph is an advanced Flot Chart.</li>
+<li>The example can be seen under <strong><em>Cloud Admin - js - charts.js</em></strong></li>
+<li>Specially note <code>grow: { active: true, duration: 1500 }</code> inside <code>initOtherCharts</code></li>
+</ul>
+<h1>Sparklines</h1>
+<ul>
+<li>Include <code>handleSparkline();</code> in <strong><em>script.js</em></strong></li>
+<li>Please visit plugin website for more examples, usage &amp; syntax.</li>
+<li>Please check <strong><em>getting_started.html</em></strong> for link to plugin documentation.</li>
+</ul>
+<h1>Just Gage - Gauge Styles</h1>
+<ul>
+<li>Basic HTML syntax is simply a div with a distinct id e.g. <code>&lt;div id=&quot;gage1&quot;&gt;&lt;/div&gt;</code></li>
+<li>Include <code>handleGage();</code> in <strong><em>script.js</em></strong></li>
+<li>Please visit plugin website for more examples, usage &amp; syntax.</li>
+<li>Please check <strong><em>getting_started.html</em></strong> for link to plugin documentation.</li>
+</ul>
+<h1>Bootstrap Editor with Keyboard Shortcuts</h1>
+<p>To activate editor do the following:</p>
+<ol>
+<li>
+<p>Add to HTML </p>
+<div id="alerts"></div>
+<pre class="prettyprint linenums"><code>&lt;div class=&quot;btn-toolbar&quot; data-role=&quot;editor-toolbar&quot; data-target=&quot;#editor&quot;&gt;
+  &lt;div class=&quot;btn-group&quot;&gt;
+    &lt;a class=&quot;btn btn-default dropdown-toggle&quot; data-toggle=&quot;dropdown&quot; title=&quot;Font&quot;&gt;&lt;i class=&quot;fa fa-font&quot;&gt;&lt;/i&gt;&lt;b class=&quot;caret&quot;&gt;&lt;/b&gt;&lt;/a&gt;
+      &lt;ul class=&quot;dropdown-menu&quot;&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+  &lt;div class=&quot;btn-group&quot;&gt;
+    &lt;a class=&quot;btn btn-default dropdown-toggle&quot; data-toggle=&quot;dropdown&quot; title=&quot;Font Size&quot;&gt;&lt;i class=&quot;fa fa-text-height&quot;&gt;&lt;/i&gt;&amp;nbsp;&lt;b class=&quot;caret&quot;&gt;&lt;/b&gt;&lt;/a&gt;
+      &lt;ul class=&quot;dropdown-menu&quot;&gt;
+      &lt;li&gt;&lt;a data-edit=&quot;fontSize 5&quot;&gt;&lt;font size=&quot;5&quot;&gt;Huge&lt;/font&gt;&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a data-edit=&quot;fontSize 3&quot;&gt;&lt;font size=&quot;3&quot;&gt;Normal&lt;/font&gt;&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a data-edit=&quot;fontSize 1&quot;&gt;&lt;font size=&quot;1&quot;&gt;Small&lt;/font&gt;&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;btn-group&quot;&gt;
+    &lt;a class=&quot;btn btn-default&quot; data-edit=&quot;bold&quot; title=&quot;Bold (Ctrl/Cmd+B)&quot;&gt;&lt;i class=&quot;fa fa-bold&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+    &lt;a class=&quot;btn btn-default&quot; data-edit=&quot;italic&quot; title=&quot;Italic (Ctrl/Cmd+I)&quot;&gt;&lt;i class=&quot;fa fa-italic&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+    &lt;a class=&quot;btn btn-default&quot; data-edit=&quot;strikethrough&quot; title=&quot;Strikethrough&quot;&gt;&lt;i class=&quot;fa fa-strikethrough&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+    &lt;a class=&quot;btn btn-default&quot; data-edit=&quot;underline&quot; title=&quot;Underline (Ctrl/Cmd+U)&quot;&gt;&lt;i class=&quot;fa fa-underline&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;btn-group&quot;&gt;
+    &lt;a class=&quot;btn btn-default&quot; data-edit=&quot;insertunorderedlist&quot; title=&quot;Bullet list&quot;&gt;&lt;i class=&quot;fa fa-list-ul&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+    &lt;a class=&quot;btn btn-default&quot; data-edit=&quot;insertorderedlist&quot; title=&quot;Number list&quot;&gt;&lt;i class=&quot;fa fa-list-ol&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+    &lt;a class=&quot;btn btn-default&quot; data-edit=&quot;outdent&quot; title=&quot;Reduce indent (Shift+Tab)&quot;&gt;&lt;i class=&quot;fa fa-outdent&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+    &lt;a class=&quot;btn btn-default&quot; data-edit=&quot;indent&quot; title=&quot;Indent (Tab)&quot;&gt;&lt;i class=&quot;fa fa-indent&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;btn-group&quot;&gt;
+    &lt;a class=&quot;btn btn-default&quot; data-edit=&quot;justifyleft&quot; title=&quot;Align Left (Ctrl/Cmd+L)&quot;&gt;&lt;i class=&quot;fa fa-align-left&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+    &lt;a class=&quot;btn btn-default&quot; data-edit=&quot;justifycenter&quot; title=&quot;Center (Ctrl/Cmd+E)&quot;&gt;&lt;i class=&quot;fa fa-align-center&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+    &lt;a class=&quot;btn btn-default&quot; data-edit=&quot;justifyright&quot; title=&quot;Align Right (Ctrl/Cmd+R)&quot;&gt;&lt;i class=&quot;fa fa-align-right&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+    &lt;a class=&quot;btn btn-default&quot; data-edit=&quot;justifyfull&quot; title=&quot;Justify (Ctrl/Cmd+J)&quot;&gt;&lt;i class=&quot;fa fa-align-justify&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;btn-group&quot;&gt;
+      &lt;a class=&quot;btn btn-default dropdown-toggle&quot; data-toggle=&quot;dropdown&quot; title=&quot;Hyperlink&quot;&gt;&lt;i class=&quot;fa fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+        &lt;div class=&quot;dropdown-menu input-append&quot;&gt;
+            &lt;input class=&quot;span2&quot; placeholder=&quot;URL&quot; type=&quot;text&quot; data-edit=&quot;createLink&quot;/&gt;
+            &lt;button class=&quot;btn btn-default&quot; type=&quot;button&quot;&gt;Add&lt;/button&gt;
+    &lt;/div&gt;
+    &lt;a class=&quot;btn btn-default&quot; data-edit=&quot;unlink&quot; title=&quot;Remove Hyperlink&quot;&gt;&lt;i class=&quot;fa fa-scissors&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+
+  &lt;/div&gt;
+
+  &lt;div class=&quot;btn-group&quot;&gt;
+    &lt;a class=&quot;btn btn-default&quot; title=&quot;Insert picture (or just drag &amp; drop)&quot; id=&quot;pictureBtn&quot;&gt;&lt;i class=&quot;fa fa-picture-o&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+    &lt;input type=&quot;file&quot; data-role=&quot;magic-overlay&quot; data-target=&quot;#pictureBtn&quot; data-edit=&quot;insertImage&quot; /&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;btn-group&quot;&gt;
+    &lt;a class=&quot;btn btn-default&quot; data-edit=&quot;undo&quot; title=&quot;Undo (Ctrl/Cmd+Z)&quot;&gt;&lt;i class=&quot;fa fa-undo&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+    &lt;a class=&quot;btn btn-default&quot; data-edit=&quot;redo&quot; title=&quot;Redo (Ctrl/Cmd+Y)&quot;&gt;&lt;i class=&quot;fa fa-repeat&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+  &lt;/div&gt;
+  &lt;input type=&quot;text&quot; data-edit=&quot;inserttext&quot; id=&quot;voiceBtn&quot; x-webkit-speech=&quot;&quot;&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;editor&quot;&gt;
+  Go ahead&amp;hellip;
+&lt;/div&gt;
+</code></pre>
+
+</li>
+<li>Include <code>handleWysiwyg();</code> in <strong><em>script.js</em></strong></li>
+</ol>
+<h1>Advanced CKEditor</h1>
+<p>To add CKEditor do the following:</p>
+<ol>
+<li>Add to HTML <code>&lt;textarea class=&quot;ckeditor&quot; name=&quot;editor1&quot;&gt;&lt;/textarea&gt;</code></li>
+</ol>
+<h1>Bootstrap Markdown Editor</h1>
+<p>To add Markdown Editor do the following:</p>
+<ol>
+<li>
+<p>Add to HTML </p>
+<pre><code>&lt;form&gt;
+    &lt;textarea name=&quot;content&quot; data-provide=&quot;markdown&quot; rows=&quot;10&quot;&gt;&lt;/textarea&gt;
+    &lt;label class=&quot;checkbox&quot;&gt;
+      &lt;input name=&quot;publish&quot; type=&quot;checkbox&quot;&gt; Publish
+    &lt;/label&gt;
+    &lt;hr/&gt;
+    &lt;button type=&quot;submit&quot; class=&quot;btn btn-default&quot;&gt;Submit&lt;/button&gt;
+&lt;/form&gt; 
+</code></pre>
+
+</li>
+</ol>
+<p>For advanced options visit plugin documentation page.</p>
+<h1>Table</h1>
+<h2>TableCloth</h2>
+<ul>
+<li>Include <code>handleTablecloth();</code> in <strong><em>script.js</em></strong></li>
+</ul>
+<h3>Dark Theme</h3>
+<ul>
+<li>Name your table as <code>&lt;table id=&quot;example-dark&quot;&gt;</code></li>
+</ul>
+<h3>Paper Table</h3>
+<ul>
+<li>Name your table as <code>&lt;table id=&quot;example-paper&quot;&gt;</code></li>
+</ul>
+<h3>Stats Table</h3>
+<ul>
+<li>Name your table as <code>&lt;table id=&quot;example-stats&quot;&gt;</code></li>
+</ul>
+<h1>Sliders</h1>
+<ul>
+<li>Include <code>handleSliders();</code> in <strong><em>script.js</em></strong></li>
+<li>Look out the examples in the function</li>
+</ul>
+<h1>Progress</h1>
+<ul>
+<li>Include <code>handleProgress();</code> in <strong><em>script.js</em></strong></li>
+<li>Look out the examples in the function</li>
+</ul>
+<h1>Knobs</h1>
+<ul>
+<li>Include <code>handleKnobs();</code> in <strong><em>script.js</em></strong></li>
+<li>Look out the examples in the function</li>
+<li>Please visit plugin website for more examples, usage &amp; syntax.</li>
+<li>Please check <strong><em>getting_started.html</em></strong> for link to plugin documentation.</li>
+</ul>
+<h1>Tabs on Box Header</h1>
+<p>The basic syntax of tabs on box header is as follows:</p>
+<pre class="prettyprint linenums"><code>&lt;!-- SAMPLE --&gt;
+&lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;col-md-4&quot;&gt;
+        &lt;!-- BOX --&gt;
+        &lt;div class=&quot;box&quot;&gt;
+            &lt;div class=&quot;box-title&quot;&gt;
+                &lt;h4&gt;&lt;i class=&quot;fa fa-reorder&quot;&gt;&lt;/i&gt; &lt;span class=&quot;hidden-inline-mobile&quot;&gt;Box Title&lt;/span&gt;&lt;/h4&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;box-body&quot;&gt;
+                &lt;div class=&quot;tabbable header-tabs&quot;&gt;
+                  &lt;ul class=&quot;nav nav-tabs&quot;&gt;
+                     &lt;li&gt;&lt;a href=&quot;#box_tab3&quot; data-toggle=&quot;tab&quot;&gt;&lt;i class=&quot;fa fa-circle-o&quot;&gt;&lt;/i&gt; &lt;span class=&quot;hidden-inline-mobile&quot;&gt;More&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href=&quot;#box_tab2&quot; data-toggle=&quot;tab&quot;&gt;&lt;i class=&quot;fa fa-laptop&quot;&gt;&lt;/i&gt; &lt;span class=&quot;hidden-inline-mobile&quot;&gt;Profile&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+                    &lt;li class=&quot;active&quot;&gt;&lt;a href=&quot;#box_tab1&quot; data-toggle=&quot;tab&quot;&gt;&lt;i class=&quot;fa fa-calendar-o&quot;&gt;&lt;/i&gt; &lt;span class=&quot;hidden-inline-mobile&quot;&gt;Home&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+                  &lt;/ul&gt;
+                  &lt;div class=&quot;tab-content&quot;&gt;
+                     &lt;div class=&quot;tab-pane active&quot; id=&quot;box_tab1&quot;&gt;
+                        &lt;!-- Tab1 content goes here --&gt;
+                     &lt;/div&gt;
+                     &lt;div class=&quot;tab-pane&quot; id=&quot;box_tab2&quot;&gt;
+                        &lt;!-- Tab2 content goes here --&gt;
+                     &lt;/div&gt;
+                     &lt;div class=&quot;tab-pane&quot; id=&quot;box_tab3&quot;&gt;
+                        &lt;!-- Tab3 content goes here --&gt;
+                     &lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;!-- /BOX --&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- /SAMPLE --&gt;
+</code></pre>
+
+<p><strong><em>p.s.</em></strong> Include <code>&lt;span class=&quot;hidden-inline-mobile&quot;&gt;</code> on Box Title and Tabs Titles so that the box can gracefully be responsive at smaller screens.</p>
+<h1>Inner Tabs</h1>
+<p>Support for left, right and bottom is removed from Bootstrap 3.</p>
+<p>But with Cloud Admin you still cal use <code>.tabbable .tabs-left</code>, <code>.tabbable .tabs-right</code> and <code>.tabbable .tabs-below</code> as you did with Bootstrap 2.</p>
+<h2>Left Tabs</h2>
+<pre class="prettyprint linenums"><code>&lt;div class=&quot;col-md-6&quot;&gt;
+ &lt;div class=&quot;tabbable tabs-left&quot;&gt;
+    &lt;ul class=&quot;nav nav-tabs tabs-left&quot;&gt;
+       &lt;li class=&quot;active&quot;&gt;&lt;a href=&quot;#tab_3_1&quot; data-toggle=&quot;tab&quot;&gt;Desktop&lt;/a&gt;&lt;/li&gt;
+       &lt;li&gt;&lt;a href=&quot;#tab_3_2&quot; data-toggle=&quot;tab&quot;&gt;Laptop&lt;/a&gt;&lt;/li&gt;
+       &lt;li&gt;&lt;a href=&quot;#tab_3_3&quot; data-toggle=&quot;tab&quot;&gt;Mobile&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;div class=&quot;tab-content&quot;&gt;
+       &lt;div class=&quot;tab-pane active&quot; id=&quot;tab_3_1&quot;&gt;
+          &lt;p&gt;I'm in Section 1. Less content, nonetheless correct height.&lt;/p&gt;
+       &lt;/div&gt;
+       &lt;div class=&quot;tab-pane &quot; id=&quot;tab_3_2&quot;&gt;
+          &lt;p&gt;I'm in Section 2.&lt;/p&gt;
+          &lt;p&gt; Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat. &lt;/p&gt;
+       &lt;/div&gt;
+       &lt;div class=&quot;tab-pane&quot; id=&quot;tab_3_3&quot;&gt;
+          &lt;p&gt;I'm in Section 3.&lt;/p&gt;
+       &lt;/div&gt;
+    &lt;/div&gt;
+ &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<h2>Right Tabs</h2>
+<pre class="prettyprint linenums"><code>&lt;div class=&quot;col-md-6&quot;&gt;
+ &lt;div class=&quot;tabbable tabs-right&quot;&gt;
+    &lt;ul class=&quot;nav nav-tabs tabs-right&quot;&gt;
+       &lt;li class=&quot;active&quot;&gt;&lt;a href=&quot;#tab_4_1&quot; data-toggle=&quot;tab&quot;&gt;&lt;span class=&quot;badge badge-red font-11&quot;&gt;4&lt;/span&gt; Section 1&lt;/a&gt;&lt;/li&gt;
+       &lt;li&gt;&lt;a href=&quot;#tab_4_2&quot; data-toggle=&quot;tab&quot;&gt;Section 2&lt;/a&gt;&lt;/li&gt;
+       &lt;li&gt;&lt;a href=&quot;#tab_4_3&quot; data-toggle=&quot;tab&quot;&gt;Section 3&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;div class=&quot;tab-content&quot;&gt;
+       &lt;div class=&quot;tab-pane active&quot; id=&quot;tab_4_1&quot;&gt;
+          &lt;p&gt;I'm in Section 1.&lt;/p&gt;
+          &lt;p&gt; Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat. &lt;/p&gt;
+       &lt;/div&gt;
+       &lt;div class=&quot;tab-pane&quot; id=&quot;tab_4_2&quot;&gt;
+          &lt;p&gt;I'm in Section 2.&lt;/p&gt;
+       &lt;/div&gt;
+       &lt;div class=&quot;tab-pane&quot; id=&quot;tab_4_3&quot;&gt;
+          &lt;p&gt;I'm in Section 3.&lt;/p&gt;
+       &lt;/div&gt;
+    &lt;/div&gt;
+ &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<h1>Accordions</h1>
+<pre class="prettyprint linenums"><code>&lt;div class=&quot;panel-group&quot; id=&quot;accordion&quot;&gt;
+  &lt;div class=&quot;panel panel-default&quot;&gt;
+     &lt;div class=&quot;panel-heading&quot;&gt;
+        &lt;h3 class=&quot;panel-title&quot;&gt; &lt;a class=&quot;accordion-toggle&quot; data-toggle=&quot;caret-square-o-down&quot; data-parent=&quot;#accordion&quot; href=&quot;#collapseOne&quot;&gt;Group Item #1 &lt;/a&gt; &lt;/h3&gt;
+     &lt;/div&gt;
+     &lt;div id=&quot;collapseOne&quot; class=&quot;panel-collapse collapse in&quot;&gt;
+        &lt;div class=&quot;panel-body&quot;&gt; Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS. &lt;/div&gt;
+     &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;panel panel-default&quot;&gt;
+     &lt;div class=&quot;panel-heading&quot;&gt;
+        &lt;h3 class=&quot;panel-title&quot;&gt; &lt;a class=&quot;accordion-toggle&quot; data-toggle=&quot;caret-square-o-down&quot; data-parent=&quot;#accordion&quot; href=&quot;#collapseTwo&quot;&gt;Group Item #2 &lt;/a&gt; &lt;/h3&gt;
+     &lt;/div&gt;
+     &lt;div id=&quot;collapseTwo&quot; class=&quot;panel-collapse caret-square-o-down&quot;&gt;
+        &lt;div class=&quot;panel-body&quot;&gt; Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS. &lt;/div&gt;
+     &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;panel panel-default&quot;&gt;
+     &lt;div class=&quot;panel-heading&quot;&gt;
+        &lt;h3 class=&quot;panel-title&quot;&gt; &lt;a class=&quot;accordion-toggle&quot; data-toggle=&quot;caret-square-o-down&quot; data-parent=&quot;#accordion&quot; href=&quot;#collapseThree&quot;&gt;Group Item #3 &lt;/a&gt; &lt;/h3&gt;
+     &lt;/div&gt;
+     &lt;div id=&quot;collapseThree&quot; class=&quot;panel-collapse caret-square-o-down&quot;&gt;
+        &lt;div class=&quot;panel-body&quot;&gt; Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS. &lt;/div&gt;
+     &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<h1>Tree View</h1>
+<p>To get the tree, follow the steps below:</p>
+<ol>
+<li>Include <code>&lt;div id=&quot;tree1&quot; class=&quot;tree&quot;&gt;&lt;/div&gt;</code> ,<code>&lt;div id=&quot;tree2&quot; class=&quot;tree&quot;&gt;&lt;/div&gt;</code> etc. in your HTML code.</li>
+<li>The treeview data is populated from sample data which can be found under <strong><em>Cloud Admin - js - fuelux-tree - fuelux.tree-sampledata.js</em></strong></li>
+<li>Please visit plugin website for more examples, usage &amp; syntax.</li>
+<li>Please check <strong><em>getting_started.html</em></strong> for link to plugin documentation.</li>
+</ol>
+<h1>Ordered List Item</h1>
+<h2>Colored Text</h2>
+<p>To add colors to text add <code>class=&quot;text-X&quot;</code> where <code>X</code> is the color name</p>
+<p>The following options are available:</p>
+<ul>
+<li><code>text-primary</code></li>
+<li><code>text-danger</code></li>
+<li><code>text-success</code></li>
+<li><code>text-info</code></li>
+<li><code>text-warning</code></li>
+<li><code>text-muted</code></li>
+<li><code>text-pink</code></li>
+<li><code>text-dark</code></li>
+<li><code>text-purple</code></li>
+<li><code>text-yellow</code></li>
+</ul>
+<h1>Code Markup</h1>
+<ol>
+<li>Include <code>onload=&quot;prettyPrint();&quot;</code> on body like <code>&lt;body onload=&quot;prettyPrint();&quot;&gt;</code></li>
+<li>Add your code markup inside <code>&lt;code&gt;&lt;/code&gt;</code> tags</li>
+<li>Wrap the <code>&lt;code&gt;&lt;/code&gt;</code> tag in <code>&lt;pre class=&quot;prettyprint linenums&quot;&gt;&lt;/pre&gt;</code></li>
+</ol>
+<h1>Vector Maps</h1>
+<ul>
+<li>The examples shown in the theme can be availed by including <code>handleJqvmaps();</code> in <strong><em>script.js</em></strong></li>
+<li>Please visit plugin website for more examples, usage &amp; syntax.</li>
+<li>Please check <strong><em>getting_started.html</em></strong> for link to plugin documentation.</li>
+</ul>
+<h1>Basic Widget</h1>
+<p>The basic markup of a box widget is as follows</p>
+<pre class="prettyprint linenums"><code>&lt;!-- SAMPLE --&gt;
+&lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;col-md-4&quot;&gt;
+        &lt;!-- BOX --&gt;
+        &lt;div class=&quot;box&quot;&gt;
+            &lt;div class=&quot;box-title&quot;&gt;
+                &lt;h4&gt;&lt;i class=&quot;fa fa-reorder&quot;&gt;&lt;/i&gt;Box Title&lt;/h4&gt;
+                &lt;div class=&quot;tools&quot;&gt;
+                    &lt;a href=&quot;#box-config&quot; data-toggle=&quot;modal&quot; class=&quot;config&quot;&gt;
+                        &lt;i class=&quot;fa fa-cog&quot;&gt;&lt;/i&gt;
+                    &lt;/a&gt;
+                    &lt;a href=&quot;javascript:;&quot; class=&quot;reload&quot;&gt;
+                        &lt;i class=&quot;fa fa-refresh&quot;&gt;&lt;/i&gt;
+                    &lt;/a&gt;
+                    &lt;a href=&quot;javascript:;&quot; class=&quot;collapse&quot;&gt;
+                        &lt;i class=&quot;fa fa-chevron-up&quot;&gt;&lt;/i&gt;
+                    &lt;/a&gt;
+                    &lt;a href=&quot;javascript:;&quot; class=&quot;remove&quot;&gt;
+                        &lt;i class=&quot;fa fa-times&quot;&gt;&lt;/i&gt;
+                    &lt;/a&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;box-body&quot;&gt;
+                &lt;!-- Box content goes here --&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;!-- /BOX --&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- /SAMPLE --&gt;
+</code></pre>
+
+<h1>Bordered Box</h1>
+<pre class="prettyprint linenums"><code>&lt;!-- SAMPLE --&gt;
+&lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;col-md-4&quot;&gt;
+        &lt;!-- BOX --&gt;
+        &lt;div class=&quot;box border&quot;&gt;
+            &lt;div class=&quot;box-title&quot;&gt;
+                &lt;h4&gt;&lt;i class=&quot;fa fa-reorder&quot;&gt;&lt;/i&gt;Box Title&lt;/h4&gt;
+                &lt;div class=&quot;tools&quot;&gt;
+                    &lt;a href=&quot;#box-config&quot; data-toggle=&quot;modal&quot; class=&quot;config&quot;&gt;
+                        &lt;i class=&quot;fa fa-cog&quot;&gt;&lt;/i&gt;
+                    &lt;/a&gt;
+                    &lt;a href=&quot;javascript:;&quot; class=&quot;reload&quot;&gt;
+                        &lt;i class=&quot;fa fa-refresh&quot;&gt;&lt;/i&gt;
+                    &lt;/a&gt;
+                    &lt;a href=&quot;javascript:;&quot; class=&quot;collapse&quot;&gt;
+                        &lt;i class=&quot;fa fa-chevron-up&quot;&gt;&lt;/i&gt;
+                    &lt;/a&gt;
+                    &lt;a href=&quot;javascript:;&quot; class=&quot;remove&quot;&gt;
+                        &lt;i class=&quot;fa fa-times&quot;&gt;&lt;/i&gt;
+                    &lt;/a&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;box-body&quot;&gt;
+                &lt;!-- Box content goes here --&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;!-- /BOX --&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- /SAMPLE --&gt;
+</code></pre>
+
+<h2>Adding colors to Bordered Box</h2>
+<p>Add colorname after <code>&lt;div class=&quot;box border&quot;&gt;</code></p>
+<blockquote>
+<p>E.g. <code>&lt;div class=&quot;box border red&quot;&gt;</code></p>
+</blockquote>
+<p>Available options are:</p>
+<ul>
+<li>orange</li>
+<li>pink</li>
+<li>purple</li>
+<li>inverse</li>
+<li>blue</li>
+<li>red</li>
+<li>green</li>
+<li>primary</li>
+<li>lite</li>
+</ul>
+<h1>Solid Box (Full color)</h1>
+<pre class="prettyprint linenums"><code>&lt;!-- SAMPLE --&gt;
+&lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;col-md-4&quot;&gt;
+        &lt;!-- BOX --&gt;
+        &lt;div class=&quot;box solid blue&quot;&gt;
+            &lt;div class=&quot;box-title&quot;&gt;
+                &lt;h4&gt;&lt;i class=&quot;fa fa-reorder&quot;&gt;&lt;/i&gt;Box Title&lt;/h4&gt;
+                &lt;div class=&quot;tools&quot;&gt;
+                    &lt;a href=&quot;#box-config&quot; data-toggle=&quot;modal&quot; class=&quot;config&quot;&gt;
+                        &lt;i class=&quot;fa fa-cog&quot;&gt;&lt;/i&gt;
+                    &lt;/a&gt;
+                    &lt;a href=&quot;javascript:;&quot; class=&quot;reload&quot;&gt;
+                        &lt;i class=&quot;fa fa-refresh&quot;&gt;&lt;/i&gt;
+                    &lt;/a&gt;
+                    &lt;a href=&quot;javascript:;&quot; class=&quot;collapse&quot;&gt;
+                        &lt;i class=&quot;fa fa-chevron-up&quot;&gt;&lt;/i&gt;
+                    &lt;/a&gt;
+                    &lt;a href=&quot;javascript:;&quot; class=&quot;remove&quot;&gt;
+                        &lt;i class=&quot;fa fa-times&quot;&gt;&lt;/i&gt;
+                    &lt;/a&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;box-body&quot;&gt;
+                &lt;!-- Box content goes here --&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;!-- /BOX --&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- /SAMPLE --&gt;
+</code></pre>
+
+<h2>Adding colors to Solid Box</h2>
+<p>Add colorname after <code>&lt;div class=&quot;box solid&quot;&gt;</code></p>
+<blockquote>
+<p>E.g. <code>&lt;div class=&quot;box solid blue&quot;&gt;</code></p>
+</blockquote>
+<p>Available options are:</p>
+<ul>
+<li>blue</li>
+<li>grey</li>
+</ul>
+<h1>Adding Toolbox</h1>
+<h2>Top Toolbox</h2>
+<p>The basic markup is as follows</p>
+<pre class="prettyprint linenums"><code>&lt;!-- SAMPLE --&gt;
+&lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;col-md-4&quot;&gt;
+        &lt;!-- BOX --&gt;
+        &lt;div class=&quot;box solid blue&quot;&gt;
+            &lt;div class=&quot;box-title&quot;&gt;
+                &lt;h4&gt;&lt;i class=&quot;fa fa-reorder&quot;&gt;&lt;/i&gt;Box Title&lt;/h4&gt;
+                &lt;div class=&quot;tools&quot;&gt;
+                    &lt;a href=&quot;#box-config&quot; data-toggle=&quot;modal&quot; class=&quot;config&quot;&gt;
+                        &lt;i class=&quot;fa fa-cog&quot;&gt;&lt;/i&gt;
+                    &lt;/a&gt;
+                    &lt;a href=&quot;javascript:;&quot; class=&quot;reload&quot;&gt;
+                        &lt;i class=&quot;fa fa-refresh&quot;&gt;&lt;/i&gt;
+                    &lt;/a&gt;
+                    &lt;a href=&quot;javascript:;&quot; class=&quot;collapse&quot;&gt;
+                        &lt;i class=&quot;fa fa-chevron-up&quot;&gt;&lt;/i&gt;
+                    &lt;/a&gt;
+                    &lt;a href=&quot;javascript:;&quot; class=&quot;remove&quot;&gt;
+                        &lt;i class=&quot;fa fa-times&quot;&gt;&lt;/i&gt;
+                    &lt;/a&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;toolbox&quot;&gt;
+                &lt;div class=&quot;btn-group&quot;&gt;
+                    &lt;button type=&quot;button&quot; class=&quot;btn btn-default&quot;&gt;&lt;i class=&quot;fa fa-bold&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+                    &lt;button type=&quot;button&quot; class=&quot;btn btn-default&quot;&gt;&lt;i class=&quot;fa fa-italic&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+                    &lt;button type=&quot;button&quot; class=&quot;btn btn-default&quot;&gt;&lt;i class=&quot;fa fa-file&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+                    &lt;button type=&quot;button&quot; class=&quot;btn btn-default&quot;&gt;&lt;i class=&quot;fa fa-align-right&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+                    &lt;button type=&quot;button&quot; class=&quot;btn btn-default&quot;&gt;&lt;i class=&quot;fa fa-align-justify&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+                    &lt;button type=&quot;button&quot; class=&quot;btn btn-default&quot;&gt;&lt;i class=&quot;fa fa-align-left&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+                    &lt;button type=&quot;button&quot; class=&quot;btn btn-default&quot;&gt;&lt;i class=&quot;fa fa-cloud-arrow-circle-o-up&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;box-body&quot;&gt;
+                &lt;!-- Box content goes here --&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;!-- /BOX --&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- /SAMPLE --&gt;
+</code></pre>
+
+<h2>Bottom Toolbox</h2>
+<pre class="prettyprint linenums"><code>&lt;!-- SAMPLE --&gt;
+&lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;col-md-4&quot;&gt;
+        &lt;!-- BOX --&gt;
+        &lt;div class=&quot;box solid blue&quot;&gt;
+            &lt;div class=&quot;box-title&quot;&gt;
+                &lt;h4&gt;&lt;i class=&quot;fa fa-reorder&quot;&gt;&lt;/i&gt;Box Title&lt;/h4&gt;
+                &lt;div class=&quot;tools&quot;&gt;
+                    &lt;a href=&quot;#box-config&quot; data-toggle=&quot;modal&quot; class=&quot;config&quot;&gt;
+                        &lt;i class=&quot;fa fa-cog&quot;&gt;&lt;/i&gt;
+                    &lt;/a&gt;
+                    &lt;a href=&quot;javascript:;&quot; class=&quot;reload&quot;&gt;
+                        &lt;i class=&quot;fa fa-refresh&quot;&gt;&lt;/i&gt;
+                    &lt;/a&gt;
+                    &lt;a href=&quot;javascript:;&quot; class=&quot;collapse&quot;&gt;
+                        &lt;i class=&quot;fa fa-chevron-up&quot;&gt;&lt;/i&gt;
+                    &lt;/a&gt;
+                    &lt;a href=&quot;javascript:;&quot; class=&quot;remove&quot;&gt;
+                        &lt;i class=&quot;fa fa-times&quot;&gt;&lt;/i&gt;
+                    &lt;/a&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;box-body&quot;&gt;
+                &lt;!-- Box content goes here --&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;toolbox bottom&quot;&gt;
+                &lt;div class=&quot;btn-group&quot;&gt;
+                    &lt;button type=&quot;button&quot; class=&quot;btn btn-default&quot;&gt;&lt;i class=&quot;fa fa-step-backward&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+                    &lt;button type=&quot;button&quot; class=&quot;btn btn-default&quot;&gt;&lt;i class=&quot;fa fa-backward&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+                    &lt;button type=&quot;button&quot; class=&quot;btn btn-default&quot;&gt;&lt;i class=&quot;fa fa-pause&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;!-- /BOX --&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- /SAMPLE --&gt;
+</code></pre>
+
+<h2>Make Boxes draggable/sortable</h2>
+<ol>
+<li>Call <code>handleBoxSortable()</code> in <strong><em>script.js</em></strong></li>
+<li>
+<p>Include <code>class=&quot;box-container&quot;</code> as follows</p>
+<pre class="prettyprint linenums"><code>&lt;!-- SAMPLE --&gt;
+&lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;col-md-4 box-container&quot;&gt;
+        &lt;!-- BOX --&gt;
+        &lt;div class=&quot;box&quot;&gt;
+            &lt;div class=&quot;box-title&quot;&gt;
+                &lt;h4&gt;&lt;i class=&quot;fa fa-reorder&quot;&gt;&lt;/i&gt;Box Title&lt;/h4&gt;
+                &lt;div class=&quot;tools&quot;&gt;
+                    &lt;a href=&quot;#box-config&quot; data-toggle=&quot;modal&quot; class=&quot;config&quot;&gt;
+                        &lt;i class=&quot;fa fa-cog&quot;&gt;&lt;/i&gt;
+                    &lt;/a&gt;
+                    &lt;a href=&quot;javascript:;&quot; class=&quot;reload&quot;&gt;
+                        &lt;i class=&quot;fa fa-refresh&quot;&gt;&lt;/i&gt;
+                    &lt;/a&gt;
+                    &lt;a href=&quot;javascript:;&quot; class=&quot;collapse&quot;&gt;
+                        &lt;i class=&quot;fa fa-chevron-up&quot;&gt;&lt;/i&gt;
+                    &lt;/a&gt;
+                    &lt;a href=&quot;javascript:;&quot; class=&quot;remove&quot;&gt;
+                        &lt;i class=&quot;fa fa-times&quot;&gt;&lt;/i&gt;
+                    &lt;/a&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;box-body&quot;&gt;
+                &lt;!-- Box content goes here --&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;!-- /BOX --&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- /SAMPLE --&gt;
+</code></pre>
+
+</li>
+</ol>
+<h1>Vertical Timeline</h1>
+<p>Timeline shows a series of events in a vertically time-sorted structure.</p>
+<p>Timeline utilizes a handful of super cool libraries, including Tabletop.js (for the data storage) and Isotope for the layout.</p>
+<h2>How to use</h2>
+<h3>1) Set up your data using Tabletop.js</h3>
+<p>Create a Google Spreadsheet with the following columns:</p>
+<pre><code>title
+date
+display date
+photo url
+caption
+body
+read more url
+</code></pre>
+
+<p><strong>Please note that the the display date column must be in the format Month day, Year (April 25, 2012) for proper javascript parsing. Also, all columns must be plain text format, including the two date columns.</strong></p>
+<p>Now follow the instructions over at Tabletop.js to publish the Spreadsheet.</p>
+<p>The Spreadsheet used in the example index.html file is at <a href="https://docs.google.com/spreadsheet/ccc?key=0AsmHVq28GtVJdG1fX3dsQlZrY18zTVA2ZG8wTXdtNHc">https://docs.google.com/spreadsheet/ccc?key=0AsmHVq28GtVJdG1fX3dsQlZrY18zTVA2ZG8wTXdtNHc</a></p>
+<h3>2) Insert the Spreadsheet key into script.js</h3>
+<ul>
+<li>
+<p>Find your Spreadsheet key (see <a href="https://github.com/jsoma/tabletop">Tabletop.js</a> for instructions), and replace the sample key on <strong>line 3</strong> of <code>Cloud-Admin/js/vertical-timeline/js/script.js</code> with the key to your Spreadsheet.</p>
+</li>
+<li>
+<p>You also need to update the name of the spreadsheet 'sheet' that holds the data on <strong>line 4</strong> of <code>Cloud-Admin/js/vertical-timeline/js/script.js</code>.</p>
+</li>
+</ul>
+<h3>3) Include the HTML markup</h3>
+<p>Include the following markup where you want the timeline to appear</p>
+<pre><code>    &lt;div class=&quot;box-body vertical-timeline&quot;&gt;
+      &lt;h2 class=&quot;timeline-title text-center&quot;&gt;Vertical Timeline&lt;/h2&gt;
+      &lt;div role=&quot;main&quot; class=&quot;clearfix&quot;&gt;
+      &lt;div id=&quot;buttons&quot;&gt;
+        &lt;div id=&quot;expand-collapse-buttons&quot;&gt;
+          &lt;a class=&quot;expand-all active btn btn-danger&quot; href=&quot;#&quot;&gt;&lt;span&gt;EXPAND ALL &lt;i class=&quot;fa fa-caret-up&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/a&gt;
+          &lt;a class=&quot;collapse-all btn btn-danger&quot; href=&quot;#&quot;&gt;&lt;span&gt;COLLAPSE ALL &lt;i class=&quot;fa fa-caret-down&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/a&gt;
+        &lt;/div&gt;
+        &lt;div id=&quot;sort-buttons&quot;&gt;
+          &lt;a class=&quot;sort-newest active btn btn-success&quot; href=&quot;#&quot;&gt;&lt;span&gt;NEWEST FIRST &lt;i class=&quot;fa fa-caret-up&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/a&gt;
+          &lt;a class=&quot;sort-oldest btn btn-success&quot; href=&quot;#&quot;&gt;&lt;span&gt;OLDEST FIRST &lt;i class=&quot;fa fa-caret-down&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/a&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div id=&quot;timeline&quot;&gt;
+        &lt;div id=&quot;line-container&quot;&gt;
+          &lt;div id=&quot;line&quot;&gt;&lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;  
+</code></pre>
+
+<p>Include the template scripts just before <code>&lt;/body&gt;</code></p>
+<pre><code>    &lt;!-- HANDLEBAR SCRIPT TEMPLATES --&gt;
+    &lt;script id=&quot;year-marker-template&quot; type=&quot;text/x-handlebars-template&quot;&gt;
+    &lt;div class=&quot;item year-marker&quot;&gt;
+      &lt;div class=&quot;inner&quot;&gt;
+        &lt;div class=&quot;inner2&quot;&gt;
+          &lt;div class=&quot;timestamp&quot;&gt;{{timestamp}}&lt;/div&gt;
+          &lt;div class=&quot;year&quot;&gt;{{year}}&lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/script&gt;
+
+  &lt;script id=&quot;post-template&quot; type=&quot;text/x-handlebars-template&quot;&gt;
+    &lt;div class=&quot;item post&quot;&gt;
+      &lt;div class=&quot;inner&quot;&gt;
+        &lt;div class=&quot;timestamp&quot;&gt;{{timestamp}}&lt;/div&gt;
+        &lt;div class=&quot;title&quot;&gt;&lt;h3&gt;{{title}}&lt;/h3&gt;&lt;/div&gt;
+        &lt;div class=&quot;date&quot;&gt;{{display_date}}&lt;/div&gt;
+        &lt;div class=&quot;body&quot;&gt;
+          {{#if photo_url}}
+            &lt;img src=&quot;{{photo_url}}&quot; alt=&quot;&quot;&gt;
+          {{/if}}
+          {{#if caption}}
+            &lt;div class=&quot;caption&quot;&gt;({{caption}})&lt;/div&gt;
+          {{/if}}
+          {{#if body}}
+            &lt;div class=&quot;text&quot;&gt;{{body}}&lt;/div&gt;
+          {{/if}}
+          &lt;div class=&quot;clearfix&quot;&gt;
+            {{#if read_more_url}}
+              &lt;a target=&quot;_blank&quot; class=&quot;btn btn-warning&quot; href=&quot;{{read_more_url}}&quot;&gt;READ MORE&lt;/a&gt;
+              &lt;div class=&quot;share&quot;&gt;
+                &lt;a href=&quot;#&quot; class=&quot;btn btn-info share-trigger tip&quot; title=&quot;Share this item&quot;&gt;&lt;i class=&quot;fa fa-retweet&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+              &lt;/div&gt;
+            {{/if}}
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/script&gt;
+    &lt;!-- CUSTOM SCRIPT --&gt;
+</code></pre>
+
+<h3>Please note</h3>
+<ul>
+<li>The timeline has been customized to work as a responsive timeline.</li>
+<li>jQuery Isotope has been extended to make it responsive. Please refer to <a href="http://isotope.metafizzy.co/docs/extending-isotope.html">Extending Isotopes</a> to customize it further.</li>
+<li>If you want a jQuery Plugin version of this implementation, kindly look at <a href="https://github.com/MinnPost/jquery-vertical-timeline">jQuery-vertical-timeline</a></li>
+<li>Please note that jQuery Isotope requires a one time <a href="http://isotope.metafizzy.co/docs/license.html">$25 license</a> for commercial projects.</li>
+</ul>
+<h1>Wizard &amp; Validation</h1>
+<ol>
+<li>In the basic box structure include <code>&lt;h4&gt;&lt;i class=&quot;fa fa-reorder&quot;&gt;&lt;/i&gt;Form Wizard - &lt;span class=&quot;stepHeader&quot;&gt;Step 1 of 3&lt;/h4&gt;</code> under <code>&lt;div class=&quot;box-title&quot;&gt;</code></li>
+<li>Include <code>form</code> as shown in <strong><em>wizards_validations.html</em></strong></li>
+<li>The JS related to this can be found at <strong><em>Cloud Admin - js - bootstrap-wizard - form-wizard.js</em></strong></li>
+<li>Include the validation rules in the <strong><em>form-wizard.js</em></strong> file as shown.</li>
+</ol>
+<h1>xCharts</h1>
+<ul>
+<li>The examples shown can be found under <strong><em>handleXcharts();</em></strong> function in <strong><em>script.js</em></strong></li>
+<li>Please visit plugin website for more examples, usage &amp; syntax.</li>
+<li>Please check <strong><em>getting_started.html</em></strong> for link to plugin documentation.</li>
+</ul>
+	</div>
+	</div>
+</div>
+
+<!-- JAVASCRIPTS -->
+<script src="js/jquery-2.0.3.min.js"></script>
+<script src="js/jquery-ui-1.10.3.custom.min.js"></script>
+<script src="tocify/js/jquery.tocify.min.js""></script>
+<script>
+$(function() {
+    //Calls the tocify method on your HTML div.
+    $("#toc").tocify();
+});
+</script>
+</body>
+</html>
+<!-- This document was created with MarkdownPad, the Markdown editor for Windows (http://markdownpad.com) -->

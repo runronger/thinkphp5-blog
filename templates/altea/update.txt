@@ -1,0 +1,43 @@
+v 2.4
+- fixed chrome bug in menu (supersized.css)
+
+v.2.3
+- fixed tabs bug on firefox (added clearfix).
+- fixed tabs border on focus (IE)
+- added loader
+
+v.2.2
+- Added popup examples in portfolio
+- Added custom pretty photo gallery in portfolio (add any image in the gallery).
+
+v.2.1
+- Added smoothscroll
+- improved parallax sliding on safari
+
+v.2
+- added "portfolio" variant
+- removed box shadow on active buttons
+- added slide up for quote form opening
+- fixed color on rollover icons (team section)
+- removed margin-bottom on tabs
+- replaced image background on supersized slider (retina)
+- optimized tabs responsive display
+
+
+v.1.2.2
+- fixed Placeholders in IE.
+- fixed menu and paralax bug when using isotope filters (in work)
+
+
+v.1.2.1
+- documentation update
+
+
+v. 1.2
+- removed blue box shadow on inputs focus
+- Added App variant
+- Added flat mobile devices psd
+- Added bubble background psd
+- Added Twitter timeline
+
+

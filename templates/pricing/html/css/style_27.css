@@ -1,0 +1,63 @@
+@import url(http://fonts.googleapis.com/css?family=Life+Savers);
+fonts{
+	font-family: 'Life Savers', cursive;
+}
+body{
+	background-color: #D8D9D8;
+}
+.spacer{
+	height: 50px;
+}
+.pricing_tbls{
+	text-align: center;
+	font-family: 'Life Savers', cursive;
+}
+.for_header{
+	background-color: #6CC7BE;
+
+	border-top-left-radius: 6px;
+	border-top-right-radius: 6px;
+}
+.for_header{
+	margin-top: 20px;
+}
+	.for_header h4{
+		margin: 0;
+		padding-top: 20px;
+	}
+.price p{
+	margin:0;
+	padding-bottom: 15px;
+	padding-top: 10px;
+
+	font-size: 20px;
+	letter-spacing: 3px;
+	color: white;
+}
+	.price p span{
+		font-size: 14px;
+	}
+.for_border{
+	border: 4px solid #6CC7BE;
+	background-color: #6cc7be;
+
+	border-bottom-left-radius: 9px;
+	border-bottom-right-radius: 9px;
+}
+.for_border p{
+	margin:0;
+	padding: 8px 0px;
+
+	background-color: white;
+}
+	.for_border p:first-child{
+		border-top-left-radius: 6px;
+		border-top-right-radius: 6px;
+	}
+	.for_border p:last-child{
+		border-bottom-left-radius: 6px;
+		border-bottom-right-radius: 6px;
+	}
+	.for_border p span{
+		font-weight: bold;
+	}

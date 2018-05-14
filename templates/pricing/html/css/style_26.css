@@ -1,0 +1,66 @@
+@import url(http://fonts.googleapis.com/css?family=Headland+One);
+fonts{
+	font-family: 'Headland One', serif;
+}
+body{
+	background-color: #F3F3F3;
+}
+.spacer{
+	height: 50px;
+}
+.pricing_tbls{
+	text-align: center;
+	font-family: 'Headland One', serif;
+}
+.for_header{
+	margin-top: 20px;
+
+	border: 1px solid #0A5678;
+	border-bottom: none;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+
+	background-color: white;
+}
+	.for_header h4{
+		margin: 0;
+		padding-top: 10px;
+
+		font-size: 14px;
+	}
+.price p{
+	margin:0;
+	padding-bottom: 10px;
+}
+	.price p span{
+
+	}
+.for_border{
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	border: 1px solid #0A5678;
+	border-top: none;
+
+	background: #8ed0f3; /* Old browsers */
+	background: -moz-linear-gradient(top,  #8ed0f3 0%, #2d9cc9 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#8ed0f3), color-stop(100%,#2d9cc9)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #8ed0f3 0%,#2d9cc9 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #8ed0f3 0%,#2d9cc9 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #8ed0f3 0%,#2d9cc9 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #8ed0f3 0%,#2d9cc9 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8ed0f3', endColorstr='#2d9cc9',GradientType=0 ); /* IE6-9 */
+}
+.for_border p{
+	margin:0;
+	padding: 6px 0px;
+
+	font-size: 12px;
+	color: white;
+	text-shadow:0px 1px 0px rgba(0,0,0,0.5);
+}
+	.for_border p:nth-child(odd){
+		background-color: rgba(0,0,0,0.05);
+	}
+	.for_border p span{
+		font-weight: bold;
+	}

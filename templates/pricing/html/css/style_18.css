@@ -1,0 +1,63 @@
+@import url(http://fonts.googleapis.com/css?family=Quattrocento:400,700);
+fonts{
+	font-family: 'Quattrocento', serif;
+}
+body{
+	background-color: #F0F0F0;
+}
+.spacer{
+	height: 50px;
+}
+.pricing_tbls{
+	text-align: center;
+	font-family: 'Quattrocento', serif;
+}
+.pricing_tbls .span3{
+	box-shadow: 0px 2px 9px rgba(0,0,0,0.3);
+}
+.for_header{
+	border: 4px solid white;
+	border-bottom: none;
+}
+.for_header h4{
+	margin: 0;
+	padding: 10px 0px;
+
+	text-shadow:0px -1px 0px rgba(0,0,0,0.3);	
+	color: white;
+
+	background: #00abe0; /* Old browsers */
+	background: -moz-linear-gradient(top,  #00abe0 0%, #0085c7 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#00abe0), color-stop(100%,#0085c7)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #00abe0 0%,#0085c7 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #00abe0 0%,#0085c7 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #00abe0 0%,#0085c7 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #00abe0 0%,#0085c7 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00abe0', endColorstr='#0085c7',GradientType=0 ); /* IE6-9 */
+}
+.price p{
+	margin:0;
+	padding: 10px 0px;
+
+	font-size: 22px;
+	background-color: #f1f9fa;
+}
+	.price p span{
+		font-size: 12px;
+		margin-left: -5px;
+	}
+.for_border{
+	border: 4px solid white;
+}
+.for_border p{
+	margin:0;
+	padding: 9px 0px;
+
+	background-color: white;
+}
+	.for_border p span{
+		font-weight: bold;
+	}
+	.for_border p:nth-child(odd){
+		background-color: #fafafa;
+	}

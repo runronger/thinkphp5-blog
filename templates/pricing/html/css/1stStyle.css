@@ -1,0 +1,105 @@
+/*gradients*/
+.gr_grey{
+		background: #65707f; /* Old browsers */
+		background: -moz-linear-gradient(top, #65707f 0%, #4b5565 100%); /* FF3.6+ */
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#65707f), color-stop(100%,#4b5565)); /* Chrome,Safari4+ */
+		background: -webkit-linear-gradient(top, #65707f 0%,#4b5565 100%); /* Chrome10+,Safari5.1+ */
+		background: -o-linear-gradient(top, #65707f 0%,#4b5565 100%); /* Opera 11.10+ */
+		background: -ms-linear-gradient(top, #65707f 0%,#4b5565 100%); /* IE10+ */
+		background: linear-gradient(to bottom, #65707f 0%,#4b5565 100%); /* W3C */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#65707f', endColorstr='#4b5565',GradientType=0 ); /* IE6-9 */
+	}
+.spacer{
+	height: 50px;
+}
+
+.pricing_tbls{
+	text-align: center;
+}
+
+.pricing_tbls h4{
+	background-color: rgba(0,0,0,0.2);
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+
+	padding: 10px 0px;
+	margin: 0;
+	margin-top: 20px;
+	
+	color:white;
+	text-shadow: 0px 1px 1px rgba(0,0,0,1);
+}
+
+.pricing_tbls p{
+	font-weight: 200;
+
+	margin: 0;
+	padding: 5px 0px;
+	border-bottom: 1px solid #EFEFF0;
+
+
+	-webkit-transition: .3s ease;
+	-moz-transition: .3s ease;
+	-o-transition: .3s ease;
+	transition: .3s ease;
+}
+	.pricing_tbls p:last-child{
+		border-radius: 4px;
+	}
+	.pricing_tbls p:hover{
+		background-color: #F0F3F4;	
+
+		-webkit-transition: .05s ease;
+		-moz-transition: .05s ease;
+		-o-transition: .05s ease;
+		transition: .05s ease;
+	}
+
+
+.for_border{
+	border: 1px solid #EFEFF0;
+	border-bottom: none;
+	border-top: none;
+	border-radius: 4px;
+	border-top-right-radius: 0px;
+	border-top-left-radius: 0px;
+
+	_margin: 40px 0px;
+}
+
+.for_border p:first-child{
+	border-top: none;
+}
+	.for_border p:last-child:hover{
+		background-color: white;
+	}
+
+.featured .for_border{
+	position: relative;
+	top: -10px;
+}
+	.featured h3{
+		background-color: rgba(0,0,0,0.5);
+		color: white;
+
+		padding: 15px 0px;
+	}
+
+.price{
+	background-color: #F0F3F4;
+	border: 1px solid #EFEFF0;
+	border-top: none;
+	border-bottom: none;
+}
+	.price p{
+		border-radius: 0px !important;
+		padding: 10px 0px;
+		padding-top: 13px;
+
+		font-size: 22px;
+		text-shadow:0px 1px 0px white;
+	}
+	.price span{
+		font-weight: normal;
+		font-size:11px;
+	}

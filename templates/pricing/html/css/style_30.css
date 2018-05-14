@@ -1,0 +1,52 @@
+@import url(http://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700,800);
+fonts{
+	font-family: 'Dosis', sans-serif;
+}
+body{
+	background-color: #F3F3F3;
+}
+.spacer{
+	height: 50px;
+}
+.pricing_tbls{
+	text-align: center;
+	font-family: 'Dosis', sans-serif;
+}
+.for_header{
+	margin-top: 20px;
+
+	color: white;
+
+	background-color: #323232;
+}
+	.for_header h4{
+		margin: 0;
+		padding-top: 15px;
+	}
+.price p{
+	margin:0;
+	padding-bottom: 15px;
+	padding-top: 5px;
+
+	font-size: 19px;
+
+	border-bottom: 2px solid #32D49D;
+}
+	.price p span{
+		font-size: 12px;
+	}
+.for_border p{
+	margin:0;
+	padding: 7px 0px;
+
+	background-color: #E9E9DE;
+}
+	.for_border p:nth-child(even){
+
+	}
+	.for_border p span{
+		font-weight: bold;
+	}
+		.for_border .btn{
+			border-radius: 0px;
+		}

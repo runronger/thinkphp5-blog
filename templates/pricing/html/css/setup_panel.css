@@ -1,0 +1,55 @@
+/* setup panel styling */
+.setup_panel{
+	position: fixed;
+	background-color: rgba(255,255,0,0.9);
+	top:15%;
+	_height: 20em;
+	_width:250px;
+	_left:-250px;
+	z-index: 999;
+	display: none;
+
+}
+	.for_scroll{
+		padding: 50px 0px;
+		position: relative;
+		top:-50px;
+		overflow: scroll;
+		height: inherit;
+	}
+
+	.setup_panel h4:hover{
+		cursor: pointer;
+		background-color: rgba(255,0,255,0.1);
+	}
+	.setup_panel h4:focus{
+		outline: none;
+	}
+	.setup_panel p{
+		text-shadow:none;
+	}
+	.setup_panel p:hover{
+		cursor: pointer;
+		background-color: rgba(0,0,255,0.1);
+	}
+	#accordion{
+		position: relative;
+		top:-50px;
+		padding-left: 10px;
+		margin-bottom: -50px;
+	}
+	.setup_panel{
+
+	}
+
+	.setup_ico{
+
+		position: relative;
+		height: 50px;
+		width: 50px;
+		background-color: rgba(255,255,0,0.9);
+		_left:350px;
+		_top:125px;
+		cursor: pointer;
+		z-index: 999;
+	}

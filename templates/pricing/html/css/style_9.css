@@ -1,0 +1,71 @@
+@import url(http://fonts.googleapis.com/css?family=Cabin:400,500,600,700,400italic,500italic,600italic,700italic|Josefin+Sans:100,300,400,600,700,100italic,300italic,400italic,600italic,700italic);
+
+fonts{
+	font-family: 'Cabin', sans-serif;
+	font-family: 'Josefin Sans', sans-serif;
+}
+.spacer{
+	height: 50px;
+}
+.pricing_tbls{
+	text-align: center;
+}
+
+.for_header h4{
+	margin: 0;
+	padding: 20px 0px;
+
+	font-size: 22px;
+	color: #E3994D;
+	_text-shadow:0px 1px 2px rgba(0,0,0,0.2);
+}
+.for_header{
+	margin-top: 20px;
+
+	font-family: 'Cabin', sans-serif;
+
+	border: 4px solid rgba(0,0,0,0.2);
+	border-bottom: none;
+	border-top-left-radius: 14px;
+	border-top-right-radius: 14px;
+}
+.for_header p{
+	margin:0;
+}
+.price p{
+	padding: 10px 0px;
+	padding-top: 15px;
+	
+	font-size: 28px;
+	background-color: #E8E8E0;
+
+	border: 1px solid #e0e0d8;
+	border-left:none;
+	border-right:none;
+}
+	.price p:first-letter{
+		font-weight: 200;
+		font-size: 20px;
+		margin-right: 2px;
+	}
+	.price p span{
+		font-size: 11px;
+		margin-left: -8px;
+	}
+.for_border{
+	border: 4px solid rgba(0,0,0,0.2);
+	border-top: none;
+	border-bottom-left-radius: 14px;
+	border-bottom-right-radius: 14px;
+}
+.for_border p{
+	margin:0;
+	padding: 7px 0;
+
+	font-family: 'Josefin Sans', sans-serif;
+	font-weight: 600;
+}
+	.for_border p:last-child{
+		border-bottom-left-radius: 10px;
+		border-bottom-right-radius: 10px;
+	}

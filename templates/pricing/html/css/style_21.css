@@ -1,0 +1,53 @@
+@import url(http://fonts.googleapis.com/css?family=Chivo:400,400italic,900,900italic);
+fonts{
+	font-family: 'Chivo', sans-serif;
+}
+.spacer{
+	height: 50px;
+}
+.pricing_tbls{
+	text-align: center;
+	font-family: 'Chivo', sans-serif;
+}
+.for_header h4{
+	margin: 0;
+	padding: 10px 0px;
+
+	border: 3px solid #F6F5F1;
+	border-bottom: none;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+.price p{
+	margin:0;
+	padding: 10px 0px;
+
+	border: 1px solid #E4E4E4;
+	border-left: none;
+	border-right: none;
+	font-size: 22px;
+
+	background-color: #F6F5F1;
+}
+	.price p span{
+		font-size: 12px;
+	}
+.for_border{
+	border: 3px solid #F6F5F1;
+	border-top: none;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+.for_border p{
+	margin:0;
+	padding: 6px 0px;
+}
+	.for_border p:nth-child(even){
+		background-color: #F7F7F7;
+	}
+	.for_border p span{
+		font-weight: bold;
+	}
+	.for_border p:last-child{
+		background-color: #F6F5F1;
+	}

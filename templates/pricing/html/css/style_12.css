@@ -1,0 +1,82 @@
+@import url(http://fonts.googleapis.com/css?family=Abel);
+fonts{
+	font-family: 'Abel', sans-serif;
+}
+.spacer{
+	height: 50px;
+}
+.pricing_tbls{
+	text-align: center;
+	font-family: 'Abel', sans-serif;
+}
+.for_header h4{
+	margin: 0;
+	padding: 15px 0px;
+
+	text-shadow:0px -1px 0px rgba(0,0,0,0.5);
+	font-weight: bold;
+	color: white;
+
+	border: 1px solid #475163;
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+	border-bottom: none;
+
+	background: #636d7f; /* Old browsers */
+	background: -moz-linear-gradient(top,  #636d7f 0%, #4c5669 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#636d7f), color-stop(100%,#4c5669)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #636d7f 0%,#4c5669 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #636d7f 0%,#4c5669 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #636d7f 0%,#4c5669 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #636d7f 0%,#4c5669 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#636d7f', endColorstr='#4c5669',GradientType=0 ); /* IE6-9 */
+}
+.pricing_tbls .span3:nth-child(3) .for_header h4{
+	border: 1px solid #0053A6;
+	border-bottom: none;
+
+	background: #0082ea; /* Old browsers */
+	background: -moz-linear-gradient(top,  #0082ea 0%, #0054a8 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#0082ea), color-stop(100%,#0054a8)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #0082ea 0%,#0054a8 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #0082ea 0%,#0054a8 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #0082ea 0%,#0054a8 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #0082ea 0%,#0054a8 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0082ea', endColorstr='#0054a8',GradientType=0 ); /* IE6-9 */
+}
+.pricing_tbls .span3:nth-child(3) .price{
+	background-color: #D9EAF0;
+
+	border: 1px solid #C3CCCF;
+	border-bottom: none;
+	border-top: none;
+}
+.for_header p{
+	margin:0;
+
+	font-size: 22px;
+}
+.price{
+	padding: 10px 0px;
+	background-color: #EAEAEA;
+
+	border: 1px solid #E1E2E3;
+	border-bottom: none;
+	border-top: none;
+}
+	.price span{
+		font-size: 11px;
+		margin-left: -5px;
+	}
+.for_border{
+	border: 1px solid #E1E2E3;
+	border-bottom-left-radius: 4px;
+	border-bottom-right-radius: 4px;
+}
+.for_border p{
+	margin:0;
+	padding: 6px 0px;
+}
+	.for_border p:nth-child(even){
+		background-color: #fafafa;
+	}

@@ -1,0 +1,54 @@
+@import url(http://fonts.googleapis.com/css?family=Coming+Soon);
+fonts{
+	font-family: 'Coming Soon', cursive;
+}
+.spacer{
+	height: 50px;
+}
+.pricing_tbls{
+	text-align: center;
+	font-family: 'Coming Soon', cursive;
+	color: #999;
+}
+.for_header{
+	margin-top: 20px;
+	padding: 15px 0px;
+	background-color: #F7F7F7;
+
+	border: 1px solid #DBDBDB;
+}
+.for_header h4{
+	margin: 0;
+}
+	.pricing_tbls .span3:nth-child(3) .for_header h4{
+		color: black;
+	}
+.for_header p{
+	margin:0;
+}
+	.pricing_tbls .span3:nth-child(3) .price p{
+		color:#FB761D;
+	}
+	.price p{
+		padding-top: 10px;
+
+		font-size: 26px;
+		color: #666;
+	}
+		.price span{
+			margin-left: -5px;
+
+			font-size: 13px;
+			color: #999;
+		}
+.for_border{
+	border: 1px solid #DBDBDB;
+	border-top: none;
+}
+.for_border p{
+	margin:0;
+	padding: 7px 0px;
+}
+.pricing_tbls .span3:nth-child(3) .for_border p{
+	color: black;
+}

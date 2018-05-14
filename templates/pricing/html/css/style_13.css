@@ -1,0 +1,69 @@
+@import url(http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700,300italic,400italic,500italic,700italic);
+fonts{
+	font-family: 'Ubuntu', sans-serif;
+}
+.spacer{
+	height: 50px;
+}
+.pricing_tbls{
+	text-align: center;
+	font-family: 'Ubuntu', sans-serif;
+}
+.for_header h4{
+	margin: 0;
+	padding: 5px 0px;
+
+	text-shadow: 0px -1px 0px rgba(0,0,0,0.5);
+	color: white;
+
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+
+	background: #28b3e6; /* Old browsers */
+	background: -moz-linear-gradient(top,  #28b3e6 0%, #004c6a 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#28b3e6), color-stop(100%,#004c6a)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #28b3e6 0%,#004c6a 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #28b3e6 0%,#004c6a 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #28b3e6 0%,#004c6a 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #28b3e6 0%,#004c6a 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#28b3e6', endColorstr='#004c6a',GradientType=0 ); /* IE6-9 */
+}
+.for_header p{
+	margin:0;
+	padding: 15px 0px;
+	padding-top: 20px;
+
+	text-shadow:0px 2px 1px rgba(0,0,0,0.6);
+	font-size: 36px;
+
+	color: white;
+}
+.price{
+	background: #636d7f; /* Old browsers */
+	background: -moz-linear-gradient(top,  #636d7f 0%, #444444 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#636d7f), color-stop(100%,#444444)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #636d7f 0%,#444444 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #636d7f 0%,#444444 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #636d7f 0%,#444444 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #636d7f 0%,#444444 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#636d7f', endColorstr='#444444',GradientType=0 ); /* IE6-9 */
+}
+	.price span{
+		font-size: 11px;
+		margin-left: -9px;
+	}
+.for_border{
+	border: 1px solid #DFDFDF;
+	border-top: none;
+	border-bottom-left-radius: 4px;
+	border-bottom-right-radius: 4px;
+}
+.for_border p{
+	margin:0;
+	padding: 7px 0px;
+
+	font-size: 12px;
+}
+	.for_border p:nth-child(odd){
+		background-color: #efefef;
+	}
