@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="914494e3-d04e-4f3a-92e9-70ad7d3c0949" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/admin/controller/Article.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/admin/controller/Article.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/animate" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/animate" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/daterangepicker" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/daterangepicker" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/flot" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/flot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/html5shiv" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/html5shiv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/jquery-cookie" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/jquery-cookie" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/jquery-ui" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/jquery-ui" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -388,7 +392,7 @@
       <workItem from="1526000957807" duration="20565000" />
       <workItem from="1526261794504" duration="13612000" />
       <workItem from="1526290375042" duration="5401000" />
-      <workItem from="1526346671550" duration="18816000" />
+      <workItem from="1526346671550" duration="19417000" />
     </task>
     <task id="LOCAL-00001" summary="补充说明">
       <created>1526292620119</created>
@@ -401,7 +405,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="86714000" />
+    <option name="totallyTimeSpent" value="87315000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="50" y="-11" width="1871" height="1092" extended-state="6" />
