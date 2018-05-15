@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:28:"theme/admin/index/index.html";i:1526280241;s:46:"/home/rong/WEBROOT/tp5/theme/admin/layout.html";i:1526375957;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:28:"theme/admin/index/index.html";i:1526280241;s:46:"/home/rong/WEBROOT/tp5/theme/admin/layout.html";i:1526377672;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,14 +12,13 @@
     <link rel="stylesheet" type="text/css" href="/static/admin/css/cloud-admin.min.css">
     <link rel="stylesheet" type="text/css" href="/static/admin/css/themes/default.min.css" id="skin-switcher">
     <link rel="stylesheet" type="text/css" href="/static/admin/css/responsive.min.css">
-    <link rel="stylesheet" type="text/css" href="/static/lib/jquery-ui/jquery-ui.min.css">
     
     <!-- STYLESHEETS --><!--[if lt IE 9]>
     <script type="text/javascript" src="/static/lib/flot/excanvas.min.js"></script>
     <script type="text/javascript" src="/static/lib/html5shiv/dist/html5shiv.min.js"></script>
     <script type="text/javascript" src="/static/lib/css3-mediaqueries-js/css3-mediaqueries.min.js"></script>
     <![endif]-->
-    <link href="/static/lib/Font-Awesome/web-fonts-with-css/css/fontawesome-all.min.css" rel="stylesheet">
+    <link href="/static/lib/fontawesome/css/font-awesome.min.css" rel="stylesheet">
     <!-- ANIMATE -->
     <link rel="stylesheet" type="text/css" href="/static/lib/animate/animate.min.css"/>
 </head>

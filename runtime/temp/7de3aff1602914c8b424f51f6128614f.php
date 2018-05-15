@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:22:"theme/admin/login.html";i:1526018368;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:22:"theme/admin/login.html";i:1526376575;}*/ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,7 +17,7 @@
     <link href="/static/images/common/ico.ico" rel="Shortcut Icon" type="image/x-icon">
     <link href="/static/images/common/ico.ico" rel="icon" type="image/x-icon">
     <link href="/static/css/common.css" rel="stylesheet"/>
-    <link href="/static/lib/FontAwesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/static/lib/Font-Awesome/web-fonts-with-css/css/fontawesome-all.min.css" rel="stylesheet">
     <link href="/static/css/login.css" rel="stylesheet">
 </head>
 <body>
