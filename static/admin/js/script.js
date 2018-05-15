@@ -1324,12 +1324,12 @@ var App = function () {
 	/*-----------------------------------------------------------------------------------*/
 	/*	Typeahead
 	/*-----------------------------------------------------------------------------------*/
-	var handleTypeahead = function () {
+	/*var handleTypeahead = function () {
 		$('#autocomplete-example').typeahead({
 			name: 'countries',
 			local: ["red", "blue", "green", "yellow", "brown", "black"]
 		});
-	}
+	}*/
 	/*-----------------------------------------------------------------------------------*/
 	/*	Autosize
 	/*-----------------------------------------------------------------------------------*/
@@ -2852,12 +2852,12 @@ var App = function () {
 				handleJqgrid();	//Function to display jqGrid
 			}
 			if (App.isPage("forms")) {
-				handleTypeahead();	//Function to display autocomplete
-				handleAutosize(); //Function to handle textarea autosize
-				handleCountable(); //Function to handle char count
-				handleSelect2(); //Function to handle select2
-				handleUniform();	//Function to handle uniform inputs
-				handleTimeAgo(); //Function to handle timestamps
+				// handleTypeahead();	//Function to display autocomplete
+				// handleAutosize(); //Function to handle textarea autosize
+				// handleCountable(); //Function to handle char count
+				// handleSelect2(); //Function to handle select2
+				// handleUniform();	//Function to handle uniform inputs
+				// handleTimeAgo(); //Function to handle timestamps
 			}
 			if (App.isPage("rich_text_editors")) {
 				handleWysiwyg();	//Function to display wysiwyg
