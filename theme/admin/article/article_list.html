@@ -2,12 +2,14 @@
 {block name="title"}文章列表{/block}
 {block name="keywords"}文章列表{/block}
 {block name="description"}文章列表{/block}
+{block name="link"}
+    <link rel="stylesheet" type="text/css" href="/static/lib/daterangepicker/daterangepicker.css">
+{/block}
 {block name="navi"}文章列表{/block}
-
 {block name="content-description"}文章列表描述{/block}
 {block name="main-content"}
     <div class="row">
-       <div class="col-lg-12">
+       <div class="col-xs-12 col-md-12 col-lg-12">
            <div class="box border blue">
                <div class="box-title">
                    <h4><i class="fa fa-bars"></i>搜索</h4>
@@ -55,21 +57,10 @@
                                            <div class="input-group">
                                             <span class="input-group-addon">
                                                 <i class="fa fa-calendar"></i>
-                                            </span><input type="text" class="form-control" id="reservation" placeholder="添加时间" name="filter[order.add_times]" value="">
+                                            </span><input type="text" class="form-control" id="addTime" placeholder="添加时间" name="filter[article.add_times]" value="">
+                                               <!--<div class="input-group-addon clearBtns">x</div>-->
                                            </div>
                                        </div>
-
-                                       <!--Basic Scripts-->
-                                       <script src="/Assets/js/jquery-2.0.3.min.js"></script>
-                                       <!--Bootstrap Date Range Picker-->
-                                       <script src="/Assets/js/datetime/moment.js"></script>
-                                       <script src="/Assets/js/datetime/daterangepicker.js"></script>
-
-                                       <script type="text/javascript">
-                                           //--Bootstrap Date Range Picker--
-                                           $('#reservation').daterangepicker();
-                                       </script>
-
                                    </div>
 
                                </div>
@@ -83,15 +74,10 @@
                                            <div class="input-group">
                                             <span class="input-group-addon">
                                                 <i class="fa fa-calendar"></i>
-                                            </span><input type="text" class="form-control" id="order-time" placeholder="修改时间" name="filter[order.pay_times]" value="">
+                                            </span><input type="text" class="form-control" id="editTime" placeholder="修改时间" name="filter[order.pay_times]" value="">
+                                               <!--<div class="input-group-addon clearBtns">x</div>-->
                                            </div>
                                        </div>
-
-                                       <script type="text/javascript">
-                                           //--Bootstrap Date Range Picker--
-                                           $('#order-time').daterangepicker();
-                                       </script>
-
                                    </div>
                                </div>
 
@@ -125,7 +111,7 @@
 
 
     <div class="row">
-        <div class="col-md-12">
+        <div class="col-xs-12 col-md-12 col-md-12">
             <!-- BOX -->
             <div class="box border blue">
                 <div class="box-title">
@@ -150,8 +136,9 @@
                         <thead>
                         <tr>
                             <th width="3%">编号</th>
-                            <th width="20%">标题</th>
-                            <th width="40%">描述</th>
+                            <th width="3%" style="width: 60px; height: 60px">图片</th>
+                            <th width="15%">标题</th>
+                            <th width="35%">描述</th>
                             <th width="5%">置顶</th>
                             <th width="5%">作者</th>
                             <th width="8%">添加时间</th>
@@ -162,6 +149,7 @@
                         <tbody>
                         <tr>
                             <td>1</td>
+                            <td><img src="/static/images/wall_page/1.jpg" style="width: 60px; height: 60px"></td>
                             <td>Laravel 的 Blade 模板引擎</td>
                             <td>Blade 是 Laravel 提供的一个简单而又强大的模板引擎。和其他流行的 PHP 模板引擎不同，Blade 并不限制你在视图中使用原生 PHP 代码。</td>
                             <td>admin</td>
@@ -174,76 +162,7 @@
                                 <a class="btn btn-warning">删除</a>
                             </td>
                         </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>Laravel 的 Blade 模板引擎</td>
-                            <td>Blade 是 Laravel 提供的一个简单而又强大的模板引擎。和其他流行的 PHP 模板引擎不同，Blade 并不限制你在视图中使用原生 PHP 代码。</td>
-                            <td>admin</td>
-                            <td>admin</td>
-                            <td>2018-05-12 16:30:23</td>
-                            <td>2018-05-12 16:30:23</td>
-                            <td>
-                                <a class="btn btn-primary">置顶</a>
-                                <a class="btn btn-success">编辑</a>
-                                <a class="btn btn-warning">删除</a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>Laravel 的 Blade 模板引擎</td>
-                            <td>Blade 是 Laravel 提供的一个简单而又强大的模板引擎。和其他流行的 PHP 模板引擎不同，Blade 并不限制你在视图中使用原生 PHP 代码。</td>
-                            <td>admin</td>
-                            <td>admin</td>
-                            <td>2018-05-12 16:30:23</td>
-                            <td>2018-05-12 16:30:23</td>
-                            <td>
-                                <a class="btn btn-primary">置顶</a>
-                                <a class="btn btn-success">编辑</a>
-                                <a class="btn btn-warning">删除</a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>Laravel 的 Blade 模板引擎</td>
-                            <td>Blade 是 Laravel 提供的一个简单而又强大的模板引擎。和其他流行的 PHP 模板引擎不同，Blade 并不限制你在视图中使用原生 PHP 代码。</td>
-                            <td>admin</td>
-                            <td>admin</td>
-                            <td>2018-05-12 16:30:23</td>
-                            <td>2018-05-12 16:30:23</td>
-                            <td>
-                                <a class="btn btn-primary">置顶</a>
-                                <a class="btn btn-success">编辑</a>
-                                <a class="btn btn-warning">删除</a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>Laravel 的 Blade 模板引擎</td>
-                            <td>Blade 是 Laravel 提供的一个简单而又强大的模板引擎。和其他流行的 PHP 模板引擎不同，Blade 并不限制你在视图中使用原生 PHP 代码。</td>
-                            <td>admin</td>
-                            <td>admin</td>
-                            <td>2018-05-12 16:30:23</td>
-                            <td>2018-05-12 16:30:23</td>
-                            <td>
-                                <a class="btn btn-primary">置顶</a>
-                                <a class="btn btn-success">编辑</a>
-                                <a class="btn btn-warning">删除</a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>Laravel 的 Blade 模板引擎</td>
-                            <td>Blade 是 Laravel 提供的一个简单而又强大的模板引擎。和其他流行的 PHP 模板引擎不同，Blade 并不限制你在视图中使用原生 PHP 代码。</td>
-                            <td>admin</td>
-                            <td>admin</td>
-                            <td>2018-05-12 16:30:23</td>
-                            <td>2018-05-12 16:30:23</td>
-                            <td>
-                                <a class="btn btn-primary">置顶</a>
-                                <a class="btn btn-success">编辑</a>
-                                <a class="btn btn-warning">删除</a>
-                            </td>
-                        </tr>
+
 
                         </tbody>
                     </table>
@@ -253,4 +172,218 @@
         </div>
     </div>
 
+{/block}
+{block name="javascript"}
+    <script src="/static/lib/daterangepicker/moment.min.js"></script>
+    <script src="/static/lib/daterangepicker/daterangepicker.js"></script>
+    <script type="text/javascript">
+        $("#addTime").daterangepicker({
+            //日期或字符串）最初选择的日期范围的开始日期。如果您提供了一个字符串，它必须与您的locale设置中设置的日期格式字符串匹配。
+            "startDate": moment().subtract(29, 'days'),
+            //（日期或字符串）最初选择的日期范围的结束日期。
+            "endDate": moment(),
+            //（日期或字符串）用户可以选择的最早日期。
+            "minDate":'01/01/2017',
+            // （日期或字符串）用户可以选择的最新日期。
+            "maxDate": '12/31/2019',
+            //(对象）所选开始和结束日期之间的最大跨度。maxSpan在配置生成器中检查一个如何使用它的例子。您可以提供该moment库允许您添加到日期的任何对象。
+            "maxSpan": {
+                "days": 60
+            },
+            //（true / false）显示日历上方的年份和月份选择框，以跳转到特定的月份和年份。
+            "showDropdowns": true,
+            //（数字）下拉列表中显示的最小年份showDropdowns设置为true。
+            "minYear":'2010',
+            //(数字）下拉列表中显示的最大年份showDropdowns设置为true。
+            "maxYear":'2020',
+            //(true / false）在日历的每周开始时显示本地化的星期编号。
+            "showWeekNumbers": true,
+            //（真/假）在日历上的每周开始时显示ISO星期数。
+            "showISOWeekNumbers":false,
+            //（true / false）添加选择框以选择日期以外的时间。
+            "timePicker": true,
+            //（数字）分钟选择列表的时间增量（即30，只允许选择以0或30结尾的时间）
+            "timePickerIncrement":1,
+            //（true / false）使用24小时而不是12小时的时间，取消AM / PM选择
+            "timePicker24Hour": true,
+            //true / false）在timePicker中显示秒数
+            "timePickerSeconds": true,
+            //设置用户可以从中选择的预定义日期范围。每个键都是范围的标签，其值是一个数组，其中两个日期代表范围的界限。
+                "ranges": {
+                    'Today': [moment(), moment()],
+                    'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+                    'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+                    'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+                    'This Month': [moment().startOf('month'), moment().endOf('month')],
+                    'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+                },
+            //（true / false）ranges使用该选项时，在预定范围列表的末尾显示“Custom Range” 。只要当前日期范围选择与预定义的范围之一不匹配，该选项就会突出显示。点击它将显示日历以选择新的范围。
+            "showCustomRangeLabel": true,
+            //（true / false）通常，如果您使用该ranges选项指定预定义日期范围，则用户单击“自定义范围”之前，不会显示用于选择自定义日期范围的日历。当此选项设置为true时，将始终显示用于选择自定义日期范围的日历。
+            "alwaysShowCalendars": true,
+            //（'left'/'right'/'center'）该选择器是否显示在左侧，右侧或与其相连的HTML元素对齐的位置。
+            "opens":'center',
+            //（'down'/'up'）选择器是否出现在下面（默认）或高于它所连接的HTML元素。
+            "drops":'down',
+            //（字符串）将被添加到应用和取消按钮的CSS类名称。
+            "buttonClasses":'btn btn-default',
+            //（字符串）将仅添加到应用按钮的CSS类名称。
+            "applyButtonClasses":'btn-small btn-primary',
+            //（string）将仅添加到取消按钮的CSS类名称。
+            "cancelButtonClasses":'btn-small btn-primary',
+            //（object）允许您为按钮和标签提供本地化的字符串，自定义日期格式，并更改日历的第一个星期几。locale在配置生成器中检查以了解如何自定义这些选项。
+            "locale": {
+                "format": "YYYY/MM/DD HH:mm:ss",
+                "separator": " - ",
+                "applyLabel": "应用",
+                "cancelLabel": "取消",
+                "fromLabel": "From",
+                "toLabel": "To",
+                "customRangeLabel": "Custom",
+                "weekLabel": "W",
+                "daysOfWeek": [
+                    "Su",
+                    "Mo",
+                    "Tu",
+                    "We",
+                    "Th",
+                    "Fr",
+                    "Sa"
+                ],
+                "monthNames": [
+                    "January",
+                    "February",
+                    "March",
+                    "April",
+                    "May",
+                    "June",
+                    "July",
+                    "August",
+                    "September",
+                    "October",
+                    "November",
+                    "December"
+                ],
+                "firstDay": 1
+            },
+            //true / false）隐藏应用和取消按钮，并在点击两个日期后自动应用新的日期范围。
+            "autoApply":false,
+            //（true / false）仅显示一个日历来选择一个日期，而不是具有两个日历的范围选择器。提供给您的回调的开始日期和结束日期将选择相同的单一日期。
+            "singleDatePicker": false,
+            //（true / false）启用后，显示的两个日历将始终为连续两个月（即一月和二月），并且在点击日历上方的左侧或右侧箭头时，两者都将被提前。禁用时，两个日历可以单独进阶并显示任何月份/年份。
+            "linkedCalendars": false,
+            //（true / false）指示日期范围选择器是否应自动更新其<input>在初始化时以及选定日期更改时所附的元素的值。
+            "autoUpdateInput": false,
+
+        },
+            function(start, end, label) {
+                console.log('New date range selected: ' + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD') + ' (predefined range: ' + label + ')');
+                $("#addTime").val(start.format('YYYY-MM-DD HH:mm:ss') + ' - ' + end.format('YYYY-MM-DD HH:mm:ss'));
+            }
+        );
+        $("#editTime").daterangepicker({
+                //日期或字符串）最初选择的日期范围的开始日期。如果您提供了一个字符串，它必须与您的locale设置中设置的日期格式字符串匹配。
+                "startDate": moment().subtract(29, 'days'),
+                //（日期或字符串）最初选择的日期范围的结束日期。
+                "endDate": moment(),
+                //（日期或字符串）用户可以选择的最早日期。
+                "minDate":'01/01/2017',
+                // （日期或字符串）用户可以选择的最新日期。
+                "maxDate": '12/31/2019',
+                //(对象）所选开始和结束日期之间的最大跨度。maxSpan在配置生成器中检查一个如何使用它的例子。您可以提供该moment库允许您添加到日期的任何对象。
+                "maxSpan": {
+                    "days": 60
+                },
+                //（true / false）显示日历上方的年份和月份选择框，以跳转到特定的月份和年份。
+                "showDropdowns": true,
+                //（数字）下拉列表中显示的最小年份showDropdowns设置为true。
+                "minYear":'2010',
+                //(数字）下拉列表中显示的最大年份showDropdowns设置为true。
+                "maxYear":'2020',
+                //(true / false）在日历的每周开始时显示本地化的星期编号。
+                "showWeekNumbers": true,
+                //（真/假）在日历上的每周开始时显示ISO星期数。
+                "showISOWeekNumbers":false,
+                //（true / false）添加选择框以选择日期以外的时间。
+                "timePicker": true,
+                //（数字）分钟选择列表的时间增量（即30，只允许选择以0或30结尾的时间）
+                "timePickerIncrement":1,
+                //（true / false）使用24小时而不是12小时的时间，取消AM / PM选择
+                "timePicker24Hour": true,
+                //true / false）在timePicker中显示秒数
+                "timePickerSeconds": true,
+                //设置用户可以从中选择的预定义日期范围。每个键都是范围的标签，其值是一个数组，其中两个日期代表范围的界限。
+                "ranges": {
+                    'Today': [moment(), moment()],
+                    'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+                    'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+                    'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+                    'This Month': [moment().startOf('month'), moment().endOf('month')],
+                    'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+                },
+                //（true / false）ranges使用该选项时，在预定范围列表的末尾显示“Custom Range” 。只要当前日期范围选择与预定义的范围之一不匹配，该选项就会突出显示。点击它将显示日历以选择新的范围。
+                "showCustomRangeLabel": true,
+                //（true / false）通常，如果您使用该ranges选项指定预定义日期范围，则用户单击“自定义范围”之前，不会显示用于选择自定义日期范围的日历。当此选项设置为true时，将始终显示用于选择自定义日期范围的日历。
+                "alwaysShowCalendars": true,
+                //（'left'/'right'/'center'）该选择器是否显示在左侧，右侧或与其相连的HTML元素对齐的位置。
+                "opens":'center',
+                //（'down'/'up'）选择器是否出现在下面（默认）或高于它所连接的HTML元素。
+                "drops":'down',
+                //（字符串）将被添加到应用和取消按钮的CSS类名称。
+                "buttonClasses":'btn btn-default',
+                //（字符串）将仅添加到应用按钮的CSS类名称。
+                "applyButtonClasses":'btn-small btn-primary',
+                //（string）将仅添加到取消按钮的CSS类名称。
+                "cancelButtonClasses":'btn-small btn-primary',
+                //（object）允许您为按钮和标签提供本地化的字符串，自定义日期格式，并更改日历的第一个星期几。locale在配置生成器中检查以了解如何自定义这些选项。
+                "locale": {
+                    "format": "YYYY/MM/DD HH:mm:ss",
+                    "separator": " - ",
+                    "applyLabel": "应用",
+                    "cancelLabel": "取消",
+                    "fromLabel": "From",
+                    "toLabel": "To",
+                    "customRangeLabel": "Custom",
+                    "weekLabel": "W",
+                    "daysOfWeek": [
+                        "Su",
+                        "Mo",
+                        "Tu",
+                        "We",
+                        "Th",
+                        "Fr",
+                        "Sa"
+                    ],
+                    "monthNames": [
+                        "January",
+                        "February",
+                        "March",
+                        "April",
+                        "May",
+                        "June",
+                        "July",
+                        "August",
+                        "September",
+                        "October",
+                        "November",
+                        "December"
+                    ],
+                    "firstDay": 1
+                },
+                //true / false）隐藏应用和取消按钮，并在点击两个日期后自动应用新的日期范围。
+                "autoApply":false,
+                //（true / false）仅显示一个日历来选择一个日期，而不是具有两个日历的范围选择器。提供给您的回调的开始日期和结束日期将选择相同的单一日期。
+                "singleDatePicker": false,
+                //（true / false）启用后，显示的两个日历将始终为连续两个月（即一月和二月），并且在点击日历上方的左侧或右侧箭头时，两者都将被提前。禁用时，两个日历可以单独进阶并显示任何月份/年份。
+                "linkedCalendars": false,
+                //（true / false）指示日期范围选择器是否应自动更新其<input>在初始化时以及选定日期更改时所附的元素的值。
+                "autoUpdateInput": false,
+
+            },
+            function(start, end, label) {
+                console.log('New date range selected: ' + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD') + ' (predefined range: ' + label + ')');
+                $("#editTime").val(start.format('YYYY-MM-DD HH:mm:ss') + ' - ' + end.format('YYYY-MM-DD HH:mm:ss'));
+            }
+        );
+    </script>
 {/block}
