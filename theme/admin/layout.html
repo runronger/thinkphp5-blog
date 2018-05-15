@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" href="/static/admin/css/cloud-admin.min.css">
     <link rel="stylesheet" type="text/css" href="/static/admin/css/themes/default.min.css" id="skin-switcher">
     <link rel="stylesheet" type="text/css" href="/static/admin/css/responsive.min.css">
+    {block name="link"}{/block}
     <!-- STYLESHEETS --><!--[if lt IE 9]>
     <script type="text/javascript" src="/static/lib/flot/excanvas.min.js"></script>
     <script type="text/javascript" src="/static/lib/html5shiv/dist/html5shiv.min.js"></script>
@@ -432,6 +433,7 @@
 <script type="text/javascript" src="/static/lib/bootstrap/js/bootstrap.min.js"></script>
 <!-- CUSTOM SCRIPT -->
 <script type="text/javascript" src="/static/admin/js/script.js"></script>
+{block name="javascript"}{/block}
 <script>
     jQuery(document).ready(function () {
         App.setPage("index");  //Set current page
