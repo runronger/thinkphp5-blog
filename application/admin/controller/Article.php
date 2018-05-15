@@ -5,7 +5,7 @@ namespace app\admin\controller;
 use think\Controller;
 use think\Request;
 
-class Article extends Controller
+class Article extends Base
 {
     /**
      * 显示资源列表
@@ -23,9 +23,11 @@ class Article extends Controller
      *
      * @return \think\Response
      */
-    public function create()
+    public function articleAdd()
     {
         //
+        return $this->fetch("article_edit");
+
     }
 
     /**

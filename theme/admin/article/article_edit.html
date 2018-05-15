@@ -1,0 +1,237 @@
+{extend name="layout"/}
+{block name="title"}添加文章{/block}
+{block name="keywords"}添加文章{/block}
+{block name="description"}添加文章{/block}
+{block name="link"}
+<link rel="stylesheet" href="/static/lib/jQueryFileUpload/css/jquery.fileupload.css">
+{/block}
+{block name="navi"}添加文章{/block}
+{block name="content-description"}添加文章描述{/block}
+{block name="main-content"}
+<div class="row">
+    <div class="col-xs-12 col-md-12 col-md-12">
+        <div class="row">
+            <div class="col-md-12">
+                <!-- BASIC -->
+                <div class="box border blue">
+                    <div class="box-title">
+                        <h4><i class="fa fa-bars"></i>添加文章</h4>
+                        <div class="tools hidden-xs">
+                            <a href="#box-config" data-toggle="modal" class="config">
+                                <i class="fa fa-cog"></i>
+                            </a>
+                            <a href="javascript:;" class="reload">
+                                <i class="fa fa-refresh"></i>
+                            </a>
+                            <a href="javascript:;" class="collapse">
+                                <i class="fa fa-chevron-up"></i>
+                            </a>
+                            <a href="javascript:;" class="remove">
+                                <i class="fa fa-times"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="box-body big">
+                        <h3 class="form-title">添加文章</h3>
+                        <form role="form">
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">标题</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter title">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">简介</label>
+                                <input type="text" class="form-control" id="exampleInputPassword1" placeholder="description">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">作者</label>
+                                <input type="text" class="form-control" id="exampleInputPassword1" placeholder="authoer">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">图片</label>
+                            </div>
+
+
+
+                            <div class="box-body">
+                                <form id="fileupload" action="http://jquery-file-upload.appspot.com/" method="POST" enctype="multipart/form-data">
+                                    <!-- Redirect browsers with JavaScript disabled to the origin page -->
+                                    <noscript><input type="hidden" name="redirect" value="http://blueimp.github.io/jQuery-File-Upload/"></noscript>
+                                    <!-- The fileupload-buttonbar contains buttons to add/delete files and start/cancel the upload -->
+                                    <div class="divide-20"></div>
+                                    <div class="row fileupload-buttonbar">
+                                        <div class="col-lg-12">
+                                            <!-- The fileinput-button span is used to style the file input field as button -->
+                                            <span class="btn btn-success fileinput-button">
+                                                <i class="fa fa-plus"></i>
+                                                <span>Add files...</span>
+                                                <input type="file" name="files[]" multiple>
+                                            </span>
+                                            <button type="submit" class="btn btn-primary start">
+                                                <i class="fa fa-arrow-circle-o-up"></i>
+                                                <span>Start upload</span>
+                                            </button>
+                                            <button type="reset" class="btn btn-warning cancel">
+                                                <i class="fa fa-ban"></i>
+                                                <span>Cancel upload</span>
+                                            </button>
+                                            <button type="button" class="btn btn-danger delete">
+                                                <i class="fa fa-trash-o"></i>
+                                                <span>Delete</span>
+                                            </button>
+                                            <input type="checkbox" class="toggle">
+                                            <!-- The loading indicator is shown during file processing -->
+                                            <span class="fileupload-loading"></span>
+                                        </div>
+                                        <!-- The global progress information -->
+                                        <div class="col-lg-5 fileupload-progress fade">
+                                            <!-- The global progress bar -->
+                                            <div class="progress progress-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100">
+                                                <div class="progress-bar progress-bar-success" style="width:0%;"></div>
+                                            </div>
+                                            <!-- The extended global progress information -->
+                                            <div class="progress-extended">&nbsp;</div>
+                                        </div>
+                                    </div>
+                                    <!-- The table listing the files available for upload/download -->
+                                    <table role="presentation" class="table table-striped"><tbody class="files"></tbody></table>
+                                </form>
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h3 class="panel-title">Demo Notes</h3>
+                                    </div>
+                                    <div class="panel-body">
+                                        <ul>
+                                            <li>The server is not configured for uploads. This is for demonstration purpose only.</li>
+                                            <li>The maximum file size for uploads is unlimited.</li>
+                                            <li>You can <strong>drag &amp; drop</strong> files from your desktop.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!-- The blueimp Gallery widget -->
+                                <div id="blueimp-gallery" class="blueimp-gallery blueimp-gallery-controls" data-filter=":even">
+                                    <div class="slides"></div>
+                                    <h3 class="title"></h3>
+                                    <a class="prev">‹</a>
+                                    <a class="next">›</a>
+                                    <a class="close">×</a>
+                                    <a class="play-pause"></a>
+                                    <ol class="indicator"></ol>
+                                </div>
+                                <script id="template-upload" type="text/x-tmpl">
+                            {% for (var i=0, file; file=o.files[i]; i++) { %}
+                                <tr class="template-upload fade">
+                                    <td>
+                                        <span class="preview"></span>
+                                    </td>
+                                    <td>
+                                        <p class="name">{%=file.name%}</p>
+                                        {% if (file.error) { %}
+                                            <div><span class="label label-danger">Error</span> {%=file.error%}</div>
+                                        {% } %}
+                                    </td>
+                                    <td>
+                                        <p class="size">{%=o.formatFileSize(file.size)%}</p>
+                                        {% if (!o.files.error) { %}
+                                            <div class="progress progress-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><div class="progress-bar progress-bar-success" style="width:0%;"></div></div>
+                                        {% } %}
+                                    </td>
+                                    <td>
+                                        {% if (!o.files.error && !i && !o.options.autoUpload) { %}
+                                            <button class="btn btn-primary start">
+                                                <i class="fa fa-arrow-circle-o-up"></i>
+                                                <span>Start</span>
+                                            </button>
+                                        {% } %}
+                                        {% if (!i) { %}
+                                            <button class="btn btn-warning cancel">
+                                                <i class="fa fa-ban"></i>
+                                                <span>Cancel</span>
+                                            </button>
+                                        {% } %}
+                                    </td>
+                                </tr>
+                            {% } %}
+                            </script>
+                                <!-- The template to display files available for download -->
+                                <script id="template-download" type="text/x-tmpl">
+                            {% for (var i=0, file; file=o.files[i]; i++) { %}
+                                <tr class="template-download fade">
+                                    <td>
+                                        <span class="preview">
+                                            {% if (file.thumbnailUrl) { %}
+                                                <a href="{%=file.url%}" title="{%=file.name%}" download="{%=file.name%}" data-gallery><img src="{%=file.thumbnailUrl%}"></a>
+                                            {% } %}
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <p class="name">
+                                            {% if (file.url) { %}
+                                                <a href="{%=file.url%}" title="{%=file.name%}" download="{%=file.name%}" {%=file.thumbnailUrl?'data-gallery':''%}>{%=file.name%}</a>
+                                            {% } else { %}
+                                                <span>{%=file.name%}</span>
+                                            {% } %}
+                                        </p>
+                                        {% if (file.error) { %}
+                                            <div><span class="label label-danger">Error</span> {%=file.error%}</div>
+                                        {% } %}
+                                    </td>
+                                    <td>
+                                        <span class="size">{%=o.formatFileSize(file.size)%}</span>
+                                    </td>
+                                    <td>
+                                        {% if (file.deleteUrl) { %}
+                                            <button class="btn btn-danger delete" data-type="{%=file.deleteType%}" data-url="{%=file.deleteUrl%}"{% if (file.deleteWithCredentials) { %} data-xhr-fields='{"withCredentials":true}'{% } %}>
+                                                <i class="fa fa-trash-o"></i>
+                                                <span>Delete</span>
+                                            </button>
+                                            <input type="checkbox" name="delete" value="1" class="toggle">
+                                        {% } else { %}
+                                            <button class="btn btn-warning cancel">
+                                                <i class="fa fa-ban"></i>
+                                                <span>Cancel</span>
+                                            </button>
+                                        {% } %}
+                                    </td>
+                                </tr>
+                            {% } %}
+                            </script>
+                            </div>
+
+
+                            <label for="exampleInputPassword1">内容</label>
+                            <script id="container" name="content" type="text/plain">这里写你的初始化内容</script>
+                            <div class="separator"></div>
+                            <button type="submit" class="btn btn-success">提交</button>
+                        </form>
+
+                    </div>
+                </div>
+                <!-- /BASIC -->
+            </div>
+
+        </div>
+    </div>
+</div>
+
+{/block}
+{block name="javascript"}
+<script type="text/javascript" src="/static/lib/jQueryFileUpload/js/vendor/jquery.ui.widget.js"></script>
+<script type="text/javascript" src="/static/lib/jQueryFileUpload/js/jquery.iframe-transport.js"></script>
+<script type="text/javascript" src="/static/lib/jQueryFileUpload/js/jquery.fileupload.js"></script>
+<script type="text/javascript" src="/static/lib/jQueryFileUpload/js/jquery.fileupload-process.js"></script>
+<script type="text/javascript" src="/static/lib/jQueryFileUpload/js/jquery.fileupload-validate.js"></script>
+<script type="text/javascript" src="/static/lib/jQueryFileUpload/js/jquery.fileupload-ui.js"></script>
+<script type="text/javascript" src="/static/lib/jQueryFileUpload/js/main.js"></script>
+<!-- 配置文件 -->
+<script type="text/javascript" src="/static/lib/ueditor/ueditor.config.js"></script>
+<!-- 编辑器源码文件 -->
+<script type="text/javascript" src="/static/lib/ueditor/ueditor.all.min.js"></script>
+<!-- 实例化编辑器 -->
+<script type="text/javascript">
+    jQuery(document).ready(function() {
+        App.setPage("forms");  //Set current page
+        App.init(); //Initialise plugins and elements
+    });
+    var ue = UE.getEditor('container');
+</script>
+{/block}
