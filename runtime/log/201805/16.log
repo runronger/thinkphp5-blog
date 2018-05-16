@@ -1,0 +1,5058 @@
+---------------------------------------------------------------
+[ 2018-05-16T09:18:16+08:00 ] 127.0.0.1 GET /admin/article/articleAdd.html
+[ info ] tp5.com/admin/article/articleAdd.html [运行时间：1.063850s][吞吐率：0.94req/s] [内存消耗：287.92kb] [文件加载：38]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'article',
+    2 => 'articleAdd',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-GB,en;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => 'tp5.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] /home/rong/WEBROOT/tp5/thinkphp/tpl/dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-16T09:19:52+08:00 ] 127.0.0.1 GET /admin/article/articleAdd.html
+[ info ] tp5.com/admin/article/articleAdd.html [运行时间：0.003126s][吞吐率：319.91req/s] [内存消耗：218.88kb] [文件加载：38]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'article',
+    2 => 'articleAdd',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-GB,en;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => 'tp5.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] /home/rong/WEBROOT/tp5/thinkphp/tpl/dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-16T09:19:55+08:00 ] 127.0.0.1 GET /admin/login/index.html
+[ info ] tp5.com/admin/login/index.html [运行时间：0.026575s][吞吐率：37.63req/s] [内存消耗：217.38kb] [文件加载：36]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'cookie' => 'PHPSESSID=b5mc0ojmordrjj5gbnk087uv10',
+  'referer' => 'http://tp5.com/admin/article/articleAdd.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-GB,en;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => 'tp5.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Login->index[ /home/rong/WEBROOT/tp5/application/admin/controller/Login.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] theme/admin/login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-16T09:19:55+08:00 ] 127.0.0.1 GET /captcha.html
+[ info ] tp5.com/captcha.html [运行时间：0.039697s][吞吐率：25.19req/s] [内存消耗：141.55kb] [文件加载：28]
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'cookie' => 'PHPSESSID=b5mc0ojmordrjj5gbnk087uv10',
+  'referer' => 'http://tp5.com/admin/login/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-GB,en;q=0.5',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => 'tp5.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ /home/rong/WEBROOT/tp5/vendor/topthink/think-captcha/src/CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-16T09:20:03+08:00 ] 127.0.0.1 POST /admin/login/doLogin.html
+[ info ] tp5.com/admin/login/doLogin.html [运行时间：0.345812s][吞吐率：2.89req/s] [内存消耗：500.76kb] [文件加载：48]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'doLogin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'cookie' => 'PHPSESSID=b5mc0ojmordrjj5gbnk087uv10',
+  'content-length' => '42',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://tp5.com/admin/login/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-GB,en;q=0.5',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'user-agent' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => 'tp5.com',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'admin',
+  'password' => 'admin',
+  'captcha' => 'qtyv',
+)
+[ info ] [ RUN ] app\admin\controller\Login->doLogin[ /home/rong/WEBROOT/tp5/application/admin/controller/Login.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012629s ] mysql:host=127.0.0.1;dbname=cnit8;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cn_admin` [ RunTime:0.018373s ]
+[ sql ] [ SQL ] SELECT * FROM `cn_admin` WHERE  `user_name` = 'admin'  AND `work_status` = 1 LIMIT 1 [ RunTime:0.014607s ]
+[ sql ] [ SQL ] UPDATE `cn_admin`  SET `last_time`='2018-05-16 09:20:03'  WHERE  `id` = 5 [ RunTime:0.059245s ]
+---------------------------------------------------------------
+[ 2018-05-16T09:20:03+08:00 ] 127.0.0.1 GET /admin/index.html
+[ info ] tp5.com/admin/index.html [运行时间：0.088109s][吞吐率：11.35req/s] [内存消耗：257.88kb] [文件加载：39]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'cookie' => 'PHPSESSID=b5mc0ojmordrjj5gbnk087uv10',
+  'referer' => 'http://tp5.com/admin/login/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-GB,en;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => 'tp5.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->index[ /home/rong/WEBROOT/tp5/application/admin/controller/Index.php ]
+[ info ] [ VIEW ] theme/admin/index/index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-16T09:20:11+08:00 ] 127.0.0.1 GET /admin/article/articleList.html
+[ info ] tp5.com/admin/article/articleList.html [运行时间：0.108556s][吞吐率：9.21req/s] [内存消耗：384.42kb] [文件加载：41]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'article',
+    2 => 'articleList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'cookie' => 'PHPSESSID=b5mc0ojmordrjj5gbnk087uv10',
+  'referer' => 'http://tp5.com/admin/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-GB,en;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => 'tp5.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Article->articleList[ /home/rong/WEBROOT/tp5/application/admin/controller/Article.php ]
+[ info ] [ VIEW ] theme/admin/article/article_list.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-16T09:20:20+08:00 ] 127.0.0.1 GET /admin/article/articleAdd.html
+[ info ] tp5.com/admin/article/articleAdd.html [运行时间：0.048673s][吞吐率：20.55req/s] [内存消耗：257.71kb] [文件加载：39]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'article',
+    2 => 'articleAdd',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'cookie' => 'PHPSESSID=b5mc0ojmordrjj5gbnk087uv10',
+  'referer' => 'http://tp5.com/admin/article/articleList.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-GB,en;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => 'tp5.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Article->articleAdd[ /home/rong/WEBROOT/tp5/application/admin/controller/Article.php ]
+[ info ] [ VIEW ] theme/admin/article/article_edit.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-16T09:31:41+08:00 ] 127.0.0.1 GET /admin/article/articleAdd.html
+[ info ] tp5.com/admin/article/articleAdd.html [运行时间：0.003029s][吞吐率：330.13req/s] [内存消耗：357.74kb] [文件加载：41]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'article',
+    2 => 'articleAdd',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'cookie' => 'PHPSESSID=b5mc0ojmordrjj5gbnk087uv10',
+  'referer' => 'http://tp5.com/admin/article/articleList.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-GB,en;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => 'tp5.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Article->articleAdd[ /home/rong/WEBROOT/tp5/application/admin/controller/Article.php ]
+[ info ] [ VIEW ] theme/admin/article/article_edit.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-16T09:38:08+08:00 ] 127.0.0.1 GET /admin/article/articleAdd.html
+[ info ] tp5.com/admin/article/articleAdd.html [运行时间：0.003808s][吞吐率：262.60req/s] [内存消耗：357.74kb] [文件加载：41]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'article',
+    2 => 'articleAdd',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'cookie' => 'PHPSESSID=b5mc0ojmordrjj5gbnk087uv10',
+  'referer' => 'http://tp5.com/admin/article/articleList.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-GB,en;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => 'tp5.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Article->articleAdd[ /home/rong/WEBROOT/tp5/application/admin/controller/Article.php ]
+[ info ] [ VIEW ] theme/admin/article/article_edit.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-16T10:18:10+08:00 ] 127.0.0.1 GET /admin/article/articleAdd.html
+[ info ] tp5.com/admin/article/articleAdd.html [运行时间：0.001473s][吞吐率：678.91req/s] [内存消耗：219.59kb] [文件加载：38]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'article',
+    2 => 'articleAdd',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'cookie' => 'PHPSESSID=b5mc0ojmordrjj5gbnk087uv10',
+  'referer' => 'http://tp5.com/admin/article/articleList.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-GB,en;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => 'tp5.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] /home/rong/WEBROOT/tp5/thinkphp/tpl/dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-16T10:18:13+08:00 ] 127.0.0.1 GET /admin/login/index.html
+[ info ] tp5.com/admin/login/index.html [运行时间：0.001455s][吞吐率：687.25req/s] [内存消耗：216.74kb] [文件加载：36]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'cookie' => 'PHPSESSID=b5mc0ojmordrjj5gbnk087uv10',
+  'referer' => 'http://tp5.com/admin/article/articleAdd.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-GB,en;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => 'tp5.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Login->index[ /home/rong/WEBROOT/tp5/application/admin/controller/Login.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] theme/admin/login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-16T10:18:13+08:00 ] 127.0.0.1 GET /captcha.html
+[ info ] tp5.com/captcha.html [运行时间：0.011594s][吞吐率：86.25req/s] [内存消耗：141.04kb] [文件加载：28]
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'cookie' => 'PHPSESSID=b5mc0ojmordrjj5gbnk087uv10',
+  'referer' => 'http://tp5.com/admin/login/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-GB,en;q=0.5',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => 'tp5.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ /home/rong/WEBROOT/tp5/vendor/topthink/think-captcha/src/CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-16T10:18:23+08:00 ] 127.0.0.1 POST /admin/login/doLogin.html
+[ info ] tp5.com/admin/login/doLogin.html [运行时间：0.104745s][吞吐率：9.55req/s] [内存消耗：434.48kb] [文件加载：48]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'doLogin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'cookie' => 'PHPSESSID=b5mc0ojmordrjj5gbnk087uv10',
+  'content-length' => '42',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://tp5.com/admin/login/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-GB,en;q=0.5',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'user-agent' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => 'tp5.com',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'admin',
+  'password' => 'admin',
+  'captcha' => 'eunp',
+)
+[ info ] [ RUN ] app\admin\controller\Login->doLogin[ /home/rong/WEBROOT/tp5/application/admin/controller/Login.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000419s ] mysql:host=127.0.0.1;dbname=cnit8;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cn_admin` [ RunTime:0.000789s ]
+[ sql ] [ SQL ] SELECT * FROM `cn_admin` WHERE  `user_name` = 'admin'  AND `work_status` = 1 LIMIT 1 [ RunTime:0.000393s ]
+[ sql ] [ SQL ] UPDATE `cn_admin`  SET `last_time`='2018-05-16 10:18:23'  WHERE  `id` = 5 [ RunTime:0.100871s ]
+---------------------------------------------------------------
+[ 2018-05-16T10:18:23+08:00 ] 127.0.0.1 GET /admin/index.html
+[ info ] tp5.com/admin/index.html [运行时间：0.002503s][吞吐率：399.53req/s] [内存消耗：257.25kb] [文件加载：39]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'cookie' => 'PHPSESSID=b5mc0ojmordrjj5gbnk087uv10',
+  'referer' => 'http://tp5.com/admin/login/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-GB,en;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => 'tp5.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->index[ /home/rong/WEBROOT/tp5/application/admin/controller/Index.php ]
+[ info ] [ VIEW ] theme/admin/index/index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-16T10:18:29+08:00 ] 127.0.0.1 GET /admin/article/articleAdd.html
+[ info ] tp5.com/admin/article/articleAdd.html [运行时间：0.003032s][吞吐率：329.82req/s] [内存消耗：357.99kb] [文件加载：41]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'article',
+    2 => 'articleAdd',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'cookie' => 'PHPSESSID=b5mc0ojmordrjj5gbnk087uv10',
+  'referer' => 'http://tp5.com/admin/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-GB,en;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => 'tp5.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Article->articleAdd[ /home/rong/WEBROOT/tp5/application/admin/controller/Article.php ]
+[ info ] [ VIEW ] theme/admin/article/article_edit.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-16T10:22:26+08:00 ] 127.0.0.1 GET /admin/article/articleAdd.html
+[ info ] tp5.com/admin/article/articleAdd.html [运行时间：0.003059s][吞吐率：326.91req/s] [内存消耗：357.99kb] [文件加载：41]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'article',
+    2 => 'articleAdd',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'cookie' => 'PHPSESSID=b5mc0ojmordrjj5gbnk087uv10',
+  'referer' => 'http://tp5.com/admin/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-GB,en;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => 'tp5.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Article->articleAdd[ /home/rong/WEBROOT/tp5/application/admin/controller/Article.php ]
+[ info ] [ VIEW ] theme/admin/article/article_edit.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-16T10:36:00+08:00 ] 127.0.0.1 GET /admin/article/articleAdd.html
+[ info ] tp5.com/admin/article/articleAdd.html [运行时间：0.003198s][吞吐率：312.68req/s] [内存消耗：357.99kb] [文件加载：41]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'article',
+    2 => 'articleAdd',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'cookie' => 'PHPSESSID=b5mc0ojmordrjj5gbnk087uv10',
+  'referer' => 'http://tp5.com/admin/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-GB,en;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => 'tp5.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Article->articleAdd[ /home/rong/WEBROOT/tp5/application/admin/controller/Article.php ]
+[ info ] [ VIEW ] theme/admin/article/article_edit.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-16T10:41:53+08:00 ] 127.0.0.1 GET /admin/article/articleAdd.html
+[ info ] tp5.com/admin/article/articleAdd.html [运行时间：0.003074s][吞吐率：325.32req/s] [内存消耗：358.24kb] [文件加载：41]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'article',
+    2 => 'articleAdd',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'cookie' => 'PHPSESSID=b5mc0ojmordrjj5gbnk087uv10',
+  'referer' => 'http://tp5.com/admin/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-GB,en;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => 'tp5.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Article->articleAdd[ /home/rong/WEBROOT/tp5/application/admin/controller/Article.php ]
+[ info ] [ VIEW ] theme/admin/article/article_edit.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-16T10:44:05+08:00 ] 127.0.0.1 GET /admin/article/articleAdd.html
+[ info ] tp5.com/admin/article/articleAdd.html [运行时间：0.003030s][吞吐率：330.03req/s] [内存消耗：358.24kb] [文件加载：41]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'article',
+    2 => 'articleAdd',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'cookie' => 'PHPSESSID=b5mc0ojmordrjj5gbnk087uv10',
+  'referer' => 'http://tp5.com/admin/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-GB,en;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => 'tp5.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Article->articleAdd[ /home/rong/WEBROOT/tp5/application/admin/controller/Article.php ]
+[ info ] [ VIEW ] theme/admin/article/article_edit.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-16T10:44:19+08:00 ] 127.0.0.1 GET /admin/article/articleAdd.html
+[ info ] tp5.com/admin/article/articleAdd.html [运行时间：0.001811s][吞吐率：552.17req/s] [内存消耗：257.78kb] [文件加载：39]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'article',
+    2 => 'articleAdd',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'cookie' => 'PHPSESSID=b5mc0ojmordrjj5gbnk087uv10',
+  'referer' => 'http://tp5.com/admin/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-GB,en;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => 'tp5.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Article->articleAdd[ /home/rong/WEBROOT/tp5/application/admin/controller/Article.php ]
+[ info ] [ VIEW ] theme/admin/article/article_edit.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-16T10:44:24+08:00 ] 127.0.0.1 GET /admin/article/articleAdd.html
+[ info ] tp5.com/admin/article/articleAdd.html [运行时间：0.001676s][吞吐率：596.71req/s] [内存消耗：257.36kb] [文件加载：39]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'article',
+    2 => 'articleAdd',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'cookie' => 'PHPSESSID=b5mc0ojmordrjj5gbnk087uv10',
+  'referer' => 'http://tp5.com/admin/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-GB,en;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => 'tp5.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Article->articleAdd[ /home/rong/WEBROOT/tp5/application/admin/controller/Article.php ]
+[ info ] [ VIEW ] theme/admin/article/article_edit.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-16T10:48:09+08:00 ] 127.0.0.1 GET /admin/article/articleAdd.html
+[ info ] tp5.com/admin/article/articleAdd.html [运行时间：0.003203s][吞吐率：312.19req/s] [内存消耗：358.74kb] [文件加载：41]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'article',
+    2 => 'articleAdd',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'cookie' => 'PHPSESSID=b5mc0ojmordrjj5gbnk087uv10',
+  'referer' => 'http://tp5.com/admin/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-GB,en;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => 'tp5.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Article->articleAdd[ /home/rong/WEBROOT/tp5/application/admin/controller/Article.php ]
+[ info ] [ VIEW ] theme/admin/article/article_edit.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-16T10:48:14+08:00 ] 127.0.0.1 GET /admin/article/articleAdd.html
+[ info ] tp5.com/admin/article/articleAdd.html [运行时间：0.001983s][吞吐率：504.30req/s] [内存消耗：257.78kb] [文件加载：39]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'article',
+    2 => 'articleAdd',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'cookie' => 'PHPSESSID=b5mc0ojmordrjj5gbnk087uv10',
+  'referer' => 'http://tp5.com/admin/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-GB,en;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => 'tp5.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Article->articleAdd[ /home/rong/WEBROOT/tp5/application/admin/controller/Article.php ]
+[ info ] [ VIEW ] theme/admin/article/article_edit.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-16T10:49:59+08:00 ] 127.0.0.1 GET /admin/article/articleAdd.html
+[ info ] tp5.com/admin/article/articleAdd.html [运行时间：0.003175s][吞吐率：314.96req/s] [内存消耗：358.74kb] [文件加载：41]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'article',
+    2 => 'articleAdd',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'cookie' => 'PHPSESSID=b5mc0ojmordrjj5gbnk087uv10',
+  'referer' => 'http://tp5.com/admin/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-GB,en;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => 'tp5.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Article->articleAdd[ /home/rong/WEBROOT/tp5/application/admin/controller/Article.php ]
+[ info ] [ VIEW ] theme/admin/article/article_edit.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-16T10:50:05+08:00 ] 127.0.0.1 GET /admin/article/articleAdd.html
+[ info ] tp5.com/admin/article/articleAdd.html [运行时间：0.001878s][吞吐率：532.47req/s] [内存消耗：257.78kb] [文件加载：39]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'article',
+    2 => 'articleAdd',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'cookie' => 'PHPSESSID=b5mc0ojmordrjj5gbnk087uv10',
+  'referer' => 'http://tp5.com/admin/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-GB,en;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => 'tp5.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Article->articleAdd[ /home/rong/WEBROOT/tp5/application/admin/controller/Article.php ]
+[ info ] [ VIEW ] theme/admin/article/article_edit.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-16T10:51:13+08:00 ] 127.0.0.1 GET /admin/article/articleAdd.html
+[ info ] tp5.com/admin/article/articleAdd.html [运行时间：0.003569s][吞吐率：280.18req/s] [内存消耗：358.74kb] [文件加载：41]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'article',
+    2 => 'articleAdd',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'cookie' => 'PHPSESSID=b5mc0ojmordrjj5gbnk087uv10',
+  'referer' => 'http://tp5.com/admin/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-GB,en;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => 'tp5.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Article->articleAdd[ /home/rong/WEBROOT/tp5/application/admin/controller/Article.php ]
+[ info ] [ VIEW ] theme/admin/article/article_edit.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-16T10:51:20+08:00 ] 127.0.0.1 GET /admin/article/articleAdd.html
+[ info ] tp5.com/admin/article/articleAdd.html [运行时间：0.003225s][吞吐率：310.07req/s] [内存消耗：358.74kb] [文件加载：41]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'article',
+    2 => 'articleAdd',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'cookie' => 'PHPSESSID=b5mc0ojmordrjj5gbnk087uv10',
+  'referer' => 'http://tp5.com/admin/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-GB,en;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => 'tp5.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Article->articleAdd[ /home/rong/WEBROOT/tp5/application/admin/controller/Article.php ]
+[ info ] [ VIEW ] theme/admin/article/article_edit.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-16T10:52:41+08:00 ] 127.0.0.1 GET /admin/article/articleAdd.html
+[ info ] tp5.com/admin/article/articleAdd.html [运行时间：0.002859s][吞吐率：349.76req/s] [内存消耗：358.74kb] [文件加载：41]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'article',
+    2 => 'articleAdd',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'cookie' => 'PHPSESSID=b5mc0ojmordrjj5gbnk087uv10',
+  'referer' => 'http://tp5.com/admin/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-GB,en;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => 'tp5.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Article->articleAdd[ /home/rong/WEBROOT/tp5/application/admin/controller/Article.php ]
+[ info ] [ VIEW ] theme/admin/article/article_edit.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-16T10:52:44+08:00 ] 127.0.0.1 GET /admin/article/articleAdd.html
+[ info ] tp5.com/admin/article/articleAdd.html [运行时间：0.001816s][吞吐率：550.65req/s] [内存消耗：257.78kb] [文件加载：39]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'article',
+    2 => 'articleAdd',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'cookie' => 'PHPSESSID=b5mc0ojmordrjj5gbnk087uv10',
+  'referer' => 'http://tp5.com/admin/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-GB,en;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => 'tp5.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Article->articleAdd[ /home/rong/WEBROOT/tp5/application/admin/controller/Article.php ]
+[ info ] [ VIEW ] theme/admin/article/article_edit.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-16T10:53:19+08:00 ] 127.0.0.1 GET /admin/article/articleAdd.html
+[ info ] tp5.com/admin/article/articleAdd.html [运行时间：0.001448s][吞吐率：690.65req/s] [内存消耗：257.33kb] [文件加载：39]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'article',
+    2 => 'articleAdd',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'cookie' => 'mini_sidebar=0; PHPSESSID=b5mc0ojmordrjj5gbnk087uv10',
+  'referer' => 'http://tp5.com/admin/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-GB,en;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => 'tp5.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Article->articleAdd[ /home/rong/WEBROOT/tp5/application/admin/controller/Article.php ]
+[ info ] [ VIEW ] theme/admin/article/article_edit.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-16T10:54:03+08:00 ] 127.0.0.1 GET /admin/article/articleAdd.html
+[ info ] tp5.com/admin/article/articleAdd.html [运行时间：0.002939s][吞吐率：340.25req/s] [内存消耗：356.84kb] [文件加载：41]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'article',
+    2 => 'articleAdd',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'cookie' => 'mini_sidebar=0; skin_color=nature; PHPSESSID=b5mc0ojmordrjj5gbnk087uv10',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-GB,en;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => 'tp5.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Article->articleAdd[ /home/rong/WEBROOT/tp5/application/admin/controller/Article.php ]
+[ info ] [ VIEW ] theme/admin/article/article_edit.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-16T10:54:34+08:00 ] 127.0.0.1 GET /admin/article/articleAdd.html
+[ info ] tp5.com/admin/article/articleAdd.html [运行时间：0.001875s][吞吐率：533.36req/s] [内存消耗：257.75kb] [文件加载：39]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'article',
+    2 => 'articleAdd',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'cookie' => 'mini_sidebar=0; skin_color=nature; PHPSESSID=b5mc0ojmordrjj5gbnk087uv10',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-GB,en;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => 'tp5.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Article->articleAdd[ /home/rong/WEBROOT/tp5/application/admin/controller/Article.php ]
+[ info ] [ VIEW ] theme/admin/article/article_edit.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-16T10:54:42+08:00 ] 127.0.0.1 GET /admin/index
+[ info ] tp5.com/admin/index [运行时间：0.001288s][吞吐率：776.29req/s] [内存消耗：257.19kb] [文件加载：39]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'cookie' => 'PHPSESSID=b5mc0ojmordrjj5gbnk087uv10',
+  'referer' => 'http://tp5.com/admin/article/articleAdd.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-GB,en;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => 'tp5.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->index[ /home/rong/WEBROOT/tp5/application/admin/controller/Index.php ]
+[ info ] [ VIEW ] theme/admin/index/index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-16T10:54:48+08:00 ] 127.0.0.1 GET /admin/article/articleList.html
+[ info ] tp5.com/admin/article/articleList.html [运行时间：0.001883s][吞吐率：531.06req/s] [内存消耗：257.91kb] [文件加载：39]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'article',
+    2 => 'articleList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'cookie' => 'mini_sidebar=0; skin_color=nature; mini_sidebar=0; PHPSESSID=b5mc0ojmordrjj5gbnk087uv10',
+  'referer' => 'http://tp5.com/admin/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-GB,en;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => 'tp5.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Article->articleList[ /home/rong/WEBROOT/tp5/application/admin/controller/Article.php ]
+[ info ] [ VIEW ] theme/admin/article/article_list.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-16T10:54:53+08:00 ] 127.0.0.1 GET /admin/article/articleAdd.html
+[ info ] tp5.com/admin/article/articleAdd.html [运行时间：0.001597s][吞吐率：626.20req/s] [内存消耗：257.48kb] [文件加载：39]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'article',
+    2 => 'articleAdd',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'cookie' => 'mini_sidebar=0; skin_color=nature; mini_sidebar=0; PHPSESSID=b5mc0ojmordrjj5gbnk087uv10',
+  'referer' => 'http://tp5.com/admin/article/articleList.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-GB,en;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => 'tp5.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Article->articleAdd[ /home/rong/WEBROOT/tp5/application/admin/controller/Article.php ]
+[ info ] [ VIEW ] theme/admin/article/article_edit.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-16T10:55:17+08:00 ] 127.0.0.1 GET /admin/article/articleAdd.html
+[ info ] tp5.com/admin/article/articleAdd.html [运行时间：0.003038s][吞吐率：329.17req/s] [内存消耗：356.99kb] [文件加载：41]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'article',
+    2 => 'articleAdd',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'cookie' => 'mini_sidebar=0; skin_color=nature; mini_sidebar=0; PHPSESSID=b5mc0ojmordrjj5gbnk087uv10',
+  'referer' => 'http://tp5.com/admin/article/articleList.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-GB,en;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => 'tp5.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Article->articleAdd[ /home/rong/WEBROOT/tp5/application/admin/controller/Article.php ]
+[ info ] [ VIEW ] theme/admin/article/article_edit.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-16T10:55:44+08:00 ] 127.0.0.1 GET /admin/article/articleAdd.html
+[ info ] tp5.com/admin/article/articleAdd.html [运行时间：0.003070s][吞吐率：325.75req/s] [内存消耗：356.74kb] [文件加载：41]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'article',
+    2 => 'articleAdd',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'cookie' => 'mini_sidebar=0; skin_color=nature; mini_sidebar=0; PHPSESSID=b5mc0ojmordrjj5gbnk087uv10',
+  'referer' => 'http://tp5.com/admin/article/articleList.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-GB,en;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => 'tp5.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Article->articleAdd[ /home/rong/WEBROOT/tp5/application/admin/controller/Article.php ]
+[ info ] [ VIEW ] theme/admin/article/article_edit.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-16T10:55:56+08:00 ] 127.0.0.1 GET /admin/article/articleAdd.html
+[ info ] tp5.com/admin/article/articleAdd.html [运行时间：0.002971s][吞吐率：336.59req/s] [内存消耗：356.74kb] [文件加载：41]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'article',
+    2 => 'articleAdd',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'cookie' => 'mini_sidebar=0; skin_color=nature; mini_sidebar=0; PHPSESSID=b5mc0ojmordrjj5gbnk087uv10',
+  'referer' => 'http://tp5.com/admin/article/articleList.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-GB,en;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => 'tp5.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Article->articleAdd[ /home/rong/WEBROOT/tp5/application/admin/controller/Article.php ]
+[ info ] [ VIEW ] theme/admin/article/article_edit.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-16T11:14:17+08:00 ] 127.0.0.1 GET /admin/article/articleAdd.html
+[ info ] tp5.com/admin/article/articleAdd.html [运行时间：0.003096s][吞吐率：322.99req/s] [内存消耗：356.74kb] [文件加载：41]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'article',
+    2 => 'articleAdd',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'cookie' => 'mini_sidebar=0; skin_color=nature; mini_sidebar=0; PHPSESSID=b5mc0ojmordrjj5gbnk087uv10',
+  'referer' => 'http://tp5.com/admin/article/articleList.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-GB,en;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => 'tp5.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Article->articleAdd[ /home/rong/WEBROOT/tp5/application/admin/controller/Article.php ]
+[ info ] [ VIEW ] theme/admin/article/article_edit.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-16T11:15:24+08:00 ] 127.0.0.1 GET /admin/article/articleAdd.html
+[ info ] tp5.com/admin/article/articleAdd.html [运行时间：0.003111s][吞吐率：321.43req/s] [内存消耗：360.74kb] [文件加载：41]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'article',
+    2 => 'articleAdd',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'cookie' => 'mini_sidebar=0; skin_color=nature; mini_sidebar=0; PHPSESSID=b5mc0ojmordrjj5gbnk087uv10',
+  'referer' => 'http://tp5.com/admin/article/articleList.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-GB,en;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => 'tp5.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Article->articleAdd[ /home/rong/WEBROOT/tp5/application/admin/controller/Article.php ]
+[ info ] [ VIEW ] theme/admin/article/article_edit.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-16T11:15:35+08:00 ] 127.0.0.1 GET /admin/article/articleAdd.html
+[ info ] tp5.com/admin/article/articleAdd.html [运行时间：0.002334s][吞吐率：428.47req/s] [内存消耗：257.91kb] [文件加载：39]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'article',
+    2 => 'articleAdd',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'cookie' => 'mini_sidebar=0; skin_color=nature; mini_sidebar=0; PHPSESSID=b5mc0ojmordrjj5gbnk087uv10',
+  'referer' => 'http://tp5.com/admin/article/articleList.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-GB,en;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => 'tp5.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Article->articleAdd[ /home/rong/WEBROOT/tp5/application/admin/controller/Article.php ]
+[ info ] [ VIEW ] theme/admin/article/article_edit.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-16T11:16:21+08:00 ] 127.0.0.1 GET /admin/article/articleAdd.html
+[ info ] tp5.com/admin/article/articleAdd.html [运行时间：0.003288s][吞吐率：304.13req/s] [内存消耗：360.74kb] [文件加载：41]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'article',
+    2 => 'articleAdd',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'cookie' => 'mini_sidebar=0; skin_color=nature; mini_sidebar=0; PHPSESSID=b5mc0ojmordrjj5gbnk087uv10',
+  'referer' => 'http://tp5.com/admin/article/articleList.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-GB,en;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => 'tp5.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Article->articleAdd[ /home/rong/WEBROOT/tp5/application/admin/controller/Article.php ]
+[ info ] [ VIEW ] theme/admin/article/article_edit.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-16T11:16:26+08:00 ] 127.0.0.1 GET /admin/article/articleAdd.html
+[ info ] tp5.com/admin/article/articleAdd.html [运行时间：0.003134s][吞吐率：319.08req/s] [内存消耗：360.74kb] [文件加载：41]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'article',
+    2 => 'articleAdd',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'cookie' => 'mini_sidebar=0; skin_color=nature; mini_sidebar=0; PHPSESSID=b5mc0ojmordrjj5gbnk087uv10',
+  'referer' => 'http://tp5.com/admin/article/articleList.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-GB,en;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => 'tp5.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Article->articleAdd[ /home/rong/WEBROOT/tp5/application/admin/controller/Article.php ]
+[ info ] [ VIEW ] theme/admin/article/article_edit.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-16T11:16:54+08:00 ] 127.0.0.1 GET /admin/article/articleAdd.html
+[ info ] tp5.com/admin/article/articleAdd.html [运行时间：0.003040s][吞吐率：328.94req/s] [内存消耗：360.74kb] [文件加载：41]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'article',
+    2 => 'articleAdd',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'cookie' => 'mini_sidebar=0; skin_color=nature; mini_sidebar=0; PHPSESSID=b5mc0ojmordrjj5gbnk087uv10',
+  'referer' => 'http://tp5.com/admin/article/articleList.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-GB,en;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => 'tp5.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Article->articleAdd[ /home/rong/WEBROOT/tp5/application/admin/controller/Article.php ]
+[ info ] [ VIEW ] theme/admin/article/article_edit.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-16T11:17:10+08:00 ] 127.0.0.1 GET /admin/article/articleAdd.html
+[ info ] tp5.com/admin/article/articleAdd.html [运行时间：0.003228s][吞吐率：309.79req/s] [内存消耗：360.74kb] [文件加载：41]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'article',
+    2 => 'articleAdd',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'cookie' => 'mini_sidebar=0; skin_color=nature; mini_sidebar=0; PHPSESSID=b5mc0ojmordrjj5gbnk087uv10',
+  'referer' => 'http://tp5.com/admin/article/articleList.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-GB,en;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => 'tp5.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Article->articleAdd[ /home/rong/WEBROOT/tp5/application/admin/controller/Article.php ]
+[ info ] [ VIEW ] theme/admin/article/article_edit.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-16T11:17:27+08:00 ] 127.0.0.1 GET /admin/article/articleAdd.html
+[ info ] tp5.com/admin/article/articleAdd.html [运行时间：0.003783s][吞吐率：264.34req/s] [内存消耗：360.74kb] [文件加载：41]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'article',
+    2 => 'articleAdd',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'cookie' => 'mini_sidebar=0; skin_color=nature; mini_sidebar=0; PHPSESSID=b5mc0ojmordrjj5gbnk087uv10',
+  'referer' => 'http://tp5.com/admin/article/articleList.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-GB,en;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => 'tp5.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Article->articleAdd[ /home/rong/WEBROOT/tp5/application/admin/controller/Article.php ]
+[ info ] [ VIEW ] theme/admin/article/article_edit.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-16T11:18:21+08:00 ] 127.0.0.1 GET /admin/article/articleAdd.html
+[ info ] tp5.com/admin/article/articleAdd.html [运行时间：0.003485s][吞吐率：286.95req/s] [内存消耗：360.74kb] [文件加载：41]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'article',
+    2 => 'articleAdd',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'cookie' => 'mini_sidebar=0; skin_color=nature; mini_sidebar=0; PHPSESSID=b5mc0ojmordrjj5gbnk087uv10',
+  'referer' => 'http://tp5.com/admin/article/articleList.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-GB,en;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => 'tp5.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Article->articleAdd[ /home/rong/WEBROOT/tp5/application/admin/controller/Article.php ]
+[ info ] [ VIEW ] theme/admin/article/article_edit.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-16T11:18:33+08:00 ] 127.0.0.1 GET /admin/article/articleAdd.html
+[ info ] tp5.com/admin/article/articleAdd.html [运行时间：0.003074s][吞吐率：325.32req/s] [内存消耗：360.74kb] [文件加载：41]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'article',
+    2 => 'articleAdd',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'cookie' => 'mini_sidebar=0; skin_color=nature; mini_sidebar=0; PHPSESSID=b5mc0ojmordrjj5gbnk087uv10',
+  'referer' => 'http://tp5.com/admin/article/articleList.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-GB,en;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => 'tp5.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Article->articleAdd[ /home/rong/WEBROOT/tp5/application/admin/controller/Article.php ]
+[ info ] [ VIEW ] theme/admin/article/article_edit.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-16T11:19:01+08:00 ] 127.0.0.1 GET /admin/article/articleAdd.html
+[ info ] tp5.com/admin/article/articleAdd.html [运行时间：0.004589s][吞吐率：217.91req/s] [内存消耗：360.74kb] [文件加载：41]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'article',
+    2 => 'articleAdd',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'cookie' => 'mini_sidebar=0; skin_color=nature; mini_sidebar=0; PHPSESSID=b5mc0ojmordrjj5gbnk087uv10',
+  'referer' => 'http://tp5.com/admin/article/articleList.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-GB,en;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => 'tp5.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Article->articleAdd[ /home/rong/WEBROOT/tp5/application/admin/controller/Article.php ]
+[ info ] [ VIEW ] theme/admin/article/article_edit.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-16T11:21:16+08:00 ] 127.0.0.1 GET /admin/article/articleAdd.html
+[ info ] tp5.com/admin/article/articleAdd.html [运行时间：0.004720s][吞吐率：211.85req/s] [内存消耗：360.74kb] [文件加载：41]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'article',
+    2 => 'articleAdd',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'cookie' => 'mini_sidebar=0; skin_color=nature; mini_sidebar=0; PHPSESSID=b5mc0ojmordrjj5gbnk087uv10',
+  'referer' => 'http://tp5.com/admin/article/articleList.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-GB,en;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => 'tp5.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Article->articleAdd[ /home/rong/WEBROOT/tp5/application/admin/controller/Article.php ]
+[ info ] [ VIEW ] theme/admin/article/article_edit.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-16T11:22:03+08:00 ] 127.0.0.1 GET /admin/article/articleAdd.html
+[ info ] tp5.com/admin/article/articleAdd.html [运行时间：0.003191s][吞吐率：313.38req/s] [内存消耗：360.74kb] [文件加载：41]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'article',
+    2 => 'articleAdd',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'cookie' => 'mini_sidebar=0; skin_color=nature; mini_sidebar=0; PHPSESSID=b5mc0ojmordrjj5gbnk087uv10',
+  'referer' => 'http://tp5.com/admin/article/articleList.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-GB,en;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => 'tp5.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Article->articleAdd[ /home/rong/WEBROOT/tp5/application/admin/controller/Article.php ]
+[ info ] [ VIEW ] theme/admin/article/article_edit.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-16T11:22:30+08:00 ] 127.0.0.1 GET /admin/article/articleAdd.html
+[ info ] tp5.com/admin/article/articleAdd.html [运行时间：0.002931s][吞吐率：341.17req/s] [内存消耗：360.74kb] [文件加载：41]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'article',
+    2 => 'articleAdd',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'cookie' => 'mini_sidebar=0; skin_color=nature; mini_sidebar=0; PHPSESSID=b5mc0ojmordrjj5gbnk087uv10',
+  'referer' => 'http://tp5.com/admin/article/articleList.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-GB,en;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => 'tp5.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Article->articleAdd[ /home/rong/WEBROOT/tp5/application/admin/controller/Article.php ]
+[ info ] [ VIEW ] theme/admin/article/article_edit.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-16T11:24:33+08:00 ] 127.0.0.1 GET /admin/article/articleAdd.html
+[ info ] tp5.com/admin/article/articleAdd.html [运行时间：0.003141s][吞吐率：318.38req/s] [内存消耗：360.74kb] [文件加载：41]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'article',
+    2 => 'articleAdd',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'cookie' => 'mini_sidebar=0; skin_color=nature; mini_sidebar=0; PHPSESSID=b5mc0ojmordrjj5gbnk087uv10',
+  'referer' => 'http://tp5.com/admin/article/articleList.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-GB,en;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => 'tp5.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Article->articleAdd[ /home/rong/WEBROOT/tp5/application/admin/controller/Article.php ]
+[ info ] [ VIEW ] theme/admin/article/article_edit.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-16T11:25:27+08:00 ] 127.0.0.1 GET /admin/article/articleAdd.html
+[ info ] tp5.com/admin/article/articleAdd.html [运行时间：0.003195s][吞吐率：313.01req/s] [内存消耗：360.74kb] [文件加载：41]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'article',
+    2 => 'articleAdd',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'cookie' => 'mini_sidebar=0; skin_color=nature; mini_sidebar=0; PHPSESSID=b5mc0ojmordrjj5gbnk087uv10',
+  'referer' => 'http://tp5.com/admin/article/articleList.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-GB,en;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => 'tp5.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Article->articleAdd[ /home/rong/WEBROOT/tp5/application/admin/controller/Article.php ]
+[ info ] [ VIEW ] theme/admin/article/article_edit.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-16T11:26:06+08:00 ] 127.0.0.1 GET /admin/article/articleAdd.html
+[ info ] tp5.com/admin/article/articleAdd.html [运行时间：0.001936s][吞吐率：516.48req/s] [内存消耗：257.91kb] [文件加载：39]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'article',
+    2 => 'articleAdd',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'cookie' => 'mini_sidebar=0; skin_color=nature; mini_sidebar=0; PHPSESSID=b5mc0ojmordrjj5gbnk087uv10',
+  'referer' => 'http://tp5.com/admin/article/articleList.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-GB,en;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => 'tp5.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Article->articleAdd[ /home/rong/WEBROOT/tp5/application/admin/controller/Article.php ]
+[ info ] [ VIEW ] theme/admin/article/article_edit.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-16T11:26:37+08:00 ] 127.0.0.1 GET /admin/article/articleAdd.html
+[ info ] tp5.com/admin/article/articleAdd.html [运行时间：0.003029s][吞吐率：330.13req/s] [内存消耗：360.74kb] [文件加载：41]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'article',
+    2 => 'articleAdd',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'cookie' => 'mini_sidebar=0; skin_color=nature; mini_sidebar=0; PHPSESSID=b5mc0ojmordrjj5gbnk087uv10',
+  'referer' => 'http://tp5.com/admin/article/articleList.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-GB,en;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => 'tp5.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Article->articleAdd[ /home/rong/WEBROOT/tp5/application/admin/controller/Article.php ]
+[ info ] [ VIEW ] theme/admin/article/article_edit.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-16T11:26:49+08:00 ] 127.0.0.1 GET /admin/article/articleAdd.html
+[ info ] tp5.com/admin/article/articleAdd.html [运行时间：0.003273s][吞吐率：305.53req/s] [内存消耗：360.74kb] [文件加载：41]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'article',
+    2 => 'articleAdd',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'cookie' => 'mini_sidebar=0; skin_color=nature; mini_sidebar=0; PHPSESSID=b5mc0ojmordrjj5gbnk087uv10',
+  'referer' => 'http://tp5.com/admin/article/articleList.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-GB,en;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => 'tp5.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Article->articleAdd[ /home/rong/WEBROOT/tp5/application/admin/controller/Article.php ]
+[ info ] [ VIEW ] theme/admin/article/article_edit.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-16T11:27:30+08:00 ] 127.0.0.1 GET /admin/article/articleAdd.html
+[ info ] tp5.com/admin/article/articleAdd.html [运行时间：0.003112s][吞吐率：321.35req/s] [内存消耗：360.74kb] [文件加载：41]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'article',
+    2 => 'articleAdd',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'cookie' => 'mini_sidebar=0; skin_color=nature; mini_sidebar=0; PHPSESSID=b5mc0ojmordrjj5gbnk087uv10',
+  'referer' => 'http://tp5.com/admin/article/articleList.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-GB,en;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => 'tp5.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Article->articleAdd[ /home/rong/WEBROOT/tp5/application/admin/controller/Article.php ]
+[ info ] [ VIEW ] theme/admin/article/article_edit.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-16T11:27:49+08:00 ] 127.0.0.1 GET /admin/article/articleAdd.html
+[ info ] tp5.com/admin/article/articleAdd.html [运行时间：0.003872s][吞吐率：258.27req/s] [内存消耗：360.74kb] [文件加载：41]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'article',
+    2 => 'articleAdd',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'cookie' => 'mini_sidebar=0; skin_color=nature; mini_sidebar=0; PHPSESSID=b5mc0ojmordrjj5gbnk087uv10',
+  'referer' => 'http://tp5.com/admin/article/articleList.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-GB,en;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => 'tp5.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Article->articleAdd[ /home/rong/WEBROOT/tp5/application/admin/controller/Article.php ]
+[ info ] [ VIEW ] theme/admin/article/article_edit.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-16T11:29:21+08:00 ] 127.0.0.1 GET /admin/article/articleAdd.html
+[ info ] tp5.com/admin/article/articleAdd.html [运行时间：0.003337s][吞吐率：299.66req/s] [内存消耗：360.74kb] [文件加载：41]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'article',
+    2 => 'articleAdd',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'cookie' => 'mini_sidebar=0; skin_color=nature; mini_sidebar=0; PHPSESSID=b5mc0ojmordrjj5gbnk087uv10',
+  'referer' => 'http://tp5.com/admin/article/articleList.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-GB,en;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => 'tp5.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Article->articleAdd[ /home/rong/WEBROOT/tp5/application/admin/controller/Article.php ]
+[ info ] [ VIEW ] theme/admin/article/article_edit.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-16T11:30:33+08:00 ] 127.0.0.1 GET /admin/article/articleAdd.html
+[ info ] tp5.com/admin/article/articleAdd.html [运行时间：0.003570s][吞吐率：280.12req/s] [内存消耗：360.74kb] [文件加载：41]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'article',
+    2 => 'articleAdd',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'cookie' => 'mini_sidebar=0; skin_color=nature; mini_sidebar=0; PHPSESSID=b5mc0ojmordrjj5gbnk087uv10',
+  'referer' => 'http://tp5.com/admin/article/articleList.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-GB,en;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => 'tp5.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Article->articleAdd[ /home/rong/WEBROOT/tp5/application/admin/controller/Article.php ]
+[ info ] [ VIEW ] theme/admin/article/article_edit.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-16T11:31:02+08:00 ] 127.0.0.1 GET /admin/article/articleAdd.html
+[ info ] tp5.com/admin/article/articleAdd.html [运行时间：0.003234s][吞吐率：309.22req/s] [内存消耗：360.74kb] [文件加载：41]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'article',
+    2 => 'articleAdd',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'cookie' => 'mini_sidebar=0; skin_color=nature; mini_sidebar=0; PHPSESSID=b5mc0ojmordrjj5gbnk087uv10',
+  'referer' => 'http://tp5.com/admin/article/articleList.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-GB,en;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => 'tp5.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Article->articleAdd[ /home/rong/WEBROOT/tp5/application/admin/controller/Article.php ]
+[ info ] [ VIEW ] theme/admin/article/article_edit.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-16T11:32:42+08:00 ] 127.0.0.1 GET /admin/article/articleAdd.html
+[ info ] tp5.com/admin/article/articleAdd.html [运行时间：0.003487s][吞吐率：286.79req/s] [内存消耗：384.37kb] [文件加载：41]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'article',
+    2 => 'articleAdd',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'cookie' => 'mini_sidebar=0; skin_color=nature; mini_sidebar=0; PHPSESSID=b5mc0ojmordrjj5gbnk087uv10',
+  'referer' => 'http://tp5.com/admin/article/articleList.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-GB,en;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => 'tp5.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Article->articleAdd[ /home/rong/WEBROOT/tp5/application/admin/controller/Article.php ]
+[ info ] [ VIEW ] theme/admin/article/article_edit.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-16T11:33:18+08:00 ] 127.0.0.1 GET /admin/article/articleAdd.html
+[ info ] tp5.com/admin/article/articleAdd.html [运行时间：0.002058s][吞吐率：485.90req/s] [内存消耗：257.91kb] [文件加载：39]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'article',
+    2 => 'articleAdd',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'cookie' => 'mini_sidebar=0; skin_color=nature; mini_sidebar=0; PHPSESSID=b5mc0ojmordrjj5gbnk087uv10',
+  'referer' => 'http://tp5.com/admin/article/articleList.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-GB,en;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => 'tp5.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Article->articleAdd[ /home/rong/WEBROOT/tp5/application/admin/controller/Article.php ]
+[ info ] [ VIEW ] theme/admin/article/article_edit.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-16T11:33:25+08:00 ] 127.0.0.1 GET /admin/article/articleAdd.html
+[ info ] tp5.com/admin/article/articleAdd.html [运行时间：0.001992s][吞吐率：502.01req/s] [内存消耗：257.48kb] [文件加载：39]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'article',
+    2 => 'articleAdd',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'cookie' => 'mini_sidebar=0; skin_color=nature; mini_sidebar=0; PHPSESSID=b5mc0ojmordrjj5gbnk087uv10',
+  'referer' => 'http://tp5.com/admin/article/articleList.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-GB,en;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => 'tp5.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Article->articleAdd[ /home/rong/WEBROOT/tp5/application/admin/controller/Article.php ]
+[ info ] [ VIEW ] theme/admin/article/article_edit.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-16T11:33:48+08:00 ] 127.0.0.1 GET /admin/article/articleAdd.html
+[ info ] tp5.com/admin/article/articleAdd.html [运行时间：0.003678s][吞吐率：271.88req/s] [内存消耗：384.49kb] [文件加载：41]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'article',
+    2 => 'articleAdd',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'cookie' => 'mini_sidebar=0; skin_color=nature; mini_sidebar=0; PHPSESSID=b5mc0ojmordrjj5gbnk087uv10',
+  'referer' => 'http://tp5.com/admin/article/articleList.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-GB,en;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => 'tp5.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Article->articleAdd[ /home/rong/WEBROOT/tp5/application/admin/controller/Article.php ]
+[ info ] [ VIEW ] theme/admin/article/article_edit.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-16T11:34:58+08:00 ] 127.0.0.1 GET /admin/article/articleAdd.html
+[ info ] tp5.com/admin/article/articleAdd.html [运行时间：0.004701s][吞吐率：212.73req/s] [内存消耗：384.49kb] [文件加载：41]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'article',
+    2 => 'articleAdd',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'cookie' => 'mini_sidebar=0; skin_color=nature; mini_sidebar=0; PHPSESSID=b5mc0ojmordrjj5gbnk087uv10',
+  'referer' => 'http://tp5.com/admin/article/articleList.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-GB,en;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => 'tp5.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Article->articleAdd[ /home/rong/WEBROOT/tp5/application/admin/controller/Article.php ]
+[ info ] [ VIEW ] theme/admin/article/article_edit.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-16T11:35:24+08:00 ] 127.0.0.1 GET /admin/article/articleAdd.html
+[ info ] tp5.com/admin/article/articleAdd.html [运行时间：0.003441s][吞吐率：290.61req/s] [内存消耗：384.49kb] [文件加载：41]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'article',
+    2 => 'articleAdd',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'cookie' => 'mini_sidebar=0; skin_color=nature; mini_sidebar=0; PHPSESSID=b5mc0ojmordrjj5gbnk087uv10',
+  'referer' => 'http://tp5.com/admin/article/articleList.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-GB,en;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => 'tp5.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Article->articleAdd[ /home/rong/WEBROOT/tp5/application/admin/controller/Article.php ]
+[ info ] [ VIEW ] theme/admin/article/article_edit.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-16T11:37:20+08:00 ] 127.0.0.1 GET /admin/article/articleAdd.html
+[ info ] tp5.com/admin/article/articleAdd.html [运行时间：0.003944s][吞吐率：253.54req/s] [内存消耗：384.46kb] [文件加载：41]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'article',
+    2 => 'articleAdd',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'cookie' => 'mini_sidebar=0; skin_color=nature; mini_sidebar=0; PHPSESSID=b5mc0ojmordrjj5gbnk087uv10',
+  'referer' => 'http://tp5.com/admin/article/articleList.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-GB,en;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => 'tp5.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Article->articleAdd[ /home/rong/WEBROOT/tp5/application/admin/controller/Article.php ]
+[ info ] [ VIEW ] theme/admin/article/article_edit.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-16T11:43:53+08:00 ] 127.0.0.1 GET /admin/article/articleAdd.html
+[ info ] tp5.com/admin/article/articleAdd.html [运行时间：0.003240s][吞吐率：308.65req/s] [内存消耗：384.46kb] [文件加载：41]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'article',
+    2 => 'articleAdd',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'cookie' => 'mini_sidebar=0; skin_color=nature; mini_sidebar=0; PHPSESSID=b5mc0ojmordrjj5gbnk087uv10',
+  'referer' => 'http://tp5.com/admin/article/articleList.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-GB,en;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => 'tp5.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Article->articleAdd[ /home/rong/WEBROOT/tp5/application/admin/controller/Article.php ]
+[ info ] [ VIEW ] theme/admin/article/article_edit.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-16T11:43:55+08:00 ] 127.0.0.1 GET /admin/article/articleAdd.html?uploadImg=&filter%5Barticle.add_times%5D=&content=%3Cp%3E%E8%BF%99%E9%87%8C%E5%86%99%E4%BD%A0%E7%9A%84%E5%88%9D%E5%A7%8B%E5%8C%96%E5%86%85%E5%AE%B9%3C%2Fp%3E
+[ info ] tp5.com/admin/article/articleAdd.html?uploadImg=&filter%5Barticle.add_times%5D=&content=%3Cp%3E%E8%BF%99%E9%87%8C%E5%86%99%E4%BD%A0%E7%9A%84%E5%88%9D%E5%A7%8B%E5%8C%96%E5%86%85%E5%AE%B9%3C%2Fp%3E [运行时间：0.001886s][吞吐率：530.19req/s] [内存消耗：258.82kb] [文件加载：39]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'article',
+    2 => 'articleAdd',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'cookie' => 'mini_sidebar=0; skin_color=nature; mini_sidebar=0; PHPSESSID=b5mc0ojmordrjj5gbnk087uv10',
+  'referer' => 'http://tp5.com/admin/article/articleAdd.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-GB,en;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => 'tp5.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'uploadImg' => '',
+  'filter' => 
+  array (
+    'article.add_times' => '',
+  ),
+  'content' => '<p>这里写你的初始化内容</p>',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Article->articleAdd[ /home/rong/WEBROOT/tp5/application/admin/controller/Article.php ]
+[ info ] [ VIEW ] theme/admin/article/article_edit.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-16T11:43:57+08:00 ] 127.0.0.1 GET /admin/article/articleAdd.html?uploadImg=&filter%5Barticle.add_times%5D=&content=%3Cp%3E%E8%BF%99%E9%87%8C%E5%86%99%E4%BD%A0%E7%9A%84%E5%88%9D%E5%A7%8B%E5%8C%96%E5%86%85%E5%AE%B9%3C%2Fp%3E
+[ info ] tp5.com/admin/article/articleAdd.html?uploadImg=&filter%5Barticle.add_times%5D=&content=%3Cp%3E%E8%BF%99%E9%87%8C%E5%86%99%E4%BD%A0%E7%9A%84%E5%88%9D%E5%A7%8B%E5%8C%96%E5%86%85%E5%AE%B9%3C%2Fp%3E [运行时间：0.001862s][吞吐率：537.11req/s] [内存消耗：258.65kb] [文件加载：39]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'article',
+    2 => 'articleAdd',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'cookie' => 'mini_sidebar=0; skin_color=nature; mini_sidebar=0; PHPSESSID=b5mc0ojmordrjj5gbnk087uv10',
+  'referer' => 'http://tp5.com/admin/article/articleAdd.html?uploadImg=&filter%5Barticle.add_times%5D=&content=%3Cp%3E%E8%BF%99%E9%87%8C%E5%86%99%E4%BD%A0%E7%9A%84%E5%88%9D%E5%A7%8B%E5%8C%96%E5%86%85%E5%AE%B9%3C%2Fp%3E',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-GB,en;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => 'tp5.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'uploadImg' => '',
+  'filter' => 
+  array (
+    'article.add_times' => '',
+  ),
+  'content' => '<p>这里写你的初始化内容</p>',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Article->articleAdd[ /home/rong/WEBROOT/tp5/application/admin/controller/Article.php ]
+[ info ] [ VIEW ] theme/admin/article/article_edit.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-16T11:44:41+08:00 ] 127.0.0.1 GET /admin/article/articleAdd.html?uploadImg=&filter%5Barticle.add_times%5D=&content=%3Cp%3E%E8%BF%99%E9%87%8C%E5%86%99%E4%BD%A0%E7%9A%84%E5%88%9D%E5%A7%8B%E5%8C%96%E5%86%85%E5%AE%B9%3C%2Fp%3E
+[ info ] tp5.com/admin/article/articleAdd.html?uploadImg=&filter%5Barticle.add_times%5D=&content=%3Cp%3E%E8%BF%99%E9%87%8C%E5%86%99%E4%BD%A0%E7%9A%84%E5%88%9D%E5%A7%8B%E5%8C%96%E5%86%85%E5%AE%B9%3C%2Fp%3E [运行时间：0.003111s][吞吐率：321.43req/s] [内存消耗：395.32kb] [文件加载：41]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'article',
+    2 => 'articleAdd',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'cookie' => 'mini_sidebar=0; skin_color=nature; mini_sidebar=0; PHPSESSID=b5mc0ojmordrjj5gbnk087uv10',
+  'referer' => 'http://tp5.com/admin/article/articleAdd.html?uploadImg=&filter%5Barticle.add_times%5D=&content=%3Cp%3E%E8%BF%99%E9%87%8C%E5%86%99%E4%BD%A0%E7%9A%84%E5%88%9D%E5%A7%8B%E5%8C%96%E5%86%85%E5%AE%B9%3C%2Fp%3E',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-GB,en;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => 'tp5.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'uploadImg' => '',
+  'filter' => 
+  array (
+    'article.add_times' => '',
+  ),
+  'content' => '<p>这里写你的初始化内容</p>',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Article->articleAdd[ /home/rong/WEBROOT/tp5/application/admin/controller/Article.php ]
+[ info ] [ VIEW ] theme/admin/article/article_edit.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-16T11:44:44+08:00 ] 127.0.0.1 GET /admin/article/articleAdd.html?uploadImg=&filter%5Barticle.add_times%5D=&content=%3Cp%3E%E8%BF%99%E9%87%8C%E5%86%99%E4%BD%A0%E7%9A%84%E5%88%9D%E5%A7%8B%E5%8C%96%E5%86%85%E5%AE%B9%3C%2Fp%3E
+[ info ] tp5.com/admin/article/articleAdd.html?uploadImg=&filter%5Barticle.add_times%5D=&content=%3Cp%3E%E8%BF%99%E9%87%8C%E5%86%99%E4%BD%A0%E7%9A%84%E5%88%9D%E5%A7%8B%E5%8C%96%E5%86%85%E5%AE%B9%3C%2Fp%3E [运行时间：0.001954s][吞吐率：511.75req/s] [内存消耗：259.07kb] [文件加载：39]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'article',
+    2 => 'articleAdd',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'cookie' => 'mini_sidebar=0; skin_color=nature; mini_sidebar=0; PHPSESSID=b5mc0ojmordrjj5gbnk087uv10',
+  'referer' => 'http://tp5.com/admin/article/articleAdd.html?uploadImg=&filter%5Barticle.add_times%5D=&content=%3Cp%3E%E8%BF%99%E9%87%8C%E5%86%99%E4%BD%A0%E7%9A%84%E5%88%9D%E5%A7%8B%E5%8C%96%E5%86%85%E5%AE%B9%3C%2Fp%3E',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-GB,en;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => 'tp5.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'uploadImg' => '',
+  'filter' => 
+  array (
+    'article.add_times' => '',
+  ),
+  'content' => '<p>这里写你的初始化内容</p>',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Article->articleAdd[ /home/rong/WEBROOT/tp5/application/admin/controller/Article.php ]
+[ info ] [ VIEW ] theme/admin/article/article_edit.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-16T11:44:46+08:00 ] 127.0.0.1 GET /admin/article/articleAdd.html?uploadImg=&filter%5Barticle.add_times%5D=&content=%3Cp%3E%E8%BF%99%E9%87%8C%E5%86%99%E4%BD%A0%E7%9A%84%E5%88%9D%E5%A7%8B%E5%8C%96%E5%86%85%E5%AE%B9%3C%2Fp%3E
+[ info ] tp5.com/admin/article/articleAdd.html?uploadImg=&filter%5Barticle.add_times%5D=&content=%3Cp%3E%E8%BF%99%E9%87%8C%E5%86%99%E4%BD%A0%E7%9A%84%E5%88%9D%E5%A7%8B%E5%8C%96%E5%86%85%E5%AE%B9%3C%2Fp%3E [运行时间：0.001411s][吞吐率：708.74req/s] [内存消耗：258.65kb] [文件加载：39]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'article',
+    2 => 'articleAdd',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'cookie' => 'mini_sidebar=0; skin_color=nature; mini_sidebar=0; PHPSESSID=b5mc0ojmordrjj5gbnk087uv10',
+  'referer' => 'http://tp5.com/admin/article/articleAdd.html?uploadImg=&filter%5Barticle.add_times%5D=&content=%3Cp%3E%E8%BF%99%E9%87%8C%E5%86%99%E4%BD%A0%E7%9A%84%E5%88%9D%E5%A7%8B%E5%8C%96%E5%86%85%E5%AE%B9%3C%2Fp%3E',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-GB,en;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => 'tp5.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'uploadImg' => '',
+  'filter' => 
+  array (
+    'article.add_times' => '',
+  ),
+  'content' => '<p>这里写你的初始化内容</p>',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Article->articleAdd[ /home/rong/WEBROOT/tp5/application/admin/controller/Article.php ]
+[ info ] [ VIEW ] theme/admin/article/article_edit.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-16T11:44:48+08:00 ] 127.0.0.1 GET /admin/article/articleAdd.html?uploadImg=&filter%5Barticle.add_times%5D=&content=%3Cp%3E%E8%BF%99%E9%87%8C%E5%86%99%E4%BD%A0%E7%9A%84%E5%88%9D%E5%A7%8B%E5%8C%96%E5%86%85%E5%AE%B9%3C%2Fp%3E
+[ info ] tp5.com/admin/article/articleAdd.html?uploadImg=&filter%5Barticle.add_times%5D=&content=%3Cp%3E%E8%BF%99%E9%87%8C%E5%86%99%E4%BD%A0%E7%9A%84%E5%88%9D%E5%A7%8B%E5%8C%96%E5%86%85%E5%AE%B9%3C%2Fp%3E [运行时间：0.002721s][吞吐率：367.50req/s] [内存消耗：258.65kb] [文件加载：39]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'article',
+    2 => 'articleAdd',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'cookie' => 'mini_sidebar=0; skin_color=nature; mini_sidebar=0; PHPSESSID=b5mc0ojmordrjj5gbnk087uv10',
+  'referer' => 'http://tp5.com/admin/article/articleAdd.html?uploadImg=&filter%5Barticle.add_times%5D=&content=%3Cp%3E%E8%BF%99%E9%87%8C%E5%86%99%E4%BD%A0%E7%9A%84%E5%88%9D%E5%A7%8B%E5%8C%96%E5%86%85%E5%AE%B9%3C%2Fp%3E',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-GB,en;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => 'tp5.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'uploadImg' => '',
+  'filter' => 
+  array (
+    'article.add_times' => '',
+  ),
+  'content' => '<p>这里写你的初始化内容</p>',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Article->articleAdd[ /home/rong/WEBROOT/tp5/application/admin/controller/Article.php ]
+[ info ] [ VIEW ] theme/admin/article/article_edit.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-16T11:46:13+08:00 ] 127.0.0.1 GET /admin/article/articleAdd.html?uploadImg=&filter%5Barticle.add_times%5D=&content=%3Cp%3E%E8%BF%99%E9%87%8C%E5%86%99%E4%BD%A0%E7%9A%84%E5%88%9D%E5%A7%8B%E5%8C%96%E5%86%85%E5%AE%B9%3C%2Fp%3E
+[ info ] tp5.com/admin/article/articleAdd.html?uploadImg=&filter%5Barticle.add_times%5D=&content=%3Cp%3E%E8%BF%99%E9%87%8C%E5%86%99%E4%BD%A0%E7%9A%84%E5%88%9D%E5%A7%8B%E5%8C%96%E5%86%85%E5%AE%B9%3C%2Fp%3E [运行时间：0.003752s][吞吐率：266.53req/s] [内存消耗：407.32kb] [文件加载：41]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'article',
+    2 => 'articleAdd',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'cookie' => 'mini_sidebar=0; skin_color=nature; mini_sidebar=0; PHPSESSID=b5mc0ojmordrjj5gbnk087uv10',
+  'referer' => 'http://tp5.com/admin/article/articleAdd.html?uploadImg=&filter%5Barticle.add_times%5D=&content=%3Cp%3E%E8%BF%99%E9%87%8C%E5%86%99%E4%BD%A0%E7%9A%84%E5%88%9D%E5%A7%8B%E5%8C%96%E5%86%85%E5%AE%B9%3C%2Fp%3E',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-GB,en;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => 'tp5.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'uploadImg' => '',
+  'filter' => 
+  array (
+    'article.add_times' => '',
+  ),
+  'content' => '<p>这里写你的初始化内容</p>',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Article->articleAdd[ /home/rong/WEBROOT/tp5/application/admin/controller/Article.php ]
+[ info ] [ VIEW ] theme/admin/article/article_edit.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-16T11:46:14+08:00 ] 127.0.0.1 GET /admin/article/articleAdd.html?uploadImg=&filter%5Barticle.add_times%5D=
+[ info ] tp5.com/admin/article/articleAdd.html?uploadImg=&filter%5Barticle.add_times%5D= [运行时间：0.001566s][吞吐率：638.60req/s] [内存消耗：258.90kb] [文件加载：39]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'article',
+    2 => 'articleAdd',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'cookie' => 'mini_sidebar=0; skin_color=nature; mini_sidebar=0; PHPSESSID=b5mc0ojmordrjj5gbnk087uv10',
+  'referer' => 'http://tp5.com/admin/article/articleAdd.html?uploadImg=&filter%5Barticle.add_times%5D=&content=%3Cp%3E%E8%BF%99%E9%87%8C%E5%86%99%E4%BD%A0%E7%9A%84%E5%88%9D%E5%A7%8B%E5%8C%96%E5%86%85%E5%AE%B9%3C%2Fp%3E',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-GB,en;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => 'tp5.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'uploadImg' => '',
+  'filter' => 
+  array (
+    'article.add_times' => '',
+  ),
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Article->articleAdd[ /home/rong/WEBROOT/tp5/application/admin/controller/Article.php ]
+[ info ] [ VIEW ] theme/admin/article/article_edit.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-16T11:46:15+08:00 ] 127.0.0.1 GET /admin/article/articleAdd.html?uploadImg=&filter%5Barticle.add_times%5D=
+[ info ] tp5.com/admin/article/articleAdd.html?uploadImg=&filter%5Barticle.add_times%5D= [运行时间：0.001773s][吞吐率：563.98req/s] [内存消耗：258.77kb] [文件加载：39]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'article',
+    2 => 'articleAdd',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'cookie' => 'mini_sidebar=0; skin_color=nature; mini_sidebar=0; PHPSESSID=b5mc0ojmordrjj5gbnk087uv10',
+  'referer' => 'http://tp5.com/admin/article/articleAdd.html?uploadImg=&filter%5Barticle.add_times%5D=',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-GB,en;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => 'tp5.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'uploadImg' => '',
+  'filter' => 
+  array (
+    'article.add_times' => '',
+  ),
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Article->articleAdd[ /home/rong/WEBROOT/tp5/application/admin/controller/Article.php ]
+[ info ] [ VIEW ] theme/admin/article/article_edit.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-16T11:46:16+08:00 ] 127.0.0.1 GET /admin/article/articleAdd.html?uploadImg=&filter%5Barticle.add_times%5D=
+[ info ] tp5.com/admin/article/articleAdd.html?uploadImg=&filter%5Barticle.add_times%5D= [运行时间：0.001866s][吞吐率：535.94req/s] [内存消耗：258.35kb] [文件加载：39]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'article',
+    2 => 'articleAdd',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'cookie' => 'mini_sidebar=0; skin_color=nature; mini_sidebar=0; PHPSESSID=b5mc0ojmordrjj5gbnk087uv10',
+  'referer' => 'http://tp5.com/admin/article/articleAdd.html?uploadImg=&filter%5Barticle.add_times%5D=',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-GB,en;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => 'tp5.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'uploadImg' => '',
+  'filter' => 
+  array (
+    'article.add_times' => '',
+  ),
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Article->articleAdd[ /home/rong/WEBROOT/tp5/application/admin/controller/Article.php ]
+[ info ] [ VIEW ] theme/admin/article/article_edit.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-16T11:46:22+08:00 ] 127.0.0.1 GET /admin/article/articleAdd.html
+[ info ] tp5.com/admin/article/articleAdd.html [运行时间：0.001677s][吞吐率：596.29req/s] [内存消耗：257.26kb] [文件加载：39]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'article',
+    2 => 'articleAdd',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'cookie' => 'mini_sidebar=0; skin_color=nature; mini_sidebar=0; PHPSESSID=b5mc0ojmordrjj5gbnk087uv10',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-GB,en;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => 'tp5.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Article->articleAdd[ /home/rong/WEBROOT/tp5/application/admin/controller/Article.php ]
+[ info ] [ VIEW ] theme/admin/article/article_edit.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-16T11:46:25+08:00 ] 127.0.0.1 GET /admin/article/articleAdd.html?uploadImg=&filter%5Barticle.add_times%5D=
+[ info ] tp5.com/admin/article/articleAdd.html?uploadImg=&filter%5Barticle.add_times%5D= [运行时间：0.001448s][吞吐率：690.65req/s] [内存消耗：257.73kb] [文件加载：39]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'article',
+    2 => 'articleAdd',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'cookie' => 'mini_sidebar=0; skin_color=nature; mini_sidebar=0; PHPSESSID=b5mc0ojmordrjj5gbnk087uv10',
+  'referer' => 'http://tp5.com/admin/article/articleAdd.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-GB,en;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => 'tp5.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'uploadImg' => '',
+  'filter' => 
+  array (
+    'article.add_times' => '',
+  ),
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Article->articleAdd[ /home/rong/WEBROOT/tp5/application/admin/controller/Article.php ]
+[ info ] [ VIEW ] theme/admin/article/article_edit.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-16T11:46:30+08:00 ] 127.0.0.1 GET /admin/article/articleAdd.html?uploadImg=&filter%5Barticle.add_times%5D=
+[ info ] tp5.com/admin/article/articleAdd.html?uploadImg=&filter%5Barticle.add_times%5D= [运行时间：0.001599s][吞吐率：625.46req/s] [内存消耗：258.35kb] [文件加载：39]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'article',
+    2 => 'articleAdd',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'cookie' => 'mini_sidebar=0; skin_color=nature; mini_sidebar=0; PHPSESSID=b5mc0ojmordrjj5gbnk087uv10',
+  'referer' => 'http://tp5.com/admin/article/articleAdd.html?uploadImg=&filter%5Barticle.add_times%5D=',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-GB,en;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => 'tp5.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'uploadImg' => '',
+  'filter' => 
+  array (
+    'article.add_times' => '',
+  ),
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Article->articleAdd[ /home/rong/WEBROOT/tp5/application/admin/controller/Article.php ]
+[ info ] [ VIEW ] theme/admin/article/article_edit.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-16T11:46:31+08:00 ] 127.0.0.1 GET /admin/article/articleAdd.html?uploadImg=&filter%5Barticle.add_times%5D=
+[ info ] tp5.com/admin/article/articleAdd.html?uploadImg=&filter%5Barticle.add_times%5D= [运行时间：0.001772s][吞吐率：564.36req/s] [内存消耗：258.35kb] [文件加载：39]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'article',
+    2 => 'articleAdd',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'cookie' => 'mini_sidebar=0; skin_color=nature; mini_sidebar=0; PHPSESSID=b5mc0ojmordrjj5gbnk087uv10',
+  'referer' => 'http://tp5.com/admin/article/articleAdd.html?uploadImg=&filter%5Barticle.add_times%5D=',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-GB,en;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => 'tp5.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'uploadImg' => '',
+  'filter' => 
+  array (
+    'article.add_times' => '',
+  ),
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Article->articleAdd[ /home/rong/WEBROOT/tp5/application/admin/controller/Article.php ]
+[ info ] [ VIEW ] theme/admin/article/article_edit.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-16T11:46:32+08:00 ] 127.0.0.1 GET /admin/article/articleAdd.html?uploadImg=&filter%5Barticle.add_times%5D=
+[ info ] tp5.com/admin/article/articleAdd.html?uploadImg=&filter%5Barticle.add_times%5D= [运行时间：0.001450s][吞吐率：689.63req/s] [内存消耗：258.35kb] [文件加载：39]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'article',
+    2 => 'articleAdd',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'cookie' => 'mini_sidebar=0; skin_color=nature; mini_sidebar=0; PHPSESSID=b5mc0ojmordrjj5gbnk087uv10',
+  'referer' => 'http://tp5.com/admin/article/articleAdd.html?uploadImg=&filter%5Barticle.add_times%5D=',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-GB,en;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => 'tp5.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'uploadImg' => '',
+  'filter' => 
+  array (
+    'article.add_times' => '',
+  ),
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Article->articleAdd[ /home/rong/WEBROOT/tp5/application/admin/controller/Article.php ]
+[ info ] [ VIEW ] theme/admin/article/article_edit.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-16T11:46:33+08:00 ] 127.0.0.1 GET /admin/article/articleAdd.html?uploadImg=&filter%5Barticle.add_times%5D=
+[ info ] tp5.com/admin/article/articleAdd.html?uploadImg=&filter%5Barticle.add_times%5D= [运行时间：0.001765s][吞吐率：566.57req/s] [内存消耗：258.35kb] [文件加载：39]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'article',
+    2 => 'articleAdd',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'cookie' => 'mini_sidebar=0; skin_color=nature; mini_sidebar=0; PHPSESSID=b5mc0ojmordrjj5gbnk087uv10',
+  'referer' => 'http://tp5.com/admin/article/articleAdd.html?uploadImg=&filter%5Barticle.add_times%5D=',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-GB,en;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => 'tp5.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'uploadImg' => '',
+  'filter' => 
+  array (
+    'article.add_times' => '',
+  ),
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Article->articleAdd[ /home/rong/WEBROOT/tp5/application/admin/controller/Article.php ]
+[ info ] [ VIEW ] theme/admin/article/article_edit.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-16T11:46:34+08:00 ] 127.0.0.1 GET /admin/article/articleAdd.html?uploadImg=&filter%5Barticle.add_times%5D=
+[ info ] tp5.com/admin/article/articleAdd.html?uploadImg=&filter%5Barticle.add_times%5D= [运行时间：0.001510s][吞吐率：662.19req/s] [内存消耗：258.35kb] [文件加载：39]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'article',
+    2 => 'articleAdd',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'cookie' => 'mini_sidebar=0; skin_color=nature; mini_sidebar=0; PHPSESSID=b5mc0ojmordrjj5gbnk087uv10',
+  'referer' => 'http://tp5.com/admin/article/articleAdd.html?uploadImg=&filter%5Barticle.add_times%5D=',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-GB,en;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => 'tp5.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'uploadImg' => '',
+  'filter' => 
+  array (
+    'article.add_times' => '',
+  ),
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Article->articleAdd[ /home/rong/WEBROOT/tp5/application/admin/controller/Article.php ]
+[ info ] [ VIEW ] theme/admin/article/article_edit.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-16T11:47:28+08:00 ] 127.0.0.1 GET /admin/article/articleAdd.html?uploadImg=&filter%5Barticle.add_times%5D=
+[ info ] tp5.com/admin/article/articleAdd.html?uploadImg=&filter%5Barticle.add_times%5D= [运行时间：0.003875s][吞吐率：258.06req/s] [内存消耗：407.02kb] [文件加载：41]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'article',
+    2 => 'articleAdd',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'cookie' => 'mini_sidebar=0; skin_color=nature; mini_sidebar=0; PHPSESSID=b5mc0ojmordrjj5gbnk087uv10',
+  'referer' => 'http://tp5.com/admin/article/articleAdd.html?uploadImg=&filter%5Barticle.add_times%5D=',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-GB,en;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => 'tp5.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'uploadImg' => '',
+  'filter' => 
+  array (
+    'article.add_times' => '',
+  ),
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Article->articleAdd[ /home/rong/WEBROOT/tp5/application/admin/controller/Article.php ]
+[ info ] [ VIEW ] theme/admin/article/article_edit.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-16T11:47:30+08:00 ] 127.0.0.1 GET /admin/article/articleAdd.html?uploadImgs=&filter%5Barticle.add_times%5D=
+[ info ] tp5.com/admin/article/articleAdd.html?uploadImgs=&filter%5Barticle.add_times%5D= [运行时间：0.001932s][吞吐率：517.56req/s] [内存消耗：258.77kb] [文件加载：39]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'article',
+    2 => 'articleAdd',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'cookie' => 'mini_sidebar=0; skin_color=nature; mini_sidebar=0; PHPSESSID=b5mc0ojmordrjj5gbnk087uv10',
+  'referer' => 'http://tp5.com/admin/article/articleAdd.html?uploadImg=&filter%5Barticle.add_times%5D=',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-GB,en;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => 'tp5.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'uploadImgs' => '',
+  'filter' => 
+  array (
+    'article.add_times' => '',
+  ),
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Article->articleAdd[ /home/rong/WEBROOT/tp5/application/admin/controller/Article.php ]
+[ info ] [ VIEW ] theme/admin/article/article_edit.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-16T11:47:31+08:00 ] 127.0.0.1 GET /admin/article/articleAdd.html?uploadImgs=&filter%5Barticle.add_times%5D=
+[ info ] tp5.com/admin/article/articleAdd.html?uploadImgs=&filter%5Barticle.add_times%5D= [运行时间：0.001445s][吞吐率：692.02req/s] [内存消耗：258.35kb] [文件加载：39]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'article',
+    2 => 'articleAdd',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'cookie' => 'mini_sidebar=0; skin_color=nature; mini_sidebar=0; PHPSESSID=b5mc0ojmordrjj5gbnk087uv10',
+  'referer' => 'http://tp5.com/admin/article/articleAdd.html?uploadImgs=&filter%5Barticle.add_times%5D=',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-GB,en;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => 'tp5.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'uploadImgs' => '',
+  'filter' => 
+  array (
+    'article.add_times' => '',
+  ),
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Article->articleAdd[ /home/rong/WEBROOT/tp5/application/admin/controller/Article.php ]
+[ info ] [ VIEW ] theme/admin/article/article_edit.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-16T11:47:32+08:00 ] 127.0.0.1 GET /admin/article/articleAdd.html?uploadImgs=&filter%5Barticle.add_times%5D=
+[ info ] tp5.com/admin/article/articleAdd.html?uploadImgs=&filter%5Barticle.add_times%5D= [运行时间：0.001454s][吞吐率：687.82req/s] [内存消耗：258.35kb] [文件加载：39]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'article',
+    2 => 'articleAdd',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'cookie' => 'mini_sidebar=0; skin_color=nature; mini_sidebar=0; PHPSESSID=b5mc0ojmordrjj5gbnk087uv10',
+  'referer' => 'http://tp5.com/admin/article/articleAdd.html?uploadImgs=&filter%5Barticle.add_times%5D=',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-GB,en;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => 'tp5.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'uploadImgs' => '',
+  'filter' => 
+  array (
+    'article.add_times' => '',
+  ),
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Article->articleAdd[ /home/rong/WEBROOT/tp5/application/admin/controller/Article.php ]
+[ info ] [ VIEW ] theme/admin/article/article_edit.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-16T11:47:33+08:00 ] 127.0.0.1 GET /admin/article/articleAdd.html?uploadImgs=&filter%5Barticle.add_times%5D=
+[ info ] tp5.com/admin/article/articleAdd.html?uploadImgs=&filter%5Barticle.add_times%5D= [运行时间：0.001541s][吞吐率：648.87req/s] [内存消耗：258.35kb] [文件加载：39]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'article',
+    2 => 'articleAdd',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'cookie' => 'mini_sidebar=0; skin_color=nature; mini_sidebar=0; PHPSESSID=b5mc0ojmordrjj5gbnk087uv10',
+  'referer' => 'http://tp5.com/admin/article/articleAdd.html?uploadImgs=&filter%5Barticle.add_times%5D=',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-GB,en;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => 'tp5.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'uploadImgs' => '',
+  'filter' => 
+  array (
+    'article.add_times' => '',
+  ),
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Article->articleAdd[ /home/rong/WEBROOT/tp5/application/admin/controller/Article.php ]
+[ info ] [ VIEW ] theme/admin/article/article_edit.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-16T11:47:34+08:00 ] 127.0.0.1 GET /admin/article/articleAdd.html?uploadImgs=&filter%5Barticle.add_times%5D=
+[ info ] tp5.com/admin/article/articleAdd.html?uploadImgs=&filter%5Barticle.add_times%5D= [运行时间：0.001561s][吞吐率：640.65req/s] [内存消耗：258.35kb] [文件加载：39]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'article',
+    2 => 'articleAdd',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'cookie' => 'mini_sidebar=0; skin_color=nature; mini_sidebar=0; PHPSESSID=b5mc0ojmordrjj5gbnk087uv10',
+  'referer' => 'http://tp5.com/admin/article/articleAdd.html?uploadImgs=&filter%5Barticle.add_times%5D=',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-GB,en;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => 'tp5.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'uploadImgs' => '',
+  'filter' => 
+  array (
+    'article.add_times' => '',
+  ),
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Article->articleAdd[ /home/rong/WEBROOT/tp5/application/admin/controller/Article.php ]
+[ info ] [ VIEW ] theme/admin/article/article_edit.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-16T11:47:34+08:00 ] 127.0.0.1 GET /admin/article/articleAdd.html?uploadImgs=&filter%5Barticle.add_times%5D=
+[ info ] tp5.com/admin/article/articleAdd.html?uploadImgs=&filter%5Barticle.add_times%5D= [运行时间：0.001486s][吞吐率：673.03req/s] [内存消耗：258.35kb] [文件加载：39]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'article',
+    2 => 'articleAdd',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'cookie' => 'mini_sidebar=0; skin_color=nature; mini_sidebar=0; PHPSESSID=b5mc0ojmordrjj5gbnk087uv10',
+  'referer' => 'http://tp5.com/admin/article/articleAdd.html?uploadImgs=&filter%5Barticle.add_times%5D=',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-GB,en;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => 'tp5.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'uploadImgs' => '',
+  'filter' => 
+  array (
+    'article.add_times' => '',
+  ),
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Article->articleAdd[ /home/rong/WEBROOT/tp5/application/admin/controller/Article.php ]
+[ info ] [ VIEW ] theme/admin/article/article_edit.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-16T11:47:35+08:00 ] 127.0.0.1 GET /admin/article/articleAdd.html?uploadImgs=&filter%5Barticle.add_times%5D=
+[ info ] tp5.com/admin/article/articleAdd.html?uploadImgs=&filter%5Barticle.add_times%5D= [运行时间：0.002271s][吞吐率：440.35req/s] [内存消耗：258.35kb] [文件加载：39]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'article',
+    2 => 'articleAdd',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'cookie' => 'mini_sidebar=0; skin_color=nature; mini_sidebar=0; PHPSESSID=b5mc0ojmordrjj5gbnk087uv10',
+  'referer' => 'http://tp5.com/admin/article/articleAdd.html?uploadImgs=&filter%5Barticle.add_times%5D=',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-GB,en;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => 'tp5.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'uploadImgs' => '',
+  'filter' => 
+  array (
+    'article.add_times' => '',
+  ),
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Article->articleAdd[ /home/rong/WEBROOT/tp5/application/admin/controller/Article.php ]
+[ info ] [ VIEW ] theme/admin/article/article_edit.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-16T11:47:36+08:00 ] 127.0.0.1 GET /admin/article/articleAdd.html?uploadImgs=&filter%5Barticle.add_times%5D=
+[ info ] tp5.com/admin/article/articleAdd.html?uploadImgs=&filter%5Barticle.add_times%5D= [运行时间：0.001760s][吞吐率：568.26req/s] [内存消耗：258.35kb] [文件加载：39]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'article',
+    2 => 'articleAdd',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'cookie' => 'mini_sidebar=0; skin_color=nature; mini_sidebar=0; PHPSESSID=b5mc0ojmordrjj5gbnk087uv10',
+  'referer' => 'http://tp5.com/admin/article/articleAdd.html?uploadImgs=&filter%5Barticle.add_times%5D=',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-GB,en;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => 'tp5.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'uploadImgs' => '',
+  'filter' => 
+  array (
+    'article.add_times' => '',
+  ),
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Article->articleAdd[ /home/rong/WEBROOT/tp5/application/admin/controller/Article.php ]
+[ info ] [ VIEW ] theme/admin/article/article_edit.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-16T11:47:36+08:00 ] 127.0.0.1 GET /admin/article/articleAdd.html?uploadImgs=&filter%5Barticle.add_times%5D=
+[ info ] tp5.com/admin/article/articleAdd.html?uploadImgs=&filter%5Barticle.add_times%5D= [运行时间：0.001371s][吞吐率：729.32req/s] [内存消耗：258.35kb] [文件加载：39]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'article',
+    2 => 'articleAdd',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'cookie' => 'mini_sidebar=0; skin_color=nature; mini_sidebar=0; PHPSESSID=b5mc0ojmordrjj5gbnk087uv10',
+  'referer' => 'http://tp5.com/admin/article/articleAdd.html?uploadImgs=&filter%5Barticle.add_times%5D=',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-GB,en;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => 'tp5.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'uploadImgs' => '',
+  'filter' => 
+  array (
+    'article.add_times' => '',
+  ),
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Article->articleAdd[ /home/rong/WEBROOT/tp5/application/admin/controller/Article.php ]
+[ info ] [ VIEW ] theme/admin/article/article_edit.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-16T11:48:13+08:00 ] 127.0.0.1 GET /admin/article/articleAdd.html?uploadImgs=&filter%5Barticle.add_times%5D=
+[ info ] tp5.com/admin/article/articleAdd.html?uploadImgs=&filter%5Barticle.add_times%5D= [运行时间：0.003853s][吞吐率：259.53req/s] [内存消耗：407.05kb] [文件加载：41]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'article',
+    2 => 'articleAdd',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'cookie' => 'mini_sidebar=0; skin_color=nature; mini_sidebar=0; PHPSESSID=b5mc0ojmordrjj5gbnk087uv10',
+  'referer' => 'http://tp5.com/admin/article/articleAdd.html?uploadImgs=&filter%5Barticle.add_times%5D=',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-GB,en;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => 'tp5.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'uploadImgs' => '',
+  'filter' => 
+  array (
+    'article.add_times' => '',
+  ),
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Article->articleAdd[ /home/rong/WEBROOT/tp5/application/admin/controller/Article.php ]
+[ info ] [ VIEW ] theme/admin/article/article_edit.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-16T11:48:14+08:00 ] 127.0.0.1 GET /admin/article/articleAdd.html?uploadImgs=&filter%5Barticle.add_times%5D=
+[ info ] tp5.com/admin/article/articleAdd.html?uploadImgs=&filter%5Barticle.add_times%5D= [运行时间：0.002155s][吞吐率：464.02req/s] [内存消耗：258.77kb] [文件加载：39]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'article',
+    2 => 'articleAdd',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'cookie' => 'mini_sidebar=0; skin_color=nature; mini_sidebar=0; PHPSESSID=b5mc0ojmordrjj5gbnk087uv10',
+  'referer' => 'http://tp5.com/admin/article/articleAdd.html?uploadImgs=&filter%5Barticle.add_times%5D=',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-GB,en;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => 'tp5.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'uploadImgs' => '',
+  'filter' => 
+  array (
+    'article.add_times' => '',
+  ),
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Article->articleAdd[ /home/rong/WEBROOT/tp5/application/admin/controller/Article.php ]
+[ info ] [ VIEW ] theme/admin/article/article_edit.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-16T11:48:15+08:00 ] 127.0.0.1 GET /admin/article/articleAdd.html?uploadImgs=&filter%5Barticle.add_times%5D=
+[ info ] tp5.com/admin/article/articleAdd.html?uploadImgs=&filter%5Barticle.add_times%5D= [运行时间：0.002370s][吞吐率：421.92req/s] [内存消耗：258.77kb] [文件加载：39]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'article',
+    2 => 'articleAdd',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'cookie' => 'mini_sidebar=0; skin_color=nature; mini_sidebar=0; PHPSESSID=b5mc0ojmordrjj5gbnk087uv10',
+  'referer' => 'http://tp5.com/admin/article/articleAdd.html?uploadImgs=&filter%5Barticle.add_times%5D=',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-GB,en;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => 'tp5.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'uploadImgs' => '',
+  'filter' => 
+  array (
+    'article.add_times' => '',
+  ),
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Article->articleAdd[ /home/rong/WEBROOT/tp5/application/admin/controller/Article.php ]
+[ info ] [ VIEW ] theme/admin/article/article_edit.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-16T11:48:16+08:00 ] 127.0.0.1 GET /admin/article/articleAdd.html?uploadImgs=&filter%5Barticle.add_times%5D=
+[ info ] tp5.com/admin/article/articleAdd.html?uploadImgs=&filter%5Barticle.add_times%5D= [运行时间：0.001626s][吞吐率：615.00req/s] [内存消耗：258.35kb] [文件加载：39]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'article',
+    2 => 'articleAdd',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'cookie' => 'mini_sidebar=0; skin_color=nature; mini_sidebar=0; PHPSESSID=b5mc0ojmordrjj5gbnk087uv10',
+  'referer' => 'http://tp5.com/admin/article/articleAdd.html?uploadImgs=&filter%5Barticle.add_times%5D=',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-GB,en;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => 'tp5.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'uploadImgs' => '',
+  'filter' => 
+  array (
+    'article.add_times' => '',
+  ),
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Article->articleAdd[ /home/rong/WEBROOT/tp5/application/admin/controller/Article.php ]
+[ info ] [ VIEW ] theme/admin/article/article_edit.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-16T11:49:54+08:00 ] 127.0.0.1 GET /admin/article/articleAdd.html?uploadImgs=&filter%5Barticle.add_times%5D=
+[ info ] tp5.com/admin/article/articleAdd.html?uploadImgs=&filter%5Barticle.add_times%5D= [运行时间：0.003181s][吞吐率：314.37req/s] [内存消耗：379.02kb] [文件加载：41]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'article',
+    2 => 'articleAdd',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'cookie' => 'mini_sidebar=0; skin_color=nature; mini_sidebar=0; PHPSESSID=b5mc0ojmordrjj5gbnk087uv10',
+  'referer' => 'http://tp5.com/admin/article/articleAdd.html?uploadImgs=&filter%5Barticle.add_times%5D=',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-GB,en;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => 'tp5.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'uploadImgs' => '',
+  'filter' => 
+  array (
+    'article.add_times' => '',
+  ),
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Article->articleAdd[ /home/rong/WEBROOT/tp5/application/admin/controller/Article.php ]
+[ info ] [ VIEW ] theme/admin/article/article_edit.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-16T11:49:55+08:00 ] 127.0.0.1 GET /admin/article/articleAdd.html?uploadImgs=&filter%5Barticle.add_times%5D=
+[ info ] tp5.com/admin/article/articleAdd.html?uploadImgs=&filter%5Barticle.add_times%5D= [运行时间：0.001626s][吞吐率：615.00req/s] [内存消耗：258.77kb] [文件加载：39]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'article',
+    2 => 'articleAdd',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'cookie' => 'mini_sidebar=0; skin_color=nature; mini_sidebar=0; PHPSESSID=b5mc0ojmordrjj5gbnk087uv10',
+  'referer' => 'http://tp5.com/admin/article/articleAdd.html?uploadImgs=&filter%5Barticle.add_times%5D=',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-GB,en;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => 'tp5.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'uploadImgs' => '',
+  'filter' => 
+  array (
+    'article.add_times' => '',
+  ),
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Article->articleAdd[ /home/rong/WEBROOT/tp5/application/admin/controller/Article.php ]
+[ info ] [ VIEW ] theme/admin/article/article_edit.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-16T11:49:56+08:00 ] 127.0.0.1 GET /admin/article/articleAdd.html?uploadImgs=&filter%5Barticle.add_times%5D=
+[ info ] tp5.com/admin/article/articleAdd.html?uploadImgs=&filter%5Barticle.add_times%5D= [运行时间：0.001649s][吞吐率：606.38req/s] [内存消耗：258.77kb] [文件加载：39]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'article',
+    2 => 'articleAdd',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'cookie' => 'mini_sidebar=0; skin_color=nature; mini_sidebar=0; PHPSESSID=b5mc0ojmordrjj5gbnk087uv10',
+  'referer' => 'http://tp5.com/admin/article/articleAdd.html?uploadImgs=&filter%5Barticle.add_times%5D=',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-GB,en;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => 'tp5.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'uploadImgs' => '',
+  'filter' => 
+  array (
+    'article.add_times' => '',
+  ),
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Article->articleAdd[ /home/rong/WEBROOT/tp5/application/admin/controller/Article.php ]
+[ info ] [ VIEW ] theme/admin/article/article_edit.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-16T11:49:57+08:00 ] 127.0.0.1 GET /admin/article/articleAdd.html?uploadImgs=&filter%5Barticle.add_times%5D=
+[ info ] tp5.com/admin/article/articleAdd.html?uploadImgs=&filter%5Barticle.add_times%5D= [运行时间：0.001483s][吞吐率：674.22req/s] [内存消耗：258.35kb] [文件加载：39]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'article',
+    2 => 'articleAdd',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'cookie' => 'mini_sidebar=0; skin_color=nature; mini_sidebar=0; PHPSESSID=b5mc0ojmordrjj5gbnk087uv10',
+  'referer' => 'http://tp5.com/admin/article/articleAdd.html?uploadImgs=&filter%5Barticle.add_times%5D=',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-GB,en;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => 'tp5.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'uploadImgs' => '',
+  'filter' => 
+  array (
+    'article.add_times' => '',
+  ),
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Article->articleAdd[ /home/rong/WEBROOT/tp5/application/admin/controller/Article.php ]
+[ info ] [ VIEW ] theme/admin/article/article_edit.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-16T11:49:57+08:00 ] 127.0.0.1 GET /admin/article/articleAdd.html?uploadImgs=&filter%5Barticle.add_times%5D=
+[ info ] tp5.com/admin/article/articleAdd.html?uploadImgs=&filter%5Barticle.add_times%5D= [运行时间：0.001463s][吞吐率：683.45req/s] [内存消耗：258.35kb] [文件加载：39]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'article',
+    2 => 'articleAdd',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'cookie' => 'mini_sidebar=0; skin_color=nature; mini_sidebar=0; PHPSESSID=b5mc0ojmordrjj5gbnk087uv10',
+  'referer' => 'http://tp5.com/admin/article/articleAdd.html?uploadImgs=&filter%5Barticle.add_times%5D=',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-GB,en;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => 'tp5.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'uploadImgs' => '',
+  'filter' => 
+  array (
+    'article.add_times' => '',
+  ),
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Article->articleAdd[ /home/rong/WEBROOT/tp5/application/admin/controller/Article.php ]
+[ info ] [ VIEW ] theme/admin/article/article_edit.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-16T11:50:38+08:00 ] 127.0.0.1 GET /admin/article/articleAdd.html?uploadImgs=&filter%5Barticle.add_times%5D=
+[ info ] tp5.com/admin/article/articleAdd.html?uploadImgs=&filter%5Barticle.add_times%5D= [运行时间：0.003096s][吞吐率：323.01req/s] [内存消耗：373.43kb] [文件加载：41]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'article',
+    2 => 'articleAdd',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'cookie' => 'mini_sidebar=0; skin_color=nature; mini_sidebar=0; PHPSESSID=b5mc0ojmordrjj5gbnk087uv10',
+  'referer' => 'http://tp5.com/admin/article/articleAdd.html?uploadImgs=&filter%5Barticle.add_times%5D=',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-GB,en;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => 'tp5.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'uploadImgs' => '',
+  'filter' => 
+  array (
+    'article.add_times' => '',
+  ),
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Article->articleAdd[ /home/rong/WEBROOT/tp5/application/admin/controller/Article.php ]
+[ info ] [ VIEW ] theme/admin/article/article_edit.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-16T11:50:40+08:00 ] 127.0.0.1 GET /admin/article/articleAdd.html?uploadImgs=&filter%5Barticle.add_times%5D=
+[ info ] tp5.com/admin/article/articleAdd.html?uploadImgs=&filter%5Barticle.add_times%5D= [运行时间：0.001650s][吞吐率：606.03req/s] [内存消耗：258.77kb] [文件加载：39]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'article',
+    2 => 'articleAdd',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'cookie' => 'mini_sidebar=0; skin_color=nature; mini_sidebar=0; PHPSESSID=b5mc0ojmordrjj5gbnk087uv10',
+  'referer' => 'http://tp5.com/admin/article/articleAdd.html?uploadImgs=&filter%5Barticle.add_times%5D=',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-GB,en;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => 'tp5.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'uploadImgs' => '',
+  'filter' => 
+  array (
+    'article.add_times' => '',
+  ),
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Article->articleAdd[ /home/rong/WEBROOT/tp5/application/admin/controller/Article.php ]
+[ info ] [ VIEW ] theme/admin/article/article_edit.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-16T11:50:41+08:00 ] 127.0.0.1 GET /admin/article/articleAdd.html?uploadImgs=&filter%5Barticle.add_times%5D=
+[ info ] tp5.com/admin/article/articleAdd.html?uploadImgs=&filter%5Barticle.add_times%5D= [运行时间：0.001445s][吞吐率：692.13req/s] [内存消耗：258.35kb] [文件加载：39]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'article',
+    2 => 'articleAdd',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'cookie' => 'mini_sidebar=0; skin_color=nature; mini_sidebar=0; PHPSESSID=b5mc0ojmordrjj5gbnk087uv10',
+  'referer' => 'http://tp5.com/admin/article/articleAdd.html?uploadImgs=&filter%5Barticle.add_times%5D=',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-GB,en;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => 'tp5.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'uploadImgs' => '',
+  'filter' => 
+  array (
+    'article.add_times' => '',
+  ),
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Article->articleAdd[ /home/rong/WEBROOT/tp5/application/admin/controller/Article.php ]
+[ info ] [ VIEW ] theme/admin/article/article_edit.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-16T11:50:42+08:00 ] 127.0.0.1 GET /admin/article/articleAdd.html?uploadImgs=&filter%5Barticle.add_times%5D=
+[ info ] tp5.com/admin/article/articleAdd.html?uploadImgs=&filter%5Barticle.add_times%5D= [运行时间：0.001454s][吞吐率：687.70req/s] [内存消耗：258.35kb] [文件加载：39]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'article',
+    2 => 'articleAdd',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'cookie' => 'mini_sidebar=0; skin_color=nature; mini_sidebar=0; PHPSESSID=b5mc0ojmordrjj5gbnk087uv10',
+  'referer' => 'http://tp5.com/admin/article/articleAdd.html?uploadImgs=&filter%5Barticle.add_times%5D=',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-GB,en;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => 'tp5.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'uploadImgs' => '',
+  'filter' => 
+  array (
+    'article.add_times' => '',
+  ),
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Article->articleAdd[ /home/rong/WEBROOT/tp5/application/admin/controller/Article.php ]
+[ info ] [ VIEW ] theme/admin/article/article_edit.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-16T11:53:00+08:00 ] 127.0.0.1 GET /admin/article/articleAdd.html?uploadImgs=&filter%5Barticle.add_times%5D=
+[ info ] tp5.com/admin/article/articleAdd.html?uploadImgs=&filter%5Barticle.add_times%5D= [运行时间：0.004839s][吞吐率：206.66req/s] [内存消耗：373.43kb] [文件加载：41]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'article',
+    2 => 'articleAdd',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'cookie' => 'mini_sidebar=0; skin_color=nature; mini_sidebar=0; PHPSESSID=b5mc0ojmordrjj5gbnk087uv10',
+  'referer' => 'http://tp5.com/admin/article/articleAdd.html?uploadImgs=&filter%5Barticle.add_times%5D=',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-GB,en;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => 'tp5.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'uploadImgs' => '',
+  'filter' => 
+  array (
+    'article.add_times' => '',
+  ),
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Article->articleAdd[ /home/rong/WEBROOT/tp5/application/admin/controller/Article.php ]
+[ info ] [ VIEW ] theme/admin/article/article_edit.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-16T11:53:10+08:00 ] 127.0.0.1 GET /admin/article/articleAdd.html?files%5B%5D=cpu.png&uploadImgs=&filter%5Barticle.add_times%5D=
+[ info ] tp5.com/admin/article/articleAdd.html?files%5B%5D=cpu.png&uploadImgs=&filter%5Barticle.add_times%5D= [运行时间：0.001943s][吞吐率：514.64req/s] [内存消耗：258.92kb] [文件加载：39]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'article',
+    2 => 'articleAdd',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'cookie' => 'mini_sidebar=0; skin_color=nature; mini_sidebar=0; PHPSESSID=b5mc0ojmordrjj5gbnk087uv10',
+  'referer' => 'http://tp5.com/admin/article/articleAdd.html?uploadImgs=&filter%5Barticle.add_times%5D=',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-GB,en;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => 'tp5.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'files' => 
+  array (
+    0 => 'cpu.png',
+  ),
+  'uploadImgs' => '',
+  'filter' => 
+  array (
+    'article.add_times' => '',
+  ),
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Article->articleAdd[ /home/rong/WEBROOT/tp5/application/admin/controller/Article.php ]
+[ info ] [ VIEW ] theme/admin/article/article_edit.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-16T11:53:59+08:00 ] 127.0.0.1 GET /admin/article/articleAdd.html?files%5B%5D=cpu.png&uploadImgs=&filter%5Barticle.add_times%5D=
+[ info ] tp5.com/admin/article/articleAdd.html?files%5B%5D=cpu.png&uploadImgs=&filter%5Barticle.add_times%5D= [运行时间：0.003448s][吞吐率：290.02req/s] [内存消耗：373.51kb] [文件加载：41]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'article',
+    2 => 'articleAdd',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'cookie' => 'mini_sidebar=0; skin_color=nature; mini_sidebar=0; PHPSESSID=b5mc0ojmordrjj5gbnk087uv10',
+  'referer' => 'http://tp5.com/admin/article/articleAdd.html?uploadImgs=&filter%5Barticle.add_times%5D=',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-GB,en;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => 'tp5.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'files' => 
+  array (
+    0 => 'cpu.png',
+  ),
+  'uploadImgs' => '',
+  'filter' => 
+  array (
+    'article.add_times' => '',
+  ),
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Article->articleAdd[ /home/rong/WEBROOT/tp5/application/admin/controller/Article.php ]
+[ info ] [ VIEW ] theme/admin/article/article_edit.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-16T11:54:43+08:00 ] 127.0.0.1 GET /admin/article/articleAdd.html?files%5B%5D=cpu.png&uploadImgs=&filter%5Barticle.add_times%5D=
+[ info ] tp5.com/admin/article/articleAdd.html?files%5B%5D=cpu.png&uploadImgs=&filter%5Barticle.add_times%5D= [运行时间：0.003131s][吞吐率：319.40req/s] [内存消耗：361.51kb] [文件加载：41]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'article',
+    2 => 'articleAdd',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'cookie' => 'mini_sidebar=0; skin_color=nature; mini_sidebar=0; PHPSESSID=b5mc0ojmordrjj5gbnk087uv10',
+  'referer' => 'http://tp5.com/admin/article/articleAdd.html?uploadImgs=&filter%5Barticle.add_times%5D=',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-GB,en;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => 'tp5.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'files' => 
+  array (
+    0 => 'cpu.png',
+  ),
+  'uploadImgs' => '',
+  'filter' => 
+  array (
+    'article.add_times' => '',
+  ),
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Article->articleAdd[ /home/rong/WEBROOT/tp5/application/admin/controller/Article.php ]
+[ info ] [ VIEW ] theme/admin/article/article_edit.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-16T11:55:53+08:00 ] 127.0.0.1 GET /admin/article/articleAdd.html?files%5B%5D=cpu.png&uploadImgs=&filter%5Barticle.add_times%5D=
+[ info ] tp5.com/admin/article/articleAdd.html?files%5B%5D=cpu.png&uploadImgs=&filter%5Barticle.add_times%5D= [运行时间：0.002955s][吞吐率：338.41req/s] [内存消耗：361.51kb] [文件加载：41]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'article',
+    2 => 'articleAdd',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'cookie' => 'mini_sidebar=0; skin_color=nature; mini_sidebar=0; PHPSESSID=b5mc0ojmordrjj5gbnk087uv10',
+  'referer' => 'http://tp5.com/admin/article/articleAdd.html?uploadImgs=&filter%5Barticle.add_times%5D=',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-GB,en;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => 'tp5.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'files' => 
+  array (
+    0 => 'cpu.png',
+  ),
+  'uploadImgs' => '',
+  'filter' => 
+  array (
+    'article.add_times' => '',
+  ),
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Article->articleAdd[ /home/rong/WEBROOT/tp5/application/admin/controller/Article.php ]
+[ info ] [ VIEW ] theme/admin/article/article_edit.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-16T11:56:55+08:00 ] 127.0.0.1 GET /admin/article/articleAdd.html?files%5B%5D=cpu.png&uploadImgs=&filter%5Barticle.add_times%5D=
+[ info ] tp5.com/admin/article/articleAdd.html?files%5B%5D=cpu.png&uploadImgs=&filter%5Barticle.add_times%5D= [运行时间：0.002909s][吞吐率：343.77req/s] [内存消耗：361.51kb] [文件加载：41]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'article',
+    2 => 'articleAdd',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'cookie' => 'mini_sidebar=0; skin_color=nature; mini_sidebar=0; PHPSESSID=b5mc0ojmordrjj5gbnk087uv10',
+  'referer' => 'http://tp5.com/admin/article/articleAdd.html?uploadImgs=&filter%5Barticle.add_times%5D=',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-GB,en;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => 'tp5.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'files' => 
+  array (
+    0 => 'cpu.png',
+  ),
+  'uploadImgs' => '',
+  'filter' => 
+  array (
+    'article.add_times' => '',
+  ),
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Article->articleAdd[ /home/rong/WEBROOT/tp5/application/admin/controller/Article.php ]
+[ info ] [ VIEW ] theme/admin/article/article_edit.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-16T11:57:16+08:00 ] 127.0.0.1 GET /admin/article/articleAdd.html?files%5B%5D=cpu.png&uploadImgs=&filter%5Barticle.add_times%5D=
+[ info ] tp5.com/admin/article/articleAdd.html?files%5B%5D=cpu.png&uploadImgs=&filter%5Barticle.add_times%5D= [运行时间：0.003517s][吞吐率：284.32req/s] [内存消耗：361.51kb] [文件加载：41]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'article',
+    2 => 'articleAdd',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'cookie' => 'mini_sidebar=0; skin_color=nature; mini_sidebar=0; PHPSESSID=b5mc0ojmordrjj5gbnk087uv10',
+  'referer' => 'http://tp5.com/admin/article/articleAdd.html?uploadImgs=&filter%5Barticle.add_times%5D=',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-GB,en;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => 'tp5.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'files' => 
+  array (
+    0 => 'cpu.png',
+  ),
+  'uploadImgs' => '',
+  'filter' => 
+  array (
+    'article.add_times' => '',
+  ),
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Article->articleAdd[ /home/rong/WEBROOT/tp5/application/admin/controller/Article.php ]
+[ info ] [ VIEW ] theme/admin/article/article_edit.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-16T12:01:32+08:00 ] 127.0.0.1 GET /admin/article/articleAdd.html?files%5B%5D=cpu.png&uploadImgs=&filter%5Barticle.add_times%5D=
+[ info ] tp5.com/admin/article/articleAdd.html?files%5B%5D=cpu.png&uploadImgs=&filter%5Barticle.add_times%5D= [运行时间：0.003543s][吞吐率：282.25req/s] [内存消耗：373.51kb] [文件加载：41]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'article',
+    2 => 'articleAdd',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'cookie' => 'mini_sidebar=0; skin_color=nature; mini_sidebar=0; PHPSESSID=b5mc0ojmordrjj5gbnk087uv10',
+  'referer' => 'http://tp5.com/admin/article/articleAdd.html?uploadImgs=&filter%5Barticle.add_times%5D=',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-GB,en;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => 'tp5.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'files' => 
+  array (
+    0 => 'cpu.png',
+  ),
+  'uploadImgs' => '',
+  'filter' => 
+  array (
+    'article.add_times' => '',
+  ),
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Article->articleAdd[ /home/rong/WEBROOT/tp5/application/admin/controller/Article.php ]
+[ info ] [ VIEW ] theme/admin/article/article_edit.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-16T12:01:37+08:00 ] 127.0.0.1 GET /admin/article/articleAdd.html?files%5B%5D=cpu.png&uploadImgs=&filter%5Barticle.add_times%5D=
+[ info ] tp5.com/admin/article/articleAdd.html?files%5B%5D=cpu.png&uploadImgs=&filter%5Barticle.add_times%5D= [运行时间：0.002162s][吞吐率：462.54req/s] [内存消耗：258.92kb] [文件加载：39]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'article',
+    2 => 'articleAdd',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'cookie' => 'mini_sidebar=0; skin_color=nature; mini_sidebar=0; PHPSESSID=b5mc0ojmordrjj5gbnk087uv10',
+  'referer' => 'http://tp5.com/admin/article/articleAdd.html?uploadImgs=&filter%5Barticle.add_times%5D=',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-GB,en;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => 'tp5.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'files' => 
+  array (
+    0 => 'cpu.png',
+  ),
+  'uploadImgs' => '',
+  'filter' => 
+  array (
+    'article.add_times' => '',
+  ),
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Article->articleAdd[ /home/rong/WEBROOT/tp5/application/admin/controller/Article.php ]
+[ info ] [ VIEW ] theme/admin/article/article_edit.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-16T12:01:49+08:00 ] 127.0.0.1 GET /admin/article/articleAdd.html?files%5B%5D=&filter%5Barticle.add_times%5D=&content=%3Cp%3E%E8%BF%99%E9%87%8C%E5%86%99%E4%BD%A0%E7%9A%84%E5%88%9D%E5%A7%8B%E5%8C%96%E5%86%85%E5%AE%B9%3C%2Fp%3E
+[ info ] tp5.com/admin/article/articleAdd.html?files%5B%5D=&filter%5Barticle.add_times%5D=&content=%3Cp%3E%E8%BF%99%E9%87%8C%E5%86%99%E4%BD%A0%E7%9A%84%E5%88%9D%E5%A7%8B%E5%8C%96%E5%86%85%E5%AE%B9%3C%2Fp%3E [运行时间：0.003184s][吞吐率：314.09req/s] [内存消耗：258.63kb] [文件加载：39]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'article',
+    2 => 'articleAdd',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'cookie' => 'mini_sidebar=0; skin_color=nature; mini_sidebar=0; PHPSESSID=b5mc0ojmordrjj5gbnk087uv10',
+  'referer' => 'http://tp5.com/admin/article/articleAdd.html?files%5B%5D=cpu.png&uploadImgs=&filter%5Barticle.add_times%5D=',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'en-GB,en;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0',
+  'host' => 'tp5.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'files' => 
+  array (
+    0 => '',
+  ),
+  'filter' => 
+  array (
+    'article.add_times' => '',
+  ),
+  'content' => '<p>这里写你的初始化内容</p>',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Article->articleAdd[ /home/rong/WEBROOT/tp5/application/admin/controller/Article.php ]
+[ info ] [ VIEW ] theme/admin/article/article_edit.html [ array (
+) ]
+[ info ] [ LOG ] INIT File

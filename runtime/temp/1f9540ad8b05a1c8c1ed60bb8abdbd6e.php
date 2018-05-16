@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:28:"theme/admin/index/index.html";i:1526280241;s:46:"/home/rong/WEBROOT/tp5/theme/admin/layout.html";i:1526377672;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:28:"theme/admin/index/index.html";i:1526280241;s:46:"/home/rong/WEBROOT/tp5/theme/admin/layout.html";i:1526381938;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,6 +21,8 @@
     <link href="/static/lib/fontawesome/css/font-awesome.min.css" rel="stylesheet">
     <!-- ANIMATE -->
     <link rel="stylesheet" type="text/css" href="/static/lib/animate/animate.min.css"/>
+    <!--bootstrap-->
+    <link rel="stylesheet" type="text/css" href="/static/lib/bootstrap/css/bootstrap.min.css"/>
 </head>
 <body>
 <!-- HEADER -->

@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:37:"theme/admin/article/article_list.html";i:1526366037;s:46:"/home/rong/WEBROOT/tp5/theme/admin/layout.html";i:1526351014;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:37:"theme/admin/article/article_list.html";i:1526366037;s:46:"/home/rong/WEBROOT/tp5/theme/admin/layout.html";i:1526381938;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,9 +20,11 @@
     <script type="text/javascript" src="/static/lib/html5shiv/dist/html5shiv.min.js"></script>
     <script type="text/javascript" src="/static/lib/css3-mediaqueries-js/css3-mediaqueries.min.js"></script>
     <![endif]-->
-    <link href="/static/lib/FontAwesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/static/lib/fontawesome/css/font-awesome.min.css" rel="stylesheet">
     <!-- ANIMATE -->
     <link rel="stylesheet" type="text/css" href="/static/lib/animate/animate.min.css"/>
+    <!--bootstrap-->
+    <link rel="stylesheet" type="text/css" href="/static/lib/bootstrap/css/bootstrap.min.css"/>
 </head>
 <body>
 <!-- HEADER -->
@@ -591,7 +593,7 @@
 <!-- JQUERY -->
 <script type="text/javascript" src="/static/lib/jquery/jquery-2.1.4.min.js"></script>
 <!-- JQUERY UI-->
-<script type="text/javascript" src="/static/lib/jquery-ui-1.12.1/jquery-ui.min.js"></script>
+<script type="text/javascript" src="/static/lib/jquery-ui/jquery-ui.min.js"></script>
 <!--JQUERY COOKIE-->
 <script type="text/javascript" src="/static/lib/jquery-cookie/src/jquery.cookie.js"></script>
 <!-- BOOTSTRAP -->
