@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:37:"theme/admin/article/article_list.html";i:1526366037;s:46:"/home/rong/WEBROOT/tp5/theme/admin/layout.html";i:1526381938;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:37:"theme/admin/article/article_list.html";i:1526525704;s:46:"/home/rong/WEBROOT/tp5/theme/admin/layout.html";i:1526523131;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,9 +12,6 @@
     <link rel="stylesheet" type="text/css" href="/static/admin/css/cloud-admin.min.css">
     <link rel="stylesheet" type="text/css" href="/static/admin/css/themes/default.min.css" id="skin-switcher">
     <link rel="stylesheet" type="text/css" href="/static/admin/css/responsive.min.css">
-    
-    <link rel="stylesheet" type="text/css" href="/static/lib/daterangepicker/daterangepicker.css">
-
     <!-- STYLESHEETS --><!--[if lt IE 9]>
     <script type="text/javascript" src="/static/lib/flot/excanvas.min.js"></script>
     <script type="text/javascript" src="/static/lib/html5shiv/dist/html5shiv.min.js"></script>
@@ -23,8 +20,9 @@
     <link href="/static/lib/fontawesome/css/font-awesome.min.css" rel="stylesheet">
     <!-- ANIMATE -->
     <link rel="stylesheet" type="text/css" href="/static/lib/animate/animate.min.css"/>
-    <!--bootstrap-->
-    <link rel="stylesheet" type="text/css" href="/static/lib/bootstrap/css/bootstrap.min.css"/>
+    
+    <link rel="stylesheet" type="text/css" href="/static/lib/daterangepicker/daterangepicker.css">
+
 </head>
 <body>
 <!-- HEADER -->
@@ -208,11 +206,6 @@
                 <input class="search" type="text" placeholder="Search"><i class="fa fa-search search-icon"></i>
             </div>
             <!-- /SEARCH BAR -->
-
-            <!-- SIDEBAR QUICK-LAUNCH -->
-            <!-- <div id="quicklaunch">
-            <!-- /SIDEBAR QUICK-LAUNCH -->
-
             <!-- SIDEBAR MENU -->
             <ul>
                 <li class="active">
@@ -405,7 +398,7 @@
                     
     <div class="row">
        <div class="col-xs-12 col-md-12 col-lg-12">
-           <div class="box border blue">
+           <div class="box">
                <div class="box-title">
                    <h4><i class="fa fa-bars"></i>搜索</h4>
 
@@ -483,6 +476,7 @@
                                        <label >置顶</label>
                                        <!--<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">-->
                                        <select id="e1" class="form-control" style="width:100%;" name="filter[order.status]">
+                                           <option value="">请选择</option>
                                            <option value="0">未置顶</option>
                                            <option value="1">已置顶</option>
                                        </select>
@@ -508,21 +502,11 @@
     <div class="row">
         <div class="col-xs-12 col-md-12 col-md-12">
             <!-- BOX -->
-            <div class="box border blue">
+            <div class="box">
                 <div class="box-title">
                     <h4><i class="fa fa-table"></i>文章列表</h4>
                     <div class="tools">
-                        <a href="#box-config" data-toggle="modal" class="config">
-                            <i class="fa fa-cog"></i>
-                        </a>
-                        <a href="javascript:;" class="reload">
-                            <i class="fa fa-refresh"></i>
-                        </a>
-                        <a href="javascript:;" class="collapse">
-                            <i class="fa fa-chevron-up"></i>
-                        </a>
-                        <a href="javascript:;" class="remove">
-                            <i class="fa fa-times"></i>
+                        <a href="javascript:;" class="btn btn-xs btn-success" style="color: #ffffff;">导出
                         </a>
                     </div>
                 </div>
@@ -592,18 +576,21 @@
 <!-- Placed at the end of the document so the pages load faster -->
 <!-- JQUERY -->
 <script type="text/javascript" src="/static/lib/jquery/jquery-2.1.4.min.js"></script>
-<!-- JQUERY UI-->
-<script type="text/javascript" src="/static/lib/jquery-ui/jquery-ui.min.js"></script>
 <!--JQUERY COOKIE-->
 <script type="text/javascript" src="/static/lib/jquery-cookie/src/jquery.cookie.js"></script>
 <!-- BOOTSTRAP -->
 <script type="text/javascript" src="/static/lib/bootstrap/js/bootstrap.min.js"></script>
 <!-- CUSTOM SCRIPT -->
-<script type="text/javascript" src="/static/admin/js/script.js"></script>
+<script type="text/javascript" src="/static/admin/js/public.js"></script>
+<!-- /JAVASCRIPTS -->
 
     <script src="/static/lib/daterangepicker/moment.min.js"></script>
     <script src="/static/lib/daterangepicker/daterangepicker.js"></script>
     <script type="text/javascript">
+        jQuery(document).ready(function () {
+            App.init(); //Initialise plugins and elements
+        });
+
         $("#addTime").daterangepicker({
             //日期或字符串）最初选择的日期范围的开始日期。如果您提供了一个字符串，它必须与您的locale设置中设置的日期格式字符串匹配。
             "startDate": moment().subtract(29, 'days'),
@@ -814,12 +801,5 @@
         );
     </script>
 
-<script>
-    jQuery(document).ready(function () {
-        App.setPage("index");  //Set current page
-        App.init(); //Initialise plugins and elements
-    });
-</script>
-<!-- /JAVASCRIPTS -->
 </body>
 </html>

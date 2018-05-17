@@ -53,5 +53,4 @@ return [
     'Article' => 'Article',
     'Article list' => 'Article list',
     'Add articles' => 'Add articles',
-
 ];

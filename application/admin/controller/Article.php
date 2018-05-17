@@ -39,6 +39,7 @@ class Article extends Base
     public function save(Request $request)
     {
         //
+        dump($request->post());
     }
 
     /**

@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:28:"theme/admin/index/index.html";i:1526280241;s:46:"/home/rong/WEBROOT/tp5/theme/admin/layout.html";i:1526381938;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:28:"theme/admin/index/index.html";i:1526466499;s:46:"/home/rong/WEBROOT/tp5/theme/admin/layout.html";i:1526523131;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,7 +12,6 @@
     <link rel="stylesheet" type="text/css" href="/static/admin/css/cloud-admin.min.css">
     <link rel="stylesheet" type="text/css" href="/static/admin/css/themes/default.min.css" id="skin-switcher">
     <link rel="stylesheet" type="text/css" href="/static/admin/css/responsive.min.css">
-    
     <!-- STYLESHEETS --><!--[if lt IE 9]>
     <script type="text/javascript" src="/static/lib/flot/excanvas.min.js"></script>
     <script type="text/javascript" src="/static/lib/html5shiv/dist/html5shiv.min.js"></script>
@@ -21,8 +20,7 @@
     <link href="/static/lib/fontawesome/css/font-awesome.min.css" rel="stylesheet">
     <!-- ANIMATE -->
     <link rel="stylesheet" type="text/css" href="/static/lib/animate/animate.min.css"/>
-    <!--bootstrap-->
-    <link rel="stylesheet" type="text/css" href="/static/lib/bootstrap/css/bootstrap.min.css"/>
+    
 </head>
 <body>
 <!-- HEADER -->
@@ -206,11 +204,6 @@
                 <input class="search" type="text" placeholder="Search"><i class="fa fa-search search-icon"></i>
             </div>
             <!-- /SEARCH BAR -->
-
-            <!-- SIDEBAR QUICK-LAUNCH -->
-            <!-- <div id="quicklaunch">
-            <!-- /SIDEBAR QUICK-LAUNCH -->
-
             <!-- SIDEBAR MENU -->
             <ul>
                 <li class="active">
@@ -425,21 +418,19 @@
 <!-- Placed at the end of the document so the pages load faster -->
 <!-- JQUERY -->
 <script type="text/javascript" src="/static/lib/jquery/jquery-2.1.4.min.js"></script>
-<!-- JQUERY UI-->
-<script type="text/javascript" src="/static/lib/jquery-ui/jquery-ui.min.js"></script>
 <!--JQUERY COOKIE-->
 <script type="text/javascript" src="/static/lib/jquery-cookie/src/jquery.cookie.js"></script>
 <!-- BOOTSTRAP -->
 <script type="text/javascript" src="/static/lib/bootstrap/js/bootstrap.min.js"></script>
 <!-- CUSTOM SCRIPT -->
-<script type="text/javascript" src="/static/admin/js/script.js"></script>
+<script type="text/javascript" src="/static/admin/js/public.js"></script>
+<!-- /JAVASCRIPTS -->
 
 <script>
     jQuery(document).ready(function () {
-        App.setPage("index");  //Set current page
         App.init(); //Initialise plugins and elements
     });
 </script>
-<!-- /JAVASCRIPTS -->
+
 </body>
 </html>

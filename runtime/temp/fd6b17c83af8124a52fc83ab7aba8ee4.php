@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:37:"theme/admin/article/article_edit.html";i:1526443288;s:46:"/home/rong/WEBROOT/tp5/theme/admin/layout.html";i:1526381938;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:37:"theme/admin/article/article_edit.html";i:1526544609;s:46:"/home/rong/WEBROOT/tp5/theme/admin/layout.html";i:1526523131;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,7 +12,17 @@
     <link rel="stylesheet" type="text/css" href="/static/admin/css/cloud-admin.min.css">
     <link rel="stylesheet" type="text/css" href="/static/admin/css/themes/default.min.css" id="skin-switcher">
     <link rel="stylesheet" type="text/css" href="/static/admin/css/responsive.min.css">
+    <!-- STYLESHEETS --><!--[if lt IE 9]>
+    <script type="text/javascript" src="/static/lib/flot/excanvas.min.js"></script>
+    <script type="text/javascript" src="/static/lib/html5shiv/dist/html5shiv.min.js"></script>
+    <script type="text/javascript" src="/static/lib/css3-mediaqueries-js/css3-mediaqueries.min.js"></script>
+    <![endif]-->
+    <link href="/static/lib/fontawesome/css/font-awesome.min.css" rel="stylesheet">
+    <!-- ANIMATE -->
+    <link rel="stylesheet" type="text/css" href="/static/lib/animate/animate.min.css"/>
     
+<!--bootstrap-->
+<!--<link rel="stylesheet" type="text/css" href="/static/lib/bootstrap/css/bootstrap.min.css"/>-->
 <!-- blueimp Gallery styles -->
 <!--<link rel="stylesheet" href="/static/lib/Gallery/css/blueimp-gallery.min.css">-->
 <!-- CSS to style the file input field as button and adjust the Bootstrap progress bars -->
@@ -23,16 +33,6 @@
 <!--<noscript><link rel="stylesheet" href="/static/lib/jQueryFileUpload/css/jquery.fileupload-ui-noscript.css"></noscript>-->
 <link rel="stylesheet" type="text/css" href="/static/lib/daterangepicker/daterangepicker.css">
 
-    <!-- STYLESHEETS --><!--[if lt IE 9]>
-    <script type="text/javascript" src="/static/lib/flot/excanvas.min.js"></script>
-    <script type="text/javascript" src="/static/lib/html5shiv/dist/html5shiv.min.js"></script>
-    <script type="text/javascript" src="/static/lib/css3-mediaqueries-js/css3-mediaqueries.min.js"></script>
-    <![endif]-->
-    <link href="/static/lib/fontawesome/css/font-awesome.min.css" rel="stylesheet">
-    <!-- ANIMATE -->
-    <link rel="stylesheet" type="text/css" href="/static/lib/animate/animate.min.css"/>
-    <!--bootstrap-->
-    <link rel="stylesheet" type="text/css" href="/static/lib/bootstrap/css/bootstrap.min.css"/>
 </head>
 <body>
 <!-- HEADER -->
@@ -216,11 +216,6 @@
                 <input class="search" type="text" placeholder="Search"><i class="fa fa-search search-icon"></i>
             </div>
             <!-- /SEARCH BAR -->
-
-            <!-- SIDEBAR QUICK-LAUNCH -->
-            <!-- <div id="quicklaunch">
-            <!-- /SIDEBAR QUICK-LAUNCH -->
-
             <!-- SIDEBAR MENU -->
             <ul>
                 <li class="active">
@@ -416,41 +411,34 @@
         <div class="row">
             <div class="col-md-12">
                 <!-- BASIC -->
-                <div class="box border blue">
+                <div class="box  ">
                     <div class="box-title">
                         <h4><i class="fa fa-bars"></i>添加文章</h4>
-                        <div class="tools hidden-xs">
-                            <a href="#box-config" data-toggle="modal" class="config">
-                                <i class="fa fa-cog"></i>
-                            </a>
-                            <a href="javascript:;" class="reload">
-                                <i class="fa fa-refresh"></i>
-                            </a>
-                            <a href="javascript:;" class="collapse">
-                                <i class="fa fa-chevron-up"></i>
-                            </a>
-                            <a href="javascript:;" class="remove">
-                                <i class="fa fa-times"></i>
-                            </a>
-                        </div>
                     </div>
                     <div class="box-body big">
-                        <h3 class="form-title">添加文章</h3>
-                        <form role="form">
+                        <form role="form" id="articlleForm" action="" method="post">
                             <div class="form-group">
-                                <label for="exampleInputEmail1">标题</label>
-                                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter title">
+                                <label for="articleType">分类 <span style="color: red">*</span></label>
+                                <select class="form-control" id="articleType" name="articleType">
+                                    <option value="">请选择</option>
+                                    <option value="1">Mysql</option>
+                                    <option value="0">Linux</option>
+                                </select>
                             </div>
                             <div class="form-group">
-                                <label for="exampleInputPassword1">简介</label>
-                                <input type="text" class="form-control" id="exampleInputPassword1" placeholder="description">
+                                <label for="articleTitle">标题 <span style="color: red">*</span></label>
+                                <input type="text" class="form-control" id="articleTitle" name="articleTitle" placeholder="Enter title">
                             </div>
                             <div class="form-group">
-                                <label for="exampleInputPassword1">作者</label>
-                                <input type="text" class="form-control" id="exampleInputPassword1" placeholder="authoer">
+                                <label for="articleDescription">简介 <span style="color: red">*</span></label>
+                                <input type="text" class="form-control" id="articleDescription" name="articleDescription" placeholder="description">
                             </div>
                             <div class="form-group">
-                                <label for="exampleInputPassword1">图片</label>
+                                <label for="articleAuthor">作者 <span style="color: red">*</span></label>
+                                <input type="text" class="form-control" id="articleAuthor" name="articleAuthor" placeholder="authoer">
+                            </div>
+                            <div class="form-group">
+                                <label for="fileupload">图片 <span style="color: red">*</span></label>
                                 <div class="jquery-fileupload">
                                     <span class="btn btn-success fileinput-button">
                                         <i class="glyphicon glyphicon-plus"></i>
@@ -466,42 +454,34 @@
                                     </div>
                                     <!-- The container for the uploaded files -->
                                     <div id="files" class="files"></div>
-
-
-                                    <div>
-                                        <img id="image" src="">
-                                    </div>
-                                    <div id="progressss">
-                                        <div class="bar" style="width: 0%;"></div>
-                                    </div>
                                 </div>
                             </div>
                             <div class="divide-20"></div>
                             <div class="form-group">
-                                <label for="exampleInputPassword1">是否置顶</label>
-                                    <select class="form-control">
+                                <label for="top">是否置顶 <span style="color: red">*</span></label>
+                                    <select class="form-control" style="width: 45%" name="top" id="top">
                                         <option value="">请选择</option>
                                         <option value="1">置顶</option>
                                         <option value="0">不置顶</option>
                                     </select>
                             </div>
                             <div class="form-group">
-                                <label for="exampleInputPassword1">发布时间</label>
+                                <label for="addTime">发布时间 <span style="color: red">*</span></label>
                                 <div class="controls">
                                     <div class="input-group">
                                             <span class="input-group-addon">
                                                 <i class="fa fa-calendar"></i>
-                                            </span><input type="text" class="form-control" id="addTime" placeholder="添加时间" name="filter[article.add_times]" value="">
+                                            </span>
+                                        <input type="text" class="form-control" id="addTime"  name="add_times" value="" style="width: 44%" placeholder="添加时间">
                                         <!--<div class="input-group-addon clearBtns">x</div>-->
                                     </div>
                                 </div>
                             </div>
-                            <label for="exampleInputPassword1">内容</label>
-                            <script id="container" name="content" type="text/plain">这里写你的初始化内容</script>
+                            <label for="container">内容 <span style="color: red">*</span></label>
+                            <script id="container" name="container" type="text/plain"></script>
                             <div class="separator"></div>
                             <button type="submit" class="btn btn-success">提交</button>
                         </form>
-
                     </div>
                 </div>
                 <!-- /BASIC -->
@@ -509,7 +489,10 @@
         </div>
     </div>
 </div>
+<style>
+    lablel > .error{color:red; border-color:red !important;}
 
+</style>
 
                     <!-- /CALENDAR & CHAT -->
                 </div>
@@ -535,22 +518,22 @@
 <!-- Placed at the end of the document so the pages load faster -->
 <!-- JQUERY -->
 <script type="text/javascript" src="/static/lib/jquery/jquery-2.1.4.min.js"></script>
-<!-- JQUERY UI-->
-<script type="text/javascript" src="/static/lib/jquery-ui/jquery-ui.min.js"></script>
 <!--JQUERY COOKIE-->
 <script type="text/javascript" src="/static/lib/jquery-cookie/src/jquery.cookie.js"></script>
 <!-- BOOTSTRAP -->
 <script type="text/javascript" src="/static/lib/bootstrap/js/bootstrap.min.js"></script>
 <!-- CUSTOM SCRIPT -->
-<script type="text/javascript" src="/static/admin/js/script.js"></script>
+<script type="text/javascript" src="/static/admin/js/public.js"></script>
+<!-- /JAVASCRIPTS -->
 
 <script src="/static/lib/jQueryFileUpload/js/vendor/jquery.ui.widget.js"></script>
 <!-- The Load Image plugin is included for the preview images and image resizing functionality -->
-<script src="https://blueimp.github.io/JavaScript-Load-Image/js/load-image.all.min.js"></script>
+<script src="/static/lib/LoadImage/js/load-image.all.min.js"></script>
 <!-- The Canvas to Blob plugin is included for image resizing functionality -->
-<script src="https://blueimp.github.io/JavaScript-Canvas-to-Blob/js/canvas-to-blob.min.js"></script>
+<script src="/static/lib/CanvastoBlob/js/canvas-to-blob.min.js"></script>
 
-
+<!-- JQUERY UI-->
+<script type="text/javascript" src="/static/lib/jquery-ui/jquery-ui.min.js"></script>
 
 <script src="/static/lib/jQueryFileUpload/js/jquery.iframe-transport.js"></script>
 <script src="/static/lib/jQueryFileUpload/js/jquery.fileupload.js"></script>
@@ -558,22 +541,29 @@
 <script src="/static/lib/jQueryFileUpload/js/jquery.fileupload-image.js"></script>
 <script src="/static/lib/jQueryFileUpload/js/jquery.fileupload-validate.js"></script>
 
+<script src="/static/lib/validation/dist/jquery.validate.min.js"></script>
+<script src="/static/lib/validation/dist/additional-methods.min.js"></script>
+<script src="/static/lib/validation/dist/localization/messages_zh.min.js"></script>
 
 <script src="/static/lib/daterangepicker/moment.min.js"></script>
 <script src="/static/lib/daterangepicker/daterangepicker.js"></script>
 <!-- 配置文件 -->
 <script type="text/javascript" src="/static/lib/ueditor/ueditor.config.js"></script>
- 编辑器源码文件
+ <!--编辑器源码文件-->
 <script type="text/javascript" src="/static/lib/ueditor/ueditor.all.min.js"></script>
 <!-- 实例化编辑器 -->
 <script type="text/javascript">
+    jQuery(document).ready(function () {
+        App.init(); //Initialise plugins and elements
+    });
     /*jslint unparam: true, regexp: true */
     /*global window, $ */
     $(function () {
         'use strict';
         // Change this to the location of your server-side upload handler:
-        var url = window.location.hostname === 'blueimp.github.io' ?
-            '//jquery-file-upload.appspot.com/' : 'server/php/',
+        // var url = window.location.hostname === 'blueimp.github.io' ?
+        //     '//jquery-file-upload.appspot.com/' : 'server/php/',
+        var url = '/admin/article/save',
             uploadButton = $('<button/>')
                 .addClass('btn btn-primary')
                 .prop('disabled', true)
@@ -668,10 +658,7 @@
         }).prop('disabled', !$.support.fileInput)
             .parent().addClass($.support.fileInput ? undefined : 'disabled');
     });
-
-
-
-
+    //set time
     $("#addTime").daterangepicker({
             //日期或字符串）最初选择的日期范围的开始日期。如果您提供了一个字符串，它必须与您的locale设置中设置的日期格式字符串匹配。
             "startDate": moment().subtract(29, 'days'),
@@ -776,15 +763,126 @@
             $("#addTime").val(start.format('YYYY-MM-DD HH:mm:ss'));
         }
     );
-    var ue = UE.getEditor('container');
+    //get user Language
+     function lang() {
+        if ($.cookie('think_var') == 'en-us'){
+            return 'en';
+        } else {
+            return 'zh-cn'
+        }
+    }
+    //set uedit
+    var ue = UE.getEditor('container',{
+        toolbars: [
+            [
+                'fullscreen', 'source', '|', 'undo', 'redo', '|',
+                'bold', 'italic', 'underline', 'fontborder', 'strikethrough', 'superscript', 'subscript', 'removeformat', 'formatmatch', 'autotypeset', 'blockquote', 'pasteplain', '|', 'forecolor', 'backcolor', 'insertorderedlist', 'insertunorderedlist', 'selectall', 'cleardoc', '|',
+                'rowspacingtop', 'rowspacingbottom', 'lineheight', '|',
+                'customstyle', 'paragraph', 'fontfamily', 'fontsize', '|',
+                'directionalityltr', 'directionalityrtl', 'indent', '|',
+                'justifyleft', 'justifycenter', 'justifyright', 'justifyjustify', '|', 'touppercase', 'tolowercase', '|',
+                'link', 'unlink', 'anchor', '|', 'imagenone', 'imageleft', 'imageright', 'imagecenter', '|',
+                'simpleupload', 'insertimage', 'emotion', 'scrawl', 'insertvideo', 'music', 'attachment', 'map', 'gmap', 'insertframe', 'insertcode', 'webapp', 'pagebreak', 'template', '|',
+                'horizontal', 'date', 'time', 'spechars', 'snapscreen', 'wordimage', '|',
+                'inserttable', 'deletetable', 'insertparagraphbeforetable', 'insertrow', 'deleterow', 'insertcol', 'deletecol', 'mergecells', 'mergeright', 'mergedown', 'splittocells', 'splittorows', 'splittocols', 'charts', '|',
+                'print', 'preview', 'searchreplace', 'drafts', 'help'
+            ]
+        ],
+        autoHeightEnabled: false,
+        autoFloatEnabled: true,
+        // lang:(navigator.language||navigator.browserLanguage ||navigator.userLanguage).toLowerCase(),
+        lang:lang(),
+        langPath:"/static/lib/ueditor/lang/",
+        initialFrameHeight:400,
+    });
+   /* ue.ready(function() {
+        //设置编辑器的内容
+        // ue.setContent('hello');
+        //获取html内容，返回: <p>hello</p>
+        var html = ue.getContent();
+        //获取纯文本内容，返回: hello
+        var txt = ue.getContentTxt();
+        var lang = ue.getOpt('lang');
+        console.log(lang);
+    });*/
+
+    /*************************插件新功能-设置插件validator的默认参数*****************************************/
+    $.validator.setDefaults({
+        /*关闭键盘输入时的实时校验*/
+        onkeyup: null,
+        /*添加校验成功后的执行函数--修改提示内容，并为正确提示信息添加新的样式(默认是valid)*/
+        success: function(label){
+            /*label的默认正确样式为valid，需要通过validClass来重置，否则这里添加的其他样式不能被清除*/
+            label.text('').addClass('valid');
+        },
+        /*/!*重写校验元素获得焦点后的执行函数--增加[1.光标移入元素时的帮助提示,2.校验元素的高亮显示]两个功能点*!/
+        onfocusin: function( element ) {
+            this.lastActive = element;
+
+            /!*1.帮助提示功能*!/
+            this.addWrapper(this.errorsFor(element)).hide();
+            var tip = $(element).attr('tip');
+            //alert(tip);
+            if(tip && $(element).parent().children(".tip").length === 0){
+                $(element).parent().append("<label class='tip'>" + tip + "</label>");
+            }
+
+            /!*2.校验元素的高亮显示*!/
+            $(element).addClass('highlight');
+
+            // Hide error label and remove error class on focus if enabled
+            if ( this.settings.focusCleanup ) {
+                if ( this.settings.unhighlight ) {
+                    this.settings.unhighlight.call( this, element, this.settings.errorClass, this.settings.validClass );
+                }
+                this.hideThese( this.errorsFor( element ) );
+            }
+        },
+        /!*重写校验元素焦点离开时的执行函数--移除[1.添加的帮助提示,2.校验元素的高亮显示]*!/
+        onfocusout: function( element ) {
+            /!*1.帮助提示信息移除*!/
+            $(element).parent().children(".tip").remove();
+
+            /!*2.校验元素高亮样式移除*!/
+            $(element).removeClass('highlight');
+
+            /!*3.替换下面注释的原始代码，任何时候光标离开元素都触发校验功能*!/
+            //this.element( element );
+
+            if ( !this.checkable( element ) && ( element.name in this.submitted || !this.optional( element ) ) ) {
+                this.element( element );
+            }
+        }*/
+    });
+
+    //自定义方法，完成手机号码的验证
+    //name:自定义方法的名称，method：函数体, message:错误消息
+  /*  $.validator.addMethod("phone", function(value, element, param){
+        //方法中又有三个参数:value:被验证的值， element:当前验证的dom对象，param:参数(多个即是数组)
+        //alert(value + "," + $(element).val() + "," + param[0] + "," + param[1]);
+        return new RegExp(/^1[3458]\d{9}$/).test(value);
+
+    }, "手机号码不正确");*/
+   $(document).ready(function () {
+        $("#articlleForm").validate({
+            // debug:true,
+            rules:{
+                articleType:{
+                    required:true,
+                },
+                articleTitle:{
+                    required:true,
+                },
+                articleDescription:{
+                    required:true,
+                },
+                articleAuthor:{
+                    required:true,
+                },
+            }
+        });
+   });
 </script>
 
-<script>
-    jQuery(document).ready(function () {
-        App.setPage("index");  //Set current page
-        App.init(); //Initialise plugins and elements
-    });
-</script>
-<!-- /JAVASCRIPTS -->
 </body>
 </html>

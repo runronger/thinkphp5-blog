@@ -8,7 +8,7 @@ var App = function () {
 	var responsiveFunctions = []; //responsive function holder
 	
 	/*-----------------------------------------------------------------------------------*/
-	/*	Runs callback functions set by App.addResponsiveFunction()
+	/*	Runs callback functions set by App.addResponsiveFunction() 运行由App.addResponsiveFunction（）设置的回调函数
 	/*-----------------------------------------------------------------------------------*/
     var runResponsiveFunctions = function () {
         // reinitialize other subscribed elements
@@ -59,7 +59,7 @@ var App = function () {
         }
     }
 	/*-----------------------------------------------------------------------------------*/
-	/*	Sidebar
+	/*	Sidebar 侧边栏
 	/*-----------------------------------------------------------------------------------*/
 	var handleSidebar = function () {
 	jQuery('.sidebar-menu .has-sub > a').click(function () {
@@ -115,7 +115,7 @@ var App = function () {
 	}
 	
 	/*-----------------------------------------------------------------------------------*/
-	/*	Collapse Sidebar Programatically
+	/*	Collapse Sidebar Programatically 以编程方式折叠侧边栏
 	/*-----------------------------------------------------------------------------------*/
 	var collapseSidebar = function () {
 		var iconElem = document.getElementById("sidebar-collapse").querySelector('[class*="fa-"]');
@@ -135,7 +135,7 @@ var App = function () {
 		$.cookie('mini_sidebar', '1');
 	}
 	/*-----------------------------------------------------------------------------------*/
-	/*	Responsive Sidebar Collapse
+	/*	Responsive Sidebar Collapse 响应式侧边栏折叠
 	/*-----------------------------------------------------------------------------------*/
 	var responsiveSidebar = function () {
 		//Handle sidebar collapse on screen width
@@ -160,7 +160,7 @@ var App = function () {
 		}
 	}
 	/*-----------------------------------------------------------------------------------*/
-	/*	Sidebar Collapse
+	/*	Sidebar Collapse 侧边栏折叠
 	/*-----------------------------------------------------------------------------------*/
 	var handleSidebarCollapse = function () {
 		var viewport = getViewPort();
@@ -307,7 +307,7 @@ var App = function () {
 		}, 50); // wait 50ms until window resize finishes.
 	});
 	/*-----------------------------------------------------------------------------------*/
-	/*	Date Range Picker
+	/*	Date Range Picker 日期范围选取器
 	/*-----------------------------------------------------------------------------------*/
 	/*var handleDateTimePickers = function () {
 
@@ -356,7 +356,7 @@ var App = function () {
 	/*-----------------------------------------------------------------------------------*/
 	/*	Team View
 	/*-----------------------------------------------------------------------------------*/
-	var handleTeamView = function () {
+	/*var handleTeamView = function () {
 		c();
 		$(".team-status-toggle").click(function (y) {
             y.preventDefault();
@@ -420,12 +420,12 @@ var App = function () {
             x.css("position", "relative").css("margin-top", "0").hide();
             $("ul", this).width(w)
         })
-    };
+    };*/
 	
 	/*-----------------------------------------------------------------------------------*/
-	/*	Homepage tooltips
+	/*	Homepage tooltips 首页工具提示
 	/*-----------------------------------------------------------------------------------*/
-	var handleHomePageTooltips = function () {
+	/*var handleHomePageTooltips = function () {
 		//On Hover
 		//Default tooltip (Top)
 		$('.tip').tooltip();
@@ -446,12 +446,12 @@ var App = function () {
 		$('.tip-focus').tooltip({
 			trigger: 'focus'
 		});
-	}
+	}*/
 	
 	/*-----------------------------------------------------------------------------------*/
-	/* Box tools
+	/* Box tools 盒子工具
 	/*-----------------------------------------------------------------------------------*/
-	var handleBoxTools = function () {
+	/*var handleBoxTools = function () {
 		//Collapse
 		jQuery('.box .tools .collapse, .box .tools .expand').click(function () {
             var el = jQuery(this).parents(".box").children(".box-body");
@@ -468,7 +468,7 @@ var App = function () {
             }
         });
 		
-		/* Close */
+		/!* Close *!/
 		jQuery('.box .tools a.remove').click(function () {
             var removable = jQuery(this).parents(".box");
             if (removable.next().hasClass('box') || removable.prev().hasClass('box')) {
@@ -478,7 +478,7 @@ var App = function () {
             }
         });
 		
-		/* Reload */
+		/!* Reload *!/
 		jQuery('.box .tools a.reload').click(function () {
             var el = jQuery(this).parents(".box");
             App.blockUI(el);
@@ -486,11 +486,11 @@ var App = function () {
                 App.unblockUI(el);
             }, 1000);
         });
-	}
+	}*/
 	/*-----------------------------------------------------------------------------------*/
 	/*	SlimScroll
 	/*-----------------------------------------------------------------------------------*/
-	var handleSlimScrolls = function () {
+	/*var handleSlimScrolls = function () {
         if (!jQuery().slimScroll) {
             return;
         }
@@ -506,12 +506,12 @@ var App = function () {
                 disableFadeOut: true
             });
         });
-    }
+    }*/
 	
 	/*-----------------------------------------------------------------------------------*/
 	/*	Bootbox alerts
 	/*-----------------------------------------------------------------------------------*/
-	var handleBootbox = function () {
+	/*var handleBootbox = function () {
 		$(".basic-alert").click(function(){
 			bootbox.alert("Hello World");
 		});
@@ -593,7 +593,7 @@ var App = function () {
 			}, 3000);
 		});
 		
-	}
+	}*/
 	/*-----------------------------------------------------------------------------------*/
 	/*	Popovers
 	/*-----------------------------------------------------------------------------------*/
@@ -619,7 +619,7 @@ var App = function () {
 	}
 	
 	/*-----------------------------------------------------------------------------------*/
-	/*	Hubspot messenger
+	/*	Hubspot messenger 侧边栏消息提醒，可以设置定时等
 	/*-----------------------------------------------------------------------------------*/
 	var handleMessenger = function () {
 		
@@ -721,7 +721,7 @@ var App = function () {
 	}
 	
 	/*-----------------------------------------------------------------------------------*/
-	/*	Magic Suggest
+	/*	Magic Suggest  类似facebook选择回调地址，写一个自动选择
 	/*-----------------------------------------------------------------------------------*/
 	var handleMagicSuggest = function () {
 		var jsonData = [];
@@ -773,7 +773,7 @@ var App = function () {
 	/*-----------------------------------------------------------------------------------*/
 	/*	Timeago
 	/*-----------------------------------------------------------------------------------*/
-	var handleTimeAgo = function () {
+	/*var handleTimeAgo = function () {
 		jQuery(document).ready(function() {
 			var curr_time = moment().format('YYYY-MM-DD HH:mm');
 			var yesterday = moment().subtract('days', 1).format('MMM D, YYYY');
@@ -785,17 +785,17 @@ var App = function () {
 			$("#yesterday").attr('data-original-title', yesterday);
 		  jQuery("abbr.timeago").timeago();
 		});
-	}
+	}*/
 	/*-----------------------------------------------------------------------------------*/
 	/*	Init Timeago
 	/*-----------------------------------------------------------------------------------*/
-	var initTimeAgo = function () {
+	/*var initTimeAgo = function () {
 		jQuery("abbr.timeago").timeago();
-	}
+	}*/
 	/*-----------------------------------------------------------------------------------*/
 	/*	Date & Color Picker
 	/*-----------------------------------------------------------------------------------*/
-	var handleDateColorpicker = function () {
+	/*var handleDateColorpicker = function () {
 		$(".datepicker").datepicker();
 		$(".inlinepicker").datepicker({
 			inline: true,
@@ -809,11 +809,11 @@ var App = function () {
 		$("#colorpicker-event").colorpicker().on("changeColor", function (b) {
 			a.backgroundColor = b.color.toHex()
 		});
-	}
+	}*/
 	/*-----------------------------------------------------------------------------------*/
 	/*	Raty
 	/*-----------------------------------------------------------------------------------*/
-	var handleRaty = function () {
+	/*var handleRaty = function () {
 		$.fn.raty.defaults.path = 'js/jquery-raty/img';
 		$('#score-demo').raty({ score: 3 });
 		$('#number-demo').raty({ number: 10 });
@@ -855,11 +855,11 @@ var App = function () {
 			cancel: true,
 			target: '#target-div-hint'
 		});
-	}
+	}*/
 	/*-----------------------------------------------------------------------------------*/
 	/*	Stateful buttons
 	/*-----------------------------------------------------------------------------------*/
-	var handleStatefulButtons = function () {
+	/*var handleStatefulButtons = function () {
 		$(document).ready(function(){
 		  $("#btn-load").on("click",function(){
 			var a=$(this);
@@ -876,11 +876,11 @@ var App = function () {
 					   ,1500)}
 										 )}
 						 );
-	}
+	}*/
 	/*-----------------------------------------------------------------------------------*/
 	/*	Toggle buttons
 	/*-----------------------------------------------------------------------------------*/
-	var handleToggle = function () {
+	/*var handleToggle = function () {
 	$('.radio1').on('switch-change', function () {
 		$('.radio1').bootstrapSwitch('toggleRadioState');
 		});
@@ -892,9 +892,9 @@ var App = function () {
 		$('.radio1').on('switch-change', function () {
 		$('.radio1').bootstrapSwitch('toggleRadioStateAllowUncheck', false);
 		});
-	}
+	}*/
 	/*-----------------------------------------------------------------------------------*/
-	/*	jQuery UI Sliders
+	/*	jQuery UI Sliders  进度条
 	/*-----------------------------------------------------------------------------------*/
 	var handleSliders = function () {
 	  function repositionTooltip( e, ui ){$
@@ -944,7 +944,7 @@ var App = function () {
       });
 	}
 	/*-----------------------------------------------------------------------------------*/
-	/*	jQuery UI Progress
+	/*	jQuery UI Progress 进展
 	/*-----------------------------------------------------------------------------------*/
 	var handleProgress = function () {
 		$(document).ready(function(){
@@ -1014,7 +1014,7 @@ var App = function () {
 
 	}
 	/*-----------------------------------------------------------------------------------*/
-	/*	jQuery Knob
+	/*	jQuery Knob 圈子进度
 	/*-----------------------------------------------------------------------------------*/
 	var handleKnobs = function () {
 		$(".knob").knob({
@@ -1181,7 +1181,7 @@ var App = function () {
 		$('#nestable3').nestable();
 	}
 	/*-----------------------------------------------------------------------------------*/
-	/*	Table Cloth
+	/*	Table Cloth 表格主题美化插件
 	/*-----------------------------------------------------------------------------------*/
 	var handleTablecloth = function () {
 		$("#example-dark").tablecloth({ 
@@ -1200,9 +1200,9 @@ var App = function () {
 		});
 	}
 	/*-----------------------------------------------------------------------------------*/
-	/*	Data Tables
+	/*	Data Tables jquery table
 	/*-----------------------------------------------------------------------------------*/
-	var handleDataTables = function () {
+	/*var handleDataTables = function () {
 		$('#datatable1').dataTable({
 				"sPaginationType": "bs_full"
 			});
@@ -1224,11 +1224,11 @@ var App = function () {
 			var length_sel = datatable.closest('.dataTables_wrapper').find('div[id$=_length] select');
 			length_sel.addClass('form-control input-sm');
 		});
-	}
+	}*/
 	/*-----------------------------------------------------------------------------------*/
 	/*	jqGrid
 	/*-----------------------------------------------------------------------------------*/
-	var handleJqgrid = function () {
+	/*var handleJqgrid = function () {
 		var grid_data = 
 			[ 
 				{id:"1",invdate:"2007-12-03",name:"Client1",amount:"1000.00",tax:"140.00",total:"1000.00", note:"This is a note"},
@@ -1317,12 +1317,12 @@ var App = function () {
 				del: false
 			});
 			jQuery("#rowed3").jqGrid('inlineNav', "#prowed3");
-			/* Add tooltips */
+			/!* Add tooltips *!/
 			$('.navtable .ui-pg-button').tooltip({container:'body'});
-	}
+	}*/
 	
 	/*-----------------------------------------------------------------------------------*/
-	/*	Typeahead
+	/*	Typeahead 辅助完成加载，辅助加载邮箱一样
 	/*-----------------------------------------------------------------------------------*/
 	var handleTypeahead = function () {
 		$('#autocomplete-example').typeahead({
@@ -1331,20 +1331,20 @@ var App = function () {
 		});
 	}
 	/*-----------------------------------------------------------------------------------*/
-	/*	Autosize
+	/*	Autosize  textarea框随输入值变大，有用
 	/*-----------------------------------------------------------------------------------*/
 	var handleAutosize = function () {
 		$('textarea.autosize').autosize();
 		$('textarea.autosize').addClass('textarea-transition');
 	}
 	/*-----------------------------------------------------------------------------------*/
-	/*	jquery Counatble
+	/*	jquery Counatble  计算输入了多少字数
 	/*-----------------------------------------------------------------------------------*/
 	var handleCountable = function () {
 		$('.countable').simplyCountable();
 	}
 	/*-----------------------------------------------------------------------------------*/
-	/*	Select2
+	/*	Select2  带查找的下拉框
 	/*-----------------------------------------------------------------------------------*/
 	var handleSelect2 = function () {
 		function movieFormatResult(movie) {
@@ -1433,22 +1433,22 @@ var App = function () {
 			});
 	}
 	/*-----------------------------------------------------------------------------------*/
-	/*	Uniform
+	/*	Uniform 单选多选美化
 	/*-----------------------------------------------------------------------------------*/
 	var handleUniform = function () {
 		$(".uniform").uniform();
 	}
 	/*-----------------------------------------------------------------------------------*/
-	/*	All Checkboxes
+	/*	All Checkboxes 全选美化
 	/*-----------------------------------------------------------------------------------*/
 	var handleAllUniform = function () {
 		$("select, input[type='checkbox']").uniform();
 	}
 	/*-----------------------------------------------------------------------------------*/
-	/*	BT Wysiwyg
+	/*	BT Wysiwyg  编辑器，可以自己配置百度编辑器
 	/*-----------------------------------------------------------------------------------*/
-	var handleWysiwyg = function () {
-		/* Init Bootstrap WYSIWYG */
+	/*var handleWysiwyg = function () {
+		/!* Init Bootstrap WYSIWYG *!/
 		function initToolbarBootstrapBindings() {
 		  var fonts = ['Serif', 'Sans', 'Arial', 'Arial Black', 'Courier', 
 				'Courier New', 'Comic Sans MS', 'Helvetica', 'Impact', 'Lucida Grande', 'Lucida Sans', 'Tahoma', 'Times',
@@ -1484,11 +1484,11 @@ var App = function () {
 		};
 		initToolbarBootstrapBindings();  
 		$('#editor').wysiwyg({ fileUploadError: showErrorAlert} );
-		/* Disable auto-inline */
+		/!* Disable auto-inline *!/
 		CKEDITOR.disableAutoInline = true;
-	}
+	}*/
 	/*-----------------------------------------------------------------------------------*/
-	/*	Dropzone
+	/*	Dropzone 多文件上传
 	/*-----------------------------------------------------------------------------------*/
 	var handleDropzone = function () {
 		try {
@@ -1507,7 +1507,7 @@ var App = function () {
 			}
 	}
 	/*-----------------------------------------------------------------------------------*/
-	/*	XCharts
+	/*	XCharts 统计表
 	/*-----------------------------------------------------------------------------------*/
 	var handleXcharts = function () {
 		
@@ -1920,7 +1920,7 @@ var App = function () {
 	/*-----------------------------------------------------------------------------------*/
 	/*	Justgage
 	/*-----------------------------------------------------------------------------------*/
-	var handleGage = function () {
+	/*var handleGage = function () {
 		var g1, g2, g3, g4, g5, g6;
       
       window.onload = function(){
@@ -2005,11 +2005,11 @@ var App = function () {
           g6.refresh(getRandomInt(0, 100));
         }, 2500);
       };
-	}
+	}*/
 	/*-----------------------------------------------------------------------------------*/
 	/*	Easy Pie chart
 	/*-----------------------------------------------------------------------------------*/
-	var handleEasyPie = function () {
+	/*var handleEasyPie = function () {
 		//Pie 1
 		$('#pie_1').easyPieChart({
 			easing: 'easeOutBounce',
@@ -2066,11 +2066,11 @@ var App = function () {
 		$('#js_update_4').on('click', function() {
 			chart4.update(Math.random()*100);
 		});
-	}
+	}*/
 	/*-----------------------------------------------------------------------------------*/
-	/*	Easy Pie chart for profile
+	/*	Easy Pie chart for profile 个人中心那块页面，数据统计，暂时用不着
 	/*-----------------------------------------------------------------------------------*/
-	var handleProfileSkillPie = function () {
+	/*var handleProfileSkillPie = function () {
 		
 		//Pie 1
 		$('#pie_1').easyPieChart({
@@ -2104,7 +2104,7 @@ var App = function () {
 			barColor: '#70AFC4'
 		});
 		var chart3 = window.chart = $('#pie_3').data('easyPieChart');
-	}
+	}*/
 	/*-----------------------------------------------------------------------------------*/
 	/*	Sparklines
 	/*-----------------------------------------------------------------------------------*/
@@ -2164,11 +2164,11 @@ var App = function () {
 		});
 	}*/
 	/*-----------------------------------------------------------------------------------*/
-	/*	Fullcalendar
+	/*	Fullcalendar 日历
 	/*-----------------------------------------------------------------------------------*/
-	/*var handleCalendar = function () {
-		/!* initialize the external events
-		-----------------------------------------------------------------*!/
+	var handleCalendar = function () {
+		/* initialize the external events
+		-----------------------------------------------------------------*/
 	
 		var initDrag = function (el) {
 		
@@ -2207,8 +2207,8 @@ var App = function () {
         });
 	
 	
-		/!* initialize the calendar
-		-----------------------------------------------------------------*!/
+		/* initialize the calendar
+		-----------------------------------------------------------------*/
 		var date = new Date();
 		var d = date.getDate();
 		var m = date.getMonth();
@@ -2319,9 +2319,9 @@ var App = function () {
 			]
 		});
 		
-	}*/
+	}
 	/*-----------------------------------------------------------------------------------*/
-	/*	JQVmaps
+	/*	JQVmaps 地图
 	/*-----------------------------------------------------------------------------------*/
 	var handleJqvmaps = function () {
 		var setMap = function (name) {
@@ -2461,7 +2461,7 @@ var App = function () {
 		window.addEventListener("orientationchange", resizeColorBox, false);
 	}
 	/*-----------------------------------------------------------------------------------*/
-	/*	Handle Backstretch
+	/*	Handle Backstretch  背景切换
 	/*-----------------------------------------------------------------------------------*/
 	var handleBackstretch = function () {
 		 $.backstretch([
@@ -2521,9 +2521,9 @@ var App = function () {
 		});
 	}*/
 	/*-----------------------------------------------------------------------------------*/
-	/*	Handle Timeline
+	/*	Handle Timeline 处理添加任务与做完任务的显示界面
 	/*-----------------------------------------------------------------------------------*/
-	var handleTimeline = function () {
+	/*var handleTimeline = function () {
 		createStoryJS({
 			type:		'timeline',
 			width:		'100%',
@@ -2534,11 +2534,11 @@ var App = function () {
 			css:        'js/timelinejs/css/timeline.css',     
             js:         'js/timelinejs/js/timeline-min.js'    
 		});
-	}
+	}*/
 	/*-----------------------------------------------------------------------------------*/
-	/*	Handle Slidernav
+	/*	Handle Slidernav 根据字母跳转到对应行，类似手机联系人查找
 	/*-----------------------------------------------------------------------------------*/
-	var handleSliderNav = function () {
+	/*var handleSliderNav = function () {
 		$('#address-book').sliderNav();
 		
 		$('#address-book .slider-content ul li ul li a').click(function(e){
@@ -2559,9 +2559,9 @@ var App = function () {
 				1300
 			);
 		});
-	}
+	}*/
 	/*-----------------------------------------------------------------------------------*/
-	/*	Handle Active Toggle
+	/*	Handle Active Toggle 问题折叠
 	/*-----------------------------------------------------------------------------------*/
 	var handleActiveToggle = function () {
 		$('#list-toggle .list-group a').click(function(){
@@ -2570,9 +2570,9 @@ var App = function () {
 		})
 	}
 	/*-----------------------------------------------------------------------------------*/
-	/*	Handle Box Sortable
+	/*	Handle Box Sortable  可以拖动的小框，类似qq空间设置模块
 	/*-----------------------------------------------------------------------------------*/
-	var handleBoxSortable = function () {
+	/*var handleBoxSortable = function () {
 		$('.box-container').sortable({
 		    connectWith: '.box-container',
 			items:'> .box',
@@ -2583,18 +2583,18 @@ var App = function () {
 			forcePlaceholderSize:true,
 			tolerance:'pointer'
 		});
-	}
+	}*/
 	/*-----------------------------------------------------------------------------------*/
-	/*	Handles the go to top button at the footer
+	/*	Handles the go to top button at the footer 点击页脚top跳回顶端
 	/*-----------------------------------------------------------------------------------*/
 	var handleGoToTop = function () {
 		$('.footer-tools').on('click', '.go-top', function (e) {
 			App.scrollTo();
-			e.preventDefault();
+			e.preventDefault();  //阻止元素发生默认的行为
 		});
 	} 
 	/*-----------------------------------------------------------------------------------*/
-	/*	Handles navbar fixed top
+	/*	Handles navbar fixed top  处理导航栏固定顶部
 	/*-----------------------------------------------------------------------------------*/
 	var handleNavbarFixedTop = function () {
 		if(is_mobile && is_fixed_header) {
@@ -2610,7 +2610,7 @@ var App = function () {
 	/*-----------------------------------------------------------------------------------*/
 	/*	Handles vertically growing bars
 	/*-----------------------------------------------------------------------------------*/
-	var handleVerticalChart = function () {
+	/*var handleVerticalChart = function () {
 		if($('.verticalChart')) {		
 			$('.singleBar').each(function(){				
 				var percent = $(this).find('.value span').html();				
@@ -2619,9 +2619,9 @@ var App = function () {
 				});				
 			});
 		}
-	}
+	}*/
 	/*-----------------------------------------------------------------------------------*/
-	/*	Handles theme skin switches
+	/*	Handles theme skin switches  设置主题
 	/*-----------------------------------------------------------------------------------*/
 	var handleThemeSkins = function () {
 		// Handle theme colors
@@ -2801,9 +2801,9 @@ var App = function () {
 	/*-----------------------------------------------------------------------------------*/
 	/*	Handles Profile Edit
 	/*-----------------------------------------------------------------------------------*/
-	var handleProfileEdit = function () {
+	/*var handleProfileEdit = function () {
 		$(".datepicker").datepicker();
-	}
+	}*/
 	return {
 
         //Initialise theme pages
@@ -2818,38 +2818,38 @@ var App = function () {
 				// handleGritter();	//Function to display Gritter notifications
             }
 			if (App.isPage("widgets_box")) {
-				handleBoxSortable(); //Function to handle Box sortables
+				// handleBoxSortable(); //Function to handle Box sortables
             }
 			if (App.isPage("elements")) {
-				handleBootbox(); //Function to display Date Timepicker
-				handleMagicSuggest(); //Function to display autosuggest
-				handleDateColorpicker(); //Function to handle date and time picker
-				handleRaty(); //To show star ratings
-				handleTimeAgo(); //Function to handle timestamps
+				// handleBootbox(); //Function to display Date Timepicker
+				handleMagicSuggest(); //Function to display autosuggest  比较有用的建议
+				// handleDateColorpicker(); //Function to handle date and time picker
+				// handleRaty(); //To show star ratings 展示满意度星星的
+				// handleTimeAgo(); //Function to handle timestamps
             }
 			if (App.isPage("button_icons")) {
-				handleStatefulButtons(); //Function to display stateful buttons
-				handleToggle(); 		//Function to handle toggle buttons
+				// handleStatefulButtons(); //Function to display stateful buttons
+				// handleToggle(); 		//Function to handle toggle buttons
             }
 			if (App.isPage("sliders_progress")) {
-				handleSliders(); //Function to display sliders
-				handleProgress(); //Function to display progress bars
-				handleKnobs();	//Function to display knobs
+				handleSliders(); //Function to display sliders 进度条
+				handleProgress(); //Function to display progress bars 进展
+				handleKnobs();	//Function to display knobs 圈进展
             }
 			if (App.isPage("treeview")) {
-				handleTree();	//Function to handle tree display
+				handleTree();	//Function to handle tree display 纵向树
 			}
 			if (App.isPage("nestable_lists")) {
-				handleNestableLists();	//Function to handle nestable lists
+				handleNestableLists();	//Function to handle nestable lists 横向树
 			}
 			if (App.isPage("simple_table")) {
-				handleTablecloth();	//Function to display tablecloth.js options
+				handleTablecloth();	//Function to display tablecloth.js options 表格美化插件
 			}
 			if (App.isPage("dynamic_table")) {
-				handleDataTables();	//Function to display data tables
+				// handleDataTables();	//Function to display data tables
 			}
 			if (App.isPage("jqgrid_plugin")) {
-				handleJqgrid();	//Function to display jqGrid
+				// handleJqgrid();	//Function to display jqGrid
 			}
 			if (App.isPage("forms")) {
 				// handleTypeahead();	//Function to display autocomplete
@@ -2860,18 +2860,18 @@ var App = function () {
 				// handleTimeAgo(); //Function to handle timestamps
 			}
 			if (App.isPage("rich_text_editors")) {
-				handleWysiwyg();	//Function to display wysiwyg
+				// handleWysiwyg();	//Function to display wysiwyg
 			}
 			if (App.isPage("dropzone_file_upload")) {
-				handleDropzone();	//Function to display wysiwyg
+				handleDropzone();	//Function to display wysiwyg 多文件上传
 			}
 			if (App.isPage("xcharts")) {
-				handleXcharts();	//Function to display xcharts
+				handleXcharts();	//Function to display xcharts 统计表
 			}
 			if (App.isPage("others")) {
-				handleGage();	//Function to display justgage
-				handleEasyPie();	//Function to display easy pie charts
-				handleSparkline();	//Function to display sparklines
+				// handleGage();	//Function to display justgage
+				// handleEasyPie();	//Function to display easy pie charts
+				// handleSparkline();	//Function to display sparklines
 			}
 			if (App.isPage("calendar")) {
 				handleCalendar();	//Function to display calendar
@@ -2898,25 +2898,25 @@ var App = function () {
 			if (App.isPage("chats")) {
 				handleChat('chat-window');	//Function to handle chat
 				handleChat('chat-widget');	//Function to handle chat
-				initTimeAgo(); //Function to init timestamps
+				// initTimeAgo(); //Function to init timestamps
 			}
 			if (App.isPage("todo_timeline")) {
-				handleTimeline();	//Function to display timeline
+				// handleTimeline();	//Function to display timeline  计划做什么可以用到
 			}
 			if (App.isPage("address_book")) {
 				handleSliderNav();	//Function to display address book
 			}
 			if (App.isPage("orders")) {
-				initTimeAgo(); //Function to init timestamps
+				// initTimeAgo(); //Function to init timestamps
 			}
 			if (App.isPage("faq")) {
 				handleActiveToggle(); //Function to handle active toggle
 			}
 			if (App.isPage("user_profile")) {
-				handleProfileSkillPie(); //Function to show skills in pie
+				// handleProfileSkillPie(); //Function to show skills in pie
 				handleSparkline();	//Function to display sparklines
 				handleUniform();	//Function to handle uniform inputs
-				handleProfileEdit();	//Function to handle profile edit tab
+				// handleProfileEdit();	//Function to handle profile edit tab
 			}
 			if (App.isPage("mini_sidebar")) {
 				collapseSidebar();	//Function to display mini menu				
@@ -2929,14 +2929,14 @@ var App = function () {
 			handleSidebarCollapse(); //Function to hide or show sidebar
 			handleSidebarAndContentHeight();  //Function to hide sidebar and main content height
 			responsiveSidebar();		//Function to handle sidebar responsively
-			handleTeamView(); //Function to toggle team view
-			handleHomePageTooltips(); //Function to handle tooltips
-			handleBoxTools(); //Function to handle box tools
-			handleSlimScrolls(); //Function to handle slim scrolls
-			handlePopovers(); //Function to handle popovers
-			handleMessenger(); //Function to handle messenger
+			// handleTeamView(); //Function to toggle team view
+			// handleHomePageTooltips(); //Function to handle tooltips
+			// handleBoxTools(); //Function to handle box tools
+			// handleSlimScrolls(); //Function to handle slim scrolls 处理苗条卷轴的功能
+			handlePopovers(); //Function to handle popovers 函数来处理弹出(提示用)
+			// handleMessenger(); //Function to handle messenger 暂时留着
 			handleAlerts(); //Function to handle alerts
-			handleCustomTabs(); //Function to handle min-height of custom tabs
+			handleCustomTabs(); //Function to handle min-height of custom tabs 处理自定义选项卡的最小高度
 			handleGoToTop(); 	//Funtion to handle goto top buttons
 			handleNavbarFixedTop();		//Function to check & handle if navbar is fixed top
 			handleThemeSkins();		//Function to handle theme skins

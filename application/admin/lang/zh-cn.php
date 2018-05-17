@@ -54,5 +54,4 @@ return [
     'Article' => '文章管理',
     'Article list' => '文章列表',
     'Add articles' => '添加文章',
-
 ];
