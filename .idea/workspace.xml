@@ -2,13 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="914494e3-d04e-4f3a-92e9-70ad7d3c0949" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/admin/controller/Article.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/admin/controller/Article.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/runtime/log/201805/17.log" beforeDir="false" afterPath="$PROJECT_DIR$/runtime/log/201805/17.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/runtime/temp/1f9540ad8b05a1c8c1ed60bb8abdbd6e.php" beforeDir="false" afterPath="$PROJECT_DIR$/runtime/temp/1f9540ad8b05a1c8c1ed60bb8abdbd6e.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/runtime/temp/828e89723900d0868ee6f071e510e324.php" beforeDir="false" afterPath="$PROJECT_DIR$/runtime/temp/828e89723900d0868ee6f071e510e324.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/runtime/temp/fd6b17c83af8124a52fc83ab7aba8ee4.php" beforeDir="false" afterPath="$PROJECT_DIR$/runtime/temp/fd6b17c83af8124a52fc83ab7aba8ee4.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/admin/js/public.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/js/public.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/lib/Gallery" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/Gallery" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/lib/Uniform" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/Uniform" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/lib/animate" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/animate" afterDir="false" />
@@ -19,8 +12,17 @@
       <change beforePath="$PROJECT_DIR$/static/lib/select2" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/select2" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/lib/timeago" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/timeago" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/lib/typeahead" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/typeahead" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/theme/admin/article/article_edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/theme/admin/article/article_edit.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/theme/admin/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/theme/admin/layout.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/validation/Gruntfile.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/validation/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/validation/test/additional/creditcard.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/validation/test/additional/netmask.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/validation/test/aria.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/validation/test/error-placement.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/validation/test/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/validation/test/messages.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/validation/test/methods.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/validation/test/rules.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/lib/validation/test/test.js" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -72,7 +74,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="article_edit.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="article_edit.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/theme/admin/article/article_edit.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="5757">
@@ -82,26 +84,6 @@
                 <element signature="e#3594#3612#0" expanded="true" />
                 <element signature="e#6692#6713#0" expanded="true" />
                 <element signature="e#5851#5869#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="public.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/static/admin/js/public.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="355">
-              <caret line="483" column="29" selection-start-line="483" selection-start-column="29" selection-end-line="483" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="jquery.cookie.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/lib/jquery-cookie/src/jquery.cookie.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -342,15 +324,15 @@
               <item name="tp5" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="static" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="lib" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="jquery-cookie" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="validation" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="tp5" type="b2602c69:ProjectViewProjectNode" />
               <item name="tp5" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="static" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="lib" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="jquery-cookie" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="validation" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="dist" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="tp5" type="b2602c69:ProjectViewProjectNode" />
@@ -442,7 +424,7 @@
       <workItem from="1526346671550" duration="30989000" />
       <workItem from="1526433557270" duration="30677000" />
       <workItem from="1526519346882" duration="27104000" />
-      <workItem from="1526605525669" duration="12696000" />
+      <workItem from="1526605525669" duration="13507000" />
     </task>
     <task id="LOCAL-00001" summary="补充说明">
       <created>1526292620119</created>
@@ -455,11 +437,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="169364000" />
+    <option name="totallyTimeSpent" value="170175000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="50" y="-11" width="1871" height="1092" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
@@ -498,13 +479,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/phpstorm.jar!/resources/html5-schema/html5/web-forms.rnc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="503" column="16" selection-start-line="503" selection-start-column="16" selection-end-line="503" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/admin/js/inbox.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-3914" />
@@ -836,16 +810,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/theme/admin/article/article_edit.html">
+    <entry file="file://$PROJECT_DIR$/static/admin/js/public.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5757">
-          <caret line="303" column="10" lean-forward="true" selection-start-line="303" selection-start-column="10" selection-end-line="303" selection-end-column="10" />
-          <folding>
-            <element signature="e#2595#2613#0" expanded="true" />
-            <element signature="e#3594#3612#0" expanded="true" />
-            <element signature="e#6692#6713#0" expanded="true" />
-            <element signature="e#5851#5869#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="9177">
+          <caret line="483" column="29" selection-start-line="483" selection-start-column="29" selection-end-line="483" selection-end-column="29" />
         </state>
       </provider>
     </entry>
@@ -858,10 +826,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/admin/js/public.js">
+    <entry file="file://$PROJECT_DIR$/static/lib/validation/package.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/theme/admin/article/article_edit.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="355">
-          <caret line="483" column="29" selection-start-line="483" selection-start-column="29" selection-end-line="483" selection-end-column="29" />
+        <state relative-caret-position="5757">
+          <caret line="303" column="10" lean-forward="true" selection-start-line="303" selection-start-column="10" selection-end-line="303" selection-end-column="10" />
+          <folding>
+            <element signature="e#2595#2613#0" expanded="true" />
+            <element signature="e#3594#3612#0" expanded="true" />
+            <element signature="e#6692#6713#0" expanded="true" />
+            <element signature="e#5851#5869#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
