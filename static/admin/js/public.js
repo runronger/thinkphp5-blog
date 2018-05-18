@@ -1,6 +1,6 @@
 var App = function () {
     var currentPage = ''; // current page
-    var collapsed = false; //sidebar collapsed
+    var collapsed = true; //sidebar collapsed 侧栏已折叠
     var is_mobile = false; //is screen mobile?
     var is_mini_menu = false; //is mini-menu activated
     var is_fixed_header = false; //is fixed header activated
@@ -132,7 +132,7 @@ var App = function () {
         jQuery('.search').attr('placeholder', '');
         collapsed = true;
         /* Set a cookie so that mini-sidebar persists */
-        $.cookie('mini_sidebar', '1');
+        $.cookie('mini_sidebar', '1',{path: '/' });
     }
     /*-----------------------------------------------------------------------------------*/
     /*	Responsive Sidebar Collapse 响应式侧边栏折叠
@@ -175,6 +175,7 @@ var App = function () {
         //Handle sidebar collapse on user interaction
         jQuery('.sidebar-collapse').click(function () {
             //Handle mobile sidebar toggle
+            // 处理用户交互时的侧边栏折叠
             if (is_mobile && !(is_mini_menu)) {
                 //If sidebar is collapsed
                 if (collapsed) {
@@ -186,7 +187,7 @@ var App = function () {
                         jQuery('#main-content').addClass("margin-top-100");
                     }
                     collapsed = false;
-                    $.cookie('mini_sidebar', '0');
+                    $.cookie('mini_sidebar', '0',{path: '/' });
                 }
                 else {
                     jQuery('body').addClass("slidebar");
@@ -197,7 +198,7 @@ var App = function () {
                         jQuery('#main-content').removeClass("margin-top-100");
                     }
                     collapsed = true;
-                    $.cookie('mini_sidebar', '1');
+                    $.cookie('mini_sidebar', '1',{path: '/' });
                     handleMobileSidebar();
                 }
             }
@@ -217,7 +218,7 @@ var App = function () {
                     /* Add placeholder from Search Bar */
                     jQuery('.search').attr('placeholder', "Search");
                     collapsed = false;
-                    $.cookie('mini_sidebar', '0');
+                    $.cookie('mini_sidebar', '0',{path: '/' });
                 }
                 else {
                     /* For Navbar */
@@ -230,7 +231,7 @@ var App = function () {
                     /* Remove placeholder from Search Bar */
                     jQuery('.search').attr('placeholder', '');
                     collapsed = true;
-                    $.cookie('mini_sidebar', '1');
+                    $.cookie('mini_sidebar', '1',{path: '/' });
                 }
                 $("#main-content").on('resize', function (e) {
                     e.stopPropagation();
@@ -304,7 +305,7 @@ var App = function () {
             handleFixedSidebar();
             handleNavbarFixedTop();
             runResponsiveFunctions();
-        }, 50); // wait 50ms until window resize finishes.
+        }, 0); // wait 50ms until window resize finishes.
     });
     /*-----------------------------------------------------------------------------------*/
     /* Box tools
@@ -430,26 +431,7 @@ var App = function () {
             $('a[href="#' + w + '"]').click()
         }
     }
-    /*-----------------------------------------------------------------------------------*/
-    /*	Handle Backstretch  背景切换
-    /*-----------------------------------------------------------------------------------*/
-    var handleBackstretch = function () {
-        $.backstretch([
-            "/admin/images/login/1.jpg"
-            , "/admin/images/login/2.jpg"
-            , "/admin/images/login/3.jpg"
-            , "/admin/images/login/4.jpg"
-        ], {duration: 3000, fade: 750});
-    }
-    /*-----------------------------------------------------------------------------------*/
-    /*	Handle Active Toggle 问题折叠
-    /*-----------------------------------------------------------------------------------*/
-    var handleActiveToggle = function () {
-        $('#list-toggle .list-group a').click(function () {
-            $('#list-toggle .list-group > a.active').removeClass('active');
-            $(this).addClass('active');
-        })
-    }
+
     /*-----------------------------------------------------------------------------------*/
     /*	Handles the go to top button at the footer 点击页脚top跳回顶端
     /*-----------------------------------------------------------------------------------*/
@@ -479,7 +461,7 @@ var App = function () {
         // Handle theme colors
         var setSkin = function (color) {
             $('#skin-switcher').attr("href", "/static/admin/css/themes/" + color + ".css");
-            $.cookie('skin_color', color);
+            $.cookie('skin_color', color ,{path: '/'});
         }
         $('ul.skins > li a').click(function () {
             var color = $(this).data("skin");
@@ -491,18 +473,7 @@ var App = function () {
             setSkin($.cookie('skin_color'));
         }
     }
-    /*-----------------------------------------------------------------------------------*/
-    /*	Uniform 单选多选美化
-    /*-----------------------------------------------------------------------------------*/
-    var handleUniform = function () {
-        $(".uniform").uniform();
-    }
-    /*-----------------------------------------------------------------------------------*/
-    /*	All Checkboxes 全选美化
-    /*-----------------------------------------------------------------------------------*/
-    var handleAllUniform = function () {
-        $("select, input[type='checkbox']").uniform();
-    }
+
     return {
         //Initialise theme pages
         init: function () {

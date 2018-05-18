@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:28:"theme/admin/index/index.html";i:1526466499;s:46:"/home/rong/WEBROOT/tp5/theme/admin/layout.html";i:1526523131;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:28:"theme/admin/index/index.html";i:1526466499;s:46:"/home/rong/WEBROOT/tp5/theme/admin/layout.html";i:1526634179;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,7 +10,7 @@
     <meta name="author" content="dengrongqiu">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
     <link rel="stylesheet" type="text/css" href="/static/admin/css/cloud-admin.min.css">
-    <link rel="stylesheet" type="text/css" href="/static/admin/css/themes/default.min.css" id="skin-switcher">
+    <link rel="stylesheet" type="text/css" href="/static/admin/css/themes/graphite.css" id="skin-switcher">
     <link rel="stylesheet" type="text/css" href="/static/admin/css/responsive.min.css">
     <!-- STYLESHEETS --><!--[if lt IE 9]>
     <script type="text/javascript" src="/static/lib/flot/excanvas.min.js"></script>
@@ -26,7 +26,7 @@
 <!-- HEADER -->
 <header class="navbar clearfix" id="header">
     <div class="container">
-        <div class="navbar-brand ">
+        <div class="navbar-brand mini-menu">
             <!-- COMPANY LOGO -->
             <a href="/admin/index">
                 <img src="/static/admin/images/logo/logo.png" alt="Cloud Admin Logo" class="img-responsive" height="30"
@@ -41,7 +41,7 @@
             </div>
             <!-- /TEAM STATUS FOR MOBILE -->
             <!-- SIDEBAR COLLAPSE -->
-            <div id="sidebar-collapse" class="sidebar-collapse btn">
+            <div id="sidebar-collapse" class="sidebar-collapse  btn">
                 <i class="fa fa-bars"
                    data-icon1="fa fa-bars"
                    data-icon2="fa fa-bars"></i>
@@ -196,7 +196,7 @@
 <!-- PAGE -->
 <section id="page">
     <!-- SIDEBAR -->
-    <div id="sidebar" class="sidebar">
+    <div id="sidebar" class="sidebar mini-menu">
         <div class="sidebar-menu nav-collapse">
             <div class="divide-20"></div>
             <!-- SEARCH BAR -->
@@ -293,7 +293,7 @@
                     <ul class="sub">
                         <li><a class="" href="<?php echo url('/admin/article/articleList'); ?>"><span class="sub-menu-text"><?php echo lang('Article list'); ?></span></a>
                         </li>
-                        <li><a class="" href="<?php echo url('/admin/article/articleAdd'); ?>"><span class="sub-menu-text"><?php echo lang('Add articles'); ?></span></a>
+                        <li><a class="" href="<?php echo url('/admin/article/articleEdit'); ?>"><span class="sub-menu-text"><?php echo lang('Add articles'); ?></span></a>
                         </li>
                     </ul>
                 </li>
@@ -303,7 +303,7 @@
                         <span class="arrow"></span>
                     </a>
                     <ul class="sub">
-                        <li><a class="" href="mini_sidebar.html"><span class="sub-menu-text">相册管理</span></a>
+                        <li><a class="" href="<?php echo url('/admin/photo/photoManagement'); ?>"><span class="sub-menu-text">相册管理</span></a>
                         </li>
                         <li><a class="" href="fixed_header.html"><span class="sub-menu-text">文档管理</span></a>
                         </li>
@@ -364,7 +364,7 @@
         </div>
     </div>
     <!-- /SIDEBAR -->
-    <div id="main-content">
+    <div id="main-content" class="margin-left-50">
         <!-- /SAMPLE BOX CONFIGURATION MODAL FORM-->
         <div class="container">
             <div class="row">

@@ -1,16 +1,16 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:37:"theme/admin/article/article_list.html";i:1526525704;s:46:"/home/rong/WEBROOT/tp5/theme/admin/layout.html";i:1526634179;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:39:"theme/admin/photo/photo_management.html";i:1526554136;s:46:"/home/rong/WEBROOT/tp5/theme/admin/layout.html";i:1526552676;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
-    <title>文章列表</title>
-    <meta name="keywords" content="文章列表">
-    <meta name="description" content="文章列表">
+    <title><?php if(($isAdd == 1)): ?>添加<?php else: ?>编辑<?php endif; ?>文章</title>
+    <meta name="keywords" content="<?php if(($isAdd == 1)): ?>添加<?php else: ?>编辑<?php endif; ?>文章">
+    <meta name="description" content="<?php if(($isAdd == 1)): ?>添加<?php else: ?>编辑<?php endif; ?>文章">
     <meta name="author" content="dengrongqiu">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
     <link rel="stylesheet" type="text/css" href="/static/admin/css/cloud-admin.min.css">
-    <link rel="stylesheet" type="text/css" href="/static/admin/css/themes/graphite.css" id="skin-switcher">
+    <link rel="stylesheet" type="text/css" href="/static/admin/css/themes/default.min.css" id="skin-switcher">
     <link rel="stylesheet" type="text/css" href="/static/admin/css/responsive.min.css">
     <!-- STYLESHEETS --><!--[if lt IE 9]>
     <script type="text/javascript" src="/static/lib/flot/excanvas.min.js"></script>
@@ -21,14 +21,24 @@
     <!-- ANIMATE -->
     <link rel="stylesheet" type="text/css" href="/static/lib/animate/animate.min.css"/>
     
-    <link rel="stylesheet" type="text/css" href="/static/lib/daterangepicker/daterangepicker.css">
+<!--bootstrap-->
+<!--<link rel="stylesheet" type="text/css" href="/static/lib/bootstrap/css/bootstrap.min.css"/>-->
+<!-- blueimp Gallery styles -->
+<!--<link rel="stylesheet" href="/static/lib/Gallery/css/blueimp-gallery.min.css">-->
+<!-- CSS to style the file input field as button and adjust the Bootstrap progress bars -->
+<link rel="stylesheet" href="/static/lib/jQueryFileUpload/css/jquery.fileupload.css">
+<!--<link rel="stylesheet" href="/static/lib/jQueryFileUpload/css/jquery.fileupload-ui.css">-->
+<!-- CSS adjustments for browsers with JavaScript disabled -->
+<!--<noscript><link rel="stylesheet" href="/static/lib/jQueryFileUpload/css/jquery.fileupload-noscript.css"></noscript>-->
+<!--<noscript><link rel="stylesheet" href="/static/lib/jQueryFileUpload/css/jquery.fileupload-ui-noscript.css"></noscript>-->
+<link rel="stylesheet" type="text/css" href="/static/lib/daterangepicker/daterangepicker.css">
 
 </head>
 <body>
 <!-- HEADER -->
 <header class="navbar clearfix" id="header">
     <div class="container">
-        <div class="navbar-brand mini-menu">
+        <div class="navbar-brand ">
             <!-- COMPANY LOGO -->
             <a href="/admin/index">
                 <img src="/static/admin/images/logo/logo.png" alt="Cloud Admin Logo" class="img-responsive" height="30"
@@ -43,7 +53,7 @@
             </div>
             <!-- /TEAM STATUS FOR MOBILE -->
             <!-- SIDEBAR COLLAPSE -->
-            <div id="sidebar-collapse" class="sidebar-collapse  btn">
+            <div id="sidebar-collapse" class="sidebar-collapse btn">
                 <i class="fa fa-bars"
                    data-icon1="fa fa-bars"
                    data-icon2="fa fa-bars"></i>
@@ -198,7 +208,7 @@
 <!-- PAGE -->
 <section id="page">
     <!-- SIDEBAR -->
-    <div id="sidebar" class="sidebar mini-menu">
+    <div id="sidebar" class="sidebar">
         <div class="sidebar-menu nav-collapse">
             <div class="divide-20"></div>
             <!-- SEARCH BAR -->
@@ -366,7 +376,7 @@
         </div>
     </div>
     <!-- /SIDEBAR -->
-    <div id="main-content" class="margin-left-50">
+    <div id="main-content">
         <!-- /SAMPLE BOX CONFIGURATION MODAL FORM-->
         <div class="container">
             <div class="row">
@@ -385,172 +395,104 @@
                                         <i class="fa fa-home"></i>
                                         <a href="<?php echo url('/admin/index'); ?>"><?php echo lang('Home'); ?></a>
                                     </li>
-                                    <li>文章列表</li>
+                                    <li><?php if(($isAdd == 1)): ?>添加<?php else: ?>编辑<?php endif; ?>文章</li>
                                 </ul>
                                 <!-- /BREADCRUMBS -->
 
-                                <div class="description">文章列表描述
+                                <div class="description"><?php if(($isAdd == 1)): ?>添加<?php else: ?>编辑<?php endif; ?>文章描述
                                 </div>
                             </div>
                         </div>
                     </div>
                     <!-- /PAGE HEADER -->
                     
-    <div class="row">
-       <div class="col-xs-12 col-md-12 col-lg-12">
-           <div class="box">
-               <div class="box-title">
-                   <h4><i class="fa fa-bars"></i>搜索</h4>
-
-               </div>
-               <div class="box-body big">
-                   <div class="row">
-                       <div class="widget-body floatleft">
-                           <form role="form">
-
-                               <div class="col-sm-3 no-padding">
-                                   <div class="form-group">
-                                       <label >编号</label>
-                                       <input type="text" class="form-control" placeholder="编号" name="filter[order.id]" value="">
-                                   </div>
-                               </div>
-
-                               <div class="col-sm-3">
-                                   <div class="form-group">
-                                       <label >标题</label>
-                                       <input type="text" class="form-control" placeholder="标题" name="filter[order.order_sn]" value="">
-                                   </div>
-                               </div>
-
-                               <div class="col-sm-3">
-                                   <div class="form-group">
-                                       <label >描述</label>
-                                       <input type="text" class="form-control" placeholder="描述" name="filter[order.sign]" value="">
-                                   </div>
-                               </div>
-
-                               <div class="col-sm-3 no-padding">
-                                   <div class="form-group">
-                                       <label >作者</label>
-                                       <input type="email" class="form-control" placeholder="作者" name="filter[user.email]" value="">
-                                   </div>
-                               </div>
-
-                               <div class="col-sm-3 no-padding">
-
-                                   <div class="form-group">
-                                       <label >添加时间</label>
-
-                                       <div class="controls">
-                                           <div class="input-group">
+<div class="row">
+    <div class="col-xs-12 col-md-12 col-md-12">
+        <div class="row">
+            <div class="col-md-12">
+                <!-- BASIC -->
+                <div class="box  ">
+                    <div class="box-title">
+                        <h4><i class="fa fa-bars"></i><?php if(($isAdd == 1)): ?>添加<?php else: ?>编辑<?php endif; ?>文章</h4>
+                    </div>
+                    <div class="box-body big">
+                        <form role="form" id="articlleForm" action="" method="post" enctype="multipart/form-data">
+                            <div class="form-group">
+                                <label for="articleType">分类 <span style="color: red">*</span></label>
+                                <select class="form-control" id="articleType" name="articleType">
+                                    <option value="">请选择</option>
+                                    <option value="1">Mysql</option>
+                                    <option value="0">Linux</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="articleTitle">标题 <span style="color: red">*</span></label>
+                                <input type="text" class="form-control" id="articleTitle" name="articleTitle" placeholder="Enter title">
+                            </div>
+                            <div class="form-group">
+                                <label for="articleDescription">简介 <span style="color: red">*</span></label>
+                                <input type="text" class="form-control" id="articleDescription" name="articleDescription" placeholder="description">
+                            </div>
+                            <div class="form-group">
+                                <label for="articleAuthor">作者 <span style="color: red">*</span></label>
+                                <input type="text" class="form-control" id="articleAuthor" name="articleAuthor" placeholder="authoer">
+                            </div>
+                            <div class="form-group">
+                                <label for="fileupload">图片 <span style="color: red">*</span></label>
+                                <div class="jquery-fileupload">
+                                    <span class="btn btn-success fileinput-button">
+                                        <i class="glyphicon glyphicon-plus"></i>
+                                        <span>Add files...</span>
+                                        <!-- The file input field used as target for the file upload widget -->
+                                        <input id="fileupload" type="file" name="files" multiple="">
+                                    </span>
+                                    <br>
+                                    <br>
+                                    <!-- The global progress bar -->
+                                    <div id="progress" class="progress">
+                                        <div class="progress-bar progress-bar-success"></div>
+                                    </div>
+                                    <!-- The container for the uploaded files -->
+                                    <div id="files" class="files"></div>
+                                </div>
+                            </div>
+                            <div class="divide-20"></div>
+                            <div class="form-group">
+                                <label for="top">是否置顶 <span style="color: red">*</span></label>
+                                <select class="form-control" style="width: 45%" name="top" id="top">
+                                    <option value="">请选择</option>
+                                    <option value="1">置顶</option>
+                                    <option value="0">不置顶</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="addTime">发布时间 <span style="color: red">*</span></label>
+                                <div class="controls">
+                                    <div class="input-group">
                                             <span class="input-group-addon">
                                                 <i class="fa fa-calendar"></i>
-                                            </span><input type="text" class="form-control" id="addTime" placeholder="添加时间" name="filter[article.add_times]" value="">
-                                               <!--<div class="input-group-addon clearBtns">x</div>-->
-                                           </div>
-                                       </div>
-                                   </div>
-
-                               </div>
-
-                               <div class="col-sm-3">
-
-                                   <div class="form-group">
-                                       <label >修改时间</label>
-
-                                       <div class="controls">
-                                           <div class="input-group">
-                                            <span class="input-group-addon">
-                                                <i class="fa fa-calendar"></i>
-                                            </span><input type="text" class="form-control" id="editTime" placeholder="修改时间" name="filter[order.pay_times]" value="">
-                                               <!--<div class="input-group-addon clearBtns">x</div>-->
-                                           </div>
-                                       </div>
-                                   </div>
-                               </div>
-
-
-
-                               <div class="col-sm-3">
-                                   <div class="form-group">
-                                       <label >置顶</label>
-                                       <!--<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">-->
-                                       <select id="e1" class="form-control" style="width:100%;" name="filter[order.status]">
-                                           <option value="">请选择</option>
-                                           <option value="0">未置顶</option>
-                                           <option value="1">已置顶</option>
-                                       </select>
-
-                                   </div>
-                               </div>
-
-
-
-                               <div class="col-sm-12 no-padding">
-                                   <button type="submit" name="doSearch" class="btn btn-primary">搜索</button>
-                               </div>
-                           </form>
-                       </div>
-                   </div>
-               </div>
-           </div>
-       </div>
-
-    </div>
-
-
-    <div class="row">
-        <div class="col-xs-12 col-md-12 col-md-12">
-            <!-- BOX -->
-            <div class="box">
-                <div class="box-title">
-                    <h4><i class="fa fa-table"></i>文章列表</h4>
-                    <div class="tools">
-                        <a href="javascript:;" class="btn btn-xs btn-success" style="color: #ffffff;">导出
-                        </a>
+                                            </span>
+                                        <input type="text" class="form-control" id="addTime"  name="add_times" value="" style="width: 44%" placeholder="添加时间">
+                                        <!--<div class="input-group-addon clearBtns">x</div>-->
+                                    </div>
+                                </div>
+                            </div>
+                            <label for="container">内容 <span style="color: red">*</span></label>
+                            <script id="container" name="container" type="text/plain"></script>
+                            <div class="separator"></div>
+                            <button type="submit" class="btn btn-success">提交</button>
+                        </form>
                     </div>
                 </div>
-                <div class="box-body">
-                    <table class="table table-bordered">
-                        <thead>
-                        <tr>
-                            <th width="3%">编号</th>
-                            <th width="3%" style="width: 60px; height: 60px">图片</th>
-                            <th width="15%">标题</th>
-                            <th width="35%">描述</th>
-                            <th width="5%">置顶</th>
-                            <th width="5%">作者</th>
-                            <th width="8%">添加时间</th>
-                            <th width="8%">修改时间</th>
-                            <th width="15%">操作</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td><img src="/static/images/wall_page/1.jpg" style="width: 60px; height: 60px"></td>
-                            <td>Laravel 的 Blade 模板引擎</td>
-                            <td>Blade 是 Laravel 提供的一个简单而又强大的模板引擎。和其他流行的 PHP 模板引擎不同，Blade 并不限制你在视图中使用原生 PHP 代码。</td>
-                            <td>admin</td>
-                            <td>admin</td>
-                            <td>2018-05-12 16:30:23</td>
-                            <td>2018-05-12 16:30:23</td>
-                            <td>
-                                <a class="btn btn-primary">置顶</a>
-                                <a class="btn btn-success">编辑</a>
-                                <a class="btn btn-warning">删除</a>
-                            </td>
-                        </tr>
-
-
-                        </tbody>
-                    </table>
-                </div>
+                <!-- /BASIC -->
             </div>
-            <!-- /BOX -->
         </div>
     </div>
+</div>
+<style>
+    lablel > .error{color:red; border-color:red !important;}
 
+</style>
 
                     <!-- /CALENDAR & CHAT -->
                 </div>
@@ -584,14 +526,140 @@
 <script type="text/javascript" src="/static/admin/js/public.js"></script>
 <!-- /JAVASCRIPTS -->
 
-    <script src="/static/lib/daterangepicker/moment.min.js"></script>
-    <script src="/static/lib/daterangepicker/daterangepicker.js"></script>
-    <script type="text/javascript">
-        jQuery(document).ready(function () {
-            App.init(); //Initialise plugins and elements
-        });
+<script src="/static/lib/jQueryFileUpload/js/vendor/jquery.ui.widget.js"></script>
+<!-- The Load Image plugin is included for the preview images and image resizing functionality -->
+<script src="/static/lib/LoadImage/js/load-image.all.min.js"></script>
+<!-- The Canvas to Blob plugin is included for image resizing functionality -->
+<script src="/static/lib/CanvastoBlob/js/canvas-to-blob.min.js"></script>
 
-        $("#addTime").daterangepicker({
+<!-- JQUERY UI-->
+<script type="text/javascript" src="/static/lib/jquery-ui/jquery-ui.min.js"></script>
+
+<script src="/static/lib/jQueryFileUpload/js/jquery.iframe-transport.js"></script>
+<script src="/static/lib/jQueryFileUpload/js/jquery.fileupload.js"></script>
+<script src="/static/lib/jQueryFileUpload/js/jquery.fileupload-process.js"></script>
+<script src="/static/lib/jQueryFileUpload/js/jquery.fileupload-image.js"></script>
+<script src="/static/lib/jQueryFileUpload/js/jquery.fileupload-validate.js"></script>
+
+<script src="/static/lib/validation/dist/jquery.validate.min.js"></script>
+<script src="/static/lib/validation/dist/additional-methods.min.js"></script>
+<script src="/static/lib/validation/dist/localization/messages_zh.min.js"></script>
+
+<script src="/static/lib/daterangepicker/moment.min.js"></script>
+<script src="/static/lib/daterangepicker/daterangepicker.js"></script>
+<!-- 配置文件 -->
+<script type="text/javascript" src="/static/lib/ueditor/ueditor.config.js"></script>
+<!--编辑器源码文件-->
+<script type="text/javascript" src="/static/lib/ueditor/ueditor.all.min.js"></script>
+<!-- 实例化编辑器 -->
+<script type="text/javascript">
+    jQuery(document).ready(function () {
+        App.init(); //Initialise plugins and elements
+    });
+    /*jslint unparam: true, regexp: true */
+    /*global window, $ */
+    $(function () {
+        'use strict';
+        // Change this to the location of your server-side upload handler:
+        // var url = window.location.hostname === 'blueimp.github.io' ?
+        //     '//jquery-file-upload.appspot.com/' : 'server/php/',
+        var url = '/admin/article/upload',
+            uploadButton = $('<button/>')
+                .addClass('btn btn-primary')
+                .prop('disabled', true)
+                .text('Processing...')
+                .on('click', function () {
+                    var $this = $(this),
+                        data = $this.data();
+                    $this
+                        .off('click')
+                        .text('Abort')
+                        .on('click', function () {
+                            $this.remove();
+                            data.abort();
+                        });
+                    data.submit().always(function () {
+                        $this.remove();
+                    });
+                });
+        $('#fileupload').fileupload({
+            url: url,
+            dataType: 'json',
+            autoUpload: false,
+            acceptFileTypes: /(\.|\/)(gif|jpe?g|png)$/i,
+            maxFileSize: 999000,
+            // Enable image resizing, except for Android and Opera,
+            // which actually support image resizing, but fail to
+            // send Blob objects via XHR requests:
+            disableImageResize: /Android(?!.*Chrome)|Opera/
+                .test(window.navigator.userAgent),
+            previewMaxWidth: 100,
+            previewMaxHeight: 100,
+            previewCrop: true
+        }).on('fileuploadadd', function (e, data) {
+            data.context = $('<div/>').appendTo('#files');
+            $.each(data.files, function (index, file) {
+                var node = $('<p/>')
+                    .append($('<span/>').text(file.name));
+                if (!index) {
+                    node
+                        .append('<br>')
+                        .append(uploadButton.clone(true).data(data));
+                }
+                node.appendTo(data.context);
+            });
+        }).on('fileuploadprocessalways', function (e, data) {
+            var index = data.index,
+                file = data.files[index],
+                node = $(data.context.children()[index]);
+            if (file.preview) {
+                node
+                    .prepend('<br>')
+                    .prepend(file.preview);
+            }
+            if (file.error) {
+                node
+                    .append('<br>')
+                    .append($('<span class="text-danger"/>').text(file.error));
+            }
+            if (index + 1 === data.files.length) {
+                data.context.find('button')
+                    .text('Upload')
+                    .prop('disabled', !!data.files.error);
+            }
+        }).on('fileuploadprogressall', function (e, data) {
+            var progress = parseInt(data.loaded / data.total * 100, 10);
+            $('#progress .progress-bar').css(
+                'width',
+                progress + '%'
+            );
+        }).on('fileuploaddone', function (e, data) {
+            $.each(data.result.files, function (index, file) {
+                if (file.url) {
+                    var link = $('<a>')
+                        .attr('target', '_blank')
+                        .prop('href', file.url);
+                    $(data.context.children()[index])
+                        .wrap(link);
+                } else if (file.error) {
+                    var error = $('<span class="text-danger"/>').text(file.error);
+                    $(data.context.children()[index])
+                        .append('<br>')
+                        .append(error);
+                }
+            });
+        }).on('fileuploadfail', function (e, data) {
+            $.each(data.files, function (index) {
+                var error = $('<span class="text-danger"/>').text('File upload failed.');
+                $(data.context.children()[index])
+                    .append('<br>')
+                    .append(error);
+            });
+        }).prop('disabled', !$.support.fileInput)
+            .parent().addClass($.support.fileInput ? undefined : 'disabled');
+    });
+    //set time
+    $("#addTime").daterangepicker({
             //日期或字符串）最初选择的日期范围的开始日期。如果您提供了一个字符串，它必须与您的locale设置中设置的日期格式字符串匹配。
             "startDate": moment().subtract(29, 'days'),
             //（日期或字符串）最初选择的日期范围的结束日期。
@@ -623,20 +691,20 @@
             //true / false）在timePicker中显示秒数
             "timePickerSeconds": true,
             //设置用户可以从中选择的预定义日期范围。每个键都是范围的标签，其值是一个数组，其中两个日期代表范围的界限。
-                "ranges": {
-                    'Today': [moment(), moment()],
-                    'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
-                    'Last 7 Days': [moment().subtract(6, 'days'), moment()],
-                    'Last 30 Days': [moment().subtract(29, 'days'), moment()],
-                    'This Month': [moment().startOf('month'), moment().endOf('month')],
-                    'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
-                },
+            "ranges": {
+                'Today': [moment(), moment()],
+                'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+                'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+                'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+                'This Month': [moment().startOf('month'), moment().endOf('month')],
+                'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+            },
             //（true / false）ranges使用该选项时，在预定范围列表的末尾显示“Custom Range” 。只要当前日期范围选择与预定义的范围之一不匹配，该选项就会突出显示。点击它将显示日历以选择新的范围。
             "showCustomRangeLabel": true,
             //（true / false）通常，如果您使用该ranges选项指定预定义日期范围，则用户单击“自定义范围”之前，不会显示用于选择自定义日期范围的日历。当此选项设置为true时，将始终显示用于选择自定义日期范围的日历。
             "alwaysShowCalendars": true,
             //（'left'/'right'/'center'）该选择器是否显示在左侧，右侧或与其相连的HTML元素对齐的位置。
-            "opens":'center',
+            "opens":'right',
             //（'down'/'up'）选择器是否出现在下面（默认）或高于它所连接的HTML元素。
             "drops":'down',
             //（字符串）将被添加到应用和取消按钮的CSS类名称。
@@ -683,123 +751,138 @@
             //true / false）隐藏应用和取消按钮，并在点击两个日期后自动应用新的日期范围。
             "autoApply":false,
             //（true / false）仅显示一个日历来选择一个日期，而不是具有两个日历的范围选择器。提供给您的回调的开始日期和结束日期将选择相同的单一日期。
-            "singleDatePicker": false,
+            "singleDatePicker": true,
             //（true / false）启用后，显示的两个日历将始终为连续两个月（即一月和二月），并且在点击日历上方的左侧或右侧箭头时，两者都将被提前。禁用时，两个日历可以单独进阶并显示任何月份/年份。
             "linkedCalendars": false,
             //（true / false）指示日期范围选择器是否应自动更新其<input>在初始化时以及选定日期更改时所附的元素的值。
             "autoUpdateInput": false,
 
         },
-            function(start, end, label) {
-                console.log('New date range selected: ' + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD') + ' (predefined range: ' + label + ')');
-                $("#addTime").val(start.format('YYYY-MM-DD HH:mm:ss') + ' - ' + end.format('YYYY-MM-DD HH:mm:ss'));
-            }
-        );
-        $("#editTime").daterangepicker({
-                //日期或字符串）最初选择的日期范围的开始日期。如果您提供了一个字符串，它必须与您的locale设置中设置的日期格式字符串匹配。
-                "startDate": moment().subtract(29, 'days'),
-                //（日期或字符串）最初选择的日期范围的结束日期。
-                "endDate": moment(),
-                //（日期或字符串）用户可以选择的最早日期。
-                "minDate":'01/01/2017',
-                // （日期或字符串）用户可以选择的最新日期。
-                "maxDate": '12/31/2019',
-                //(对象）所选开始和结束日期之间的最大跨度。maxSpan在配置生成器中检查一个如何使用它的例子。您可以提供该moment库允许您添加到日期的任何对象。
-                "maxSpan": {
-                    "days": 60
-                },
-                //（true / false）显示日历上方的年份和月份选择框，以跳转到特定的月份和年份。
-                "showDropdowns": true,
-                //（数字）下拉列表中显示的最小年份showDropdowns设置为true。
-                "minYear":'2010',
-                //(数字）下拉列表中显示的最大年份showDropdowns设置为true。
-                "maxYear":'2020',
-                //(true / false）在日历的每周开始时显示本地化的星期编号。
-                "showWeekNumbers": true,
-                //（真/假）在日历上的每周开始时显示ISO星期数。
-                "showISOWeekNumbers":false,
-                //（true / false）添加选择框以选择日期以外的时间。
-                "timePicker": true,
-                //（数字）分钟选择列表的时间增量（即30，只允许选择以0或30结尾的时间）
-                "timePickerIncrement":1,
-                //（true / false）使用24小时而不是12小时的时间，取消AM / PM选择
-                "timePicker24Hour": true,
-                //true / false）在timePicker中显示秒数
-                "timePickerSeconds": true,
-                //设置用户可以从中选择的预定义日期范围。每个键都是范围的标签，其值是一个数组，其中两个日期代表范围的界限。
-                "ranges": {
-                    'Today': [moment(), moment()],
-                    'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
-                    'Last 7 Days': [moment().subtract(6, 'days'), moment()],
-                    'Last 30 Days': [moment().subtract(29, 'days'), moment()],
-                    'This Month': [moment().startOf('month'), moment().endOf('month')],
-                    'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
-                },
-                //（true / false）ranges使用该选项时，在预定范围列表的末尾显示“Custom Range” 。只要当前日期范围选择与预定义的范围之一不匹配，该选项就会突出显示。点击它将显示日历以选择新的范围。
-                "showCustomRangeLabel": true,
-                //（true / false）通常，如果您使用该ranges选项指定预定义日期范围，则用户单击“自定义范围”之前，不会显示用于选择自定义日期范围的日历。当此选项设置为true时，将始终显示用于选择自定义日期范围的日历。
-                "alwaysShowCalendars": true,
-                //（'left'/'right'/'center'）该选择器是否显示在左侧，右侧或与其相连的HTML元素对齐的位置。
-                "opens":'center',
-                //（'down'/'up'）选择器是否出现在下面（默认）或高于它所连接的HTML元素。
-                "drops":'down',
-                //（字符串）将被添加到应用和取消按钮的CSS类名称。
-                "buttonClasses":'btn btn-default',
-                //（字符串）将仅添加到应用按钮的CSS类名称。
-                "applyButtonClasses":'btn-small btn-primary',
-                //（string）将仅添加到取消按钮的CSS类名称。
-                "cancelButtonClasses":'btn-small btn-primary',
-                //（object）允许您为按钮和标签提供本地化的字符串，自定义日期格式，并更改日历的第一个星期几。locale在配置生成器中检查以了解如何自定义这些选项。
-                "locale": {
-                    "format": "YYYY/MM/DD HH:mm:ss",
-                    "separator": " - ",
-                    "applyLabel": "应用",
-                    "cancelLabel": "取消",
-                    "fromLabel": "From",
-                    "toLabel": "To",
-                    "customRangeLabel": "Custom",
-                    "weekLabel": "W",
-                    "daysOfWeek": [
-                        "Su",
-                        "Mo",
-                        "Tu",
-                        "We",
-                        "Th",
-                        "Fr",
-                        "Sa"
-                    ],
-                    "monthNames": [
-                        "January",
-                        "February",
-                        "March",
-                        "April",
-                        "May",
-                        "June",
-                        "July",
-                        "August",
-                        "September",
-                        "October",
-                        "November",
-                        "December"
-                    ],
-                    "firstDay": 1
-                },
-                //true / false）隐藏应用和取消按钮，并在点击两个日期后自动应用新的日期范围。
-                "autoApply":false,
-                //（true / false）仅显示一个日历来选择一个日期，而不是具有两个日历的范围选择器。提供给您的回调的开始日期和结束日期将选择相同的单一日期。
-                "singleDatePicker": false,
-                //（true / false）启用后，显示的两个日历将始终为连续两个月（即一月和二月），并且在点击日历上方的左侧或右侧箭头时，两者都将被提前。禁用时，两个日历可以单独进阶并显示任何月份/年份。
-                "linkedCalendars": false,
-                //（true / false）指示日期范围选择器是否应自动更新其<input>在初始化时以及选定日期更改时所附的元素的值。
-                "autoUpdateInput": false,
+        function(start, end, label) {
+            console.log('New date range selected: ' + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD') + ' (predefined range: ' + label + ')');
+            $("#addTime").val(start.format('YYYY-MM-DD HH:mm:ss'));
+        }
+    );
+    //get user Language
+    function lang() {
+        if ($.cookie('think_var') == 'en-us'){
+            return 'en';
+        } else {
+            return 'zh-cn'
+        }
+    }
+    //set uedit
+    var ue = UE.getEditor('container',{
+        toolbars: [
+            [
+                'fullscreen', 'source', '|', 'undo', 'redo', '|',
+                'bold', 'italic', 'underline', 'fontborder', 'strikethrough', 'superscript', 'subscript', 'removeformat', 'formatmatch', 'autotypeset', 'blockquote', 'pasteplain', '|', 'forecolor', 'backcolor', 'insertorderedlist', 'insertunorderedlist', 'selectall', 'cleardoc', '|',
+                'rowspacingtop', 'rowspacingbottom', 'lineheight', '|',
+                'customstyle', 'paragraph', 'fontfamily', 'fontsize', '|',
+                'directionalityltr', 'directionalityrtl', 'indent', '|',
+                'justifyleft', 'justifycenter', 'justifyright', 'justifyjustify', '|', 'touppercase', 'tolowercase', '|',
+                'link', 'unlink', 'anchor', '|', 'imagenone', 'imageleft', 'imageright', 'imagecenter', '|',
+                'simpleupload', 'insertimage', 'emotion', 'scrawl', 'insertvideo', 'music', 'attachment', 'map', 'gmap', 'insertframe', 'insertcode', 'webapp', 'pagebreak', 'template', '|',
+                'horizontal', 'date', 'time', 'spechars', 'snapscreen', 'wordimage', '|',
+                'inserttable', 'deletetable', 'insertparagraphbeforetable', 'insertrow', 'deleterow', 'insertcol', 'deletecol', 'mergecells', 'mergeright', 'mergedown', 'splittocells', 'splittorows', 'splittocols', 'charts', '|',
+                'print', 'preview', 'searchreplace', 'drafts', 'help'
+            ]
+        ],
+        autoHeightEnabled: false,
+        autoFloatEnabled: true,
+        // lang:(navigator.language||navigator.browserLanguage ||navigator.userLanguage).toLowerCase(),
+        lang:lang(),
+        langPath:"/static/lib/ueditor/lang/",
+        initialFrameHeight:400,
+    });
+    /* ue.ready(function() {
+         //设置编辑器的内容
+         // ue.setContent('hello');
+         //获取html内容，返回: <p>hello</p>
+         var html = ue.getContent();
+         //获取纯文本内容，返回: hello
+         var txt = ue.getContentTxt();
+         var lang = ue.getOpt('lang');
+         console.log(lang);
+     });*/
 
-            },
-            function(start, end, label) {
-                console.log('New date range selected: ' + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD') + ' (predefined range: ' + label + ')');
-                $("#editTime").val(start.format('YYYY-MM-DD HH:mm:ss') + ' - ' + end.format('YYYY-MM-DD HH:mm:ss'));
+    /*************************插件新功能-设置插件validator的默认参数*****************************************/
+    $.validator.setDefaults({
+        /*关闭键盘输入时的实时校验*/
+        onkeyup: null,
+        /*添加校验成功后的执行函数--修改提示内容，并为正确提示信息添加新的样式(默认是valid)*/
+        success: function(label){
+            /*label的默认正确样式为valid，需要通过validClass来重置，否则这里添加的其他样式不能被清除*/
+            label.text('').addClass('valid');
+        },
+        /*/!*重写校验元素获得焦点后的执行函数--增加[1.光标移入元素时的帮助提示,2.校验元素的高亮显示]两个功能点*!/
+        onfocusin: function( element ) {
+            this.lastActive = element;
+
+            /!*1.帮助提示功能*!/
+            this.addWrapper(this.errorsFor(element)).hide();
+            var tip = $(element).attr('tip');
+            //alert(tip);
+            if(tip && $(element).parent().children(".tip").length === 0){
+                $(element).parent().append("<label class='tip'>" + tip + "</label>");
             }
-        );
-    </script>
+
+            /!*2.校验元素的高亮显示*!/
+            $(element).addClass('highlight');
+
+            // Hide error label and remove error class on focus if enabled
+            if ( this.settings.focusCleanup ) {
+                if ( this.settings.unhighlight ) {
+                    this.settings.unhighlight.call( this, element, this.settings.errorClass, this.settings.validClass );
+                }
+                this.hideThese( this.errorsFor( element ) );
+            }
+        },
+        /!*重写校验元素焦点离开时的执行函数--移除[1.添加的帮助提示,2.校验元素的高亮显示]*!/
+        onfocusout: function( element ) {
+            /!*1.帮助提示信息移除*!/
+            $(element).parent().children(".tip").remove();
+
+            /!*2.校验元素高亮样式移除*!/
+            $(element).removeClass('highlight');
+
+            /!*3.替换下面注释的原始代码，任何时候光标离开元素都触发校验功能*!/
+            //this.element( element );
+
+            if ( !this.checkable( element ) && ( element.name in this.submitted || !this.optional( element ) ) ) {
+                this.element( element );
+            }
+        }*/
+    });
+
+    //自定义方法，完成手机号码的验证
+    //name:自定义方法的名称，method：函数体, message:错误消息
+    /*  $.validator.addMethod("phone", function(value, element, param){
+          //方法中又有三个参数:value:被验证的值， element:当前验证的dom对象，param:参数(多个即是数组)
+          //alert(value + "," + $(element).val() + "," + param[0] + "," + param[1]);
+          return new RegExp(/^1[3458]\d{9}$/).test(value);
+
+      }, "手机号码不正确");*/
+    $(document).ready(function () {
+        $("#articlleForm").validate({
+            // debug:true,
+            rules:{
+                articleType:{
+                    required:true,
+                },
+                articleTitle:{
+                    required:true,
+                },
+                articleDescription:{
+                    required:true,
+                },
+                articleAuthor:{
+                    required:true,
+                },
+            }
+        });
+    });
+</script>
 
 </body>
 </html>

@@ -2,18 +2,21 @@
 
 namespace app\admin\controller;
 
+use think\Controller;
 use think\Request;
 
-class Article extends Base
+class Photo extends Base
 {
     /**
      * 显示资源列表
      *
      * @return \think\Response
      */
-    public function articleList()
+    public function photoManagement()
     {
         //
+        $isAdd = 1;
+        $this->assign('isAdd',$isAdd);
         return $this->fetch();
     }
 
@@ -22,18 +25,21 @@ class Article extends Base
      *
      * @return \think\Response
      */
-    public function articleEdit(Request $request)
+    public function create()
     {
-        if ($request->isPost()){
-            dump($request->post(''));
-        }else{
-            $isAdd = 1;
-            $this->assign('isAdd',$isAdd);
-            return $this->fetch("article_edit");
-        }
-
+        //
     }
 
+    /**
+     * 保存新建的资源
+     *
+     * @param  \think\Request  $request
+     * @return \think\Response
+     */
+    public function save(Request $request)
+    {
+        //
+    }
 
     /**
      * 显示指定的资源
@@ -41,18 +47,9 @@ class Article extends Base
      * @param  int  $id
      * @return \think\Response
      */
-    public function upload()
+    public function read($id)
     {
-        $file = request()->file('file');
-        $info = $file->validate(['size'=>'2048000000','ext'=>'jpg,png,gif'])->move(ROOT_PATH . DS . 'upload'.DS.'images');
-        if($info){
-            $path =  DS . 'upload'.DS.'images'.DS;
-            $picUrl = $path . $info->getSaveName();
-            return json($picUrl);
-        }else{
-            // 上传失败获取错误信息
-            echo $file->getError();
-        }
+        //
     }
 
     /**

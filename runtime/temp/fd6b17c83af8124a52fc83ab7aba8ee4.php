@@ -1,16 +1,16 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:37:"theme/admin/article/article_edit.html";i:1526544609;s:46:"/home/rong/WEBROOT/tp5/theme/admin/layout.html";i:1526523131;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:37:"theme/admin/article/article_edit.html";i:1526633440;s:46:"/home/rong/WEBROOT/tp5/theme/admin/layout.html";i:1526634179;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
-    <title>添加文章</title>
-    <meta name="keywords" content="添加文章">
-    <meta name="description" content="添加文章">
+    <title><?php if(($isAdd == 1)): ?>添加<?php else: ?>编辑<?php endif; ?>文章</title>
+    <meta name="keywords" content="<?php if(($isAdd == 1)): ?>添加<?php else: ?>编辑<?php endif; ?>文章">
+    <meta name="description" content="<?php if(($isAdd == 1)): ?>添加<?php else: ?>编辑<?php endif; ?>文章">
     <meta name="author" content="dengrongqiu">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
     <link rel="stylesheet" type="text/css" href="/static/admin/css/cloud-admin.min.css">
-    <link rel="stylesheet" type="text/css" href="/static/admin/css/themes/default.min.css" id="skin-switcher">
+    <link rel="stylesheet" type="text/css" href="/static/admin/css/themes/graphite.css" id="skin-switcher">
     <link rel="stylesheet" type="text/css" href="/static/admin/css/responsive.min.css">
     <!-- STYLESHEETS --><!--[if lt IE 9]>
     <script type="text/javascript" src="/static/lib/flot/excanvas.min.js"></script>
@@ -21,16 +21,9 @@
     <!-- ANIMATE -->
     <link rel="stylesheet" type="text/css" href="/static/lib/animate/animate.min.css"/>
     
-<!--bootstrap-->
-<!--<link rel="stylesheet" type="text/css" href="/static/lib/bootstrap/css/bootstrap.min.css"/>-->
-<!-- blueimp Gallery styles -->
-<!--<link rel="stylesheet" href="/static/lib/Gallery/css/blueimp-gallery.min.css">-->
-<!-- CSS to style the file input field as button and adjust the Bootstrap progress bars -->
-<link rel="stylesheet" href="/static/lib/jQueryFileUpload/css/jquery.fileupload.css">
-<!--<link rel="stylesheet" href="/static/lib/jQueryFileUpload/css/jquery.fileupload-ui.css">-->
-<!-- CSS adjustments for browsers with JavaScript disabled -->
-<!--<noscript><link rel="stylesheet" href="/static/lib/jQueryFileUpload/css/jquery.fileupload-noscript.css"></noscript>-->
-<!--<noscript><link rel="stylesheet" href="/static/lib/jQueryFileUpload/css/jquery.fileupload-ui-noscript.css"></noscript>-->
+
+<link rel="stylesheet" type="text/css" href="/static/lib/webuploader/webuploader.css">
+<link rel="stylesheet" type="text/css" href="/static/lib/webuploader/webuploader_demo.css">
 <link rel="stylesheet" type="text/css" href="/static/lib/daterangepicker/daterangepicker.css">
 
 </head>
@@ -38,7 +31,7 @@
 <!-- HEADER -->
 <header class="navbar clearfix" id="header">
     <div class="container">
-        <div class="navbar-brand ">
+        <div class="navbar-brand mini-menu">
             <!-- COMPANY LOGO -->
             <a href="/admin/index">
                 <img src="/static/admin/images/logo/logo.png" alt="Cloud Admin Logo" class="img-responsive" height="30"
@@ -53,7 +46,7 @@
             </div>
             <!-- /TEAM STATUS FOR MOBILE -->
             <!-- SIDEBAR COLLAPSE -->
-            <div id="sidebar-collapse" class="sidebar-collapse btn">
+            <div id="sidebar-collapse" class="sidebar-collapse  btn">
                 <i class="fa fa-bars"
                    data-icon1="fa fa-bars"
                    data-icon2="fa fa-bars"></i>
@@ -208,7 +201,7 @@
 <!-- PAGE -->
 <section id="page">
     <!-- SIDEBAR -->
-    <div id="sidebar" class="sidebar">
+    <div id="sidebar" class="sidebar mini-menu">
         <div class="sidebar-menu nav-collapse">
             <div class="divide-20"></div>
             <!-- SEARCH BAR -->
@@ -305,7 +298,7 @@
                     <ul class="sub">
                         <li><a class="" href="<?php echo url('/admin/article/articleList'); ?>"><span class="sub-menu-text"><?php echo lang('Article list'); ?></span></a>
                         </li>
-                        <li><a class="" href="<?php echo url('/admin/article/articleAdd'); ?>"><span class="sub-menu-text"><?php echo lang('Add articles'); ?></span></a>
+                        <li><a class="" href="<?php echo url('/admin/article/articleEdit'); ?>"><span class="sub-menu-text"><?php echo lang('Add articles'); ?></span></a>
                         </li>
                     </ul>
                 </li>
@@ -315,7 +308,7 @@
                         <span class="arrow"></span>
                     </a>
                     <ul class="sub">
-                        <li><a class="" href="mini_sidebar.html"><span class="sub-menu-text">相册管理</span></a>
+                        <li><a class="" href="<?php echo url('/admin/photo/photoManagement'); ?>"><span class="sub-menu-text">相册管理</span></a>
                         </li>
                         <li><a class="" href="fixed_header.html"><span class="sub-menu-text">文档管理</span></a>
                         </li>
@@ -376,7 +369,7 @@
         </div>
     </div>
     <!-- /SIDEBAR -->
-    <div id="main-content">
+    <div id="main-content" class="margin-left-50">
         <!-- /SAMPLE BOX CONFIGURATION MODAL FORM-->
         <div class="container">
             <div class="row">
@@ -395,11 +388,11 @@
                                         <i class="fa fa-home"></i>
                                         <a href="<?php echo url('/admin/index'); ?>"><?php echo lang('Home'); ?></a>
                                     </li>
-                                    <li>添加文章</li>
+                                    <li><?php if(($isAdd == 1)): ?>添加<?php else: ?>编辑<?php endif; ?>文章</li>
                                 </ul>
                                 <!-- /BREADCRUMBS -->
 
-                                <div class="description">添加文章描述
+                                <div class="description"><?php if(($isAdd == 1)): ?>添加<?php else: ?>编辑<?php endif; ?>文章描述
                                 </div>
                             </div>
                         </div>
@@ -413,10 +406,10 @@
                 <!-- BASIC -->
                 <div class="box  ">
                     <div class="box-title">
-                        <h4><i class="fa fa-bars"></i>添加文章</h4>
+                        <h4><i class="fa fa-bars"></i><?php if(($isAdd == 1)): ?>添加<?php else: ?>编辑<?php endif; ?>文章</h4>
                     </div>
                     <div class="box-body big">
-                        <form role="form" id="articlleForm" action="" method="post">
+                        <form role="form" id="articlleForm" action="" method="post" enctype="multipart/form-data">
                             <div class="form-group">
                                 <label for="articleType">分类 <span style="color: red">*</span></label>
                                 <select class="form-control" id="articleType" name="articleType">
@@ -438,22 +431,25 @@
                                 <input type="text" class="form-control" id="articleAuthor" name="articleAuthor" placeholder="authoer">
                             </div>
                             <div class="form-group">
-                                <label for="fileupload">图片 <span style="color: red">*</span></label>
-                                <div class="jquery-fileupload">
-                                    <span class="btn btn-success fileinput-button">
-                                        <i class="glyphicon glyphicon-plus"></i>
-                                        <span>Add files...</span>
-                                        <!-- The file input field used as target for the file upload widget -->
-                                        <input id="fileupload" type="file" name="files[]" multiple="">
-                                    </span>
-                                    <br>
-                                    <br>
-                                    <!-- The global progress bar -->
-                                    <div id="progress" class="progress">
-                                        <div class="progress-bar progress-bar-success"></div>
+                                <label >图片 <span style="color: red">*</span></label>
+                                <div class="page-container">
+                                    <div id="uploader" class="wu-example">
+                                        <div class="queueList">
+                                            <div id="dndArea" class="placeholder">
+                                                <div id="filePicker"></div>
+                                                <p>或将照片拖到这里，单次最多可选300张</p>
+                                            </div>
+                                        </div>
+                                        <div class="statusBar" style="display:none;">
+                                            <div class="progress">
+                                                <span class="text">0%</span>
+                                                <span class="percentage"></span>
+                                            </div><div class="info"></div>
+                                            <div class="btns">
+                                                <div id="filePicker2"></div><div class="uploadBtn">开始上传</div>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <!-- The container for the uploaded files -->
-                                    <div id="files" class="files"></div>
                                 </div>
                             </div>
                             <div class="divide-20"></div>
@@ -477,8 +473,10 @@
                                     </div>
                                 </div>
                             </div>
-                            <label for="container">内容 <span style="color: red">*</span></label>
-                            <script id="container" name="container" type="text/plain"></script>
+                            <div class="form-group">
+                                <label for="container">内容 <span style="color: red">*</span></label>
+                                <script id="container" name="container" type="text/plain"></script>
+                            </div>
                             <div class="separator"></div>
                             <button type="submit" class="btn btn-success">提交</button>
                         </form>
@@ -491,7 +489,6 @@
 </div>
 <style>
     lablel > .error{color:red; border-color:red !important;}
-
 </style>
 
                     <!-- /CALENDAR & CHAT -->
@@ -526,137 +523,23 @@
 <script type="text/javascript" src="/static/admin/js/public.js"></script>
 <!-- /JAVASCRIPTS -->
 
-<script src="/static/lib/jQueryFileUpload/js/vendor/jquery.ui.widget.js"></script>
-<!-- The Load Image plugin is included for the preview images and image resizing functionality -->
-<script src="/static/lib/LoadImage/js/load-image.all.min.js"></script>
-<!-- The Canvas to Blob plugin is included for image resizing functionality -->
-<script src="/static/lib/CanvastoBlob/js/canvas-to-blob.min.js"></script>
-
-<!-- JQUERY UI-->
-<script type="text/javascript" src="/static/lib/jquery-ui/jquery-ui.min.js"></script>
-
-<script src="/static/lib/jQueryFileUpload/js/jquery.iframe-transport.js"></script>
-<script src="/static/lib/jQueryFileUpload/js/jquery.fileupload.js"></script>
-<script src="/static/lib/jQueryFileUpload/js/jquery.fileupload-process.js"></script>
-<script src="/static/lib/jQueryFileUpload/js/jquery.fileupload-image.js"></script>
-<script src="/static/lib/jQueryFileUpload/js/jquery.fileupload-validate.js"></script>
-
+<!--webuploader-->
+<script src="/static/lib/webuploader/webuploader.min.js"></script>
+<script src="/static/lib/webuploader/webuploader_demo.js"></script>
+<!--validation-->
 <script src="/static/lib/validation/dist/jquery.validate.min.js"></script>
 <script src="/static/lib/validation/dist/additional-methods.min.js"></script>
 <script src="/static/lib/validation/dist/localization/messages_zh.min.js"></script>
-
+<!--daterangepicker-->
 <script src="/static/lib/daterangepicker/moment.min.js"></script>
 <script src="/static/lib/daterangepicker/daterangepicker.js"></script>
-<!-- 配置文件 -->
+<!-- ueditor配置文件 -->
 <script type="text/javascript" src="/static/lib/ueditor/ueditor.config.js"></script>
- <!--编辑器源码文件-->
+ <!--ueditor编辑器源码文件-->
 <script type="text/javascript" src="/static/lib/ueditor/ueditor.all.min.js"></script>
-<!-- 实例化编辑器 -->
 <script type="text/javascript">
     jQuery(document).ready(function () {
         App.init(); //Initialise plugins and elements
-    });
-    /*jslint unparam: true, regexp: true */
-    /*global window, $ */
-    $(function () {
-        'use strict';
-        // Change this to the location of your server-side upload handler:
-        // var url = window.location.hostname === 'blueimp.github.io' ?
-        //     '//jquery-file-upload.appspot.com/' : 'server/php/',
-        var url = '/admin/article/save',
-            uploadButton = $('<button/>')
-                .addClass('btn btn-primary')
-                .prop('disabled', true)
-                .text('Processing...')
-                .on('click', function () {
-                    var $this = $(this),
-                        data = $this.data();
-                    $this
-                        .off('click')
-                        .text('Abort')
-                        .on('click', function () {
-                            $this.remove();
-                            data.abort();
-                        });
-                    data.submit().always(function () {
-                        $this.remove();
-                    });
-                });
-        $('#fileupload').fileupload({
-            url: url,
-            dataType: 'json',
-            autoUpload: false,
-            acceptFileTypes: /(\.|\/)(gif|jpe?g|png)$/i,
-            maxFileSize: 999000,
-            // Enable image resizing, except for Android and Opera,
-            // which actually support image resizing, but fail to
-            // send Blob objects via XHR requests:
-            disableImageResize: /Android(?!.*Chrome)|Opera/
-                .test(window.navigator.userAgent),
-            previewMaxWidth: 100,
-            previewMaxHeight: 100,
-            previewCrop: true
-        }).on('fileuploadadd', function (e, data) {
-            data.context = $('<div/>').appendTo('#files');
-            $.each(data.files, function (index, file) {
-                var node = $('<p/>')
-                    .append($('<span/>').text(file.name));
-                if (!index) {
-                    node
-                        .append('<br>')
-                        .append(uploadButton.clone(true).data(data));
-                }
-                node.appendTo(data.context);
-            });
-        }).on('fileuploadprocessalways', function (e, data) {
-            var index = data.index,
-                file = data.files[index],
-                node = $(data.context.children()[index]);
-            if (file.preview) {
-                node
-                    .prepend('<br>')
-                    .prepend(file.preview);
-            }
-            if (file.error) {
-                node
-                    .append('<br>')
-                    .append($('<span class="text-danger"/>').text(file.error));
-            }
-            if (index + 1 === data.files.length) {
-                data.context.find('button')
-                    .text('Upload')
-                    .prop('disabled', !!data.files.error);
-            }
-        }).on('fileuploadprogressall', function (e, data) {
-            var progress = parseInt(data.loaded / data.total * 100, 10);
-            $('#progress .progress-bar').css(
-                'width',
-                progress + '%'
-            );
-        }).on('fileuploaddone', function (e, data) {
-            $.each(data.result.files, function (index, file) {
-                if (file.url) {
-                    var link = $('<a>')
-                        .attr('target', '_blank')
-                        .prop('href', file.url);
-                    $(data.context.children()[index])
-                        .wrap(link);
-                } else if (file.error) {
-                    var error = $('<span class="text-danger"/>').text(file.error);
-                    $(data.context.children()[index])
-                        .append('<br>')
-                        .append(error);
-                }
-            });
-        }).on('fileuploadfail', function (e, data) {
-            $.each(data.files, function (index) {
-                var error = $('<span class="text-danger"/>').text('File upload failed.');
-                $(data.context.children()[index])
-                    .append('<br>')
-                    .append(error);
-            });
-        }).prop('disabled', !$.support.fileInput)
-            .parent().addClass($.support.fileInput ? undefined : 'disabled');
     });
     //set time
     $("#addTime").daterangepicker({
