@@ -118,7 +118,7 @@
                 <div class="box-title">
                     <h4><i class="fa fa-table"></i>文章列表</h4>
                     <div class="tools">
-                        <a href="javascript:;" class="btn btn-xs btn-success" style="color: #ffffff;">导出
+                        <a href="{:url('/admin/article/articleEdit')}" class="btn btn-xs btn-success" style="color: #ffffff;">添加
                         </a>
                     </div>
                 </div>
@@ -134,29 +134,37 @@
                             <th width="5%">作者</th>
                             <th width="8%">添加时间</th>
                             <th width="8%">修改时间</th>
-                            <th width="15%">操作</th>
+                            <th width="18%">操作</th>
                         </tr>
                         </thead>
                         <tbody>
+                        {foreach name="allArticle" item="vo"}
                         <tr>
-                            <td>1</td>
-                            <td><img src="/static/images/wall_page/1.jpg" style="width: 60px; height: 60px"></td>
-                            <td>Laravel 的 Blade 模板引擎</td>
-                            <td>Blade 是 Laravel 提供的一个简单而又强大的模板引擎。和其他流行的 PHP 模板引擎不同，Blade 并不限制你在视图中使用原生 PHP 代码。</td>
-                            <td>admin</td>
-                            <td>admin</td>
-                            <td>2018-05-12 16:30:23</td>
-                            <td>2018-05-12 16:30:23</td>
+                            <td>{$vo.id}</td>
+                            <td><img src="{$vo.image}" style="width: 60px; height: 60px"></td>
+                            <td>{$vo.title}</td>
+                            <td>{$vo.description}</td>
+                            <td>{$vo.author}</td>
                             <td>
-                                <a class="btn btn-primary">置顶</a>
-                                <a class="btn btn-success">编辑</a>
-                                <a class="btn btn-warning">删除</a>
+                                {switch name="$vo.is_top" }
+                                    {case value="1"}置顶{/case}
+                                    {case value="0"}未置顶{/case}
+                                {/switch}
+                            </td>
+                            <td>{$vo.create_time}</td>
+                            <td>{$vo.update_time}</td>
+                            <td>
+                                <a href="{:url('/admin/article/setTop')}?id={$vo.id}" class="btn btn-info">预览</a>
+                                <a href="{:url('/admin/article/setTop')}?id={$vo.id}" class="btn btn-primary">置顶</a>
+                                <a href="{:url('/admin/article/articleEdit')}?id={$vo.id}" class="btn btn-success">编辑</a>
+                                <a href="{:url('/admin/article/delete')}?id={$vo.id}" class="btn btn-warning">删除</a>
                             </td>
                         </tr>
-
+                        {/foreach}
 
                         </tbody>
                     </table>
+                    {$allArticle->render()}
                 </div>
             </div>
             <!-- /BOX -->

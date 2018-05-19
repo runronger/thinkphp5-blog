@@ -53,4 +53,6 @@ return [
     'Article' => 'Article',
     'Article list' => 'Article list',
     'Add articles' => 'Add articles',
+    'article_add_success' => 'Article added successfully',
+    'article_add_fail' => 'Article added failed',
 ];

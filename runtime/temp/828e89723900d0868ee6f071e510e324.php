@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:37:"theme/admin/article/article_list.html";i:1526525704;s:46:"/home/rong/WEBROOT/tp5/theme/admin/layout.html";i:1526634179;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:37:"theme/admin/article/article_list.html";i:1526726838;s:46:"/home/rong/WEBROOT/tp5/theme/admin/layout.html";i:1526634179;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -506,7 +506,7 @@
                 <div class="box-title">
                     <h4><i class="fa fa-table"></i>文章列表</h4>
                     <div class="tools">
-                        <a href="javascript:;" class="btn btn-xs btn-success" style="color: #ffffff;">导出
+                        <a href="<?php echo url('/admin/article/articleEdit'); ?>" class="btn btn-xs btn-success" style="color: #ffffff;">添加
                         </a>
                     </div>
                 </div>
@@ -522,29 +522,34 @@
                             <th width="5%">作者</th>
                             <th width="8%">添加时间</th>
                             <th width="8%">修改时间</th>
-                            <th width="15%">操作</th>
+                            <th width="18%">操作</th>
                         </tr>
                         </thead>
                         <tbody>
+                        <?php if(is_array($allArticle) || $allArticle instanceof \think\Collection || $allArticle instanceof \think\Paginator): if( count($allArticle)==0 ) : echo "" ;else: foreach($allArticle as $key=>$vo): ?>
                         <tr>
-                            <td>1</td>
-                            <td><img src="/static/images/wall_page/1.jpg" style="width: 60px; height: 60px"></td>
-                            <td>Laravel 的 Blade 模板引擎</td>
-                            <td>Blade 是 Laravel 提供的一个简单而又强大的模板引擎。和其他流行的 PHP 模板引擎不同，Blade 并不限制你在视图中使用原生 PHP 代码。</td>
-                            <td>admin</td>
-                            <td>admin</td>
-                            <td>2018-05-12 16:30:23</td>
-                            <td>2018-05-12 16:30:23</td>
+                            <td><?php echo $vo['id']; ?></td>
+                            <td><img src="<?php echo $vo['image']; ?>" style="width: 60px; height: 60px"></td>
+                            <td><?php echo $vo['title']; ?></td>
+                            <td><?php echo $vo['description']; ?></td>
+                            <td><?php echo $vo['author']; ?></td>
                             <td>
-                                <a class="btn btn-primary">置顶</a>
-                                <a class="btn btn-success">编辑</a>
-                                <a class="btn btn-warning">删除</a>
+                                <?php switch($vo['is_top']): case "1": ?>置顶<?php break; case "0": ?>未置顶<?php break; endswitch; ?>
+                            </td>
+                            <td><?php echo $vo['create_time']; ?></td>
+                            <td><?php echo $vo['update_time']; ?></td>
+                            <td>
+                                <a href="<?php echo url('/admin/article/setTop'); ?>?id=<?php echo $vo['id']; ?>" class="btn btn-info">预览</a>
+                                <a href="<?php echo url('/admin/article/setTop'); ?>?id=<?php echo $vo['id']; ?>" class="btn btn-primary">置顶</a>
+                                <a href="<?php echo url('/admin/article/articleEdit'); ?>?id=<?php echo $vo['id']; ?>" class="btn btn-success">编辑</a>
+                                <a href="<?php echo url('/admin/article/delete'); ?>?id=<?php echo $vo['id']; ?>" class="btn btn-warning">删除</a>
                             </td>
                         </tr>
-
+                        <?php endforeach; endif; else: echo "" ;endif; ?>
 
                         </tbody>
                     </table>
+                    <?php echo $allArticle->render(); ?>
                 </div>
             </div>
             <!-- /BOX -->

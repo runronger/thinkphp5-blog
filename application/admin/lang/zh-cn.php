@@ -54,4 +54,6 @@ return [
     'Article' => '文章管理',
     'Article list' => '文章列表',
     'Add articles' => '添加文章',
+    'article_add_success' => '文章添加成功',
+    'article_add_fail' => '文章添加失败',
 ];

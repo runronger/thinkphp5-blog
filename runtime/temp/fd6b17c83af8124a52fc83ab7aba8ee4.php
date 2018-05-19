@@ -1,12 +1,12 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:37:"theme/admin/article/article_edit.html";i:1526719048;s:46:"/home/rong/WEBROOT/tp5/theme/admin/layout.html";i:1526634179;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:37:"theme/admin/article/article_edit.html";i:1526730279;s:46:"/home/rong/WEBROOT/tp5/theme/admin/layout.html";i:1526634179;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
-    <title><?php if(($isAdd == 1)): ?>添加<?php else: ?>编辑<?php endif; ?>文章</title>
-    <meta name="keywords" content="<?php if(($isAdd == 1)): ?>添加<?php else: ?>编辑<?php endif; ?>文章">
-    <meta name="description" content="<?php if(($isAdd == 1)): ?>添加<?php else: ?>编辑<?php endif; ?>文章">
+    <title><?php if(($tag['edit'] == 1)): ?>添加<?php else: ?>编辑<?php endif; ?>文章</title>
+    <meta name="keywords" content="<?php if(($tag['edit'] == 1)): ?>添加<?php else: ?>编辑<?php endif; ?>文章">
+    <meta name="description" content="<?php if(($tag['edit'] == 1)): ?>添加<?php else: ?>编辑<?php endif; ?>文章">
     <meta name="author" content="dengrongqiu">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
     <link rel="stylesheet" type="text/css" href="/static/admin/css/cloud-admin.min.css">
@@ -388,11 +388,11 @@
                                         <i class="fa fa-home"></i>
                                         <a href="<?php echo url('/admin/index'); ?>"><?php echo lang('Home'); ?></a>
                                     </li>
-                                    <li><?php if(($isAdd == 1)): ?>添加<?php else: ?>编辑<?php endif; ?>文章</li>
+                                    <li><?php if(($tag['edit'] == 1)): ?>添加<?php else: ?>编辑<?php endif; ?>文章</li>
                                 </ul>
                                 <!-- /BREADCRUMBS -->
 
-                                <div class="description"><?php if(($isAdd == 1)): ?>添加<?php else: ?>编辑<?php endif; ?>文章描述
+                                <div class="description"><?php if(($tag['edit'] == 1)): ?>添加<?php else: ?>编辑<?php endif; ?>文章描述
                                 </div>
                             </div>
                         </div>
@@ -406,7 +406,7 @@
                 <!-- BASIC -->
                 <div class="box  ">
                     <div class="box-title">
-                        <h4><i class="fa fa-bars"></i><?php if(($isAdd == 1)): ?>添加<?php else: ?>编辑<?php endif; ?>文章</h4>
+                        <h4><i class="fa fa-bars"></i><?php if(($tag['edit'] == 1)): ?>添加<?php else: ?>编辑<?php endif; ?>文章</h4>
                     </div>
                     <div class="box-body big">
                         <form role="form" id="articlleForm" action="" method="post" enctype="multipart/form-data">
@@ -414,24 +414,26 @@
                                 <label for="articleType">分类 <span style="color: red">*</span></label>
                                 <select class="form-control" id="articleType" name="articleType">
                                     <option value="">请选择</option>
+
                                     <option value="1">Mysql</option>
                                     <option value="0">Linux</option>
                                 </select>
                             </div>
                             <div class="form-group">
                                 <label for="articleTitle">标题 <span style="color: red">*</span></label>
-                                <input type="text" class="form-control" id="articleTitle" name="articleTitle" placeholder="Enter title">
+                                <input type="text" class="form-control" id="articleTitle" name="articleTitle" value="<?php echo $articleInfo['title']; ?>" placeholder="Enter title">
                             </div>
                             <div class="form-group">
                                 <label for="articleDescription">简介 <span style="color: red">*</span></label>
-                                <input type="text" class="form-control" id="articleDescription" name="articleDescription" placeholder="description">
+                                <input type="text" class="form-control" id="articleDescription" name="articleDescription" value="<?php echo $articleInfo['description']; ?>" placeholder="description">
                             </div>
                             <div class="form-group">
-                                <label for="articleAuthor">作者 <span style="color: red">*</span></label>
-                                <input type="text" class="form-control" id="articleAuthor" name="articleAuthor" placeholder="authoer">
+                                <label for="articleAuthor">作者</label>
+                                <input type="text" class="form-control" id="articleAuthor" name="articleAuthor" value="<?php echo $articleInfo['author']; ?>" placeholder="authoer">
                             </div>
                             <div class="form-group">
                                 <label >图片 <span style="color: red">*</span></label>
+                                <?php if(($tag['edit'] == 1)): ?>
                                 <div class="page-container">
                                     <div id="uploader" class="wu-example">
                                         <div class="queueList">
@@ -451,10 +453,27 @@
                                         </div>
                                     </div>
                                 </div>
+                                <?php else: ?>
+                                <input type="hidden" name="id" value="<?php echo $tag['id']; ?>">
+                                <div style="clear:both"></div>
+                                <div class="panel-heading">
+                                    <span class="panel-title"> 添加新图： </span>
+                                    <div style="clear:both"></div>
+                                    <input type="file"  name="file" onchange="PreviewImage(this)">
+                                    <div style="clear:both"></div>
+                                </div>
+                                <div class="panel-heading">
+                                    <span class="panel-title"> 图片预览：</span>
+                                    <div style="clear:both"></div>
+                                    <div id="imgPreview">
+                                        <img id="img1" src="<?php echo $articleInfo['image']; ?>" class="img-rounded" alt="" width="100" height="100"/>
+                                    </div>
+                                </div>
+                                <?php endif; ?>
                             </div>
                             <div class="divide-20"></div>
                             <div class="form-group">
-                                <label for="isTop">是否置顶 <span style="color: red">*</span></label>
+                                <label for="isTop">是否置顶</label>
                                     <select class="form-control" style="width: 45%" name="isTop" id="isTop">
                                         <option value="">请选择</option>
                                         <option value="1">置顶</option>
@@ -462,20 +481,20 @@
                                     </select>
                             </div>
                             <div class="form-group">
-                                <label for="addTime">发布时间 <span style="color: red">*</span></label>
+                                <label for="addTime">发布时间</label>
                                 <div class="controls">
                                     <div class="input-group">
                                             <span class="input-group-addon">
                                                 <i class="fa fa-calendar"></i>
                                             </span>
-                                        <input type="text" class="form-control" id="addTime"  name="addTime" value="" style="width: 44%" placeholder="添加时间">
+                                        <input type="text" class="form-control" id="addTime"  name="addTime" value="<?php echo $articleInfo['add_time']; ?>" style="width: 44%" placeholder="添加时间">
                                         <!--<div class="input-group-addon clearBtns">x</div>-->
                                     </div>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label for="container">内容 <span style="color: red">*</span></label>
-                                <script id="container" name="container" type="text/plain"></script>
+                                <script id="container" name="container" type="text/plain"><?php echo htmlspecialchars($articleInfo['container']); ?></script>
                             </div>
                             <div class="separator"></div>
                             <button type="submit" class="btn btn-success">提交</button>
@@ -542,6 +561,31 @@
     jQuery(document).ready(function () {
         App.init(); //Initialise plugins and elements
     });
+    function PreviewImage(imgFile) {
+        var filextension = imgFile.value.substring(imgFile.value.lastIndexOf("."), imgFile.value.length);
+        filextension = filextension.toLowerCase();
+        if ((filextension != '.jpg') && (filextension != '.gif') && (filextension != '.jpeg') && (filextension != '.png') && (filextension != '.bmp')) {
+            alert("对不起，系统仅支持标准格式的照片，请您调整格式后重新上传，谢谢 !");
+            imgFile.focus();
+        }
+        else {
+            var path;
+            if (document.all)//IE
+            {
+                imgFile.select();
+                path = document.selection.createRange().text;
+                document.getElementById("imgPreview").innerHTML = "";
+                document.getElementById("imgPreview").style.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',sizingMethod='scale',src=\"" + path + "\")";//使用滤镜效果
+            }
+            else//FF
+            {
+                path = window.URL.createObjectURL(imgFile.files[0]);// FF 7.0以上
+                //path = imgFile.files[0].getAsDataURL();// FF 3.0
+                document.getElementById("imgPreview").innerHTML = "<img id='img1'  class='img-rounded' alt='' width='100px' height='100px' src='" + path + "'/>";
+                //document.getElementById("img1").src = path;
+            }
+        }
+    }
     //set time
     $("#addTime").daterangepicker({
             //日期或字符串）最初选择的日期范围的开始日期。如果您提供了一个字符串，它必须与您的locale设置中设置的日期格式字符串匹配。
@@ -758,9 +802,6 @@
                     required:true,
                 },
                 articleDescription:{
-                    required:true,
-                },
-                articleAuthor:{
                     required:true,
                 },
                 articleImage:{
