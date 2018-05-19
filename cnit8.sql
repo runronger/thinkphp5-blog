@@ -10,7 +10,7 @@ Target Server Type    : MariaDB
 Target Server Version : 100213
 File Encoding         : 65001
 
-Date: 2018-05-11 16:04:46
+Date: 2018-05-19 17:01:04
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -37,12 +37,50 @@ CREATE TABLE `cn_admin` (
   `create_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00' ON UPDATE current_timestamp(),
   `update_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00' ON UPDATE current_timestamp(),
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of cn_admin
 -- ----------------------------
-INSERT INTO `cn_admin` VALUES ('5', 'admin', '2d2a21b2754a45c815efa9d2e1be8459', '1', '18729309523', 'rongqiu', 'xian', 'sss', '1', '2048', '1', 'ssss', '2018-05-11 16:00:02', '127.0.0.1', '2018-05-11 16:00:02', '2018-05-11 16:00:02');
+INSERT INTO `cn_admin` VALUES ('5', 'admin', '2d2a21b2754a45c815efa9d2e1be8459', '1', '18729309523', 'rongqiu', 'xian', 'sss', '1', '2048', '1', 'ssss', '2018-05-19 16:22:23', '127.0.0.1', '2018-05-19 16:22:23', '2018-05-19 16:22:23');
+
+-- ----------------------------
+-- Table structure for cn_article
+-- ----------------------------
+DROP TABLE IF EXISTS `cn_article`;
+CREATE TABLE `cn_article` (
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `type_id` tinyint(2) NOT NULL,
+  `title` varchar(120) NOT NULL,
+  `description` varchar(450) NOT NULL,
+  `author` varchar(20) NOT NULL,
+  `image` varchar(500) NOT NULL,
+  `is_top` tinyint(2) NOT NULL,
+  `add_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00' ON UPDATE current_timestamp(),
+  `container` mediumtext NOT NULL,
+  `create_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00' ON UPDATE current_timestamp(),
+  `update_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00' ON UPDATE current_timestamp(),
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of cn_article
+-- ----------------------------
+INSERT INTO `cn_article` VALUES ('1', '1', 'asdas', 'asda', 'asda', 'asda', '12', '0000-00-00 00:00:00', 'sdaasd', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
+
+-- ----------------------------
+-- Table structure for cn_article_type
+-- ----------------------------
+DROP TABLE IF EXISTS `cn_article_type`;
+CREATE TABLE `cn_article_type` (
+  `id` int(3) NOT NULL AUTO_INCREMENT,
+  `type_name` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of cn_article_type
+-- ----------------------------
 
 -- ----------------------------
 -- Table structure for it_admin

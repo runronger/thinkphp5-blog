@@ -62,6 +62,7 @@ jQuery(function() {
 
     // 实例化
     uploader = WebUploader.create({
+        auto: false,// 选完文件后，是否自动上传。
         pick: {
             id: '#filePicker',
             label: '点击选择图片'
@@ -77,30 +78,36 @@ jQuery(function() {
 
         // swf文件路径
         swf: '/static/lib/webuploader/Uploader.swf',
-
+        //[可选] [默认值：'file'] 设置文件上传域的name
+        // fileVal:{"file"},
         disableGlobalDnd: true,
-
+        //文件上传请求的参数表，每次发送都会发送此对象中的参数
+        // formData: { "name": name},
         chunked: true,
         // server: 'http://webuploader.duapp.com/server/fileupload.php',
         server: '/admin/article/upload',
-        fileNumLimit: 300,
+        //是否已二进制的流的方式发送文件，这样整个上传内容
+        // sendAsBinary:true,
+        //文件上传数量
+        fileNumLimit: 1,
         fileSizeLimit: 5 * 1024 * 1024,    // 200 M
         fileSingleSizeLimit: 1 * 1024 * 1024    // 50 M
     });
 
-    // 添加“添加文件”的按钮，
-    uploader.addButton({
-        id: '#filePicker2',
-        label: '继续添加'
-    });
+    // // 添加“添加文件”的按钮，
+    // uploader.addButton({
+    //     id: '#filePicker2',
+    //     label: '继续添加'
+    // });
 
     // 当有文件添加进来时执行，负责view的创建
     function addFile( file ) {
         var $li = $( '<li id="' + file.id + '">' +
                 '<p class="title">' + file.name + '</p>' +
-                '<p class="imgWrap"></p>'/*+
-                '<p class="progress"><span></span></p>' +
-                '</li>'*/ ),
+                '<p class="imgWrap"></p>'+
+                '<input type="hidden" name="articleImage" id="articleImage"> ' +
+                // '<p class="progress"><span></span></p>' +
+                '</li>' ),
 
             $btns = $('<div class="file-panel">' +
                 '<span class="cancel">删除</span>' +
@@ -410,6 +417,43 @@ jQuery(function() {
     uploader.onError = function( code ) {
         alert( 'Eroor: ' + code );
     };
+    /**
+     * @event uploadSuccess
+     * @param {File} file File对象
+     * @param {Object} response 服务端返回的数据
+     * @description 当文件上传成功时触发。
+     * @for  Uploader
+     */
+    uploader.on('uploadSuccess', function (file, response) {
+        var imgurl = response._raw; //上传图片的路径
+        // console.log(imgurl);
+    });
+
+    /**
+     * @event uploadAccept
+     * @param {Object} object
+     * @param {Object} ret 服务端的返回数据，json格式，如果服务端不是json格式，从ret._raw中取数据，自行解析。
+     * @description 当某个文件上传到服务端响应后，会派送此事件来询问服务端响应是否有效。如果此事件handler返回值为`false`, 则此文件将派送`server`类型的`uploadError`事件。
+     * @for  Uploader
+     */
+    uploader.on('uploadAccept', function (file, response) {
+        console.log(response);
+        if (response.status !==undefined) {
+            if (response.status) {
+                $("#articleImage").val(response.picUrl);
+                return true;
+            } else {
+                //上传失败
+                alert('上传失败, ' + response.msg);
+                uploader.removeFile(file.file);
+                return false;
+            }
+        }else{
+            require(['util'],function(){
+                util.message(response._raw,'','info',5);
+            })
+        }
+    });
 
     $upload.on('click', function() {
         if ( $(this).hasClass( 'disabled' ) ) {

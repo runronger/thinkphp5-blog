@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:37:"theme/admin/article/article_edit.html";i:1526633440;s:46:"/home/rong/WEBROOT/tp5/theme/admin/layout.html";i:1526634179;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:37:"theme/admin/article/article_edit.html";i:1526719048;s:46:"/home/rong/WEBROOT/tp5/theme/admin/layout.html";i:1526634179;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -454,8 +454,8 @@
                             </div>
                             <div class="divide-20"></div>
                             <div class="form-group">
-                                <label for="top">是否置顶 <span style="color: red">*</span></label>
-                                    <select class="form-control" style="width: 45%" name="top" id="top">
+                                <label for="isTop">是否置顶 <span style="color: red">*</span></label>
+                                    <select class="form-control" style="width: 45%" name="isTop" id="isTop">
                                         <option value="">请选择</option>
                                         <option value="1">置顶</option>
                                         <option value="0">不置顶</option>
@@ -468,7 +468,7 @@
                                             <span class="input-group-addon">
                                                 <i class="fa fa-calendar"></i>
                                             </span>
-                                        <input type="text" class="form-control" id="addTime"  name="add_times" value="" style="width: 44%" placeholder="添加时间">
+                                        <input type="text" class="form-control" id="addTime"  name="addTime" value="" style="width: 44%" placeholder="添加时间">
                                         <!--<div class="input-group-addon clearBtns">x</div>-->
                                     </div>
                                 </div>
@@ -479,6 +479,7 @@
                             </div>
                             <div class="separator"></div>
                             <button type="submit" class="btn btn-success">提交</button>
+                            <button onclick="javascript:history.go(-1)" class="btn btn-primary">返回</button>
                         </form>
                     </div>
                 </div>
@@ -762,6 +763,9 @@
                 articleAuthor:{
                     required:true,
                 },
+                articleImage:{
+                    required:true,
+                }
             }
         });
    });
