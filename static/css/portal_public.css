@@ -1,0 +1,32 @@
+@charset "UTF-8";
+/* CSS Document */
+body,ol,ul,h1,h2,h3,h4,h5,h6,p,th,td,dl,dd,form,fieldset,legend,input,textarea,select{margin:0;padding:0}
+body { font: 12px/1.5 'Microsoft Yahei', 'Simsun'; color: #666666; background: #fff }
+img { border: 0; display: block }
+ul { list-style: none; }
+h1, h2, h3, h4, h5, h6 { font-size: 100%; font-weight: normal; }
+a { outline: none; }
+a:link, a:visited { text-decoration: none; color: #666 }
+.clear { clear: both; }
+.blank { height: 5px; overflow: hidden; width: 100%; margin: auto; clear: both }
+.f_l { float: left }
+.f_r { float: right }
+.l_box { width: 670px; }
+.r_box { width: 300px; }
+
+/* 头部信息 */
+.haed { }
+.top { background: #f3f3f3; height: 40px; line-height: 40px; width: 100%;}
+.topNav {margin: auto; text-align: right; margin-right: 15%}
+.topNav a { margin-left: 20px ;font-size: 14px}
+.topNav a:hover { color: #000 }
+.topBgLine { height: 1px; width: 100%; margin-top: 1px; background: #e3e2e2 }
+.logo {height:65px;overflow: hidden}
+.logoPic{width: 50%;margin: auto}
+.logoPic img{margin-top: 10px; float: left ; }
+.search{width: 50%;margin: auto}
+.search input span{margin-top: 10px; float: right}
+.nav { width: 100%; background: #31A9B3; height: 50px; line-height: 46px; }
+.nav ul { width: 1000px; margin: auto }
+.nav a { display: inline-block; font-size: 18px; font-family: "Microsoft Yahei", Arial, Helvetica, sans-serif; padding: 0 20px; }
+.nav a:hover { background: #fff; color: #000; border-top: 4px solid #f77825; }
