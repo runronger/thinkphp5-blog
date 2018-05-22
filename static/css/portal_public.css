@@ -12,7 +12,7 @@ a:link, a:visited { text-decoration: none; color: #666 }
 .centered{width: 60%;margin: 0 auto;}
 .push-right{width: 60%; float: right}
 /* 头部信息 */
-.haed { }
+.haed {position: relative }
 .top { background: #f3f3f3; height: 40px; line-height: 40px; width: 100%;}
 .top-nav {text-align: right; padding-right: 20px;}
 .top-nav a { margin-left: 20px ;font-size: 14px}
