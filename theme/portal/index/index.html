@@ -22,53 +22,45 @@
     {block name="link"}{/block}
 </head>
 <body>
-<div class="bg"></div>
 <div class="haed">
     <div class="top">
-        <ul class="topNav">
+        <ul class="top-nav centered">
             <a href="/ " target="_blank">Home</a>
             <a href="/ " target="_blank">官方微博</a>
             <a href="/ " target="_blank">关于我们</a>
         </ul>
     </div>
-    <div class="topBgLine"></div>
-    <div class="logo">
-        <div class="logoPic">
+    <div class="top-bgline"></div>
+    <div class="logo centered">
+        <div class="logo-pic">
             <a href="/"><img src="/static/images/logo.png"></a>
         </div>
         <div class="search">
-            <input class="form-group" type="text" name="keywords">
-            <span class="fa fa-search"></span>
+            <div class="push-right">
+                <input class="search-input" type="text" name="keywords" placeholder="Search...">
+                <button class="btn btn-success">搜索<i class=" fa fa-search"></i></button>
+            </div>
         </div>
     </div>
-    <div class="nav nav-pills">
-        <div class="container">
-            <nav class="navbar navbar-default" role="navigation">
-                <div class="navbar-header">
-                    <a class="navbar-brand">hello</a>
-                </div>
-                <ul class="nav navbar-nav">
-                    <li class="active"><a href="#">网站首页</a></li>
-                    <li><a href="#">JS开发</a></li>
-                    <li><a href="#">html</a></li>
-                    <li><a href="#">jquery</a></li>
-
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">前端学习 <span class="caret"></span></a>
-
-                        <ul class="dropdown-menu">
-                            <li><a href="#">html+css学习</a></li>
-                            <li><a href="#">javascript学习</a></li>
-                            <li><a href="#">jquery学习</a></li>
-                            <li class="divider"></li>
-                            <li><a href="#">bootstrap学习</a></li>
-                            <li><a href="#">less/sass学习</a></li>
-                            <li><a href="#">angularJS学习</a></li>
-                        </ul>
-                    </li>
+    <div class="menu">
+        <ul class="menu-ul centered">
+            <li class="active"><a href="#">网站首页</a></li>
+            <li><a href="#">JS开发</a></li>
+            <li><a href="#">html</a></li>
+            <li><a href="#">jquery</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">前端学习 <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">html+css学习</a></li>
+                    <li><a href="#">javascript学习</a></li>
+                    <li><a href="#">jquery学习</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">bootstrap学习</a></li>
+                    <li><a href="#">less/sass学习</a></li>
+                    <li><a href="#">angularJS学习</a></li>
                 </ul>
-            </nav>
-        </div>
+            </li>
+        </ul>
     </div>
 </div>
 <div class="pageBody">

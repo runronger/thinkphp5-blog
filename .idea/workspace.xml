@@ -3,14 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="914494e3-d04e-4f3a-92e9-70ad7d3c0949" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/admin/controller/Article.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/admin/controller/Article.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/runtime/temp/8f86468f014cc0a842b159aae5ad07a6.php" beforeDir="false" afterPath="$PROJECT_DIR$/runtime/temp/8f86468f014cc0a842b159aae5ad07a6.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/runtime/temp/fd6b17c83af8124a52fc83ab7aba8ee4.php" beforeDir="false" afterPath="$PROJECT_DIR$/runtime/temp/fd6b17c83af8124a52fc83ab7aba8ee4.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/portal_public.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/portal_public.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/lib/Uniform" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/Uniform" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/lib/select2" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/select2" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/lib/timeago" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/timeago" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/lib/typeahead" beforeDir="false" afterPath="$PROJECT_DIR$/static/lib/typeahead" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/theme/admin/article/article_edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/theme/admin/article/article_edit.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/theme/portal/index/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/theme/portal/index/index.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -42,38 +40,17 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/theme/portal/index/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="437">
-              <caret line="23" column="6" selection-start-line="23" selection-start-column="6" selection-end-line="23" selection-end-column="6" />
+            <state relative-caret-position="494">
+              <caret line="38" column="32" lean-forward="true" selection-start-line="38" selection-start-column="32" selection-end-line="38" selection-end-column="32" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="article_edit.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/theme/admin/article/article_edit.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="108" column="153" selection-start-line="108" selection-start-column="153" selection-end-line="108" selection-end-column="153" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Article.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/application/admin/controller/Article.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="38" column="51" selection-start-line="38" selection-start-column="51" selection-end-line="38" selection-end-column="51" />
-              <folding>
-                <element signature="e#40#58#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="portal_public.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="portal_public.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/static/css/portal_public.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="513">
-              <caret line="27" column="50" selection-start-line="27" selection-start-column="50" selection-end-line="27" selection-end-column="50" />
+              <caret line="27" column="33" selection-start-line="27" selection-start-column="33" selection-end-line="27" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -214,10 +191,10 @@
         <option value="$PROJECT_DIR$/theme/portal/base.html" />
         <option value="$PROJECT_DIR$/static/css/base.css" />
         <option value="$PROJECT_DIR$/static/public.css" />
-        <option value="$PROJECT_DIR$/static/css/portal_public.css" />
-        <option value="$PROJECT_DIR$/theme/portal/index/index.html" />
         <option value="$PROJECT_DIR$/theme/admin/article/article_edit.html" />
         <option value="$PROJECT_DIR$/application/admin/controller/Article.php" />
+        <option value="$PROJECT_DIR$/theme/portal/index/index.html" />
+        <option value="$PROJECT_DIR$/static/css/portal_public.css" />
       </list>
     </option>
   </component>
@@ -364,7 +341,7 @@
       <workItem from="1526605525669" duration="14761000" />
       <workItem from="1526692057951" duration="28712000" />
       <workItem from="1526865230443" duration="19354000" />
-      <workItem from="1526951279758" duration="2848000" />
+      <workItem from="1526951279758" duration="15954000" />
     </task>
     <task id="LOCAL-00001" summary="补充说明">
       <created>1526292620119</created>
@@ -377,7 +354,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="222343000" />
+    <option name="totallyTimeSpent" value="235449000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="50" y="-11" width="1871" height="1092" extended-state="6" />
@@ -639,13 +616,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/css/base.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="589">
-          <caret line="31" column="10" selection-start-line="31" selection-start-column="10" selection-end-line="31" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/js/silder.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
@@ -660,6 +630,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/application/admin/controller/Article.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="51" column="42" lean-forward="true" selection-start-line="51" selection-start-column="42" selection-end-line="51" selection-end-column="42" />
+          <folding>
+            <element signature="e#40#58#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/theme/admin/article/article_edit.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="101" column="216" selection-start-line="101" selection-start-column="205" selection-end-line="101" selection-end-column="216" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/css/base.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="589">
+          <caret line="31" column="10" selection-start-line="31" selection-start-column="10" selection-end-line="31" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/theme/portal/base.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="760">
@@ -671,34 +665,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/theme/portal/index/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="494">
+          <caret line="38" column="32" lean-forward="true" selection-start-line="38" selection-start-column="32" selection-end-line="38" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/static/css/portal_public.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="513">
-          <caret line="27" column="50" selection-start-line="27" selection-start-column="50" selection-end-line="27" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/theme/portal/index/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="23" column="6" selection-start-line="23" selection-start-column="6" selection-end-line="23" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/theme/admin/article/article_edit.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="108" column="153" selection-start-line="108" selection-start-column="153" selection-end-line="108" selection-end-column="153" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/admin/controller/Article.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="38" column="51" selection-start-line="38" selection-start-column="51" selection-end-line="38" selection-end-column="51" />
-          <folding>
-            <element signature="e#40#58#0#PHP" expanded="true" />
-          </folding>
+          <caret line="27" column="33" selection-start-line="27" selection-start-column="33" selection-end-line="27" selection-end-column="33" />
         </state>
       </provider>
     </entry>
