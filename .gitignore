@@ -1,4 +1,7 @@
 .idea
 .get
 runtime
+runtime/temp
+runtime/cache
+runtime/log
 upload

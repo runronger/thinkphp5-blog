@@ -36,7 +36,7 @@ class Article extends Base
             $articleImage = $request->post('articleImage') ? $request->post('articleImage') : '';
             $isTop = $request->post('top') ? $request->post('top') : 0 ;
             $addTime = $request->post('addTime') ? $request->post('addTime') : date("Y-m-d H:i:s",time());
-            $content = $request->post('container','','htmlspecialchars');
+            $content = $request->post('container');
             //修改部分
             $article = new ArticleModel();
             if ($id){
@@ -48,7 +48,8 @@ class Article extends Base
                         $picUrl=$path . $info->getSaveName(); //这个个地址是图片的savepath和savename组成，你懂得
                     }
                 }else{
-                    $picUrl = $article->where('id='.$id)->field('image')->find();
+                    $pic = $article->where('id='.$id)->field('image')->find();
+                    $picUrl = $pic->image;
                 }
                 $data = [
                     'type_id' => $articleType,

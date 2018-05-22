@@ -33,15 +33,15 @@
                             </div>
                             <div class="form-group">
                                 <label for="articleTitle">标题 <span style="color: red">*</span></label>
-                                <input type="text" class="form-control" id="articleTitle" name="articleTitle" value="{$articleInfo.title}" placeholder="Enter title">
+                                <input type="text" class="form-control" id="articleTitle" name="articleTitle" value="{if condition='($tag.edit == 1)'}{else/}{$articleInfo.title}{/if}" placeholder="Enter title">
                             </div>
                             <div class="form-group">
                                 <label for="articleDescription">简介 <span style="color: red">*</span></label>
-                                <input type="text" class="form-control" id="articleDescription" name="articleDescription" value="{$articleInfo.description}" placeholder="description">
+                                <input type="text" class="form-control" id="articleDescription" name="articleDescription" value="{if condition='($tag.edit == 1)'}{else/}{$articleInfo.description}{/if}" placeholder="description">
                             </div>
                             <div class="form-group">
                                 <label for="articleAuthor">作者</label>
-                                <input type="text" class="form-control" id="articleAuthor" name="articleAuthor" value="{$articleInfo.author}" placeholder="authoer">
+                                <input type="text" class="form-control" id="articleAuthor" name="articleAuthor" value="{if condition='($tag.edit == 1)'}{else/}{$articleInfo.author}{/if}" placeholder="authoer">
                             </div>
                             <div class="form-group">
                                 <label >图片 <span style="color: red">*</span></label>
@@ -99,14 +99,14 @@
                                             <span class="input-group-addon">
                                                 <i class="fa fa-calendar"></i>
                                             </span>
-                                        <input type="text" class="form-control" id="addTime"  name="addTime" value="{$articleInfo.add_time}" style="width: 44%" placeholder="添加时间">
+                                        <input type="text" class="form-control" id="addTime"  name="addTime" value="{if condition='($tag.edit == 1)'}{else/}{$articleInfo.add_time}{/if}" style="width: 44%" placeholder="添加时间">
                                         <!--<div class="input-group-addon clearBtns">x</div>-->
                                     </div>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label for="container">内容 <span style="color: red">*</span></label>
-                                <script id="container" name="container" type="text/plain">{:htmlspecialchars($articleInfo.container)}</script>
+                                <script id="container" name="container" type="text/plain">{if condition='($tag.edit == 1)'}{else/}{$articleInfo.container}{/if}</script>
                             </div>
                             <div class="separator"></div>
                             <button type="submit" class="btn btn-success">提交</button>

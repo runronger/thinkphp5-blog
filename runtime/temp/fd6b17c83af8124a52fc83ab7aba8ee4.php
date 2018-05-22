@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:37:"theme/admin/article/article_edit.html";i:1526730279;s:46:"/home/rong/WEBROOT/tp5/theme/admin/layout.html";i:1526634179;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:37:"theme/admin/article/article_edit.html";i:1526970605;s:46:"/home/rong/WEBROOT/tp5/theme/admin/layout.html";i:1526634179;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -421,15 +421,15 @@
                             </div>
                             <div class="form-group">
                                 <label for="articleTitle">标题 <span style="color: red">*</span></label>
-                                <input type="text" class="form-control" id="articleTitle" name="articleTitle" value="<?php echo $articleInfo['title']; ?>" placeholder="Enter title">
+                                <input type="text" class="form-control" id="articleTitle" name="articleTitle" value="<?php if(($tag['edit'] == 1)): else: ?><?php echo $articleInfo['title']; endif; ?>" placeholder="Enter title">
                             </div>
                             <div class="form-group">
                                 <label for="articleDescription">简介 <span style="color: red">*</span></label>
-                                <input type="text" class="form-control" id="articleDescription" name="articleDescription" value="<?php echo $articleInfo['description']; ?>" placeholder="description">
+                                <input type="text" class="form-control" id="articleDescription" name="articleDescription" value="<?php if(($tag['edit'] == 1)): else: ?><?php echo $articleInfo['description']; endif; ?>" placeholder="description">
                             </div>
                             <div class="form-group">
                                 <label for="articleAuthor">作者</label>
-                                <input type="text" class="form-control" id="articleAuthor" name="articleAuthor" value="<?php echo $articleInfo['author']; ?>" placeholder="authoer">
+                                <input type="text" class="form-control" id="articleAuthor" name="articleAuthor" value="<?php if(($tag['edit'] == 1)): else: ?><?php echo $articleInfo['author']; endif; ?>" placeholder="authoer">
                             </div>
                             <div class="form-group">
                                 <label >图片 <span style="color: red">*</span></label>
@@ -487,14 +487,14 @@
                                             <span class="input-group-addon">
                                                 <i class="fa fa-calendar"></i>
                                             </span>
-                                        <input type="text" class="form-control" id="addTime"  name="addTime" value="<?php echo $articleInfo['add_time']; ?>" style="width: 44%" placeholder="添加时间">
+                                        <input type="text" class="form-control" id="addTime"  name="addTime" value="<?php if(($tag['edit'] == 1)): else: ?><?php echo $articleInfo['add_time']; endif; ?>" style="width: 44%" placeholder="添加时间">
                                         <!--<div class="input-group-addon clearBtns">x</div>-->
                                     </div>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label for="container">内容 <span style="color: red">*</span></label>
-                                <script id="container" name="container" type="text/plain"><?php echo htmlspecialchars($articleInfo['container']); ?></script>
+                                <script id="container" name="container" type="text/plain"><?php if(($tag['edit'] == 1)): else: ?><?php echo $articleInfo['container']; endif; ?></script>
                             </div>
                             <div class="separator"></div>
                             <button type="submit" class="btn btn-success">提交</button>
