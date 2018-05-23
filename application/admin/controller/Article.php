@@ -28,6 +28,11 @@ class Article extends Base
     public function articleEdit(Request $request)
     {
         if ($request->isPost()){
+           /* // 使用表单令牌认证
+            if(false === request()->checkToken($data)){
+                $this->error = "表单令牌数据验证失败！";
+                return false;
+            }*/
             $id = $request->post('id');
             $articleType = $request->post('articleType');
             $articleTitle = trim($request->post('articleTitle'));
