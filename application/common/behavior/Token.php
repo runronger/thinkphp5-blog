@@ -3,17 +3,13 @@
  * Created by PhpStorm.
  * User: rong
  * Date: 18-5-23
- * Time: 下午2:21
+ * Time: 下午3:15
  */
-namespace app\admin\behavior;
-
+namespace app\common\behavior;
+use think\Config;
+use think\Hook;
 class Token
 {
-    public function run(&$params)
-    {
-        echo $params;
-    }
-
     /**
      * 系统行为扩展：表单令牌生成
      */
@@ -32,7 +28,7 @@ class Token
      */
     public function __construct()
     {
-        if (\think\Config::has('token')) {
+        if (Config::has('token')) {
             $this->config = array_merge($this->config, config('token'));
         }
     }
@@ -41,7 +37,7 @@ class Token
      * 方法注入到request中
      * @param $request
      */
-    public function module_init(&$request)
+    public function moduleInit(&$request)
     {
         // 检测当前对象中是否有hook方法
         if (!method_exists($request, 'hook')) {
@@ -53,7 +49,7 @@ class Token
             if(!empty($data) && is_array($data)){
                 $params['data'] = $data;
             }
-            $result = \think\Hook::exec(__CLASS__, 'check', $params);
+            $result = Hook::exec(__CLASS__, 'check', $params);
             if(false === $result){
                 return false;
             }
@@ -66,7 +62,7 @@ class Token
      * view_filter行为入口
      * @param $content
      */
-    public function view_filter(&$content)
+    public function viewFilter(&$content)
     {
         if ($this->config['token_on']) {
             list($tokenName, $tokenKey, $tokenValue) = $this->getToken();
@@ -99,7 +95,7 @@ str;
      * app_end行为入口
      * @param $response
      */
-    public function app_end(&$response)
+    public function appEnd(&$response)
     {
         if ($this->config['token_on']) {
             list($tokenName, $tokenKey, $tokenValue) = $this->getToken();
@@ -171,5 +167,10 @@ str;
 
         return true;
     }
+
+//    public function run(&$params)
+//    {
+//        echo $params;
+//    }
 
 }

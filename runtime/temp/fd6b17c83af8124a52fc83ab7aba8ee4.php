@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:37:"theme/admin/article/article_edit.html";i:1526970605;s:46:"/home/rong/WEBROOT/tp5/theme/admin/layout.html";i:1526634179;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:37:"theme/admin/article/article_edit.html";i:1527063380;s:46:"/home/rong/WEBROOT/tp5/theme/admin/layout.html";i:1526634179;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -410,6 +410,7 @@
                     </div>
                     <div class="box-body big">
                         <form role="form" id="articlleForm" action="" method="post" enctype="multipart/form-data">
+                            <input type="hidden" name="__token__" value="<?php echo \think\Request::instance()->token(); ?>" />
                             <div class="form-group">
                                 <label for="articleType">分类 <span style="color: red">*</span></label>
                                 <select class="form-control" id="articleType" name="articleType">

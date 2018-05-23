@@ -3,9 +3,14 @@
 namespace app\admin\controller;
 
 use think\Request;
+use think\Validate;
 use app\admin\model\Article as ArticleModel;
 class Article extends Base
 {
+    protected $rule = [
+        'token'  =>  'token',
+
+    ];
     /**
      * 文章列表
      * @return mixed
@@ -28,67 +33,69 @@ class Article extends Base
     public function articleEdit(Request $request)
     {
         if ($request->isPost()){
-           /* // 使用表单令牌认证
-            if(false === request()->checkToken($data)){
-                $this->error = "表单令牌数据验证失败！";
-                return false;
-            }*/
-            $id = $request->post('id');
-            $articleType = $request->post('articleType');
-            $articleTitle = trim($request->post('articleTitle'));
-            $articleDescription = trim($request->post('articleDescription'));
-            $articleAuthor = $request->post('articleAuthor') ? trim($request->post('articleAuthor')) : "admin";
-            $articleImage = $request->post('articleImage') ? $request->post('articleImage') : '';
-            $isTop = $request->post('top') ? $request->post('top') : 0 ;
-            $addTime = $request->post('addTime') ? $request->post('addTime') : date("Y-m-d H:i:s",time());
-            $content = $request->post('container');
-            //修改部分
-            $article = new ArticleModel();
-            if ($id){
-                $file = $request->file('file');
-                if($file){
-                    $info = $file->validate(['size'=>'2048000000','ext'=>'jpg,png,gif'])->move(ROOT_PATH . DS . 'upload'.DS.'images');
-                    if($info){
-                        $path =  DS . 'upload'.DS.'images'.DS;
-                        $picUrl=$path . $info->getSaveName(); //这个个地址是图片的savepath和savename组成，你懂得
+            $token = $request->post('__token__');
+            $validate = new Validate($this->rule);
+            $pass = $validate->check($token);
+            if ($pass){
+                $id = $request->post('id');
+                $articleType = $request->post('articleType');
+                $articleTitle = trim($request->post('articleTitle'));
+                $articleDescription = trim($request->post('articleDescription'));
+                $articleAuthor = $request->post('articleAuthor') ? trim($request->post('articleAuthor')) : "admin";
+                $articleImage = $request->post('articleImage') ? $request->post('articleImage') : '';
+                $isTop = $request->post('top') ? $request->post('top') : 0 ;
+                $addTime = $request->post('addTime') ? $request->post('addTime') : date("Y-m-d H:i:s",time());
+                $content = $request->post('container');
+                //修改部分
+                $article = new ArticleModel();
+                if ($id){
+                    $file = $request->file('file');
+                    if($file){
+                        $info = $file->validate(['size'=>'2048000000','ext'=>'jpg,png,gif'])->move(ROOT_PATH . DS . 'upload'.DS.'images');
+                        if($info){
+                            $path =  DS . 'upload'.DS.'images'.DS;
+                            $picUrl=$path . $info->getSaveName(); //这个个地址是图片的savepath和savename组成，你懂得
+                        }
+                    }else{
+                        $pic = $article->where('id='.$id)->field('image')->find();
+                        $picUrl = $pic->image;
+                    }
+                    $data = [
+                        'type_id' => $articleType,
+                        'title' => $articleTitle,
+                        'description' => $articleDescription,
+                        'author' => $articleAuthor,
+                        'image' => $picUrl,
+                        'is_top' => $isTop,
+                        'container' => $content,
+                        'update_time' => date("Y-m-d H:i:s",time())
+                    ];
+                    $resule = $article->where('id', $id)->update($data);
+                    if ($resule){
+                        $this->success(lang('article_add_success'),url('/admin/article/articleList'));
+                    }else{
+                        $this->error(lang('article_add_fail'));
                     }
                 }else{
-                    $pic = $article->where('id='.$id)->field('image')->find();
-                    $picUrl = $pic->image;
-                }
-                $data = [
-                    'type_id' => $articleType,
-                    'title' => $articleTitle,
-                    'description' => $articleDescription,
-                    'author' => $articleAuthor,
-                    'image' => $picUrl,
-                    'is_top' => $isTop,
-                    'container' => $content,
-                    'update_time' => date("Y-m-d H:i:s",time())
-                ];
-                $resule = $article->where('id', $id)->update($data);
-                if ($resule){
-                    $this->success(lang('article_add_success'),url('/admin/article/articleList'));
-                }else{
-                    $this->error(lang('article_add_fail'));
+                    //新增部分
+                    $article->type_id = $articleType;
+                    $article->title = $articleTitle;
+                    $article->description = $articleDescription;
+                    $article->author = $articleAuthor;
+                    $article->image = $articleImage;
+                    $article->is_top = $isTop;
+                    $article->add_time = $addTime;
+                    $article->container = $content;
+                    $article->create_time = date("Y-m-d H:i:s",time());
+                    $resule = $article->save();
+                    if ($resule){
+                        $this->success(lang('article_add_success'),url('/admin/article/articleList'));
+                    }else{
+                        $this->error(lang('article_add_fail'));
+                    }
                 }
             }else{
-                //新增部分
-                $article->type_id = $articleType;
-                $article->title = $articleTitle;
-                $article->description = $articleDescription;
-                $article->author = $articleAuthor;
-                $article->image = $articleImage;
-                $article->is_top = $isTop;
-                $article->add_time = $addTime;
-                $article->container = $content;
-                $article->create_time = date("Y-m-d H:i:s",time());
-                $resule = $article->save();
-                if ($resule){
-                    $this->success(lang('article_add_success'),url('/admin/article/articleList'));
-                }else{
-                    $this->error(lang('article_add_fail'));
-                }
+                $this->error(lang('article_add_fail'));
             }
         }else{
             $id = $request->get('id');
