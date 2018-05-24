@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:22:"theme/admin/login.html";i:1527067195;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:22:"theme/admin/login.html";i:1527145956;}*/ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,11 +14,11 @@
     <meta name="author" content="dengrongqiu"/>
     <meta name="copyright" content="cnit8.com"/>
     <meta itemprop="image" content="/static/images/common/ico.png"/>
-    <link href="/static/images/common/ico.ico" rel="Shortcut Icon" type="image/x-icon">
-    <link href="/static/images/common/ico.ico" rel="icon" type="image/x-icon">
-    <link href="/static/css/common.css" rel="stylesheet"/>
+    <link href="/static/admin/images/common/ico.ico" rel="Shortcut Icon" type="image/x-icon">
+    <link href="/static/admin/images/common/ico.ico" rel="icon" type="image/x-icon">
+    <link href="/static/admin/css/common.css" rel="stylesheet"/>
     <link href="/static/lib/fontawesome/css/font-awesome.min.css" rel="stylesheet">
-    <link href="/static/css/login.css" rel="stylesheet">
+    <link href="/static/admin/css/login.css" rel="stylesheet">
 </head>
 <body>
 <div class="background"></div>

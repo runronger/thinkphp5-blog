@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:37:"theme/admin/article/article_edit.html";i:1527063380;s:46:"/home/rong/WEBROOT/tp5/theme/admin/layout.html";i:1526634179;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:37:"theme/admin/article/article_edit.html";i:1527070093;s:46:"/home/rong/WEBROOT/tp5/theme/admin/layout.html";i:1526634179;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -499,7 +499,7 @@
                             </div>
                             <div class="separator"></div>
                             <button type="submit" class="btn btn-success">提交</button>
-                            <button onclick="javascript:history.go(-1)" class="btn btn-primary">返回</button>
+                            <a  onClick="javascript :history.back(-1);" class="btn btn-primary">返回</a>
                         </form>
                     </div>
                 </div>

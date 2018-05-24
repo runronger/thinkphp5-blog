@@ -10,7 +10,7 @@ Target Server Type    : MariaDB
 Target Server Version : 100213
 File Encoding         : 65001
 
-Date: 2018-05-19 17:01:04
+Date: 2018-05-23 17:52:38
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -42,7 +42,7 @@ CREATE TABLE `cn_admin` (
 -- ----------------------------
 -- Records of cn_admin
 -- ----------------------------
-INSERT INTO `cn_admin` VALUES ('5', 'admin', '2d2a21b2754a45c815efa9d2e1be8459', '1', '18729309523', 'rongqiu', 'xian', 'sss', '1', '2048', '1', 'ssss', '2018-05-19 16:22:23', '127.0.0.1', '2018-05-19 16:22:23', '2018-05-19 16:22:23');
+INSERT INTO `cn_admin` VALUES ('5', 'admin', '2d2a21b2754a45c815efa9d2e1be8459', '1', '18729309523', 'rongqiu', 'xian', 'sss', '1', '2048', '1', 'ssss', '2018-05-23 17:34:40', '127.0.0.1', '2018-05-23 17:34:40', '2018-05-23 17:34:40');
 
 -- ----------------------------
 -- Table structure for cn_article
@@ -61,12 +61,14 @@ CREATE TABLE `cn_article` (
   `create_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00' ON UPDATE current_timestamp(),
   `update_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00' ON UPDATE current_timestamp(),
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of cn_article
 -- ----------------------------
-INSERT INTO `cn_article` VALUES ('1', '1', 'asdas', 'asda', 'asda', 'asda', '12', '0000-00-00 00:00:00', 'sdaasd', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
+INSERT INTO `cn_article` VALUES ('2', '0', '测试', '彩色', 'asd', '/upload/images/20180522/cf028dd868428827641ff19c86c9c019.png', '0', '2018-05-23 17:49:16', '<p>asdasdasda你打没打adadad那什么大事啊啊所大所<img src=\"/upload/ueditImage/20180522/1526970662637664.jpg\" title=\"1526970662637664.jpg\" alt=\"pic.jpg\"/>adada</p>', '2018-05-23 17:49:16', '2018-05-23 17:49:16');
+INSERT INTO `cn_article` VALUES ('3', '0', '测试', '彩色', 'admin', '/upload/images/20180522/0016005d9ee08dc9f02c25829d9a87a7.png', '0', '2018-05-22 14:33:53', '<p>爱仕达所大<img src=\"/upload/ueditImage/20180522/1526970759244993.jpg\" title=\"1526970759244993.jpg\" alt=\"tp.jpg\"/></p>', '2018-05-22 14:33:53', '2018-05-22 14:33:53');
+INSERT INTO `cn_article` VALUES ('4', '0', 'adasd', 'aadsa', 'dasda', '/upload/images/20180523/acb5a19eddf467225aaa5ff9b598c411.png', '0', '2018-05-23 17:49:58', '<p>adasdasda<br/></p>', '2018-05-23 17:49:58', '2018-05-23 17:49:58');
 
 -- ----------------------------
 -- Table structure for cn_article_type
