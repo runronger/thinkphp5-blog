@@ -12,7 +12,7 @@ class Photo extends Base
      *
      * @return \think\Response
      */
-    public function photoManagement()
+    public function photoList()
     {
         //
         $isAdd = 1;

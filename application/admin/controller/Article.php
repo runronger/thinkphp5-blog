@@ -4,31 +4,84 @@ namespace app\admin\controller;
 
 use think\Request;
 use think\Validate;
+use think\Db;
 use app\admin\model\Article as ArticleModel;
+use app\admin\model\ArticleType;
 class Article extends Base
 {
     protected $rule = [
         'token'  =>  'token',
 
     ];
+
     /**
      * 文章列表
      * @return mixed
+     * @throws \think\exception\DbException
      */
     public function articleList()
     {
-        //
         $article = new ArticleModel();
         $allArticle = $article->paginate(10);
-//        dump($allArticle);
+        $this->assign('isSearch',0);
         $this->assign('allArticle',$allArticle);
         return $this->fetch();
     }
 
+    public function search(Request $request)
+    {
+        $id = trim($request->post('id'));
+        $title = trim($request->post('title'));
+        $description = trim($request->post('description'));
+        $author = trim($request->post('author'));
+        $addTime = trim($request->post('addTime'));
+        $editTime = trim($request->post('editTime'));
+        $isTop = trim($request->post('isTop'));
+        $where = array();
+        if (!empty($id)){
+            $where['id'] = ['like',"%$id%"];
+        }
+        if (!empty($title)){
+            $where['title'] = ['like',"%$title%"];
+        }
+        if (!empty($description)){
+            $where['description'] = ['like',"%$description%"];
+        }
+        if (!empty($author)){
+            $where['author'] = ['like',"%$author%"];
+        }
+        if (!empty($addTime)){
+            $times = explode('-',$addTime);
+            $start=date_format(date_create($times[0]), 'Y-m-d H:i:s');
+            $end=date_format(date_create($times[1]), 'Y-m-d H:i:s');
+            $where['create_time'] = ['between time',["$start","$end"]];
+        }
+        if (!empty($editTime)){
+            $time = explode('-',$editTime);
+            $start = date_format(date_create($time[0]),'Y-m-d H:i:s');
+            $end = date_format(date_create($time[1]),'Y-m-d H:i:s');
+            $where['update_time'] = ['between time',["$start","$end"]];
+        }
+        if (!empty($isTop)){
+            $where['is_top'] = ['like',"%$isTop%"];
+        }
+//            $result = Db::name('article')->where($where)->paginate(10);
+        $result = ArticleModel::where($where)->paginate(1,false);
+//            dump($result);
+        $this->assign('isSearch',1);
+        $this->assign('allArticle',$result);
+        return $this->fetch('article_list');
+
+    }
+
+
     /**
-     * 文章编辑添加修改
+     * 文章编辑保存操作
      * @param Request $request
      * @return mixed
+     * @throws \think\db\exception\DataNotFoundException
+     * @throws \think\db\exception\ModelNotFoundException
+     * @throws \think\exception\DbException
      */
     public function articleEdit(Request $request)
     {
@@ -119,10 +172,8 @@ class Article extends Base
 
 
     /**
-     * 显示指定的资源
-     *
-     * @param  int  $id
-     * @return \think\Response
+     * 图片上传处理
+     * @return \think\response\Json
      */
     public function upload()
     {
@@ -142,36 +193,35 @@ class Article extends Base
     }
 
     /**
-     * 显示编辑资源表单页.
-     *
-     * @param  int  $id
-     * @return \think\Response
+     * 文章类型列表
+     * @param Request $request
+     * @return mixed
+     * @throws \think\exception\DbException
      */
-    public function edit($id)
+    public function typeList(Request $request)
     {
-        //
+        $type = new ArticleType();
+        $typeList = $type-> paginate(10);
+        $this->assign('typeList',$typeList);
+        return $this->fetch();
     }
 
-    /**
-     * 保存更新的资源
-     *
-     * @param  \think\Request  $request
-     * @param  int  $id
-     * @return \think\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
 
-    /**
-     * 删除指定资源
-     *
-     * @param  int  $id
-     * @return \think\Response
-     */
-    public function delete($id)
-    {
-        //
-    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }

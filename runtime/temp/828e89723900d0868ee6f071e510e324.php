@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:37:"theme/admin/article/article_list.html";i:1526726838;s:46:"/home/rong/WEBROOT/tp5/theme/admin/layout.html";i:1526634179;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:37:"theme/admin/article/article_list.html";i:1527239322;s:46:"/home/rong/WEBROOT/tp5/theme/admin/layout.html";i:1527153615;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -293,26 +293,28 @@
                         <span class="arrow"></span>
                     </a>
                     <ul class="sub">
-                        <li><a class="" href="<?php echo url('/admin/article/articleList'); ?>"><span class="sub-menu-text"><?php echo lang('Article list'); ?></span></a>
+                        <li><a class="" href="<?php echo url('/admin/article/articleList'); ?>"><span class="sub-menu-text"><?php echo lang('Article_list'); ?></span></a>
                         </li>
-                        <li><a class="" href="<?php echo url('/admin/article/articleEdit'); ?>"><span class="sub-menu-text"><?php echo lang('Add articles'); ?></span></a>
+                        <li><a class="" href="<?php echo url('/admin/article/articleEdit'); ?>"><span class="sub-menu-text"><?php echo lang('Add_articles'); ?></span></a>
+                        </li>
+                        <li><a class="" href="<?php echo url('/admin/article/typeList'); ?>"><span class="sub-menu-text"><?php echo lang('type_list'); ?></span></a>
                         </li>
                     </ul>
                 </li>
                 <li class="has-sub">
                     <a href="javascript:;" class="">
-                        <i class="fa fa-database fa-fw"></i> <span class="menu-text">资源管理</span>
+                        <i class="fa fa-database fa-fw"></i> <span class="menu-text"><?php echo lang('Resource'); ?></span>
                         <span class="arrow"></span>
                     </a>
                     <ul class="sub">
-                        <li><a class="" href="<?php echo url('/admin/photo/photoManagement'); ?>"><span class="sub-menu-text">相册管理</span></a>
+                        <li><a class="" href="<?php echo url('/admin/photo/photoList'); ?>"><span class="sub-menu-text"><?php echo lang('Album'); ?></span></a>
                         </li>
-                        <li><a class="" href="fixed_header.html"><span class="sub-menu-text">文档管理</span></a>
+                        <li><a class="" href="<?php echo url('/admin/document/documentList'); ?>"><span class="sub-menu-text"><?php echo lang('Document'); ?></span></a>
                         </li>
                     </ul>
                 </li>
                 <li><a class="" href="calendar.html"><i class="fa fa-calendar fa-fw"></i>
-                    <span class="menu-text">日历
+                    <span class="menu-text"><?php echo lang('calendar'); ?>
 									<span class="tooltip-error pull-right" title="" data-original-title="3 New Events">
 										<span class="label label-success">New</span>
 									</span>
@@ -321,45 +323,45 @@
                 </li>
                 <li class="has-sub">
                     <a href="javascript:;" class="">
-                        <i class="fa fa-map-marker fa-fw"></i> <span class="menu-text">地图管理</span>
+                        <i class="fa fa-map-marker fa-fw"></i> <span class="menu-text"><?php echo lang('Map'); ?></span>
                         <span class="arrow"></span>
                     </a>
                     <ul class="sub">
-                        <li><a class="" href="google_maps.html"><span class="sub-menu-text">店铺列表</span></a></li>
-                        <li><a class="" href="vector_maps.html"><span class="sub-menu-text">添加标注</span></a></li>
+                        <li><a class="" href="google_maps.html"><span class="sub-menu-text"><?php echo lang('Map_list'); ?></span></a></li>
+                        <li><a class="" href="vector_maps.html"><span class="sub-menu-text"><?php echo lang('Add_labels'); ?></span></a></li>
                     </ul>
                 </li>
                 <li><a class="" href="gallery.html"><i class="fa fa-picture-o fa-fw"></i> <span
-                        class="menu-text">相册</span></a>
+                        class="menu-text"><?php echo lang('Gallery'); ?></span></a>
                 </li>
                 <li class="has-sub">
                     <a href="javascript:;" class="">
-                        <i class="fa fa-user fa-fw"></i> <span class="menu-text">会员管理</span>
+                        <i class="fa fa-user fa-fw"></i> <span class="menu-text"><?php echo lang('member'); ?></span>
                         <span class="arrow"></span>
                     </a>
                     <ul class="sub">
                         <li><a class="" href="login.html"><span
-                                class="sub-menu-text">管理员列表</span></a></li>
+                                class="sub-menu-text"><?php echo lang('Member_list'); ?></span></a></li>
                         <li><a class="" href="login_bg.html"><span
-                                class="sub-menu-text">管理员添加</span></a></li>
+                                class="sub-menu-text"><?php echo lang('Member_add'); ?></span></a></li>
                     </ul>
                 </li>
                 <li class="has-sub">
                     <a href="javascript:;" class="">
-                        <i class="fa fa-briefcase fa-fw"></i> <span class="menu-text">权限管理<span
+                        <i class="fa fa-briefcase fa-fw"></i> <span class="menu-text"><?php echo lang('Authority'); ?><span
                             class="badge pull-right">3</span></span>
                         <span class="arrow"></span>
                     </a>
                     <ul class="sub">
-                        <li><a class="" href="search_results.html"><span class="sub-menu-text">角色列表</span></a>
+                        <li><a class="" href="search_results.html"><span class="sub-menu-text"><?php echo lang('Role_list'); ?></span></a>
                         </li>
                         <li><a class="" href="email_templates.html"><span
-                                class="sub-menu-text">添加角色</span></a></li>
+                                class="sub-menu-text"><?php echo lang('Add_role'); ?></span></a></li>
 
                     </ul>
                 </li>
                 <li><a class="" href="widgets_box.html"><i class="fa fa-lock fa-fw"></i> <span
-                        class="menu-text">admin信息</span></a>
+                        class="menu-text">Admin</span></a>
                 </li>
             </ul>
             <!-- /SIDEBAR MENU -->
@@ -406,33 +408,33 @@
                <div class="box-body big">
                    <div class="row">
                        <div class="widget-body floatleft">
-                           <form role="form">
+                           <form action="<?php echo url('/admin/article/search'); ?>" method="post" enctype="multipart/form-data" role="form">
 
                                <div class="col-sm-3 no-padding">
                                    <div class="form-group">
                                        <label >编号</label>
-                                       <input type="text" class="form-control" placeholder="编号" name="filter[order.id]" value="">
+                                       <input type="text" class="form-control" placeholder="编号数字" name="id" value="<?php echo \think\Request::instance()->param('id'); ?>">
                                    </div>
                                </div>
 
                                <div class="col-sm-3">
                                    <div class="form-group">
                                        <label >标题</label>
-                                       <input type="text" class="form-control" placeholder="标题" name="filter[order.order_sn]" value="">
+                                       <input type="text" class="form-control" placeholder="标题" name="title" value="<?php echo \think\Request::instance()->param('title'); ?>">
                                    </div>
                                </div>
 
                                <div class="col-sm-3">
                                    <div class="form-group">
                                        <label >描述</label>
-                                       <input type="text" class="form-control" placeholder="描述" name="filter[order.sign]" value="">
+                                       <input type="text" class="form-control" placeholder="描述" name="description" value="<?php echo \think\Request::instance()->param('description'); ?>">
                                    </div>
                                </div>
 
                                <div class="col-sm-3 no-padding">
                                    <div class="form-group">
                                        <label >作者</label>
-                                       <input type="email" class="form-control" placeholder="作者" name="filter[user.email]" value="">
+                                       <input type="text" class="form-control" placeholder="作者" name="author" value="<?php echo \think\Request::instance()->param('author'); ?>">
                                    </div>
                                </div>
 
@@ -440,12 +442,11 @@
 
                                    <div class="form-group">
                                        <label >添加时间</label>
-
                                        <div class="controls">
                                            <div class="input-group">
                                             <span class="input-group-addon">
                                                 <i class="fa fa-calendar"></i>
-                                            </span><input type="text" class="form-control" id="addTime" placeholder="添加时间" name="filter[article.add_times]" value="">
+                                            </span><input type="text" class="form-control" id="addTime" placeholder="添加时间" name="addTime" value="<?php echo \think\Request::instance()->param('addTime'); ?>">
                                                <!--<div class="input-group-addon clearBtns">x</div>-->
                                            </div>
                                        </div>
@@ -462,32 +463,26 @@
                                            <div class="input-group">
                                             <span class="input-group-addon">
                                                 <i class="fa fa-calendar"></i>
-                                            </span><input type="text" class="form-control" id="editTime" placeholder="修改时间" name="filter[order.pay_times]" value="">
+                                            </span><input type="text" class="form-control" id="editTime" placeholder="修改时间" name="editTime" value="<?php echo \think\Request::instance()->param('editTime'); ?>">
                                                <!--<div class="input-group-addon clearBtns">x</div>-->
                                            </div>
                                        </div>
                                    </div>
                                </div>
-
-
-
                                <div class="col-sm-3">
                                    <div class="form-group">
                                        <label >置顶</label>
                                        <!--<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">-->
-                                       <select id="e1" class="form-control" style="width:100%;" name="filter[order.status]">
+                                       <select id="e1" class="form-control" style="width:100%;" name="isTop">
                                            <option value="">请选择</option>
                                            <option value="0">未置顶</option>
                                            <option value="1">已置顶</option>
                                        </select>
-
                                    </div>
                                </div>
-
-
-
                                <div class="col-sm-12 no-padding">
-                                   <button type="submit" name="doSearch" class="btn btn-primary">搜索</button>
+                                   <button type="submit" class="btn btn-primary">搜索</button>
+                                   <button type="reset" class="btn btn-default">清空</button>
                                </div>
                            </form>
                        </div>
@@ -495,20 +490,24 @@
                </div>
            </div>
        </div>
-
     </div>
-
-
     <div class="row">
         <div class="col-xs-12 col-md-12 col-md-12">
             <!-- BOX -->
             <div class="box">
                 <div class="box-title">
                     <h4><i class="fa fa-table"></i>文章列表</h4>
+                    <?php if(($isSearch == 0)): ?>
                     <div class="tools">
-                        <a href="<?php echo url('/admin/article/articleEdit'); ?>" class="btn btn-xs btn-success" style="color: #ffffff;">添加
+                        <a href="<?php echo url('/admin/article/articleEdit'); ?>" class="btn btn-xs btn-success" style="color: #ffffff;">添加文章
                         </a>
                     </div>
+                    <?php elseif(($isSearch == 1)): ?>
+                    <div class="tools">
+                        <a href="<?php echo url('/admin/article/download'); ?>" class="btn btn-xs btn-success" style="color: #ffffff;">导出文章
+                        </a>
+                    </div>
+                    <?php endif; ?>
                 </div>
                 <div class="box-body">
                     <table class="table table-bordered">
@@ -532,10 +531,10 @@
                             <td><img src="<?php echo $vo['image']; ?>" style="width: 60px; height: 60px"></td>
                             <td><?php echo $vo['title']; ?></td>
                             <td><?php echo $vo['description']; ?></td>
-                            <td><?php echo $vo['author']; ?></td>
                             <td>
-                                <?php switch($vo['is_top']): case "1": ?>置顶<?php break; case "0": ?>未置顶<?php break; endswitch; ?>
+                                <?php switch($vo['is_top']): case "1": ?><button class="btn btn-info">已置顶</button><?php break; case "0": ?><button class="btn btn-default">未置顶</button><?php break; endswitch; ?>
                             </td>
+                            <td><?php echo $vo['author']; ?></td>
                             <td><?php echo $vo['create_time']; ?></td>
                             <td><?php echo $vo['update_time']; ?></td>
                             <td>
@@ -620,13 +619,13 @@
             //（真/假）在日历上的每周开始时显示ISO星期数。
             "showISOWeekNumbers":false,
             //（true / false）添加选择框以选择日期以外的时间。
-            "timePicker": true,
+            "timePicker": false,
             //（数字）分钟选择列表的时间增量（即30，只允许选择以0或30结尾的时间）
             "timePickerIncrement":1,
             //（true / false）使用24小时而不是12小时的时间，取消AM / PM选择
-            "timePicker24Hour": true,
+            "timePicker24Hour": false,
             //true / false）在timePicker中显示秒数
-            "timePickerSeconds": true,
+            "timePickerSeconds": false,
             //设置用户可以从中选择的预定义日期范围。每个键都是范围的标签，其值是一个数组，其中两个日期代表范围的界限。
                 "ranges": {
                     'Today': [moment(), moment()],
@@ -696,8 +695,8 @@
 
         },
             function(start, end, label) {
-                console.log('New date range selected: ' + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD') + ' (predefined range: ' + label + ')');
-                $("#addTime").val(start.format('YYYY-MM-DD HH:mm:ss') + ' - ' + end.format('YYYY-MM-DD HH:mm:ss'));
+                console.log('New date range selected: ' + start.format('YYYY-MM-DD HH:mm:ss') + ' to ' + end.format('YYYY-MM-DD  HH:mm:ss') + ' (predefined range: ' + label + ')');
+                $("#addTime").val(start.format('YYYY/MM/DD') + ' - ' + end.format('YYYY/MM/DD'));
             }
         );
         $("#editTime").daterangepicker({
@@ -724,13 +723,13 @@
                 //（真/假）在日历上的每周开始时显示ISO星期数。
                 "showISOWeekNumbers":false,
                 //（true / false）添加选择框以选择日期以外的时间。
-                "timePicker": true,
+                "timePicker": false,
                 //（数字）分钟选择列表的时间增量（即30，只允许选择以0或30结尾的时间）
                 "timePickerIncrement":1,
                 //（true / false）使用24小时而不是12小时的时间，取消AM / PM选择
-                "timePicker24Hour": true,
+                "timePicker24Hour": false,
                 //true / false）在timePicker中显示秒数
-                "timePickerSeconds": true,
+                "timePickerSeconds": false,
                 //设置用户可以从中选择的预定义日期范围。每个键都是范围的标签，其值是一个数组，其中两个日期代表范围的界限。
                 "ranges": {
                     'Today': [moment(), moment()],
@@ -800,8 +799,8 @@
 
             },
             function(start, end, label) {
-                console.log('New date range selected: ' + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD') + ' (predefined range: ' + label + ')');
-                $("#editTime").val(start.format('YYYY-MM-DD HH:mm:ss') + ' - ' + end.format('YYYY-MM-DD HH:mm:ss'));
+                console.log('New date range selected: ' + start.format('YYYY-MM-DD HH:mm:ss') + ' to ' + end.format('YYYY-MM-DD HH:mm:ss') + ' (predefined range: ' + label + ')');
+                $("#editTime").val(start.format('YYYY/MM/DD') + ' - ' + end.format('YYYY/MM/DD'));
             }
         );
     </script>

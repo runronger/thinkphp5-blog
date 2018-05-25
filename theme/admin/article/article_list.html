@@ -18,33 +18,33 @@
                <div class="box-body big">
                    <div class="row">
                        <div class="widget-body floatleft">
-                           <form role="form">
+                           <form action="{:url('/admin/article/search')}" method="post" enctype="multipart/form-data" role="form">
 
                                <div class="col-sm-3 no-padding">
                                    <div class="form-group">
                                        <label >编号</label>
-                                       <input type="text" class="form-control" placeholder="编号" name="filter[order.id]" value="">
+                                       <input type="text" class="form-control" placeholder="编号数字" name="id" value="{$Request.param.id}">
                                    </div>
                                </div>
 
                                <div class="col-sm-3">
                                    <div class="form-group">
                                        <label >标题</label>
-                                       <input type="text" class="form-control" placeholder="标题" name="filter[order.order_sn]" value="">
+                                       <input type="text" class="form-control" placeholder="标题" name="title" value="{$Request.param.title}">
                                    </div>
                                </div>
 
                                <div class="col-sm-3">
                                    <div class="form-group">
                                        <label >描述</label>
-                                       <input type="text" class="form-control" placeholder="描述" name="filter[order.sign]" value="">
+                                       <input type="text" class="form-control" placeholder="描述" name="description" value="{$Request.param.description}">
                                    </div>
                                </div>
 
                                <div class="col-sm-3 no-padding">
                                    <div class="form-group">
                                        <label >作者</label>
-                                       <input type="email" class="form-control" placeholder="作者" name="filter[user.email]" value="">
+                                       <input type="text" class="form-control" placeholder="作者" name="author" value="{$Request.param.author}">
                                    </div>
                                </div>
 
@@ -52,12 +52,11 @@
 
                                    <div class="form-group">
                                        <label >添加时间</label>
-
                                        <div class="controls">
                                            <div class="input-group">
                                             <span class="input-group-addon">
                                                 <i class="fa fa-calendar"></i>
-                                            </span><input type="text" class="form-control" id="addTime" placeholder="添加时间" name="filter[article.add_times]" value="">
+                                            </span><input type="text" class="form-control" id="addTime" placeholder="添加时间" name="addTime" value="{$Request.param.addTime}">
                                                <!--<div class="input-group-addon clearBtns">x</div>-->
                                            </div>
                                        </div>
@@ -74,32 +73,26 @@
                                            <div class="input-group">
                                             <span class="input-group-addon">
                                                 <i class="fa fa-calendar"></i>
-                                            </span><input type="text" class="form-control" id="editTime" placeholder="修改时间" name="filter[order.pay_times]" value="">
+                                            </span><input type="text" class="form-control" id="editTime" placeholder="修改时间" name="editTime" value="{$Request.param.editTime}">
                                                <!--<div class="input-group-addon clearBtns">x</div>-->
                                            </div>
                                        </div>
                                    </div>
                                </div>
-
-
-
                                <div class="col-sm-3">
                                    <div class="form-group">
                                        <label >置顶</label>
                                        <!--<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">-->
-                                       <select id="e1" class="form-control" style="width:100%;" name="filter[order.status]">
+                                       <select id="e1" class="form-control" style="width:100%;" name="isTop">
                                            <option value="">请选择</option>
                                            <option value="0">未置顶</option>
                                            <option value="1">已置顶</option>
                                        </select>
-
                                    </div>
                                </div>
-
-
-
                                <div class="col-sm-12 no-padding">
-                                   <button type="submit" name="doSearch" class="btn btn-primary">搜索</button>
+                                   <button type="submit" class="btn btn-primary">搜索</button>
+                                   <button type="reset" class="btn btn-default">清空</button>
                                </div>
                            </form>
                        </div>
@@ -107,20 +100,24 @@
                </div>
            </div>
        </div>
-
     </div>
-
-
     <div class="row">
         <div class="col-xs-12 col-md-12 col-md-12">
             <!-- BOX -->
             <div class="box">
                 <div class="box-title">
                     <h4><i class="fa fa-table"></i>文章列表</h4>
+                    {if condition='($isSearch == 0)'}
                     <div class="tools">
-                        <a href="{:url('/admin/article/articleEdit')}" class="btn btn-xs btn-success" style="color: #ffffff;">添加
+                        <a href="{:url('/admin/article/articleEdit')}" class="btn btn-xs btn-success" style="color: #ffffff;">添加文章
                         </a>
                     </div>
+                    {elseif condition='($isSearch == 1)'}
+                    <div class="tools">
+                        <a href="{:url('/admin/article/download')}" class="btn btn-xs btn-success" style="color: #ffffff;">导出文章
+                        </a>
+                    </div>
+                    {/if}
                 </div>
                 <div class="box-body">
                     <table class="table table-bordered">
@@ -144,13 +141,13 @@
                             <td><img src="{$vo.image}" style="width: 60px; height: 60px"></td>
                             <td>{$vo.title}</td>
                             <td>{$vo.description}</td>
-                            <td>{$vo.author}</td>
                             <td>
                                 {switch name="$vo.is_top" }
-                                    {case value="1"}置顶{/case}
-                                    {case value="0"}未置顶{/case}
+                                    {case value="1"}<button class="btn btn-info">已置顶</button>{/case}
+                                    {case value="0"}<button class="btn btn-default">未置顶</button>{/case}
                                 {/switch}
                             </td>
+                            <td>{$vo.author}</td>
                             <td>{$vo.create_time}</td>
                             <td>{$vo.update_time}</td>
                             <td>
@@ -204,13 +201,13 @@
             //（真/假）在日历上的每周开始时显示ISO星期数。
             "showISOWeekNumbers":false,
             //（true / false）添加选择框以选择日期以外的时间。
-            "timePicker": true,
+            "timePicker": false,
             //（数字）分钟选择列表的时间增量（即30，只允许选择以0或30结尾的时间）
             "timePickerIncrement":1,
             //（true / false）使用24小时而不是12小时的时间，取消AM / PM选择
-            "timePicker24Hour": true,
+            "timePicker24Hour": false,
             //true / false）在timePicker中显示秒数
-            "timePickerSeconds": true,
+            "timePickerSeconds": false,
             //设置用户可以从中选择的预定义日期范围。每个键都是范围的标签，其值是一个数组，其中两个日期代表范围的界限。
                 "ranges": {
                     'Today': [moment(), moment()],
@@ -280,8 +277,8 @@
 
         },
             function(start, end, label) {
-                console.log('New date range selected: ' + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD') + ' (predefined range: ' + label + ')');
-                $("#addTime").val(start.format('YYYY-MM-DD HH:mm:ss') + ' - ' + end.format('YYYY-MM-DD HH:mm:ss'));
+                console.log('New date range selected: ' + start.format('YYYY-MM-DD HH:mm:ss') + ' to ' + end.format('YYYY-MM-DD  HH:mm:ss') + ' (predefined range: ' + label + ')');
+                $("#addTime").val(start.format('YYYY/MM/DD') + ' - ' + end.format('YYYY/MM/DD'));
             }
         );
         $("#editTime").daterangepicker({
@@ -308,13 +305,13 @@
                 //（真/假）在日历上的每周开始时显示ISO星期数。
                 "showISOWeekNumbers":false,
                 //（true / false）添加选择框以选择日期以外的时间。
-                "timePicker": true,
+                "timePicker": false,
                 //（数字）分钟选择列表的时间增量（即30，只允许选择以0或30结尾的时间）
                 "timePickerIncrement":1,
                 //（true / false）使用24小时而不是12小时的时间，取消AM / PM选择
-                "timePicker24Hour": true,
+                "timePicker24Hour": false,
                 //true / false）在timePicker中显示秒数
-                "timePickerSeconds": true,
+                "timePickerSeconds": false,
                 //设置用户可以从中选择的预定义日期范围。每个键都是范围的标签，其值是一个数组，其中两个日期代表范围的界限。
                 "ranges": {
                     'Today': [moment(), moment()],
@@ -384,8 +381,8 @@
 
             },
             function(start, end, label) {
-                console.log('New date range selected: ' + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD') + ' (predefined range: ' + label + ')');
-                $("#editTime").val(start.format('YYYY-MM-DD HH:mm:ss') + ' - ' + end.format('YYYY-MM-DD HH:mm:ss'));
+                console.log('New date range selected: ' + start.format('YYYY-MM-DD HH:mm:ss') + ' to ' + end.format('YYYY-MM-DD HH:mm:ss') + ' (predefined range: ' + label + ')');
+                $("#editTime").val(start.format('YYYY/MM/DD') + ' - ' + end.format('YYYY/MM/DD'));
             }
         );
     </script>

@@ -1,0 +1,62 @@
+{extend name="layout"/}
+{block name="title"}文章列表{/block}
+{block name="keywords"}文章列表{/block}
+{block name="description"}文章列表{/block}
+{block name="navi"}文章分类{/block}
+{block name="content-description"}文章分类描述{/block}
+{block name="main-content"}
+<div class="row">
+    <div class="col-xs-12 col-md-12 col-md-12">
+        <!-- BOX -->
+        <div class="box">
+            <div class="box-title">
+                <h4><i class="fa fa-table"></i>文章分类</h4>
+                <div class="tools">
+                    <a href="{:url('/admin/article/typeEdit')}" class="btn btn-xs btn-success" style="color: #ffffff;">添加分类
+                    </a>
+                </div>
+            </div>
+            <div class="box-body">
+                <table class="table table-bordered">
+                    <thead>
+                    <tr>
+                        <th width="5%">编号</th>
+                        <th width="10%">分类名称</th>
+                        <th width="10%">添加者</th>
+                        <th width="8%">添加时间</th>
+                        <th width="8%">修改时间</th>
+                        <th width="8%">操作</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {foreach name="typeList" item="vo"}
+                    <tr>
+                        <td>{$vo.id}</td>
+                        <td>{$vo.type_name}</td>
+                        <td>{$vo.create_user}</td>
+                        <td>{$vo.create_time}</td>
+                        <td>{$vo.update_time}</td>
+                        <td>
+                            <a href="{:url('/admin/article/typeEdit')}?id={$vo.id}" class="btn btn-success">编辑</a>
+                            <a href="{:url('/admin/article/typeDelete')}?id={$vo.id}" class="btn btn-warning">删除</a>
+                        </td>
+                    </tr>
+                    {/foreach}
+
+                    </tbody>
+                </table>
+                {$typeList->render()}
+            </div>
+        </div>
+        <!-- /BOX -->
+    </div>
+</div>
+
+{/block}
+{block name="javascript"}
+    <script>
+        jQuery(document).ready(function () {
+            App.init(); //Initialise plugins and elements
+        });
+    </script>
+{/block}

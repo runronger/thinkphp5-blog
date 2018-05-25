@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:28:"theme/admin/index/index.html";i:1526466499;s:46:"/home/rong/WEBROOT/tp5/theme/admin/layout.html";i:1526634179;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:28:"theme/admin/index/index.html";i:1526466499;s:46:"/home/rong/WEBROOT/tp5/theme/admin/layout.html";i:1527153615;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -291,26 +291,28 @@
                         <span class="arrow"></span>
                     </a>
                     <ul class="sub">
-                        <li><a class="" href="<?php echo url('/admin/article/articleList'); ?>"><span class="sub-menu-text"><?php echo lang('Article list'); ?></span></a>
+                        <li><a class="" href="<?php echo url('/admin/article/articleList'); ?>"><span class="sub-menu-text"><?php echo lang('Article_list'); ?></span></a>
                         </li>
-                        <li><a class="" href="<?php echo url('/admin/article/articleEdit'); ?>"><span class="sub-menu-text"><?php echo lang('Add articles'); ?></span></a>
+                        <li><a class="" href="<?php echo url('/admin/article/articleEdit'); ?>"><span class="sub-menu-text"><?php echo lang('Add_articles'); ?></span></a>
+                        </li>
+                        <li><a class="" href="<?php echo url('/admin/article/typeList'); ?>"><span class="sub-menu-text"><?php echo lang('type_list'); ?></span></a>
                         </li>
                     </ul>
                 </li>
                 <li class="has-sub">
                     <a href="javascript:;" class="">
-                        <i class="fa fa-database fa-fw"></i> <span class="menu-text">资源管理</span>
+                        <i class="fa fa-database fa-fw"></i> <span class="menu-text"><?php echo lang('Resource'); ?></span>
                         <span class="arrow"></span>
                     </a>
                     <ul class="sub">
-                        <li><a class="" href="<?php echo url('/admin/photo/photoManagement'); ?>"><span class="sub-menu-text">相册管理</span></a>
+                        <li><a class="" href="<?php echo url('/admin/photo/photoList'); ?>"><span class="sub-menu-text"><?php echo lang('Album'); ?></span></a>
                         </li>
-                        <li><a class="" href="fixed_header.html"><span class="sub-menu-text">文档管理</span></a>
+                        <li><a class="" href="<?php echo url('/admin/document/documentList'); ?>"><span class="sub-menu-text"><?php echo lang('Document'); ?></span></a>
                         </li>
                     </ul>
                 </li>
                 <li><a class="" href="calendar.html"><i class="fa fa-calendar fa-fw"></i>
-                    <span class="menu-text">日历
+                    <span class="menu-text"><?php echo lang('calendar'); ?>
 									<span class="tooltip-error pull-right" title="" data-original-title="3 New Events">
 										<span class="label label-success">New</span>
 									</span>
@@ -319,45 +321,45 @@
                 </li>
                 <li class="has-sub">
                     <a href="javascript:;" class="">
-                        <i class="fa fa-map-marker fa-fw"></i> <span class="menu-text">地图管理</span>
+                        <i class="fa fa-map-marker fa-fw"></i> <span class="menu-text"><?php echo lang('Map'); ?></span>
                         <span class="arrow"></span>
                     </a>
                     <ul class="sub">
-                        <li><a class="" href="google_maps.html"><span class="sub-menu-text">店铺列表</span></a></li>
-                        <li><a class="" href="vector_maps.html"><span class="sub-menu-text">添加标注</span></a></li>
+                        <li><a class="" href="google_maps.html"><span class="sub-menu-text"><?php echo lang('Map_list'); ?></span></a></li>
+                        <li><a class="" href="vector_maps.html"><span class="sub-menu-text"><?php echo lang('Add_labels'); ?></span></a></li>
                     </ul>
                 </li>
                 <li><a class="" href="gallery.html"><i class="fa fa-picture-o fa-fw"></i> <span
-                        class="menu-text">相册</span></a>
+                        class="menu-text"><?php echo lang('Gallery'); ?></span></a>
                 </li>
                 <li class="has-sub">
                     <a href="javascript:;" class="">
-                        <i class="fa fa-user fa-fw"></i> <span class="menu-text">会员管理</span>
+                        <i class="fa fa-user fa-fw"></i> <span class="menu-text"><?php echo lang('member'); ?></span>
                         <span class="arrow"></span>
                     </a>
                     <ul class="sub">
                         <li><a class="" href="login.html"><span
-                                class="sub-menu-text">管理员列表</span></a></li>
+                                class="sub-menu-text"><?php echo lang('Member_list'); ?></span></a></li>
                         <li><a class="" href="login_bg.html"><span
-                                class="sub-menu-text">管理员添加</span></a></li>
+                                class="sub-menu-text"><?php echo lang('Member_add'); ?></span></a></li>
                     </ul>
                 </li>
                 <li class="has-sub">
                     <a href="javascript:;" class="">
-                        <i class="fa fa-briefcase fa-fw"></i> <span class="menu-text">权限管理<span
+                        <i class="fa fa-briefcase fa-fw"></i> <span class="menu-text"><?php echo lang('Authority'); ?><span
                             class="badge pull-right">3</span></span>
                         <span class="arrow"></span>
                     </a>
                     <ul class="sub">
-                        <li><a class="" href="search_results.html"><span class="sub-menu-text">角色列表</span></a>
+                        <li><a class="" href="search_results.html"><span class="sub-menu-text"><?php echo lang('Role_list'); ?></span></a>
                         </li>
                         <li><a class="" href="email_templates.html"><span
-                                class="sub-menu-text">添加角色</span></a></li>
+                                class="sub-menu-text"><?php echo lang('Add_role'); ?></span></a></li>
 
                     </ul>
                 </li>
                 <li><a class="" href="widgets_box.html"><i class="fa fa-lock fa-fw"></i> <span
-                        class="menu-text">admin信息</span></a>
+                        class="menu-text">Admin</span></a>
                 </li>
             </ul>
             <!-- /SIDEBAR MENU -->

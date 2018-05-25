@@ -51,8 +51,27 @@ return [
     'Advertising list' => 'Advertising list',
     'Add ads' => 'Add ads',
     'Article' => 'Article',
-    'Article list' => 'Article list',
-    'Add articles' => 'Add articles',
+    'Article_list' => 'Article list',
+    'Add_articles' => 'Add articles',
+    'type_list' => 'Type list',
     'article_add_success' => 'Article added successfully',
     'article_add_fail' => 'Article added failed',
+    'Resource' => 'Resource',
+    'Album' => 'Album',
+    'Document' =>'Document',
+    'calendar' => 'calendar',
+    'Map' => 'Map',
+    'Map_list' => 'Map list',
+    'Add_labels' => 'Add labels',
+    'Gallery' => 'Gallery',
+    'member' => 'Member',
+    'Member_list' => 'Member list',
+    'Member_add' => 'Member add',
+    'Authority' => 'Authority',
+    'Role_list' => 'Role list',
+    'Add_role'  => 'Add a role',
+
+
+
+
 ];
