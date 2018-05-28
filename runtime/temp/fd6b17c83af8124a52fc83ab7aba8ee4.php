@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:37:"theme/admin/article/article_edit.html";i:1527070093;s:46:"/home/rong/WEBROOT/tp5/theme/admin/layout.html";i:1527153615;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:37:"theme/admin/article/article_edit.html";i:1527497545;s:46:"/home/rong/WEBROOT/tp5/theme/admin/layout.html";i:1527153615;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -417,9 +417,9 @@
                                 <label for="articleType">分类 <span style="color: red">*</span></label>
                                 <select class="form-control" id="articleType" name="articleType">
                                     <option value="">请选择</option>
-
-                                    <option value="1">Mysql</option>
-                                    <option value="0">Linux</option>
+                                    <?php if(is_array($typeList) || $typeList instanceof \think\Collection || $typeList instanceof \think\Paginator): if( count($typeList)==0 ) : echo "" ;else: foreach($typeList as $key=>$vo): ?>
+                                    <option value="<?php echo $vo['id']; ?>"><?php echo $vo['type_name']; ?></option>
+                                    <?php endforeach; endif; else: echo "" ;endif; ?>
                                 </select>
                             </div>
                             <div class="form-group">

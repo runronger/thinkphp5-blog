@@ -3,8 +3,8 @@
 namespace app\admin\controller;
 
 use think\Request;
+use think\Session;
 use think\Validate;
-use think\Db;
 use app\admin\model\Article as ArticleModel;
 use app\admin\model\ArticleType;
 class Article extends Base
@@ -22,12 +22,19 @@ class Article extends Base
     public function articleList()
     {
         $article = new ArticleModel();
-        $allArticle = $article->paginate(10);
+        $allArticle = $article->where('is_delete',0)->paginate(10);
         $this->assign('isSearch',0);
         $this->assign('allArticle',$allArticle);
         return $this->fetch();
     }
 
+
+    /**
+     * 文章搜索
+     * @param Request $request
+     * @return mixed
+     * @throws \think\exception\DbException
+     */
     public function search(Request $request)
     {
         $id = trim($request->post('id'));
@@ -66,13 +73,17 @@ class Article extends Base
             $where['is_top'] = ['like',"%$isTop%"];
         }
 //            $result = Db::name('article')->where($where)->paginate(10);
-        $result = ArticleModel::where($where)->paginate(1,false);
+        $result = ArticleModel::where($where)->paginate(20,false,['query'=>request()->param()]);
 //            dump($result);
         $this->assign('isSearch',1);
         $this->assign('allArticle',$result);
         return $this->fetch('article_list');
 
     }
+
+
+
+
 
 
     /**
@@ -139,6 +150,7 @@ class Article extends Base
                     $article->is_top = $isTop;
                     $article->add_time = $addTime;
                     $article->container = $content;
+                    $article->is_delete = 0;
                     $article->create_time = date("Y-m-d H:i:s",time());
                     $resule = $article->save();
                     if ($resule){
@@ -152,6 +164,9 @@ class Article extends Base
             }
         }else{
             $id = $request->get('id');
+            $type = new ArticleType();
+            $typeList = $type->getList();
+            $this->assign('typeList',$typeList);
             if ($id){
                 $article = new ArticleModel();
                 $articleInfo = $article->getArticleInfo($id);
@@ -193,6 +208,44 @@ class Article extends Base
     }
 
     /**
+     * 更改置顶状态
+     * @param Request $request
+     * @throws \think\db\exception\DataNotFoundException
+     * @throws \think\db\exception\ModelNotFoundException
+     * @throws \think\exception\DbException
+     */
+    public function changeTop(Request $request)
+    {
+        $id = $request->get('id');
+        $article = new ArticleModel();
+        $result = $article->changeTopStatus($id);
+        if ($result){
+            $this->success("状态改变成功",url('/admin/article/articleList'));
+        }else{
+            $this->error("状态改变失败");
+        }
+    }
+
+    /**
+     * 文章软删除
+     * @param Request $request
+     */
+    public function changeDelete(Request $request)
+    {
+        $id = $request->get('id');
+        $article = new ArticleModel();
+        $result = $article->changeDeleteStatus($id);
+        if ($result){
+            $this->success("删除成功",url('/admin/article/articleList'));
+        }else{
+            $this->error("删除失败");
+        }
+    }
+
+
+
+
+    /**
      * 文章类型列表
      * @param Request $request
      * @return mixed
@@ -201,18 +254,106 @@ class Article extends Base
     public function typeList(Request $request)
     {
         $type = new ArticleType();
-        $typeList = $type-> paginate(10);
+        $typeList = $type->where('is_delete',0)->paginate(10);
         $this->assign('typeList',$typeList);
         return $this->fetch();
     }
 
 
+    /**
+     * 文章分类编辑
+     * @param Request $request
+     * @return mixed
+     * @throws \think\db\exception\DataNotFoundException
+     * @throws \think\db\exception\ModelNotFoundException
+     * @throws \think\exception\DbException
+     */
+    public function typeEdit(Request $request)
+    {
+        if ($request->isPost()){
+            $token = $request->post('__token__');
+            $validate = new Validate($this->rule);
+            $pass = $validate->check($token);
+            if ($pass){
+                $id = $request->post('id');
+                $articleType = trim($request->post('articleType'));
+                if (empty($articleType)){
+                    $this->error(lang('is_empty'));
+                }
+                $type = new ArticleType();
+                $isHave = $type->where('type_name',$articleType)->find();
+                if ($isHave){
+                    $this->error(lang('is_have'));
+                }
+                if ($id){
+                    $data = [
+                        'type_name' => $articleType,
+                        'create_user' => Session::get('ADMIN_PASS')->user_name,
+                        'update_time' => date('Y-m-d H:i:s',time())
+                    ];
+//                    $result = $type->where('id' , $id)->update($data);
+                    $result = $type->save($data,['id' => $id]);
+                    if ($result){
+                        $this->success(lang('article_type_add_success'),url('/admin/article/typeList'));
+                    }else{
+                        $this->error(lang('article_type_add_fail'));
+                    }
+                }else{
+                    $type->type_name = $articleType;
+                    $type->create_user = Session::get('ADMIN_PASS')->user_name;
+                    $type->is_delete = 0;
+                    $type->create_time = date('Y-m-d H:i:s',time());
+                    $result = $type->save();
+                    if ($result){
+                        $this->success(lang('article_type_add_success'),url('/admin/article/typeList'));
+                    }else{
+                        $this->error(lang('article_type_add_fail'));
+                    }
+                }
+            }
+        }else{
+            $id = $request->get('id');
+            if ($id){
+                $type = new ArticleType();
+                $info = $type->where('id',$id)->find();
+//                dump($info);
+                $this->assign('typeInfo',$info);
+                $tag['id']=$id;
+                $tag['edit'] = 1;
+                $this->assign('tag',$tag);
+                return $this->fetch();
+            }else{
+                $tag['edit'] = 0;
+                $this->assign('tag',$tag);
+                return $this->fetch();
+            }
+        }
+    }
 
-
-
-
-
-
+    /**
+     * 删除分类
+     * @param Request $request
+     * @throws \think\db\exception\DataNotFoundException
+     * @throws \think\db\exception\ModelNotFoundException
+     * @throws \think\exception\DbException
+     */
+    public function typeDelete(Request $request)
+    {
+        $id = $request->get('id');
+        $article = new ArticleModel();
+        $hasUse = $article->checkTypeUse($id);
+        if (!empty($hasUse)){
+            $this->error("删除失败,该类型还在使用中");
+        }else{
+            $type = new ArticleType();
+            $result = $type->changeDelete($id);
+            if ($result){
+                $this->success("删除成功",url('/admin/article/typeList'));
+            }else{
+                $this->error("删除失败");
+            }
+        }
+    }
 
 
 

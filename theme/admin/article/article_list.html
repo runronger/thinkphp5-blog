@@ -143,7 +143,7 @@
                             <td>{$vo.description}</td>
                             <td>
                                 {switch name="$vo.is_top" }
-                                    {case value="1"}<button class="btn btn-info">已置顶</button>{/case}
+                                    {case value="1"}<button class="btn btn-danger">已置顶</button>{/case}
                                     {case value="0"}<button class="btn btn-default">未置顶</button>{/case}
                                 {/switch}
                             </td>
@@ -151,10 +151,12 @@
                             <td>{$vo.create_time}</td>
                             <td>{$vo.update_time}</td>
                             <td>
-                                <a href="{:url('/admin/article/setTop')}?id={$vo.id}" class="btn btn-info">预览</a>
-                                <a href="{:url('/admin/article/setTop')}?id={$vo.id}" class="btn btn-primary">置顶</a>
+                                <a href="{:url('/admin/article/changeTop')}?id={$vo.id}" class="btn btn-primary">
+                                    {if condition="($vo.is_top == 1)"}取消置顶{else/}设置置顶{/if}
+                                </a>
+                                <a href="{:url('/portal/article/show')}?id={$vo.id}" class="btn btn-info">预览</a>
                                 <a href="{:url('/admin/article/articleEdit')}?id={$vo.id}" class="btn btn-success">编辑</a>
-                                <a href="{:url('/admin/article/delete')}?id={$vo.id}" class="btn btn-warning">删除</a>
+                                <a href="{:url('/admin/article/changeDelete')}?id={$vo.id}" class="btn btn-warning">删除</a>
                             </td>
                         </tr>
                         {/foreach}

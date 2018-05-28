@@ -71,4 +71,8 @@ return [
     'Authority' => '权限管理',
     'Role_list' => '角色列表',
     'Add_role'  => '添加角色',
+    'is_empty' =>'参数不能为空',
+    'is_have'  => '数据已存在，不能重复添加',
+    'article_type_add_success' => '文章类型添加成功',
+    'article_type_add_fail' => '文章类型添加失败',
 ];

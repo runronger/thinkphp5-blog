@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:37:"theme/admin/article/article_list.html";i:1527239322;s:46:"/home/rong/WEBROOT/tp5/theme/admin/layout.html";i:1527153615;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:37:"theme/admin/article/article_list.html";i:1527500936;s:46:"/home/rong/WEBROOT/tp5/theme/admin/layout.html";i:1527153615;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -532,16 +532,18 @@
                             <td><?php echo $vo['title']; ?></td>
                             <td><?php echo $vo['description']; ?></td>
                             <td>
-                                <?php switch($vo['is_top']): case "1": ?><button class="btn btn-info">已置顶</button><?php break; case "0": ?><button class="btn btn-default">未置顶</button><?php break; endswitch; ?>
+                                <?php switch($vo['is_top']): case "1": ?><button class="btn btn-danger">已置顶</button><?php break; case "0": ?><button class="btn btn-default">未置顶</button><?php break; endswitch; ?>
                             </td>
                             <td><?php echo $vo['author']; ?></td>
                             <td><?php echo $vo['create_time']; ?></td>
                             <td><?php echo $vo['update_time']; ?></td>
                             <td>
-                                <a href="<?php echo url('/admin/article/setTop'); ?>?id=<?php echo $vo['id']; ?>" class="btn btn-info">预览</a>
-                                <a href="<?php echo url('/admin/article/setTop'); ?>?id=<?php echo $vo['id']; ?>" class="btn btn-primary">置顶</a>
+                                <a href="<?php echo url('/admin/article/changeTop'); ?>?id=<?php echo $vo['id']; ?>" class="btn btn-primary">
+                                    <?php if(($vo['is_top'] == 1)): ?>取消置顶<?php else: ?>设置置顶<?php endif; ?>
+                                </a>
+                                <a href="<?php echo url('/portal/article/show'); ?>?id=<?php echo $vo['id']; ?>" class="btn btn-info">预览</a>
                                 <a href="<?php echo url('/admin/article/articleEdit'); ?>?id=<?php echo $vo['id']; ?>" class="btn btn-success">编辑</a>
-                                <a href="<?php echo url('/admin/article/delete'); ?>?id=<?php echo $vo['id']; ?>" class="btn btn-warning">删除</a>
+                                <a href="<?php echo url('/admin/article/changeDelete'); ?>?id=<?php echo $vo['id']; ?>" class="btn btn-warning">删除</a>
                             </td>
                         </tr>
                         <?php endforeach; endif; else: echo "" ;endif; ?>

@@ -71,7 +71,9 @@ return [
     'Role_list' => 'Role list',
     'Add_role'  => 'Add a role',
 
-
-
+    'is_empty' =>'Parameter cannot be empty',
+    'is_have'  => 'Data already exists and cannot be added repeatedly',
+    'article_type_add_success' => 'article type add success',
+    'article_type_add_fail' => 'article type add fail',
 
 ];
