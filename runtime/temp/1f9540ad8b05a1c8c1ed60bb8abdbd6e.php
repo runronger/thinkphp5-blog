@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:28:"theme/admin/index/index.html";i:1526466499;s:46:"/home/rong/WEBROOT/tp5/theme/admin/layout.html";i:1527153615;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:28:"theme/admin/index/index.html";i:1526466499;s:46:"/home/rong/WEBROOT/tp5/theme/admin/layout.html";i:1527559795;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -329,7 +329,7 @@
                         <li><a class="" href="vector_maps.html"><span class="sub-menu-text"><?php echo lang('Add_labels'); ?></span></a></li>
                     </ul>
                 </li>
-                <li><a class="" href="gallery.html"><i class="fa fa-picture-o fa-fw"></i> <span
+                <li><a class="" href="<?php echo url('/admin/gallery/index'); ?>"><i class="fa fa-picture-o fa-fw"></i> <span
                         class="menu-text"><?php echo lang('Gallery'); ?></span></a>
                 </li>
                 <li class="has-sub">

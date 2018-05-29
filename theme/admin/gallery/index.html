@@ -1,0 +1,265 @@
+{extend name="layout"/}
+{block name="title"}图片列表{/block}
+{block name="keywords"}图片列表{/block}
+{block name="description"}图片列表{/block}
+{block name="link"}
+<link rel="stylesheet" type="text/css" href="/static/lib/colorbox/colorbox.min.css">
+{/block}
+{block name="navi"}图片列表{/block}
+{block name="content-description"}图片列表描述{/block}
+{block name="main-content"}
+<!-- GALLERY -->
+<div class="row">
+    <div class="col-md-12">
+        <!-- BOX -->
+        <div class="box">
+            <div class="box-title">
+                <h4><i class="fa fa-bars"></i>Portfolio</h4>
+                <div class="tools">
+                    <a href="javascript:;" class="collapse">
+                        <i class="fa fa-chevron-up"></i>
+                    </a>
+                    <a href="javascript:;" class="remove">
+                        <i class="fa fa-times"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="box-body clearfix">
+                <div id="filter-controls" class="btn-group">
+                    <div class="hidden-xs">
+                        <a href="#" class="btn btn-default" data-filter="*">All</a>
+                        <a href="#" class="btn btn-info" data-filter=".category_1">Android Apps</a>
+                        <a href="#" class="btn btn-danger" data-filter=".category_2">iPhone Apps</a>
+                        <a href="#" class="btn btn-success" data-filter=".category_3">Windows Apps</a>
+                        <a href="#" class="btn btn-warning" data-filter=".category_4">Web Apps</a>
+                    </div>
+                    <div class="visible-xs">
+                        <select id="e1" class="form-control">
+                            <option value="*">All</option>
+                            <option value=".category_1">Android Apps</option>
+                            <option value=".category_2">iPhone Apps</option>
+                            <option value=".category_3">Windows Apps</option>
+                            <option value=".category_4">Web Apps</option>
+                        </select>
+                    </div>
+                </div>
+                <div id="filter-items" class="row">
+                    <div class="col-md-3 category_1 item">
+                        <div class="filter-content">
+                            <img src="/static/admin/images/gallery/1.png" alt="" class="img-responsive" />
+                            <div class="hover-content">
+                                <h4>Image Title</h4>
+                                <a class="btn btn-success hover-link">
+                                    <i class="fa fa-edit fa-1x"></i>
+                                </a>
+                                <a class="btn btn-warning hover-link colorbox-button" href="/static/admin/images/gallery/1.png" title="Image Title">
+                                    <i class="fa fa-search-plus fa-1x"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 category_2 item">
+                        <div class="filter-content">
+                            <img src="/static/admin/images/gallery/2.jpg" alt="" class="img-responsive" />
+                            <div class="hover-content">
+                                <h4>Image Title</h4>
+                                <a class="btn btn-success hover-link">
+                                    <i class="fa fa-edit fa-1x"></i>
+                                </a>
+                                <a class="btn btn-warning hover-link colorbox-button" href="/static/admin/images/gallery/2.jpg" title="Image Title">
+                                    <i class="fa fa-search-plus fa-1x"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 category_3 item">
+                        <div class="filter-content">
+                            <img src="/static/admin/images/gallery/3.png" alt="" class="img-responsive" />
+                            <div class="hover-content">
+                                <h4>Image Title</h4>
+                                <a class="btn btn-success hover-link">
+                                    <i class="fa fa-edit fa-1x"></i>
+                                </a>
+                                <a class="btn btn-warning hover-link colorbox-button" href="/static/admin/images/gallery/3.png" title="Image Title">
+                                    <i class="fa fa-search-plus fa-1x"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 category_4 item">
+                        <div class="filter-content">
+                            <img src="/static/admin/images/gallery/4.png" alt="" class="img-responsive" />
+                            <div class="hover-content">
+                                <h4>Image Title</h4>
+                                <a class="btn btn-success hover-link">
+                                    <i class="fa fa-edit fa-1x"></i>
+                                </a>
+                                <a class="btn btn-warning hover-link colorbox-button" href="/static/admin/images/gallery/4.png" title="Image Title">
+                                    <i class="fa fa-search-plus fa-1x"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 category_1 item">
+                        <div class="filter-content">
+                            <img src="/static/admin/images/gallery/5.png" alt="" class="img-responsive" />
+                            <div class="hover-content">
+                                <h4>Image Title</h4>
+                                <a class="btn btn-success hover-link">
+                                    <i class="fa fa-edit fa-1x"></i>
+                                </a>
+                                <a class="btn btn-warning hover-link colorbox-button" href="/static/admin/images/gallery/5.png" title="Image Title">
+                                    <i class="fa fa-search-plus fa-1x"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 category_2 item">
+                        <div class="filter-content">
+                            <img src="/static/admin/images/gallery/8.png" alt="" class="img-responsive" />
+                            <div class="hover-content">
+                                <h4>Image Title</h4>
+                                <a class="btn btn-success hover-link">
+                                    <i class="fa fa-edit fa-1x"></i>
+                                </a>
+                                <a class="btn btn-warning hover-link colorbox-button" href="/static/admin/images/gallery/8.png" title="Image Title">
+                                    <i class="fa fa-search-plus fa-1x"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 category_4 item">
+                        <div class="filter-content">
+                            <img src="/static/admin/images/gallery/7.jpg" alt="" class="img-responsive" />
+                            <div class="hover-content">
+                                <h4>Image Title</h4>
+                                <a class="btn btn-success hover-link">
+                                    <i class="fa fa-edit fa-1x"></i>
+                                </a>
+                                <a class="btn btn-warning hover-link colorbox-button" href="/static/admin/images/gallery/7.jpg" title="Image Title">
+                                    <i class="fa fa-search-plus fa-1x"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 category_4 item">
+                        <div class="filter-content">
+                            <img src="/static/admin/images/gallery/2.jpg" alt="" class="img-responsive" />
+                            <div class="hover-content">
+                                <h4>Image Title</h4>
+                                <a class="btn btn-success hover-link">
+                                    <i class="fa fa-edit fa-1x"></i>
+                                </a>
+                                <a class="btn btn-warning hover-link colorbox-button" href="/static/admin/images/gallery/2.jpg" title="Image Title">
+                                    <i class="fa fa-search-plus fa-1x"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /BOX -->
+    </div>
+</div>
+<!-- /GALLERY -->
+
+{/block}
+{block name="javascript"}
+<script src="/static/lib/isotope/dist/isotope.pkgd.min.js"></script>
+<script src="/static/lib/colorbox/jquery.colorbox.min.js"></script>
+<script src="/static/lib/imagesloaded/imagesloaded.pkgd.min.js"></script>
+<script>
+    jQuery(document).ready(function () {
+        App.init(); //Initialise plugins and elements
+    });
+
+
+    /*-----------------------------------------------------------------------------------*/
+    /*	Isotope
+    /*-----------------------------------------------------------------------------------*/
+    var handleIsotope = function () {
+        // cache container
+        var $container = $('#filter-items');
+        // initialize isotope after image loaded
+        $container.imagesLoaded( function(){
+            $container.isotope({
+                // options...
+            });
+
+            // filter items when filter link is clicked
+            $('#filter-controls a').click(function(){
+                var selector = $(this).attr('data-filter');
+                $container.isotope({ filter: selector });
+                return false;
+            });
+            // filter on smaller screens
+            $("#e1").change(function(){
+                var selector = $(this).find(":selected").val();
+                $container.isotope({ filter: selector });
+                return false;
+            });
+        });
+
+        function handleIsotopeStretch() {
+            var width = $(window).width();
+            if ( width < 768 ) {
+                $('#filter-items .item').addClass('width-100');
+            }
+            else {
+                $('#filter-items .item').removeClass('width-100');
+            }
+        }
+        handleIsotopeStretch();
+        /* On Resize show menu on desktop if hidden */
+        jQuery(window).resize(function() {
+            handleIsotopeStretch();
+        });
+    }
+
+    /*-----------------------------------------------------------------------------------*/
+    /*	Handle hover in gallery
+    /*-----------------------------------------------------------------------------------*/
+    var handleHover = function () {
+        $('.filter-content').hover(function() {
+            var hoverContent = $(this).children('.hover-content');
+            hoverContent.removeClass('fadeOut').addClass('animated fadeIn').show();
+        }, function() {
+            var hoverContent = $(this).children('.hover-content');
+            hoverContent.removeClass('fadeIn').addClass('fadeOut');
+        });
+    }
+    /*-----------------------------------------------------------------------------------*/
+    /*	Handle Colorbox
+    /*-----------------------------------------------------------------------------------*/
+    var handleColorbox = function () {
+        $('.colorbox-button').colorbox({rel:'colorbox-button',maxWidth:'95%', maxHeight:'95%'});
+        /* Colorbox resize function */
+        var resizeTimer;
+        function resizeColorBox()
+        {
+            if (resizeTimer) clearTimeout(resizeTimer);
+            resizeTimer = setTimeout(function() {
+                var myWidth = 442, percentageWidth = .95;
+                if (jQuery('#cboxOverlay').is(':visible')) {
+                    $.colorbox.resize({ width: ( $(window).width() > ( myWidth+20) )? myWidth : Math.round( $(window).width()*percentageWidth ) });
+                    $('.cboxPhoto').css( {
+                        width: $('#cboxLoadedContent').innerWidth(),
+                        height: 'auto'
+                    });
+                    $('#cboxLoadedContent').height( $('.cboxPhoto').height() );
+                    $.colorbox.resize();
+                }
+            }, 300)
+        }
+
+        // Resize Colorbox when resizing window or changing mobile device orientation
+        jQuery(window).resize(resizeColorBox);
+        window.addEventListener("orientationchange", resizeColorBox, false);
+    }
+
+    handleIsotope();	//Function to display portfolio
+    handleHover();		//Function to display hover-content
+    handleColorbox();		//Function to display colorbox
+</script>
+{/block}
