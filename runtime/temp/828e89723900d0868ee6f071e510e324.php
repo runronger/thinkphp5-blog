@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:37:"theme/admin/article/article_list.html";i:1527500936;s:46:"/home/rong/WEBROOT/tp5/theme/admin/layout.html";i:1527153615;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:37:"theme/admin/article/article_list.html";i:1527500936;s:46:"/home/rong/WEBROOT/tp5/theme/admin/layout.html";i:1527670863;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -303,22 +303,34 @@
                 </li>
                 <li class="has-sub">
                     <a href="javascript:;" class="">
-                        <i class="fa fa-database fa-fw"></i> <span class="menu-text"><?php echo lang('Resource'); ?></span>
+                        <i class="fa fa-picture-o fa-fw"></i> <span class="menu-text"><?php echo lang('Gallery'); ?></span>
+                        <span class="arrow"></span>
+                    </a>
+                    <ul class="sub" style="display: none;">
+                        <li><a class="" href="<?php echo url('/admin/gallery/photoList'); ?>"><span class="sub-menu-text"><?php echo lang('Gallery_list'); ?></span></a>
+                        </li>
+                        <li><a class="" href="<?php echo url('/admin/gallery/galleryList'); ?>"><span class="sub-menu-text"><?php echo lang('Gallery_type'); ?></span></a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="has-sub">
+                    <a href="javascript:;" class="">
+                        <i class="fa fa-file fa-fw"></i> <span class="menu-text"><?php echo lang('Resource'); ?></span>
                         <span class="arrow"></span>
                     </a>
                     <ul class="sub">
-                        <li><a class="" href="<?php echo url('/admin/photo/photoList'); ?>"><span class="sub-menu-text"><?php echo lang('Album'); ?></span></a>
+                        <li><a class="" href="<?php echo url('/admin/document/documentList'); ?>"><span class="sub-menu-text"><?php echo lang('Document_list'); ?></span></a>
                         </li>
-                        <li><a class="" href="<?php echo url('/admin/document/documentList'); ?>"><span class="sub-menu-text"><?php echo lang('Document'); ?></span></a>
+                        <li><a class="" href="<?php echo url('/admin/document/documentType'); ?>"><span class="sub-menu-text"><?php echo lang('Document_type'); ?></span></a>
                         </li>
                     </ul>
                 </li>
                 <li><a class="" href="calendar.html"><i class="fa fa-calendar fa-fw"></i>
                     <span class="menu-text"><?php echo lang('calendar'); ?>
-									<span class="tooltip-error pull-right" title="" data-original-title="3 New Events">
-										<span class="label label-success">New</span>
-									</span>
-								</span>
+                        <span class="tooltip-error pull-right" title="" data-original-title="3 New Events">
+                            <span class="label label-success">New</span>
+                        </span>
+                    </span>
                 </a>
                 </li>
                 <li class="has-sub">
@@ -327,13 +339,15 @@
                         <span class="arrow"></span>
                     </a>
                     <ul class="sub">
-                        <li><a class="" href="google_maps.html"><span class="sub-menu-text"><?php echo lang('Map_list'); ?></span></a></li>
-                        <li><a class="" href="vector_maps.html"><span class="sub-menu-text"><?php echo lang('Add_labels'); ?></span></a></li>
+                        <li><a class="" href="google_maps.html"><span
+                                class="sub-menu-text"><?php echo lang('Map_list'); ?></span></a></li>
+                        <li><a class="" href="vector_maps.html"><span class="sub-menu-text"><?php echo lang('Add_labels'); ?></span></a>
+                        </li>
                     </ul>
                 </li>
-                <li><a class="" href="gallery.html"><i class="fa fa-picture-o fa-fw"></i> <span
+                <!--<li><a class="" href=""><i class="fa fa-picture-o fa-fw"></i> <span
                         class="menu-text"><?php echo lang('Gallery'); ?></span></a>
-                </li>
+                </li>-->
                 <li class="has-sub">
                     <a href="javascript:;" class="">
                         <i class="fa fa-user fa-fw"></i> <span class="menu-text"><?php echo lang('member'); ?></span>
@@ -353,7 +367,8 @@
                         <span class="arrow"></span>
                     </a>
                     <ul class="sub">
-                        <li><a class="" href="search_results.html"><span class="sub-menu-text"><?php echo lang('Role_list'); ?></span></a>
+                        <li><a class="" href="search_results.html"><span
+                                class="sub-menu-text"><?php echo lang('Role_list'); ?></span></a>
                         </li>
                         <li><a class="" href="email_templates.html"><span
                                 class="sub-menu-text"><?php echo lang('Add_role'); ?></span></a></li>

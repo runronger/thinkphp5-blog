@@ -11,7 +11,6 @@ class Article extends Base
 {
     protected $rule = [
         'token'  =>  'token',
-
     ];
 
     /**
@@ -279,11 +278,13 @@ class Article extends Base
                 $articleType = trim($request->post('articleType'));
                 if (empty($articleType)){
                     $this->error(lang('is_empty'));
+                    return false;
                 }
                 $type = new ArticleType();
                 $isHave = $type->where('type_name',$articleType)->find();
                 if ($isHave){
                     $this->error(lang('is_have'));
+                    return false;
                 }
                 if ($id){
                     $data = [
@@ -316,7 +317,6 @@ class Article extends Base
             if ($id){
                 $type = new ArticleType();
                 $info = $type->where('id',$id)->find();
-//                dump($info);
                 $this->assign('typeInfo',$info);
                 $tag['id']=$id;
                 $tag['edit'] = 1;

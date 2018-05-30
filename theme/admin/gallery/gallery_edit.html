@@ -1,9 +1,9 @@
 {extend name="layout"/}
-{block name="title"}{if condition="($tag.edit == 0)"}添加{else/}编辑{/if}文章分类{/block}
-{block name="keywords"}{if condition="($tag.edit == 0)"}添加{else/}编辑{/if}文章分类{/block}
-{block name="description"}{if condition="($tag.edit == 0)"}添加{else/}编辑{/if}文章分类{/block}
-{block name="navi"}{if condition="($tag.edit == 0)"}添加{else/}编辑{/if}文章分类{/block}
-{block name="content-description"}{if condition="($tag.edit == 0)"}添加{else/}编辑{/if}文章分类描述{/block}
+{block name="title"}{if condition="($tag.edit == 0)"}添加{else/}编辑{/if}相册{/block}
+{block name="keywords"}{if condition="($tag.edit == 0)"}添加{else/}编辑{/if}相册{/block}
+{block name="description"}{if condition="($tag.edit == 0)"}添加{else/}编辑{/if}相册{/block}
+{block name="navi"}{if condition="($tag.edit == 0)"}添加{else/}编辑{/if}相册{/block}
+{block name="content-description"}{if condition="($tag.edit == 0)"}添加{else/}编辑{/if}相册描述{/block}
 {block name="main-content"}
 <div class="row">
     <div class="col-xs-12 col-md-12 col-md-12">
@@ -12,25 +12,25 @@
                 <!-- BASIC -->
                 <div class="box  ">
                     <div class="box-title">
-                        <h4><i class="fa fa-bars"></i>{if condition="($tag.edit == 0)"}添加{else/}编辑{/if}文章分类</h4>
+                        <h4><i class="fa fa-bars"></i>{if condition="($tag.edit == 0)"}添加{else/}编辑{/if}相册</h4>
                     </div>
                     <div class="box-body big">
-                        <form role="form" id="articlleTypeForm" action="" method="post" enctype="multipart/form-data">
+                        <form role="form" id="galleryTypeForm" action="" method="post" enctype="multipart/form-data">
                             <input type="hidden" name="__token__" value="{$Request.token}" />
                             {if condition="($tag.edit == 0)"}
                             <div class="form-group">
-                                <label for="articleType1">分类名 <span style="color: red">*</span></label>
-                                <input type="text" class="form-control" id="articleType1" name="articleType" value="{if condition='($tag.edit == 1)'}{$typeInfo.type_name}{else/}{/if}" placeholder="Enter type">
+                                <label for="galleryType1">相册名 <span style="color: red">*</span></label>
+                                <input type="text" class="form-control" id="galleryType1" name="galleryType" value="{if condition='($tag.edit == 1)'}{$typeInfo.type_name}{else/}{/if}" placeholder="Enter name">
                             </div>
                             {else/}
                             <div class="form-group">
-                                <label>原分类名</label>
+                                <label>原相册名</label>
                                 <input type="text" class="form-control" value="{$typeInfo.type_name}" placeholder="Enter type">
                             </div>
                             <div class="form-group">
-                                <label for="articleType">新类名 <span style="color: red">*</span></label>
+                                <label for="galleryType">新相册名 <span style="color: red">*</span></label>
                                 <input type="hidden" name="id" value="{$tag.id}" />
-                                <input type="text" class="form-control" id="articleType" name="articleType" value="" placeholder="Enter new type">
+                                <input type="text" class="form-control" id="galleryType" name="galleryType" value="" placeholder="Enter new name">
                             </div>
                             {/if}
                             <div class="separator"></div>
@@ -55,10 +55,10 @@
         App.init(); //Initialise plugins and elements
     });
     $(document).ready(function () {
-        $("#articlleTypeForm").validate({
+        $("#galleryTypeForm").validate({
             // debug:true,
             rules:{
-                articleType:{
+                galleryType:{
                     required:true,
                 },
             }

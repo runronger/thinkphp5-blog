@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:37:"theme/admin/article/article_edit.html";i:1527497545;s:46:"/home/rong/WEBROOT/tp5/theme/admin/layout.html";i:1527153615;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:37:"theme/admin/article/article_edit.html";i:1527665176;s:46:"/home/rong/WEBROOT/tp5/theme/admin/layout.html";i:1527665461;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,7 +21,6 @@
     <!-- ANIMATE -->
     <link rel="stylesheet" type="text/css" href="/static/lib/animate/animate.min.css"/>
     
-
 <link rel="stylesheet" type="text/css" href="/static/lib/webuploader/webuploader.css">
 <link rel="stylesheet" type="text/css" href="/static/lib/webuploader/webuploader_demo.css">
 <link rel="stylesheet" type="text/css" href="/static/lib/daterangepicker/daterangepicker.css">
@@ -306,11 +305,11 @@
                 </li>
                 <li class="has-sub">
                     <a href="javascript:;" class="">
-                        <i class="fa fa-database fa-fw"></i> <span class="menu-text"><?php echo lang('Resource'); ?></span>
+                        <i class="fa fa-file fa-fw"></i> <span class="menu-text"><?php echo lang('Resource'); ?></span>
                         <span class="arrow"></span>
                     </a>
                     <ul class="sub">
-                        <li><a class="" href="<?php echo url('/admin/photo/photoList'); ?>"><span class="sub-menu-text"><?php echo lang('Album'); ?></span></a>
+                        <li><a class="" href="<?php echo url('/admin/gallery/photoList'); ?>"><span class="sub-menu-text"><?php echo lang('Album'); ?></span></a>
                         </li>
                         <li><a class="" href="<?php echo url('/admin/document/documentList'); ?>"><span class="sub-menu-text"><?php echo lang('Document'); ?></span></a>
                         </li>
@@ -334,7 +333,7 @@
                         <li><a class="" href="vector_maps.html"><span class="sub-menu-text"><?php echo lang('Add_labels'); ?></span></a></li>
                     </ul>
                 </li>
-                <li><a class="" href="gallery.html"><i class="fa fa-picture-o fa-fw"></i> <span
+                <li><a class="" href="<?php echo url('/admin/gallery/photoList'); ?>"><i class="fa fa-picture-o fa-fw"></i> <span
                         class="menu-text"><?php echo lang('Gallery'); ?></span></a>
                 </li>
                 <li class="has-sub">
@@ -474,7 +473,7 @@
                                 </div>
                                 <?php endif; ?>
                             </div>
-                            <div class="divide-20"></div>
+                            <!--<div class="divide-20"></div>-->
                             <div class="form-group">
                                 <label for="isTop">是否置顶</label>
                                     <select class="form-control" style="width: 45%" name="isTop" id="isTop">

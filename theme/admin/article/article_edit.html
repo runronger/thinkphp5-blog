@@ -3,7 +3,6 @@
 {block name="keywords"}{if condition="($tag.edit == 1)"}添加{else/}编辑{/if}文章{/block}
 {block name="description"}{if condition="($tag.edit == 1)"}添加{else/}编辑{/if}文章{/block}
 {block name="link"}
-
 <link rel="stylesheet" type="text/css" href="/static/lib/webuploader/webuploader.css">
 <link rel="stylesheet" type="text/css" href="/static/lib/webuploader/webuploader_demo.css">
 <link rel="stylesheet" type="text/css" href="/static/lib/daterangepicker/daterangepicker.css">
@@ -84,7 +83,7 @@
                                 </div>
                                 {/if}
                             </div>
-                            <div class="divide-20"></div>
+                            <!--<div class="divide-20"></div>-->
                             <div class="form-group">
                                 <label for="isTop">是否置顶</label>
                                     <select class="form-control" style="width: 45%" name="isTop" id="isTop">

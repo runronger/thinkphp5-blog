@@ -56,14 +56,16 @@ return [
     'type_list' => 'Type list',
     'article_add_success' => 'Article added successfully',
     'article_add_fail' => 'Article added failed',
-    'Resource' => 'Resource',
-    'Album' => 'Album',
-    'Document' =>'Document',
+    'Resource' => 'Document',
+    'Document_type' =>'Document type',
+    'Document_list' =>'Document list',
     'calendar' => 'calendar',
     'Map' => 'Map',
     'Map_list' => 'Map list',
     'Add_labels' => 'Add labels',
     'Gallery' => 'Gallery',
+    'Gallery_list' => 'Photo list',
+    'Gallery_type' => 'Gallery list',
     'member' => 'Member',
     'Member_list' => 'Member list',
     'Member_add' => 'Member add',
@@ -73,7 +75,10 @@ return [
 
     'is_empty' =>'Parameter cannot be empty',
     'is_have'  => 'Data already exists and cannot be added repeatedly',
-    'article_type_add_success' => 'article type add success',
-    'article_type_add_fail' => 'article type add fail',
+
+    'article_type_add_success' => 'Article type add success',
+    'article_type_add_fail' => 'Article type add fail',
+    'gallery_add_success' => 'Gallery add success',
+    'gallery_add_fail' => 'Gallery add fail',
 
 ];
