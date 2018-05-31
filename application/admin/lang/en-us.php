@@ -80,5 +80,7 @@ return [
     'article_type_add_fail' => 'Article type add fail',
     'gallery_add_success' => 'Gallery add success',
     'gallery_add_fail' => 'Gallery add fail',
+    'photo_add_success' => 'Photo add success',
+    'photo_add_fail'  => 'photo add fail',
 
 ];

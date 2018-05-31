@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:28:"theme/admin/index/index.html";i:1526466499;s:46:"/home/rong/WEBROOT/tp5/theme/admin/layout.html";i:1527666527;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:28:"theme/admin/index/index.html";i:1526466499;s:46:"/home/rong/WEBROOT/tp5/theme/admin/layout.html";i:1527670863;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -307,7 +307,7 @@
                     <ul class="sub" style="display: none;">
                         <li><a class="" href="<?php echo url('/admin/gallery/photoList'); ?>"><span class="sub-menu-text"><?php echo lang('Gallery_list'); ?></span></a>
                         </li>
-                        <li><a class="" href="<?php echo url('/admin/gallery/galleryType'); ?>"><span class="sub-menu-text"><?php echo lang('Gallery_type'); ?></span></a>
+                        <li><a class="" href="<?php echo url('/admin/gallery/galleryList'); ?>"><span class="sub-menu-text"><?php echo lang('Gallery_type'); ?></span></a>
                         </li>
                     </ul>
                 </li>

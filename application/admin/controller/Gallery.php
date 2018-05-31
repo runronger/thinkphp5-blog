@@ -6,7 +6,7 @@ use think\Request;
 use app\admin\model\GalleryType;
 use think\Validate;
 use think\Session;
-use app\admin\model\Gallery as GallertModel;
+use app\admin\model\Gallery as GalleryModel;
 class Gallery extends Base
 {
 
@@ -22,25 +22,88 @@ class Gallery extends Base
     /**
      * 图片列表
      * @return mixed
+     * @throws \think\db\exception\DataNotFoundException
+     * @throws \think\db\exception\ModelNotFoundException
+     * @throws \think\exception\DbException
      */
     public function photoList()
     {
+        $gallery = new GalleryModel();
+        $photoList = $gallery->field("id,type_id,image_url,alt")->where('is_delete',0)->select();
+        $this->assign('photoList',$photoList);
+        $type = new GalleryType();
+        $typeList = $type->field("id,type_name")->where('is_delete',0)->select();
+//        dump($typeList);
+        $this->assign('typeList',$typeList);
         return $this->fetch();
     }
+
 
     /**
      * 编辑添加图片
      * @param Request $request
      * @return mixed
+     * @throws \Exception
      */
     public function photoEdit(Request $request)
     {
         if ($request->isPost()){
-            dump($request->post());
+            $token = $request->token('__token__');
+            $validate = new Validate();
+            $pass = $validate->check($token);
+            if ($pass){
+                $galleryType = $request->post('photoType');
+                $fileUrl = $request->post('photoImage/a');
+                $gallery = new GalleryModel();
+                $data = [];
+                foreach ($fileUrl as $v){
+                    $data[] = [
+                        'type_id' => $galleryType,
+                        'image_url' => $v,
+                        'is_delete' => 0,
+                        'create_time' => date("Y-m-d H:i:s",time())
+                    ];
+                }
+                $result = $gallery->saveAll($data);
+                if ($result){
+                    $this->success(lang('photo_add_success'),url('/admin/gallery/photoList'));
+                }else{
+                    $this->error(lang('photo_add_fail'));
+                }
+            }
         }else{
+            $type = new GalleryType();
+            $photoType = $type->getTypeList();
+            $this->assign('photoType',$photoType);
             $tag['edit'] = 0;
             $this->assign('tag',$tag);
             return $this->fetch();
+        }
+    }
+
+    /**
+     * 保存图片的Alt信息
+     * @param Request $request
+     * @return array
+     */
+    public function setAlt(Request $request)
+    {
+        if ($request->isPost()){
+            $id = $request->post('id');
+            $alt = $request->post('alt');
+            if ($id){
+                $gallery = new GalleryModel();
+                $result = $gallery->save(['alt'=>$alt],['id'=>$id]);
+                if ($result){
+                    return ajaxReturn($alt,1);
+                }else{
+                    return ajaxReturn('field',0);
+                }
+            }else{
+                exit(lang('is_empty'));
+            }
+        }else{
+            exit(lang('Method is error'));
         }
     }
 
@@ -53,7 +116,7 @@ class Gallery extends Base
         $file = request()->file('file');
         $info = $file->validate(['size'=>'2048000000','ext'=>'jpg,png,gif'])->move(ROOT_PATH . DS . 'upload'.DS.'gallery');
         if($info){
-            $path =  DS . 'upload'.DS.'images'.DS;
+            $path =  DS . 'upload'.DS.'gallery'.DS;
             $return['picUrl']=$path . $info->getSaveName(); //这个个地址是图片的savepath和savename组成，你懂得
             $return['status']= 1 ;
             return json($return);
@@ -160,7 +223,7 @@ class Gallery extends Base
     public function galleryDelete(Request $request)
     {
         $id = $request->get('id');
-        $article = new GallertModel();
+        $article = new GalleryModel();
         $hasUse = $article->checkGalleryUse($id);
         if (!empty($hasUse)){
             $this->error("删除失败,该类型还在使用中");

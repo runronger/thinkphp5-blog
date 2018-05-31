@@ -9,6 +9,16 @@ class GalleryType extends Model
     //
     protected $autoWriteTimestamp = false;
 
+    public function getTypeList()
+    {
+        $result = $this->field("id,type_name")->where('is_delete',0)->select();
+        return $result;
+    }
+
+
+
+
+
     /**
      * 相册软删除
      * @param $id

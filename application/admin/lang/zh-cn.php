@@ -81,4 +81,6 @@ return [
     'article_type_add_fail' => '文章类型添加失败',
     'gallery_add_success' => '相册创建成功',
     'gallery_add_fail' => '相册创建失败',
+    'photo_add_success' => '图片上传成功',
+    'photo_add_fail'  => '图片上传失败',
 ];

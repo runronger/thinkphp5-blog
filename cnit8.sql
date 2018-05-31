@@ -11,7 +11,7 @@
  Target Server Version : 100213
  File Encoding         : 65001
 
- Date: 30/05/2018 18:55:21
+ Date: 31/05/2018 19:40:49
 */
 
 SET NAMES utf8mb4;
@@ -44,7 +44,7 @@ CREATE TABLE `cn_admin`  (
 -- ----------------------------
 -- Records of cn_admin
 -- ----------------------------
-INSERT INTO `cn_admin` VALUES (5, 'admin', '2d2a21b2754a45c815efa9d2e1be8459', 1, '18729309523', 'rongqiu', 'xian', 'sss', 1, '2048', 1, 'ssss', '2018-05-30 16:49:09', '127.0.0.1', '2018-05-30 16:49:09', '2018-05-30 16:49:09');
+INSERT INTO `cn_admin` VALUES (5, 'admin', '2d2a21b2754a45c815efa9d2e1be8459', 1, '18729309523', 'rongqiu', 'xian', 'sss', 1, '2048', 1, 'ssss', '2018-05-31 18:50:34', '127.0.0.1', '2018-05-31 18:50:34', '2018-05-31 18:50:34');
 
 -- ----------------------------
 -- Table structure for cn_article
@@ -111,10 +111,31 @@ CREATE TABLE `cn_gallery`  (
   `image_url` varchar(400) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT '',
   `alt` varchar(120) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT '',
   `is_delete` tinyint(1) NOT NULL,
-  `create_time` datetime(0) NOT NULL,
-  `update_time` datetime(0) NOT NULL,
+  `create_time` datetime(0) NULL DEFAULT NULL,
+  `update_time` datetime(0) NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 50 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of cn_gallery
+-- ----------------------------
+INSERT INTO `cn_gallery` VALUES (32, 1, '/upload/gallery/20180531/0a9c564fce985f3bd6106b7d1cbf70f6.jpg', 'asdasda', 0, '2018-05-31 16:33:37', NULL);
+INSERT INTO `cn_gallery` VALUES (33, 1, '/upload/gallery/20180531/96084e5b0c6ec0de6b515b35b802a0a0.jpg', 'adasdasd', 0, '2018-05-31 16:33:37', NULL);
+INSERT INTO `cn_gallery` VALUES (34, 1, '/upload/gallery/20180531/256ec66cf84120b1441365ed23d3aec3.jpg', 'asdasdasdas', 0, '2018-05-31 16:33:37', NULL);
+INSERT INTO `cn_gallery` VALUES (35, 1, '/upload/gallery/20180531/ae9cfc3a718b7bfeea9a8be4b475dc04.jpg', '查实的哈利撒大声地', 0, '2018-05-31 16:33:37', NULL);
+INSERT INTO `cn_gallery` VALUES (36, 2, '/upload/gallery/20180531/fb4a0c6e71915518cc1673c9ece930da.jpg', '测试image', 0, '2018-05-31 16:34:03', NULL);
+INSERT INTO `cn_gallery` VALUES (37, 2, '/upload/gallery/20180531/f9f7841fae0c44a3303c6f586c3b0ae6.jpg', 'afsfgdsfdsa', 0, '2018-05-31 16:34:03', NULL);
+INSERT INTO `cn_gallery` VALUES (38, 2, '/upload/gallery/20180531/2327c1ae96db2df54a91ca7114ec84ca.jpg', '测试image', 0, '2018-05-31 16:34:03', NULL);
+INSERT INTO `cn_gallery` VALUES (39, 4, '/upload/gallery/20180531/5a0e89c4969eff79c97adf090e575fea.jpg', 'ujhiohnkn', 0, '2018-05-31 16:34:52', NULL);
+INSERT INTO `cn_gallery` VALUES (40, 4, '/upload/gallery/20180531/468b8be2e2675a68f6e3fd5d011db52f.jpg', '测试image', 0, '2018-05-31 16:34:52', NULL);
+INSERT INTO `cn_gallery` VALUES (41, 4, '/upload/gallery/20180531/9a3e356220ac7eb442907c636e12ed29.jpg', '测试image', 0, '2018-05-31 16:34:52', NULL);
+INSERT INTO `cn_gallery` VALUES (43, 4, '/upload/gallery/20180531/6bb1323c0434d4cd06726499f0858728.jpg', '测试image', 0, '2018-05-31 16:34:52', NULL);
+INSERT INTO `cn_gallery` VALUES (44, 4, '/upload/gallery/20180531/caf89ec5eddc9a9e14b9f2d345673378.jpg', '测试image', 0, '2018-05-31 16:34:52', NULL);
+INSERT INTO `cn_gallery` VALUES (45, 3, '/upload/gallery/20180531/5351645947a4eaebc86ca4a96e1e8185.jpg', '测试image', 0, '2018-05-31 16:35:20', NULL);
+INSERT INTO `cn_gallery` VALUES (46, 3, '/upload/gallery/20180531/ebb57fac8b06f36ffe30d817fb1c0ba2.jpg', '测试image', 0, '2018-05-31 16:35:20', NULL);
+INSERT INTO `cn_gallery` VALUES (47, 3, '/upload/gallery/20180531/01e5ab555328bc2a9f934b9cafdd5d44.jpg', '测试image', 0, '2018-05-31 16:35:20', NULL);
+INSERT INTO `cn_gallery` VALUES (48, 3, '/upload/gallery/20180531/8e7dcc22c62779bda76b3f49854d8ca0.jpg', '测试image', 0, '2018-05-31 16:35:20', NULL);
+INSERT INTO `cn_gallery` VALUES (49, 3, '/upload/gallery/20180531/209fda02a1814e47fe3fb809b1087812.jpg', '测试image', 0, '2018-05-31 16:35:20', NULL);
 
 -- ----------------------------
 -- Table structure for cn_gallery_type
@@ -130,7 +151,7 @@ CREATE TABLE `cn_gallery_type`  (
   `create_time` datetime(0) NULL DEFAULT NULL,
   `update_time` datetime(0) NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 4 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 5 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of cn_gallery_type
@@ -138,6 +159,7 @@ CREATE TABLE `cn_gallery_type`  (
 INSERT INTO `cn_gallery_type` VALUES (1, '我的图库', '/upload/images/20180528/b132eedf0f7eb58593ee82e1fd8e97ce.jpg', '我的图片', 'admin', 0, '2018-05-30 18:09:39', NULL);
 INSERT INTO `cn_gallery_type` VALUES (2, '旅行', NULL, NULL, 'admin', 0, '2018-05-30 18:29:01', NULL);
 INSERT INTO `cn_gallery_type` VALUES (3, '测试1', NULL, NULL, 'admin', 0, '2018-05-30 18:49:29', '2018-05-30 18:49:50');
+INSERT INTO `cn_gallery_type` VALUES (4, '日志', NULL, NULL, 'admin', 0, '2018-05-31 16:34:32', NULL);
 
 -- ----------------------------
 -- Table structure for it_admin

@@ -9,6 +9,26 @@
 {block name="content-description"}图片列表描述{/block}
 {block name="main-content"}
 <!-- GALLERY -->
+<!-- SAMPLE BOX CONFIGURATION MODAL FORM-->
+<div class="modal fade" id="box-config" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">设置图片alt信息</h4>
+            </div>
+            <div class="modal-body">
+                <label>alt信息 </label>
+                <input type="text" class="form-control"  id="imageAlt" placeholder="图片alt信息">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" id="saveInfo" data-dismiss="modal">Save</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /SAMPLE BOX CONFIGURATION MODAL FORM-->
 <div class="row">
     <div class="col-md-12">
         <!-- BOX -->
@@ -16,7 +36,7 @@
             <div class="box-title">
                 <h4><i class="fa fa-bars"></i>图库信息</h4>
                 <div class="tools">
-                    <a href="{:url('/admin/gallery/photoEdit')}" class="btn btn-xs btn-success" style="color: #ffffff;">添加图片
+                    <a href="{:url('/admin/gallery/photoEdit')}" class="btn btn-xs btn-warning" style="color: #ffffff;">添加图片
                     </a>
                 </div>
             </div>
@@ -24,135 +44,46 @@
                 <div id="filter-controls" class="btn-group">
                     <h4 style="margin-top: 0px;">相册:</h4>
                     <div class="hidden-xs">
-                        <a href="#" class="btn btn-default" data-filter="*">所有的</a>
-                        <a href="#" class="btn btn-info" data-filter=".category_1">Android Apps</a>
-                        <a href="#" class="btn btn-danger" data-filter=".category_2">iPhone Apps</a>
-                        <a href="#" class="btn btn-success" data-filter=".category_3">Windows Apps</a>
-                        <a href="#" class="btn btn-warning" data-filter=".category_4">Web Apps</a>
+                        <a href="#" class="btn btn-info" data-filter="*">所有的</a>
+                        <!--<a href="#" class="btn btn-info" data-filter=".category_1">Android Apps</a>-->
+                        <!--<a href="#" class="btn btn-danger" data-filter=".category_2">iPhone Apps</a>-->
+                        <!--<a href="#" class="btn btn-success" data-filter=".category_3">Windows Apps</a>-->
+                        <!--<a href="#" class="btn btn-warning" data-filter=".category_4">Web Apps</a>-->
+                        {foreach name="typeList" item="vo"}
+                        <a href="#" class="btn btn-success" data-filter=".gallery{$vo.id}">{$vo.type_name}</a>
+                        {/foreach}
                     </div>
                     <div class="visible-xs">
                         <select id="e1" class="form-control">
                             <option value="*"></option>
-                            <option value=".category_1">Android Apps</option>
+                            <!--<option value=".category_1">Android Apps</option>
                             <option value=".category_2">iPhone Apps</option>
                             <option value=".category_3">Windows Apps</option>
-                            <option value=".category_4">Web Apps</option>
+                            <option value=".category_4">Web Apps</option>-->
+                            {foreach name="typeList" item="vo"}
+                            <option value=".gallery{$vo.id}">{$vo.type_name}</option>
+                            {/foreach}
+
                         </select>
                     </div>
                 </div>
                 <div id="filter-items" class="row">
-                    <div class="col-md-3 category_1 item">
+                    {foreach name="photoList" item="v"}
+                    <div class="col-md-3 gallery{$v.type_id} item">
                         <div class="filter-content">
-                            <img src="/static/admin/images/gallery/1.png" alt="" class="img-responsive" />
+                            <img src="{$v.image_url}" alt="{$v.alt}" class="img-responsive" />
                             <div class="hover-content">
-                                <h4>Image Title</h4>
-                                <a class="btn btn-success hover-link">
+                                <h4>{$v.alt}</h4>
+                                <a href="#box-config" data-toggle="modal" class=" config btn btn-success hover-link" onclick="setId('{$v.id}')">
                                     <i class="fa fa-edit fa-1x"></i>
                                 </a>
-                                <a class="btn btn-warning hover-link colorbox-button" href="/static/admin/images/gallery/1.png" title="Image Title">
+                                <a class="btn btn-warning hover-link colorbox-button" href="{$v.image_url}" title="{$v.alt}">
                                     <i class="fa fa-search-plus fa-1x"></i>
                                 </a>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3 category_2 item">
-                        <div class="filter-content">
-                            <img src="/static/admin/images/gallery/2.jpg" alt="" class="img-responsive" />
-                            <div class="hover-content">
-                                <h4>Image Title</h4>
-                                <a class="btn btn-success hover-link">
-                                    <i class="fa fa-edit fa-1x"></i>
-                                </a>
-                                <a class="btn btn-warning hover-link colorbox-button" href="/static/admin/images/gallery/2.jpg" title="Image Title">
-                                    <i class="fa fa-search-plus fa-1x"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 category_3 item">
-                        <div class="filter-content">
-                            <img src="/static/admin/images/gallery/3.png" alt="" class="img-responsive" />
-                            <div class="hover-content">
-                                <h4>Image Title</h4>
-                                <a class="btn btn-success hover-link">
-                                    <i class="fa fa-edit fa-1x"></i>
-                                </a>
-                                <a class="btn btn-warning hover-link colorbox-button" href="/static/admin/images/gallery/3.png" title="Image Title">
-                                    <i class="fa fa-search-plus fa-1x"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 category_4 item">
-                        <div class="filter-content">
-                            <img src="/static/admin/images/gallery/4.png" alt="" class="img-responsive" />
-                            <div class="hover-content">
-                                <h4>Image Title</h4>
-                                <a class="btn btn-success hover-link">
-                                    <i class="fa fa-edit fa-1x"></i>
-                                </a>
-                                <a class="btn btn-warning hover-link colorbox-button" href="/static/admin/images/gallery/4.png" title="Image Title">
-                                    <i class="fa fa-search-plus fa-1x"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 category_1 item">
-                        <div class="filter-content">
-                            <img src="/static/admin/images/gallery/5.png" alt="" class="img-responsive" />
-                            <div class="hover-content">
-                                <h4>Image Title</h4>
-                                <a class="btn btn-success hover-link">
-                                    <i class="fa fa-edit fa-1x"></i>
-                                </a>
-                                <a class="btn btn-warning hover-link colorbox-button" href="/static/admin/images/gallery/5.png" title="Image Title">
-                                    <i class="fa fa-search-plus fa-1x"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 category_2 item">
-                        <div class="filter-content">
-                            <img src="/static/admin/images/gallery/8.png" alt="" class="img-responsive" />
-                            <div class="hover-content">
-                                <h4>Image Title</h4>
-                                <a class="btn btn-success hover-link">
-                                    <i class="fa fa-edit fa-1x"></i>
-                                </a>
-                                <a class="btn btn-warning hover-link colorbox-button" href="/static/admin/images/gallery/8.png" title="Image Title">
-                                    <i class="fa fa-search-plus fa-1x"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 category_4 item">
-                        <div class="filter-content">
-                            <img src="/static/admin/images/gallery/7.jpg" alt="" class="img-responsive" />
-                            <div class="hover-content">
-                                <h4>Image Title</h4>
-                                <a class="btn btn-success hover-link">
-                                    <i class="fa fa-edit fa-1x"></i>
-                                </a>
-                                <a class="btn btn-warning hover-link colorbox-button" href="/static/admin/images/gallery/7.jpg" title="Image Title">
-                                    <i class="fa fa-search-plus fa-1x"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 category_4 item">
-                        <div class="filter-content">
-                            <img src="/static/admin/images/gallery/2.jpg" alt="" class="img-responsive" />
-                            <div class="hover-content">
-                                <h4>Image Title</h4>
-                                <a class="btn btn-success hover-link">
-                                    <i class="fa fa-edit fa-1x"></i>
-                                </a>
-                                <a class="btn btn-warning hover-link colorbox-button" href="/static/admin/images/gallery/2.jpg" title="Image Title">
-                                    <i class="fa fa-search-plus fa-1x"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+                    {/foreach}
                 </div>
             </div>
         </div>
@@ -166,12 +97,11 @@
 <script src="/static/lib/isotope/dist/isotope.pkgd.min.js"></script>
 <script src="/static/lib/colorbox/jquery.colorbox.min.js"></script>
 <script src="/static/lib/imagesloaded/imagesloaded.pkgd.min.js"></script>
+<script src="/static/lib/layer/layer.js"></script>
 <script>
     jQuery(document).ready(function () {
         App.init(); //Initialise plugins and elements
     });
-
-
     /*-----------------------------------------------------------------------------------*/
     /*	Isotope
     /*-----------------------------------------------------------------------------------*/
@@ -197,7 +127,6 @@
                 return false;
             });
         });
-
         function handleIsotopeStretch() {
             var width = $(window).width();
             if ( width < 768 ) {
@@ -249,14 +178,51 @@
                 }
             }, 300)
         }
-
         // Resize Colorbox when resizing window or changing mobile device orientation
         jQuery(window).resize(resizeColorBox);
         window.addEventListener("orientationchange", resizeColorBox, false);
     }
-
     handleIsotope();	//Function to display portfolio
     handleHover();		//Function to display hover-content
     handleColorbox();		//Function to display colorbox
+
+    /**
+     * 把图片id存入cookie中
+     * @param id
+     */
+    function setId(id){
+        $.cookie('altId', id,{path: '/' });
+        console.log($.cookie('altId'));
+    }
+    /**
+     * ajax提交请求
+     */
+    $(document).ready(function () {
+        $("#saveInfo").click(function () {
+            if ($("#imageAlt").val() == ''){
+                layer.msg("alt信息不能为空", {
+                    icon: 2,
+                    time: 2000
+                });
+                $("#imageAlt").focus();
+                return false;
+            }
+            $.ajax({
+                url:"{:url('/admin/gallery/setAlt')}",
+                data:{id:$.cookie('altId'),alt:$("#imageAlt").val()},
+                type:'POST',
+                dataType:'json',
+                success:function (e) {
+                    console.log(e);
+                    if (e.status == 1){
+                        $.cookie('altId',null,{path: '/' });
+                        window.location.reload();
+                    }
+                }
+            });
+        });
+
+    });
+
 </script>
 {/block}

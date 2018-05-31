@@ -25,9 +25,9 @@
                                 <label for="photoType">相册<span style="color: red">*</span></label>
                                 <select class="form-control" id="photoType" name="photoType">
                                     <option value="">请选择</option>
-
-                                    <option value="1">我的图库</option>
-
+                                    {foreach name="photoType" item="vo"}
+                                    <option value="{$vo.id}">{$vo.type_name}</option>
+                                    {/foreach}
                                 </select>
                             </div>
                             <div class="form-group">
