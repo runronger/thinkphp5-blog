@@ -6,6 +6,27 @@
 <link rel="stylesheet" type="text/css" href="/static/lib/webuploader/webuploader.css">
 <link rel="stylesheet" type="text/css" href="/static/lib/webuploader/webuploader_demo.css">
 <link rel="stylesheet" type="text/css" href="/static/lib/daterangepicker/daterangepicker.css">
+<style>
+    .form-group {
+        margin-bottom: 8px;
+    }
+   .error{color:red;}
+    #uploader .placeholder {
+        min-height: 300px;
+        padding-top: 150px;
+        text-align: center;
+        background: url(/static/lib/webuploader/images/image.png) center 40px no-repeat;
+        color: #cccccc;
+        font-size: 18px;
+        position: relative;
+    }
+    .form-control {
+        width: 90%;
+    }
+    .page-container{
+        width: 90%;
+    }
+</style>
 {/block}
 {block name="navi"}{if condition="($tag.edit == 1)"}添加{else/}编辑{/if}文章{/block}
 {block name="content-description"}{if condition="($tag.edit == 1)"}添加{else/}编辑{/if}文章描述{/block}
@@ -26,9 +47,15 @@
                                 <label for="articleType">分类 <span style="color: red">*</span></label>
                                 <select class="form-control" id="articleType" name="articleType">
                                     <option value="">请选择</option>
-                                    {foreach name="typeList" item="vo"}
-                                    <option value="{$vo.id}">{$vo.type_name}</option>
-                                    {/foreach}
+                                    {if condition="($tag.edit == 1)"}
+                                        {foreach name="typeList" item="vo"}
+                                        <option value="{$vo.id}">{$vo.type_name}</option>
+                                        {/foreach}
+                                        {else/}
+                                        {foreach name="typeList" item="vo"}
+                                        <option value="{$vo.id}" {if condition="($vo.select == true)"}selected="selected"{/if}>{$vo.type_name}</option>
+                                        {/foreach}
+                                    {/if}
                                 </select>
                             </div>
                             <div class="form-group">
@@ -36,7 +63,11 @@
                                 <input type="text" class="form-control" id="articleTitle" name="articleTitle" value="{if condition='($tag.edit == 1)'}{else/}{$articleInfo.title}{/if}" placeholder="Enter title">
                             </div>
                             <div class="form-group">
-                                <label for="articleDescription">简介 <span style="color: red">*</span></label>
+                                <label for="articleKeywords">关键词 <span style="color: red">*</span> 格式：用英文‘,’隔开，60个字符以内</label>
+                                <input type="text" class="form-control" id="articleKeywords" name="articleKeywords" value="{if condition='($tag.edit == 1)'}{else/}{$articleInfo.keywords}{/if}" placeholder="Enter title">
+                            </div>
+                            <div class="form-group">
+                                <label for="articleDescription">简介 <span style="color: red">*</span> 格式：用英文‘,’隔开，120个字符以内</label>
                                 <input type="text" class="form-control" id="articleDescription" name="articleDescription" value="{if condition='($tag.edit == 1)'}{else/}{$articleInfo.description}{/if}" placeholder="description">
                             </div>
                             <div class="form-group">
@@ -87,9 +118,21 @@
                             <div class="form-group">
                                 <label for="isTop">是否置顶</label>
                                     <select class="form-control" style="width: 45%" name="isTop" id="isTop">
+                                        {if condition="($tag.edit == 1)"}
                                         <option value="">请选择</option>
                                         <option value="1">置顶</option>
                                         <option value="0">不置顶</option>
+                                        {else/}
+                                            {if condition="($articleInfo.is_top == 1)"}
+                                            <option value="">请选择</option>
+                                            <option value="1" selected="selected">置顶</option>
+                                            <option value="0">不置顶</option>
+                                            {else/}
+                                            <option value="">请选择</option>
+                                            <option value="1">置顶</option>
+                                            <option value="0" selected="selected">不置顶</option>
+                                            {/if}
+                                        {/if}
                                     </select>
                             </div>
                             <div class="form-group">
@@ -119,9 +162,6 @@
         </div>
     </div>
 </div>
-<style>
-    lablel > .error{color:red; border-color:red !important;}
-</style>
 {/block}
 {block name="javascript"}
 <!--webuploader-->
@@ -303,6 +343,7 @@
         lang:lang(),
         langPath:"/static/lib/ueditor/lang/",
         initialFrameHeight:400,
+        initialFrameWidth:1600
     });
    /* ue.ready(function() {
         //设置编辑器的内容
@@ -380,6 +421,9 @@
                     required:true,
                 },
                 articleTitle:{
+                    required:true,
+                },
+                articleKeywords:{
                     required:true,
                 },
                 articleDescription:{

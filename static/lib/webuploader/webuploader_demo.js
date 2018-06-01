@@ -62,7 +62,7 @@ jQuery(function() {
 
     // 实例化
     uploader = WebUploader.create({
-        auto: false,// 选完文件后，是否自动上传。
+        auto: true,// 选完文件后，是否自动上传。
         pick: {
             id: '#filePicker',
             label: '点击选择图片'
@@ -451,7 +451,7 @@ jQuery(function() {
         }else{
             require(['util'],function(){
                 util.message(response._raw,'','info',5);
-            })
+            });
         }
     });
 

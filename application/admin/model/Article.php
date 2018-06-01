@@ -3,7 +3,6 @@
 namespace app\admin\model;
 
 use think\Model;
-
 class Article extends Model
 {
     // 是否需要自动写入时间戳 如果设置为字符串 则表示时间字段的类型
@@ -33,7 +32,7 @@ class Article extends Model
     public function getArticleInfo($id)
     {
         if ($id){
-            $resule = $this->where('id='.$id)->find();
+            $resule = $this->where(['id'=>$id,'is_delete'=>0])->find();
             return $resule;
         }else{
             return false;

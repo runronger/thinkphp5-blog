@@ -103,6 +103,7 @@ class Article extends Base
                 $id = $request->post('id');
                 $articleType = $request->post('articleType');
                 $articleTitle = trim($request->post('articleTitle'));
+                $articleKeywords = trim($request->post('articleKeywords'));
                 $articleDescription = trim($request->post('articleDescription'));
                 $articleAuthor = $request->post('articleAuthor') ? trim($request->post('articleAuthor')) : "admin";
                 $articleImage = $request->post('articleImage') ? $request->post('articleImage') : '';
@@ -126,6 +127,7 @@ class Article extends Base
                     $data = [
                         'type_id' => $articleType,
                         'title' => $articleTitle,
+                        'keywords' => $articleKeywords,
                         'description' => $articleDescription,
                         'author' => $articleAuthor,
                         'image' => $picUrl,
@@ -143,6 +145,7 @@ class Article extends Base
                     //新增部分
                     $article->type_id = $articleType;
                     $article->title = $articleTitle;
+                    $article->keywords = $articleKeywords;
                     $article->description = $articleDescription;
                     $article->author = $articleAuthor;
                     $article->image = $articleImage;
@@ -164,18 +167,25 @@ class Article extends Base
         }else{
             $id = $request->get('id');
             $type = new ArticleType();
-            $typeList = $type->getList();
-            $this->assign('typeList',$typeList);
             if ($id){
+                $typeList = $type->tagList($id);
+//                dump($typeList);
+                $this->assign('typeList',$typeList);
                 $article = new ArticleModel();
                 $articleInfo = $article->getArticleInfo($id);
 //                dump($articleInfo);
-                $this->assign('articleInfo',$articleInfo);
+                if ($articleInfo){
+                    $this->assign('articleInfo',$articleInfo);
+                }else{
+                    $this->error(lang('is_empty'));
+                }
                 $tag['edit'] = 0;
                 $tag['id'] = $id;
                 $this->assign('tag',$tag);
                 return $this->fetch("article_edit");
             }else{
+                $typeList = $type->getList();
+                $this->assign('typeList',$typeList);
                 $tag['edit'] = 1;
                 $this->assign('tag',$tag);
                 return $this->fetch("article_edit");

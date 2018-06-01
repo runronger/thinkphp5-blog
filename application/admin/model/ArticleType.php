@@ -3,7 +3,7 @@
 namespace app\admin\model;
 
 use think\Model;
-
+use think\Db;
 class ArticleType extends Model
 {
     // 关闭自动写入时间戳
@@ -36,6 +36,35 @@ class ArticleType extends Model
         return $result;
     }
 
-
+    /**
+     *
+     * @param $id
+     * @return array|bool
+     * @throws \think\db\exception\DataNotFoundException
+     * @throws \think\db\exception\ModelNotFoundException
+     * @throws \think\exception\DbException
+     */
+    public function tagList($id)
+    {
+        if ($id){
+            $hasUseType = Db::table('cn_article')->field('type_id')->where('id',$id)->find();
+            $allType = Db::table('cn_article_type')->field('id,type_name')->select();
+              $result = [];
+              foreach ($allType as $v){
+                  $select = false;
+                  if (in_array($v['id'],$hasUseType)){
+                      $select = true;
+                  }
+                  $result[$v['id']]=[
+                      'id' => $v['id'],
+                      'type_name' => $v['type_name'],
+                      'select' => $select,
+                  ];
+              }
+              return $result;
+        }else{
+            return false;
+        }
+    }
 
 }

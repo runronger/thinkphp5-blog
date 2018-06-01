@@ -1,0 +1,105 @@
+{extend name="layout"/}
+{block name="title"}网站设置{/block}
+{block name="keywords"}网站设置{/block}
+{block name="description"}网站设置{/block}
+{block name="link"}
+<link rel="stylesheet" type="text/css" href="/static/lib/colorbox/colorbox.min.css">
+<style>
+    .form-group {
+        margin-bottom: 33px;
+    }
+    .form-control {
+        height: 40px;
+    }
+    .error{color: red}
+</style>
+{/block}
+{block name="navi"}网站设置{/block}
+{block name="content-description"}网站设置描述{/block}
+{block name="main-content"}
+<div class="row">
+    <div class="col-xs-12 col-md-12 col-md-12">
+        <div class="row">
+            <div class="col-md-12">
+                <!-- BASIC -->
+                <div class="box">
+                    <div class="box-title">
+                        <h4><i class="fa fa-bars"></i>网站信息</h4>
+                    </div>
+                    <div class="box-body big">
+                        <form class="form-horizontal" role="form" id="configForm" action="" method="post" enctype="multipart/form-data">
+                            <input type="hidden" name="__token__" value="{$Request.token}" />
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label">网站标题</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" name="configTitle" id="configTitle" placeholder="Enter title">
+                                </div>
+                                <label class="col-sm-1 btn-warning">格式：用英文‘,’或‘|’隔开，60个字符以内</label>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label">网站关键字</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" name="configKeywords" id="configKeywords" placeholder="Enter keywords">
+                                </div>
+                                <label class="col-sm-1 btn-warning">格式：用英文‘,’隔开，60个字符以内</label>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label">网站描述</label>
+                                <div class="col-sm-9">
+                                    <textarea class="form-control" rows="3" name="configContent" id="configContent"></textarea>
+                                </div>
+                                <label class="col-sm-1 btn-warning">格式：用英文‘,’隔开，120个字符以内</label>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label">ICP 备案信息</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" name="configICP" id="configICP" placeholder="京ICP证030173号">
+                                </div>
+                                <label class="col-sm-1 btn-warning">格式：京ICP证030173号</label>
+                            </div>
+                            <div class="form-group">
+                                <div style="margin-left: 9.3%">
+                                    <button type="submit" class="btn btn-info">提交</button>
+                                    <button type="reset" class="btn btn-default">取消</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!-- /BASIC -->
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /GALLERY -->
+{/block}
+{block name="javascript"}
+<!--validation-->
+<script src="/static/lib/validation/dist/jquery.validate.min.js"></script>
+<script src="/static/lib/validation/dist/additional-methods.min.js"></script>
+<script src="/static/lib/validation/dist/localization/messages_zh.min.js"></script>
+<script>
+    jQuery(document).ready(function () {
+        App.init(); //Initialise plugins and elements
+    });
+    $(document).ready(function () {
+        $("#configForm").validate({
+            // debug:true,
+            rules: {
+                configTitle: {
+                    required: true,
+                },
+                configKeywords: {
+                    required: true,
+                },
+                configContent: {
+                    required: true,
+                },
+                configICP: {
+                    required: true,
+                }
+            }
+        });
+    });
+</script>
+{/block}
