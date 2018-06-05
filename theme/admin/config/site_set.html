@@ -1,0 +1,99 @@
+{extend name="layout"/}
+{block name="title"}站点设置{/block}
+{block name="keywords"}站点设置{/block}
+{block name="description"}站点设置{/block}
+{block name="link"}
+<link rel="stylesheet" type="text/css" href="/static/lib/colorbox/colorbox.min.css">
+<style>
+    .form-group {
+        margin-bottom: 33px;
+    }
+    .form-control {
+        height: 40px;
+    }
+    .error{color: red}
+</style>
+{/block}
+{block name="navi"}站点设置{/block}
+{block name="content-description"}站点设置描述{/block}
+{block name="main-content"}
+<div class="row">
+    <div class="col-xs-12 col-md-12 col-md-12">
+        <div class="row">
+            <div class="col-md-12">
+                <!-- BASIC -->
+                <div class="box">
+                    <div class="box-title">
+                        <h4><i class="fa fa-bars"></i>站点信息</h4>
+                    </div>
+                    <div class="box-body big">
+                        <form class="form-horizontal" role="form" id="siteForm" action="{:url('/admin/config/siteSet')}" method="post" enctype="multipart/form-data">
+                            <input type="hidden" name="__token__" value="{$Request.token}" />
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label">URL:</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" name="siteURL" id="siteURL" placeholder="Enter url">
+                                </div>
+                                <label class="col-sm-1 btn-warning">Eg:http://www.xx.com</label>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label">站点名：</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" name="siteName" id="siteName" placeholder="Enter name">
+                                </div>
+                                <label class="col-sm-1 btn-warning">格式：用英文‘,’隔开，60个字符以内</label>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label">站点描述</label>
+                                <div class="col-sm-9">
+                                    <textarea class="form-control" rows="3" name="siteDescription" id="siteDescription"></textarea>
+                                </div>
+                                <label class="col-sm-1 btn-warning">格式：用英文‘,’隔开，120个字符以内</label>
+                            </div>
+                            <div class="form-group">
+                                <div style="margin-left: 9.3%">
+                                    <button type="submit" class="btn btn-info">提交</button>
+                                    <button type="reset" class="btn btn-default">取消</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!-- /BASIC -->
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /GALLERY -->
+{/block}
+{block name="javascript"}
+<!--validation-->
+<script src="/static/lib/validation/dist/jquery.validate.min.js"></script>
+<script src="/static/lib/validation/dist/additional-methods.min.js"></script>
+<script src="/static/lib/validation/dist/localization/messages_zh.min.js"></script>
+<script>
+    jQuery(document).ready(function () {
+        App.init(); //Initialise plugins and elements
+    });
+    $(document).ready(function () {
+        $("#siteForm").validate({
+            // debug:true,
+            rules: {
+                siteURL: {
+                    required: true,
+                    url:true,
+                    maxlength:120
+                },
+                siteName: {
+                    required: true,
+                    maxlength:60
+                },
+                siteDescription: {
+                    required: true,
+                    maxlength:120
+                },
+            }
+        });
+    });
+</script>
+{/block}

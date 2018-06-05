@@ -1,0 +1,74 @@
+{extend name="layout"/}
+{block name="title"}{if condition="($tag.edit == 0)"}添加{else/}编辑{/if}广告分类{/block}
+{block name="keywords"}{if condition="($tag.edit == 0)"}添加{else/}编辑{/if}广告分类{/block}
+{block name="description"}{if condition="($tag.edit == 0)"}添加{else/}编辑{/if}广告分类{/block}
+{block name="link"}
+<style>
+    .error{color: red}
+</style>
+{/block}
+{block name="navi"}{if condition="($tag.edit == 0)"}添加{else/}编辑{/if}广告分类{/block}
+{block name="content-description"}{if condition="($tag.edit == 0)"}添加{else/}编辑{/if}广告分类描述{/block}
+{block name="main-content"}
+<div class="row">
+    <div class="col-xs-12 col-md-12 col-md-12">
+        <div class="row">
+            <div class="col-md-12">
+                <!-- BASIC -->
+                <div class="box  ">
+                    <div class="box-title">
+                        <h4><i class="fa fa-bars"></i>{if condition="($tag.edit == 0)"}添加{else/}编辑{/if}广告分类</h4>
+                    </div>
+                    <div class="box-body big">
+                        <form role="form" id="articlleTypeForm" action="" method="post" enctype="multipart/form-data">
+                            <input type="hidden" name="__token__" value="{$Request.token}" />
+                            {if condition="($tag.edit == 0)"}
+                            <div class="form-group">
+                                <label for="advertisementType1">分类名 <span style="color: red">*</span></label>
+                                <input type="text" class="form-control" id="advertisementType1" name="advertisementType" value="{if condition='($tag.edit == 1)'}{$typeInfo.type_name}{else/}{/if}" placeholder="Enter type">
+                            </div>
+                            {else/}
+                            <div class="form-group">
+                                <label>原分类名</label>
+                                <input type="text" class="form-control" value="{$typeInfo.type_name}" placeholder="Enter type">
+                            </div>
+                            <div class="form-group">
+                                <label for="advertisementType">新类名 <span style="color: red">*</span></label>
+                                <input type="hidden" name="id" value="{$tag.id}" />
+                                <input type="text" class="form-control" id="advertisementType" name="advertisementType" value="" placeholder="Enter new type">
+                            </div>
+                            {/if}
+                            <div class="separator"></div>
+                            <button type="submit" class="btn btn-success">提交</button>
+                            <a  onClick="javascript :history.back(-1);" class="btn btn-primary">返回</a>
+                        </form>
+                    </div>
+                </div>
+                <!-- /BASIC -->
+            </div>
+        </div>
+    </div>
+</div>
+{/block}
+{block name="javascript"}
+<!--validation-->
+<script src="/static/lib/validation/dist/jquery.validate.min.js"></script>
+<script src="/static/lib/validation/dist/additional-methods.min.js"></script>
+<script src="/static/lib/validation/dist/localization/messages_zh.min.js"></script>
+<script>
+    jQuery(document).ready(function () {
+        App.init(); //Initialise plugins and elements
+    });
+    $(document).ready(function () {
+        $("#articlleTypeForm").validate({
+            // debug:true,
+            rules:{
+                advertisementType:{
+                    required:true,
+                    maxlength:30
+                },
+            }
+        });
+    });
+</script>
+{/block}l>

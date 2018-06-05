@@ -41,8 +41,21 @@ class Gallery extends Model
 
     }
 
-
-
+    /**
+     * 获类型下所有图片
+     * @param $typeId
+     * @return false|\PDOStatement|string|\think\Collection
+     * @throws \think\db\exception\DataNotFoundException
+     * @throws \think\db\exception\ModelNotFoundException
+     * @throws \think\exception\DbException
+     */
+    public function getPictureList($typeId)
+    {
+        if ($typeId){
+            $result = $this->where('type_id',$typeId)->select();
+            return $result;
+        }
+    }
 
 
 }

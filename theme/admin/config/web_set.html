@@ -27,7 +27,7 @@
                         <h4><i class="fa fa-bars"></i>网站信息</h4>
                     </div>
                     <div class="box-body big">
-                        <form class="form-horizontal" role="form" id="configForm" action="" method="post" enctype="multipart/form-data">
+                        <form class="form-horizontal" role="form" id="configForm" action="{:url('/admin/config/webSet')}" method="post" enctype="multipart/form-data">
                             <input type="hidden" name="__token__" value="{$Request.token}" />
                             <div class="form-group">
                                 <label class="col-sm-1 control-label">网站标题</label>
@@ -46,9 +46,9 @@
                             <div class="form-group">
                                 <label class="col-sm-1 control-label">网站描述</label>
                                 <div class="col-sm-9">
-                                    <textarea class="form-control" rows="3" name="configContent" id="configContent"></textarea>
+                                    <textarea class="form-control" rows="3" name="configDescription" id="configDescription"></textarea>
                                 </div>
-                                <label class="col-sm-1 btn-warning">格式：用英文‘,’隔开，120个字符以内</label>
+                                <label class="col-sm-1 btn-warning">格式：用英文‘,’隔开，160个字符以内</label>
                             </div>
                             <div class="form-group">
                                 <label class="col-sm-1 control-label">ICP 备案信息</label>
@@ -88,15 +88,19 @@
             rules: {
                 configTitle: {
                     required: true,
+                    maxlength:60
                 },
                 configKeywords: {
                     required: true,
+                    maxlength:60
                 },
-                configContent: {
+                configDescription: {
                     required: true,
+                    maxlength:160
                 },
                 configICP: {
                     required: true,
+                    maxlength:20
                 }
             }
         });

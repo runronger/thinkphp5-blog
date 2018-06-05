@@ -1,0 +1,137 @@
+{extend name="layout"/}
+{block name="title"}{if condition="($tag.edit == 0)"}添加{else/}编辑{/if}广告{/block}
+{block name="keywords"}{if condition="($tag.edit == 0)"}添加{else/}编辑{/if}广告{/block}
+{block name="description"}{if condition="($tag.edit == 0)"}添加{else/}编辑{/if}广告{/block}
+{block name="link"}
+<link rel="stylesheet" type="text/css" href="/static/lib/webuploader/webuploader.css">
+<link rel="stylesheet" type="text/css" href="/static/lib/webuploader/webuploader_demo.css">
+<style>
+    .form-group {
+        margin-bottom: 8px;
+    }
+    .error{color:red;}
+    #uploader .placeholder {
+        min-height: 300px;
+        padding-top: 150px;
+        text-align: center;
+        background: url(/static/lib/webuploader/images/image.png) center 40px no-repeat;
+        color: #cccccc;
+        font-size: 18px;
+        position: relative;
+    }
+    .form-control {
+        width: 90%;
+    }
+    .page-container{
+        width: 90%;
+    }
+</style>
+{/block}
+{block name="navi"}{if condition="($tag.edit == 0)"}添加{else/}编辑{/if}广告{/block}
+{block name="content-description"}{if condition="($tag.edit == 0)"}添加{else/}编辑{/if}广告描述{/block}
+{block name="main-content"}
+<div class="row">
+    <div class="col-xs-12 col-md-12 col-md-12">
+        <div class="row">
+            <div class="col-md-12">
+                <!-- BASIC -->
+                <div class="box  ">
+                    <div class="box-title">
+                        <h4><i class="fa fa-bars"></i>{if condition="($tag.edit == 0)"}添加{else/}编辑{/if}广告</h4>
+                    </div>
+                    <div class="box-body big">
+                        <form role="form" id="adForm" action="" method="post" enctype="multipart/form-data">
+                            <input type="hidden" name="__token__" value="{$Request.token}" />
+                            <div class="form-group">
+                                <label for="adType">广告类型<span style="color: red">*</span></label>
+                                <select class="form-control" id="adType" name="adType">
+                                    <option value="">请选择</option>
+                                    {foreach name="typeList" item="vo"}
+                                    <option value="{$vo.id}">{$vo.type_name}</option>
+                                    {/foreach}
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="adUrl">广告跳转地址： <span style="color: red">*</span></label>
+                                <input type="text" class="form-control" id="adUrl" name="adUrl" value="{if condition='($tag.edit == 1)'}{adInfo.title}{else/}{/if}" placeholder="Enter title">
+                            </div>
+                            <div class="form-group">
+                                <label for="adDescription">描述 <span style="color: red">*</span></label>
+                                <input type="text" class="form-control" id="adDescription" name="adDescription" value="{if condition='($tag.edit == 1)'}{adInfo.title}{else/}{/if}" placeholder="Enter title">
+                            </div>
+                            <div class="form-group">
+                                <label >广告图片 <span style="color: red">*</span></label>
+                                <div class="page-container">
+                                    <div id="uploader" class="wu-example">
+                                        <div class="queueList">
+                                            <div id="dndArea" class="placeholder">
+                                                <div id="filePicker"></div>
+                                                <p>或将照片拖到这里，单次最多可选1张</p>
+                                            </div>
+                                        </div>
+                                        <div class="statusBar" style="display:none;">
+                                            <div class="progress">
+                                                <span class="text">0%</span>
+                                                <span class="percentage"></span>
+                                            </div><div class="info"></div>
+                                            <div class="btns">
+                                                <div id="filePicker2"></div><div class="uploadBtn">开始上传</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="adDescription">图片alt描述 <span style="color: red">*</span></label>
+                                <input type="text" class="form-control" id="adImageAlt" name="adImageAlt" value="{if condition='($tag.edit == 1)'}{adInfo.title}{else/}{/if}" placeholder="Enter title">
+                            </div>
+                            <div class="separator"></div>
+                            <button type="submit" class="btn btn-success">提交</button>
+                            <a  onClick="javascript :history.back(-1);" class="btn btn-primary">返回</a>
+                        </form>
+                    </div>
+                </div>
+                <!-- /BASIC -->
+            </div>
+        </div>
+    </div>
+</div>
+{/block}
+{block name="javascript"}
+<!--webuploader-->
+<script src="/static/lib/webuploader/webuploader.min.js"></script>
+<script src="/static/lib/webuploader/adEdit.js"></script>
+<!--validation-->
+<script src="/static/lib/validation/dist/jquery.validate.min.js"></script>
+<script src="/static/lib/validation/dist/additional-methods.min.js"></script>
+<script src="/static/lib/validation/dist/localization/messages_zh.min.js"></script>
+
+<script>
+    jQuery(document).ready(function () {
+        App.init(); //Initialise plugins and elements
+    });
+    $(document).ready(function () {
+        $("#adForm").validate({
+            // debug:true,
+            rules:{
+                adType:{
+                    required:true,
+                },
+                adUrl:{
+                    required:true,
+                    url:true,
+                    maxlength:1000
+                },
+                adDescription:{
+                    required:true,
+                    maxlength:240
+                },
+                adImageAlt:{
+                    required:true,
+                    maxlength:60
+                },
+            }
+        });
+    });
+</script>
+{/block}

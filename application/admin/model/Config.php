@@ -7,4 +7,5 @@ use think\Model;
 class Config extends Model
 {
     //
+    protected $autoWriteTimestamp = false;
 }

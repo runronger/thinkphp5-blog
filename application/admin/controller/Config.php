@@ -2,53 +2,85 @@
 
 namespace app\admin\controller;
 
-use think\Controller;
 use think\Request;
-
+use think\Validate;
+use think\Session;
+use app\admin\model\Config as ConfigModel;
+use app\admin\model\Site;
 class Config extends Base
 {
-    /**
-     * 显示资源列表
-     *
-     * @return \think\Response
-     */
+
     public function webSet(Request $request)
     {
         if ($request->isPost()){
-
-
+//            dump($request->post());
+            $token = $request->token('__token__');
+            $validate = new Validate();
+            $pass = $validate->check($token);
+            if ($pass){
+                $configTitle = trim($request->post('configTitle'));
+                $configKeywords = trim($request->post('configKeywords'));
+                $configDescription = trim($request->post('configDescription'));
+                $configICP = trim($request->post('configICP'));
+                $config = new ConfigModel();
+                $config->title = $configTitle;
+                $config->keywords = $configKeywords;
+                $config->description = $configDescription;
+                $config->icp = $configICP;
+                $config->author = Session::get('ADMIN_PASS')->user_name;
+                $config->create_time = date("Y-m-d H:i:s",time());
+                $result = $config->save();
+                if ($result){
+                    $this->success(lang('success'));
+                }else{
+                    $this->error(lang('error'));
+                }
+            }else{
+                $this->error(lang('error'));
+            }
         }else{
             return $this->fetch();
         }
     }
 
-    /**
-     * 显示创建资源表单页.
-     *
-     * @return \think\Response
-     */
-    public function create()
+
+    public function siteSet(Request $request)
     {
-        //
+        if ($request->isPost()){
+//            dump($request->post());
+            $token = $request->token('__token__');
+            $validate = new Validate();
+            $pass = $validate->check($token);
+            if ($pass){
+                $siteURL = trim($request->post('siteURL'));
+                $siteName = trim($request->post('siteName'));
+                $siteDescription = trim($request->post('siteDescription'));
+                $site = new Site();
+                $site->url = $siteURL;
+                $site->site_name = $siteName;
+                $site->description = $siteDescription;
+                $site->author = Session::get('ADMIN_PASS')->user_name;
+                $site->create_time = date("Y-m-d H:i:s",time());
+                $result = $site->save();
+                if ($result){
+                    $this->success(lang('success'));
+                }else{
+                    $this->error(lang('error'));
+                }
+            }
+        }else{
+
+            return $this->fetch();
+        }
     }
 
-    /**
-     * 保存新建的资源
-     *
-     * @param  \think\Request  $request
-     * @return \think\Response
-     */
+
     public function save(Request $request)
     {
         //
     }
 
-    /**
-     * 显示指定的资源
-     *
-     * @param  int  $id
-     * @return \think\Response
-     */
+
     public function read($id)
     {
         //

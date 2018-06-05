@@ -6,6 +6,12 @@
  * Time: 下午5:09
  */
 return [
+    //common
+    'is_empty' =>'参数不能为空',
+    'is_have'  => '数据已存在，不能重复添加',
+    'success' => '成功',
+    'error'   => '失败',
+
     'ZH'          => '中文',
     'EN'          => '英文',
     'Language'    => '语言设置',
@@ -49,8 +55,9 @@ return [
     'Product list' => '商品列表',
     'Add product' => '添加商品',
     'Advertising' => '广告管理',
-    'Advertising list' => '广告列表',
-    'Add ads' =>   '广告添加',
+    'Advertising_list' => '广告列表',
+    'Add_ads' =>   '广告添加',
+    'Add_type' =>   '广告分类',
     'Article' => '文章管理',
     'Article_list' => '文章列表',
     'Add_articles' => '添加文章',
@@ -74,8 +81,6 @@ return [
     'Role_list' => '角色列表',
     'Add_role'  => '添加角色',
 
-    'is_empty' =>'参数不能为空',
-    'is_have'  => '数据已存在，不能重复添加',
 
     'article_type_add_success' => '文章类型添加成功',
     'article_type_add_fail' => '文章类型添加失败',
@@ -83,4 +88,12 @@ return [
     'gallery_add_fail' => '相册创建失败',
     'photo_add_success' => '图片上传成功',
     'photo_add_fail'  => '图片上传失败',
+
+
+
+    'ad_type_add_success' => '广告分类添加成功',
+    'ad_type_add_fail' => '广告分类添加失败',
+    'ad_add_success' => '广告加成功',
+    'ad_add_fail'  => '广告加成功'
+
 ];

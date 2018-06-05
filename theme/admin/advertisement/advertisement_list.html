@@ -1,0 +1,391 @@
+{extend name="layout"/}
+{block name="title"}广告列表{/block}
+{block name="keywords"}广告列表{/block}
+{block name="description"}广告列表{/block}
+{block name="link"}
+<link rel="stylesheet" type="text/css" href="/static/lib/daterangepicker/daterangepicker.css">
+<style>
+    .form-group {
+        margin-bottom: 10px;
+    }
+    .box .box-title {
+        margin-bottom: 8px;
+    }
+</style>
+{/block}
+{block name="navi"}广告列表{/block}
+{block name="content-description"}广告列表描述{/block}
+{block name="main-content"}
+<div class="row">
+    <div class="col-xs-12 col-md-12 col-lg-12">
+        <div class="box">
+            <div class="box-title">
+                <h4><i class="fa fa-bars"></i>搜索</h4>
+
+            </div>
+            <div class="box-body big">
+                <div class="row">
+                    <div class="widget-body floatleft">
+                        <form action="{:url('/admin/advertisement/search')}" method="post" enctype="multipart/form-data" role="form">
+
+                            <div class="col-sm-3 no-padding">
+                                <div class="form-group">
+                                    <label >编号</label>
+                                    <input type="text" class="form-control" placeholder="编号数字" name="id" value="{$Request.param.id}">
+                                </div>
+                            </div>
+
+                            <div class="col-sm-3">
+                                <div class="form-group">
+                                    <label >标题</label>
+                                    <input type="text" class="form-control" placeholder="标题" name="title" value="{$Request.param.title}">
+                                </div>
+                            </div>
+
+                            <div class="col-sm-3">
+                                <div class="form-group">
+                                    <label >描述</label>
+                                    <input type="text" class="form-control" placeholder="描述" name="description" value="{$Request.param.description}">
+                                </div>
+                            </div>
+
+                            <div class="col-sm-3 no-padding">
+                                <div class="form-group">
+                                    <label >作者</label>
+                                    <input type="text" class="form-control" placeholder="作者" name="author" value="{$Request.param.author}">
+                                </div>
+                            </div>
+
+                            <div class="col-sm-3 no-padding">
+
+                                <div class="form-group">
+                                    <label >添加时间</label>
+                                    <div class="controls">
+                                        <div class="input-group">
+                                            <span class="input-group-addon">
+                                                <i class="fa fa-calendar"></i>
+                                            </span><input type="text" class="form-control" id="addTime" placeholder="添加时间" name="addTime" value="{$Request.param.addTime}">
+                                            <!--<div class="input-group-addon clearBtns">x</div>-->
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="col-sm-3">
+
+                                <div class="form-group">
+                                    <label >修改时间</label>
+
+                                    <div class="controls">
+                                        <div class="input-group">
+                                            <span class="input-group-addon">
+                                                <i class="fa fa-calendar"></i>
+                                            </span><input type="text" class="form-control" id="editTime" placeholder="修改时间" name="editTime" value="{$Request.param.editTime}">
+                                            <!--<div class="input-group-addon clearBtns">x</div>-->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="form-group">
+                                    <label >置顶</label>
+                                    <!--<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">-->
+                                    <select id="e1" class="form-control" style="width:100%;" name="isTop">
+                                        <option value="">请选择</option>
+                                        <option value="0">未置顶</option>
+                                        <option value="1">已置顶</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 no-padding">
+                                <button type="submit" class="btn btn-primary">搜索</button>
+                                <button type="reset" class="btn btn-default">清空</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12 col-md-12 col-md-12">
+        <!-- BOX -->
+        <div class="box">
+            <div class="box-title">
+                <h4><i class="fa fa-table"></i>广告列表</h4>
+                {if condition='($isSearch == 0)'}
+                <div class="tools">
+                    <a href="{:url('/admin/advertisement/advertisementEdit')}" class="btn btn-xs btn-success" style="color: #ffffff;">添加广告
+                    </a>
+                </div>
+                {elseif condition='($isSearch == 1)'}
+                <div class="tools">
+                    <a href="{:url('/admin/advertisement/download')}" class="btn btn-xs btn-success" style="color: #ffffff;">导出广告
+                    </a>
+                </div>
+                {/if}
+            </div>
+            <div class="box-body">
+                <table class="table table-bordered">
+                    <thead>
+                    <tr>
+                        <th width="3%">编号</th>
+                        <th width="3%" style="width: 60px; height: 60px">图片</th>
+                        <th width="5%">类型id</th>
+                        <th width="25%">跳转地址</th>
+                        <th width="20%">描述</th>
+                        <th width="5%">作者</th>
+                        <th width="10%">添加时间</th>
+                        <th width="10%">修改时间</th>
+                        <th width="20%">操作</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {foreach name="allAd" item="vo"}
+                    <tr>
+                        <td>{$vo.id}</td>
+                        <td><img src="{$vo.ad_image}" alt="{$vo.ad_image_alt}" style="width: 60px; height: 60px"></td>
+                        <td>{$vo.type_id}</td>
+                        <td>{$vo.ad_url}</td>
+                        <td>{$vo.ad_description}</td>
+                        <td>{$vo.author}</td>
+                        <td>{$vo.create_time}</td>
+                        <td>{$vo.update_time}</td>
+                        <td>
+                            <a href="{:url('/portal/advertisement/show')}?id={$vo.id}" class="btn btn-info">预览</a>
+                            <a href="{:url('/admin/advertisement/advertisementEdit')}?id={$vo.id}" class="btn btn-success">编辑</a>
+                            <a href="{:url('/admin/advertisement/changeDelete')}?id={$vo.id}" class="btn btn-warning">删除</a>
+                        </td>
+                    </tr>
+                    {/foreach}
+
+                    </tbody>
+                </table>
+                {$allAd->render()}
+            </div>
+        </div>
+        <!-- /BOX -->
+    </div>
+</div>
+
+{/block}
+{block name="javascript"}
+<script src="/static/lib/daterangepicker/moment.min.js"></script>
+<script src="/static/lib/daterangepicker/daterangepicker.js"></script>
+<script type="text/javascript">
+    jQuery(document).ready(function () {
+        App.init(); //Initialise plugins and elements
+    });
+
+    $("#addTime").daterangepicker({
+            //日期或字符串）最初选择的日期范围的开始日期。如果您提供了一个字符串，它必须与您的locale设置中设置的日期格式字符串匹配。
+            "startDate": moment().subtract(29, 'days'),
+            //（日期或字符串）最初选择的日期范围的结束日期。
+            "endDate": moment(),
+            //（日期或字符串）用户可以选择的最早日期。
+            "minDate":'01/01/2017',
+            // （日期或字符串）用户可以选择的最新日期。
+            "maxDate": '12/31/2019',
+            //(对象）所选开始和结束日期之间的最大跨度。maxSpan在配置生成器中检查一个如何使用它的例子。您可以提供该moment库允许您添加到日期的任何对象。
+            "maxSpan": {
+                "days": 60
+            },
+            //（true / false）显示日历上方的年份和月份选择框，以跳转到特定的月份和年份。
+            "showDropdowns": true,
+            //（数字）下拉列表中显示的最小年份showDropdowns设置为true。
+            "minYear":'2010',
+            //(数字）下拉列表中显示的最大年份showDropdowns设置为true。
+            "maxYear":'2020',
+            //(true / false）在日历的每周开始时显示本地化的星期编号。
+            "showWeekNumbers": true,
+            //（真/假）在日历上的每周开始时显示ISO星期数。
+            "showISOWeekNumbers":false,
+            //（true / false）添加选择框以选择日期以外的时间。
+            "timePicker": false,
+            //（数字）分钟选择列表的时间增量（即30，只允许选择以0或30结尾的时间）
+            "timePickerIncrement":1,
+            //（true / false）使用24小时而不是12小时的时间，取消AM / PM选择
+            "timePicker24Hour": false,
+            //true / false）在timePicker中显示秒数
+            "timePickerSeconds": false,
+            //设置用户可以从中选择的预定义日期范围。每个键都是范围的标签，其值是一个数组，其中两个日期代表范围的界限。
+            "ranges": {
+                'Today': [moment(), moment()],
+                'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+                'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+                'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+                'This Month': [moment().startOf('month'), moment().endOf('month')],
+                'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+            },
+            //（true / false）ranges使用该选项时，在预定范围列表的末尾显示“Custom Range” 。只要当前日期范围选择与预定义的范围之一不匹配，该选项就会突出显示。点击它将显示日历以选择新的范围。
+            "showCustomRangeLabel": true,
+            //（true / false）通常，如果您使用该ranges选项指定预定义日期范围，则用户单击“自定义范围”之前，不会显示用于选择自定义日期范围的日历。当此选项设置为true时，将始终显示用于选择自定义日期范围的日历。
+            "alwaysShowCalendars": true,
+            //（'left'/'right'/'center'）该选择器是否显示在左侧，右侧或与其相连的HTML元素对齐的位置。
+            "opens":'center',
+            //（'down'/'up'）选择器是否出现在下面（默认）或高于它所连接的HTML元素。
+            "drops":'down',
+            //（字符串）将被添加到应用和取消按钮的CSS类名称。
+            "buttonClasses":'btn btn-default',
+            //（字符串）将仅添加到应用按钮的CSS类名称。
+            "applyButtonClasses":'btn-small btn-primary',
+            //（string）将仅添加到取消按钮的CSS类名称。
+            "cancelButtonClasses":'btn-small btn-primary',
+            //（object）允许您为按钮和标签提供本地化的字符串，自定义日期格式，并更改日历的第一个星期几。locale在配置生成器中检查以了解如何自定义这些选项。
+            "locale": {
+                "format": "YYYY/MM/DD HH:mm:ss",
+                "separator": " - ",
+                "applyLabel": "应用",
+                "cancelLabel": "取消",
+                "fromLabel": "From",
+                "toLabel": "To",
+                "customRangeLabel": "Custom",
+                "weekLabel": "W",
+                "daysOfWeek": [
+                    "Su",
+                    "Mo",
+                    "Tu",
+                    "We",
+                    "Th",
+                    "Fr",
+                    "Sa"
+                ],
+                "monthNames": [
+                    "January",
+                    "February",
+                    "March",
+                    "April",
+                    "May",
+                    "June",
+                    "July",
+                    "August",
+                    "September",
+                    "October",
+                    "November",
+                    "December"
+                ],
+                "firstDay": 1
+            },
+            //true / false）隐藏应用和取消按钮，并在点击两个日期后自动应用新的日期范围。
+            "autoApply":false,
+            //（true / false）仅显示一个日历来选择一个日期，而不是具有两个日历的范围选择器。提供给您的回调的开始日期和结束日期将选择相同的单一日期。
+            "singleDatePicker": false,
+            //（true / false）启用后，显示的两个日历将始终为连续两个月（即一月和二月），并且在点击日历上方的左侧或右侧箭头时，两者都将被提前。禁用时，两个日历可以单独进阶并显示任何月份/年份。
+            "linkedCalendars": false,
+            //（true / false）指示日期范围选择器是否应自动更新其<input>在初始化时以及选定日期更改时所附的元素的值。
+            "autoUpdateInput": false,
+
+        },
+        function(start, end, label) {
+            console.log('New date range selected: ' + start.format('YYYY-MM-DD HH:mm:ss') + ' to ' + end.format('YYYY-MM-DD  HH:mm:ss') + ' (predefined range: ' + label + ')');
+            $("#addTime").val(start.format('YYYY/MM/DD') + ' - ' + end.format('YYYY/MM/DD'));
+        }
+    );
+    $("#editTime").daterangepicker({
+            //日期或字符串）最初选择的日期范围的开始日期。如果您提供了一个字符串，它必须与您的locale设置中设置的日期格式字符串匹配。
+            "startDate": moment().subtract(29, 'days'),
+            //（日期或字符串）最初选择的日期范围的结束日期。
+            "endDate": moment(),
+            //（日期或字符串）用户可以选择的最早日期。
+            "minDate":'01/01/2017',
+            // （日期或字符串）用户可以选择的最新日期。
+            "maxDate": '12/31/2019',
+            //(对象）所选开始和结束日期之间的最大跨度。maxSpan在配置生成器中检查一个如何使用它的例子。您可以提供该moment库允许您添加到日期的任何对象。
+            "maxSpan": {
+                "days": 60
+            },
+            //（true / false）显示日历上方的年份和月份选择框，以跳转到特定的月份和年份。
+            "showDropdowns": true,
+            //（数字）下拉列表中显示的最小年份showDropdowns设置为true。
+            "minYear":'2010',
+            //(数字）下拉列表中显示的最大年份showDropdowns设置为true。
+            "maxYear":'2020',
+            //(true / false）在日历的每周开始时显示本地化的星期编号。
+            "showWeekNumbers": true,
+            //（真/假）在日历上的每周开始时显示ISO星期数。
+            "showISOWeekNumbers":false,
+            //（true / false）添加选择框以选择日期以外的时间。
+            "timePicker": false,
+            //（数字）分钟选择列表的时间增量（即30，只允许选择以0或30结尾的时间）
+            "timePickerIncrement":1,
+            //（true / false）使用24小时而不是12小时的时间，取消AM / PM选择
+            "timePicker24Hour": false,
+            //true / false）在timePicker中显示秒数
+            "timePickerSeconds": false,
+            //设置用户可以从中选择的预定义日期范围。每个键都是范围的标签，其值是一个数组，其中两个日期代表范围的界限。
+            "ranges": {
+                'Today': [moment(), moment()],
+                'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+                'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+                'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+                'This Month': [moment().startOf('month'), moment().endOf('month')],
+                'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+            },
+            //（true / false）ranges使用该选项时，在预定范围列表的末尾显示“Custom Range” 。只要当前日期范围选择与预定义的范围之一不匹配，该选项就会突出显示。点击它将显示日历以选择新的范围。
+            "showCustomRangeLabel": true,
+            //（true / false）通常，如果您使用该ranges选项指定预定义日期范围，则用户单击“自定义范围”之前，不会显示用于选择自定义日期范围的日历。当此选项设置为true时，将始终显示用于选择自定义日期范围的日历。
+            "alwaysShowCalendars": true,
+            //（'left'/'right'/'center'）该选择器是否显示在左侧，右侧或与其相连的HTML元素对齐的位置。
+            "opens":'center',
+            //（'down'/'up'）选择器是否出现在下面（默认）或高于它所连接的HTML元素。
+            "drops":'down',
+            //（字符串）将被添加到应用和取消按钮的CSS类名称。
+            "buttonClasses":'btn btn-default',
+            //（字符串）将仅添加到应用按钮的CSS类名称。
+            "applyButtonClasses":'btn-small btn-primary',
+            //（string）将仅添加到取消按钮的CSS类名称。
+            "cancelButtonClasses":'btn-small btn-primary',
+            //（object）允许您为按钮和标签提供本地化的字符串，自定义日期格式，并更改日历的第一个星期几。locale在配置生成器中检查以了解如何自定义这些选项。
+            "locale": {
+                "format": "YYYY/MM/DD HH:mm:ss",
+                "separator": " - ",
+                "applyLabel": "应用",
+                "cancelLabel": "取消",
+                "fromLabel": "From",
+                "toLabel": "To",
+                "customRangeLabel": "Custom",
+                "weekLabel": "W",
+                "daysOfWeek": [
+                    "Su",
+                    "Mo",
+                    "Tu",
+                    "We",
+                    "Th",
+                    "Fr",
+                    "Sa"
+                ],
+                "monthNames": [
+                    "January",
+                    "February",
+                    "March",
+                    "April",
+                    "May",
+                    "June",
+                    "July",
+                    "August",
+                    "September",
+                    "October",
+                    "November",
+                    "December"
+                ],
+                "firstDay": 1
+            },
+            //true / false）隐藏应用和取消按钮，并在点击两个日期后自动应用新的日期范围。
+            "autoApply":false,
+            //（true / false）仅显示一个日历来选择一个日期，而不是具有两个日历的范围选择器。提供给您的回调的开始日期和结束日期将选择相同的单一日期。
+            "singleDatePicker": false,
+            //（true / false）启用后，显示的两个日历将始终为连续两个月（即一月和二月），并且在点击日历上方的左侧或右侧箭头时，两者都将被提前。禁用时，两个日历可以单独进阶并显示任何月份/年份。
+            "linkedCalendars": false,
+            //（true / false）指示日期范围选择器是否应自动更新其<input>在初始化时以及选定日期更改时所附的元素的值。
+            "autoUpdateInput": false,
+
+        },
+        function(start, end, label) {
+            console.log('New date range selected: ' + start.format('YYYY-MM-DD HH:mm:ss') + ' to ' + end.format('YYYY-MM-DD HH:mm:ss') + ' (predefined range: ' + label + ')');
+            $("#editTime").val(start.format('YYYY/MM/DD') + ' - ' + end.format('YYYY/MM/DD'));
+        }
+    );
+</script>
+{/block}

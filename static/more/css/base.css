@@ -23,19 +23,19 @@ header { position: fixed; top: 0; z-index: 99999 }
 .menu { height: 80px; line-height: 80px; width: 100%; background-color: #000; }
 .nav { height: 80px; width: 1140px; margin: 0 auto; }
 .nav li { float: left; position: relative; }
-.nav li a { color: #bdbdbd; padding: 0 20px; display: inline-block; }
+.nav li a { color: #bdbdbd; padding: 0 20px; display: inline-block;font-size: 14px;font-weight: bold; }
 .nav li a:hover { color: #fff; }
 .nav li .sub-nav { position: absolute; top: 80px; width: 200px; background: #FFF; left: -20px; display: none; }
 .nav li .sub-nav li { clear: left; height: 35px; line-height: 35px; position: relative; width: 200px; padding: 5px 20px }
 .nav li .sub-nav li a { font-size: 15px; font-weight: 400; color: #404040; line-height: 28px; }
 .nav li .sub-nav li a:hover { color: #000; border-left: 2px solid #000; }
-#topnav_current { color: #00A7EB; }
+#topnav_current { color: #FFF; }
 /*search*/
 .search_bar { position: relative; margin-top: 10px; width: 0%; min-width: 60px; height: 60px; float: right; overflow: hidden; -webkit-transition: width 0.3s; -moz-transition: width 0.3s; transition: width 0.3s; -webkit-backface-visibility: hidden; }
 .input { position: absolute; top: 15px; right: 0; border: none; outline: none; width: 98%; height: 30px; line-height: 30px; z-index: 10; font-size: 16px; color: #333; padding-left: 5px }
 .search_ico, .search_btn { width: 60px; height: 60px; display: block; position: absolute; right: 0; top: 0; padding: 0; margin: 0; line-height: 60px; cursor: pointer; }
 .search_ico { background: #000 url(../images/searchbg.png) no-repeat center; z-index: 90; }
-.search_open { width: 200px; }
+.search_open { width: 230px; }
 #show { position: absolute; padding: 20px }
 /*phone  nav */
 #mnav { display: none; width: 100%; position: fixed; top: 0; right: 0; }

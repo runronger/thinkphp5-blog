@@ -4,6 +4,14 @@
 {block name="description"}文章列表{/block}
 {block name="link"}
     <link rel="stylesheet" type="text/css" href="/static/lib/daterangepicker/daterangepicker.css">
+    <style>
+        .form-group {
+            margin-bottom: 10px;
+        }
+        .box .box-title {
+            margin-bottom: 8px;
+        }
+    </style>
 {/block}
 {block name="navi"}文章列表{/block}
 {block name="content-description"}文章列表描述{/block}
@@ -139,7 +147,7 @@
                         <tr>
                             <td>{$vo.id}</td>
                             <td><img src="{$vo.image}" style="width: 60px; height: 60px"></td>
-                            <td>{$vo.title}</td>
+                            <td id="title">{$vo.title}</td>
                             <td>{$vo.description}</td>
                             <td>
                                 {switch name="$vo.is_top" }
@@ -387,5 +395,6 @@
                 $("#editTime").val(start.format('YYYY/MM/DD') + ' - ' + end.format('YYYY/MM/DD'));
             }
         );
+
     </script>
 {/block}

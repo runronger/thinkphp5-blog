@@ -115,10 +115,11 @@ class Article extends Base
                 if ($id){
                     $file = $request->file('file');
                     if($file){
-                        $info = $file->validate(['size'=>'2048000000','ext'=>'jpg,png,gif'])->move(ROOT_PATH . DS . 'upload'.DS.'images');
+                        $info = $file->validate(['size'=>'2048000000','ext'=>'jpg,png,gif'])
+                            ->move(ROOT_PATH . DS . 'upload'.DS.'images');
                         if($info){
                             $path =  DS . 'upload'.DS.'images'.DS;
-                            $picUrl=$path . $info->getSaveName(); //这个个地址是图片的savepath和savename组成，你懂得
+                            $picUrl=$path . $info->getSaveName(); //这个地址是图片的savepath和savename组成
                         }
                     }else{
                         $pic = $article->where('id='.$id)->field('image')->find();
@@ -202,10 +203,11 @@ class Article extends Base
     public function upload()
     {
         $file = request()->file('file');
-        $info = $file->validate(['size'=>'2048000000','ext'=>'jpg,png,gif'])->move(ROOT_PATH . DS . 'upload'.DS.'images');
+        $info = $file->validate(['size'=>'2048000000','ext'=>'jpg,png,gif'])
+            ->move(ROOT_PATH . DS . 'upload'.DS.'images');
         if($info){
             $path =  DS . 'upload'.DS.'images'.DS;
-            $return['picUrl']=$path . $info->getSaveName(); //这个个地址是图片的savepath和savename组成，你懂得
+            $return['picUrl']=$path . $info->getSaveName(); //这个地址是图片的savepath和savename组成
             $return['status']= 1 ;
             return json($return);
         }else{

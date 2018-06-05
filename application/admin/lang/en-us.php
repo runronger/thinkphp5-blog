@@ -6,6 +6,12 @@
  * Time: 下午5:09
  */
 return [
+    //common
+    'is_empty' =>'Parameter cannot be empty',
+    'is_have'  => 'Data already exists and cannot be added repeatedly',
+    'success' => 'Succeeded',
+    'error'   => 'Error,failed',
+    //register
     'ZH'          => 'Chinese',
     'EN'          => 'English',
     'Language'    => 'Language',
@@ -48,8 +54,9 @@ return [
     'Product list'  => 'Product list',
     'Add product'  => 'Add product',
     'Advertising'  => 'Advertising',
-    'Advertising list' => 'Advertising list',
-    'Add ads' => 'Add ads',
+    'Advertising_list' => 'Advertising list',
+    'Add_ads' => 'Add ads',
+    'Add_type' => 'Add type',
     'Article' => 'Article',
     'Article_list' => 'Article list',
     'Add_articles' => 'Add articles',
@@ -73,8 +80,6 @@ return [
     'Role_list' => 'Role list',
     'Add_role'  => 'Add a role',
 
-    'is_empty' =>'Parameter cannot be empty',
-    'is_have'  => 'Data already exists and cannot be added repeatedly',
 
     'article_type_add_success' => 'Article type add success',
     'article_type_add_fail' => 'Article type add fail',
@@ -82,5 +87,12 @@ return [
     'gallery_add_fail' => 'Gallery add fail',
     'photo_add_success' => 'Photo add success',
     'photo_add_fail'  => 'photo add fail',
+
+
+
+    'ad_type_add_success' => 'ad type add success',
+    'ad_type_add_fail' => 'ad type add fail',
+    'ad_add_success' => 'ad add success',
+    'ad_add_fail'  => 'ad add fail'
 
 ];
