@@ -46,21 +46,28 @@
                                 <label for="adType">广告类型<span style="color: red">*</span></label>
                                 <select class="form-control" id="adType" name="adType">
                                     <option value="">请选择</option>
+                                    {if condition="($tag.edit == 0)"}
                                     {foreach name="typeList" item="vo"}
                                     <option value="{$vo.id}">{$vo.type_name}</option>
                                     {/foreach}
+                                    {else/}
+                                    {foreach name="typeList" item="vo"}
+                                    <option value="{$vo.id}" {if condition="($vo.select == true)"}selected="selected"{/if}>{$vo.type_name}</option>
+                                    {/foreach}
+                                    {/if}
                                 </select>
                             </div>
                             <div class="form-group">
                                 <label for="adUrl">广告跳转地址： <span style="color: red">*</span></label>
-                                <input type="text" class="form-control" id="adUrl" name="adUrl" value="{if condition='($tag.edit == 1)'}{adInfo.title}{else/}{/if}" placeholder="Enter title">
+                                <input type="text" class="form-control" id="adUrl" name="adUrl" value="{if condition='($tag.edit == 1)'}{$adInfo.ad_url}{else/}{/if}" placeholder="Enter title">
                             </div>
                             <div class="form-group">
                                 <label for="adDescription">描述 <span style="color: red">*</span></label>
-                                <input type="text" class="form-control" id="adDescription" name="adDescription" value="{if condition='($tag.edit == 1)'}{adInfo.title}{else/}{/if}" placeholder="Enter title">
+                                <input type="text" class="form-control" id="adDescription" name="adDescription" value="{if condition='($tag.edit == 1)'}{$adInfo.ad_description}{else/}{/if}" placeholder="Enter title">
                             </div>
                             <div class="form-group">
                                 <label >广告图片 <span style="color: red">*</span></label>
+                                {if condition="($tag.edit == 0)"}
                                 <div class="page-container">
                                     <div id="uploader" class="wu-example">
                                         <div class="queueList">
@@ -80,10 +87,27 @@
                                         </div>
                                     </div>
                                 </div>
+                                {else/}
+                                <input type="hidden" name="id" value="{$tag.id}">
+                                <div style="clear:both"></div>
+                                <div class="panel-heading">
+                                    <span class="panel-title"> 添加新图： </span>
+                                    <div style="clear:both"></div>
+                                    <input type="file"  name="file" onchange="PreviewImage(this)">
+                                    <div style="clear:both"></div>
+                                </div>
+                                <div class="panel-heading">
+                                    <span class="panel-title"> 图片预览：</span>
+                                    <div style="clear:both"></div>
+                                    <div id="imgPreview">
+                                        <img id="img1" src="{$adInfo.ad_image}" class="img-rounded" alt="" width="100" height="100"/>
+                                    </div>
+                                </div>
+                                {/if}
                             </div>
                             <div class="form-group">
                                 <label for="adDescription">图片alt描述 <span style="color: red">*</span></label>
-                                <input type="text" class="form-control" id="adImageAlt" name="adImageAlt" value="{if condition='($tag.edit == 1)'}{adInfo.title}{else/}{/if}" placeholder="Enter title">
+                                <input type="text" class="form-control" id="adImageAlt" name="adImageAlt" value="{if condition='($tag.edit == 1)'}{$adInfo.ad_image_alt}{else/}{/if}" placeholder="Enter title">
                             </div>
                             <div class="separator"></div>
                             <button type="submit" class="btn btn-success">提交</button>
@@ -110,6 +134,33 @@
     jQuery(document).ready(function () {
         App.init(); //Initialise plugins and elements
     });
+
+    function PreviewImage(imgFile) {
+        var filextension = imgFile.value.substring(imgFile.value.lastIndexOf("."), imgFile.value.length);
+        filextension = filextension.toLowerCase();
+        if ((filextension != '.jpg') && (filextension != '.gif') && (filextension != '.jpeg') && (filextension != '.png') && (filextension != '.bmp')) {
+            alert("对不起，系统仅支持标准格式的照片，请您调整格式后重新上传，谢谢 !");
+            imgFile.focus();
+        }
+        else {
+            var path;
+            if (document.all)//IE
+            {
+                imgFile.select();
+                path = document.selection.createRange().text;
+                document.getElementById("imgPreview").innerHTML = "";
+                document.getElementById("imgPreview").style.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',sizingMethod='scale',src=\"" + path + "\")";//使用滤镜效果
+            }
+            else//FF
+            {
+                path = window.URL.createObjectURL(imgFile.files[0]);// FF 7.0以上
+                //path = imgFile.files[0].getAsDataURL();// FF 3.0
+                document.getElementById("imgPreview").innerHTML = "<img id='img1'  class='img-rounded' alt='' width='100px' height='100px' src='" + path + "'/>";
+                //document.getElementById("img1").src = path;
+            }
+        }
+    }
+
     $(document).ready(function () {
         $("#adForm").validate({
             // debug:true,

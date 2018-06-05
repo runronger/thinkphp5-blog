@@ -11,9 +11,11 @@ use app\admin\model\Advertisement as AdvertisementModel;
 class Advertisement extends Base
 {
     /**
-     * 显示资源列表
-     *
-     * @return \think\Response
+     * 列表显示
+     * @return mixed
+     * @throws \think\db\exception\DataNotFoundException
+     * @throws \think\db\exception\ModelNotFoundException
+     * @throws \think\exception\DbException
      */
     public function advertisementList()
     {
@@ -30,11 +32,13 @@ class Advertisement extends Base
      * 广告修改/保存
      * @param Request $request
      * @return mixed
+     * @throws \think\db\exception\DataNotFoundException
+     * @throws \think\db\exception\ModelNotFoundException
+     * @throws \think\exception\DbException
      */
     public function advertisementEdit(Request $request)
     {
         if ($request->isPost()){
-            dump($request->post());
             $token = $request->token('__token__');
             $validate = new Validate();
             $pass = $validate->check($token);
@@ -47,11 +51,23 @@ class Advertisement extends Base
                 $adImageAlt = trim($request->post('adImageAlt'));
                 $ad = new AdvertisementModel();
                 if ($id){
+                    $file = $request->file('file');
+                    if($file){
+                        $info = $file->validate(['size'=>'2048000000','ext'=>'jpg,png,gif'])
+                            ->move(ROOT_PATH . DS . 'upload'.DS.'advertisement');
+                        if($info){
+                            $path =  DS . 'upload'.DS.'advertisement'.DS;
+                            $picUrl=$path . $info->getSaveName(); //这个地址是图片的savepath和savename组成
+                        }
+                    }else{
+                        $pic = $ad->where('id='.$id)->field('image')->find();
+                        $picUrl = $pic->image;
+                    }
                     $data=[
                         'type_id' => $adType,
                         'ad_url' => $adUrl,
                         'ad_description' => $adDescription,
-                        'ad_image'=> $adImage,
+                        'ad_image'=> $picUrl,
                         'ad_image_alt'=> $adImageAlt,
                         'author' => Session::get('ADMIN_PASS')->user_name,
                         'update_time' => date('Y-m-d H:i:s',time())
@@ -89,8 +105,13 @@ class Advertisement extends Base
                 $this->assign('typeList',$typeList);
                 $ad = new AdvertisementModel();
                 $adInfo = $ad->getOneAdInfo($id);
-                $this->assign('adInfo',$adInfo);
+                if ($adInfo){
+                    $this->assign('adInfo',$adInfo);
+                }else{
+                    $this->error(lang('is_empty'));
+                }
                 $tag['edit'] = 1;
+                $tag['id'] = $id;
                 $this->assign('tag',$tag);
                 return $this->fetch();
             }else{
@@ -104,7 +125,10 @@ class Advertisement extends Base
 
     }
 
-
+    /**
+     * 处理图片保存
+     * @return \think\response\Json
+     */
     public function upload()
     {
         $file = request()->file('file');
@@ -216,8 +240,11 @@ class Advertisement extends Base
     }
 
     /**
-     * soft delete advertisement type
+     * 软删除广告类型
      * @param Request $request
+     * @throws \think\db\exception\DataNotFoundException
+     * @throws \think\db\exception\ModelNotFoundException
+     * @throws \think\exception\DbException
      */
     public function advertisementTypeDelete(Request $request)
     {
