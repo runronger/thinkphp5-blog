@@ -5,6 +5,9 @@
 {block name="link"}
 <link rel="stylesheet" type="text/css" href="/static/lib/webuploader/webuploader.css">
 <link rel="stylesheet" type="text/css" href="/static/lib/webuploader/webuploader_demo.css">
+<style>
+    .error{color: red}
+</style>
 {/block}
 {block name="navi"}{if condition="($tag.edit == 0)"}添加{else/}编辑{/if}图片{/block}
 {block name="content-description"}{if condition="($tag.edit == 0)"}添加{else/}编辑{/if}图片描述{/block}

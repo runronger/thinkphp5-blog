@@ -2,6 +2,7 @@
 
 namespace app\portal\controller;
 
+use app\admin\model\Advertisement;
 use app\admin\model\Config;
 use app\admin\model\Article;
 use app\admin\model\Gallery;
@@ -10,7 +11,6 @@ use think\Request;
 
 class Index extends Controller
 {
-
     public function index()
     {
         //webset
@@ -20,12 +20,18 @@ class Index extends Controller
         //article
         $article = new Article();
         $articleList = $article->articleList();
-        $this->assign('articleList',$articleList);
 //        dump($articleList);
+        $this->assign('articleList',$articleList);
         //banner
-        $image = new Gallery();
-        $imageList = $image->getPictureList(5);
-        $this->assign('imageList',$imageList);
+        $ad = new Advertisement();
+        $banner = $ad->getTypeAd(2,4);
+        $this->assign('bannerList',$banner);
+        //small banner
+        $smbanner = $ad->getTypeAd(1,2);
+        $this->assign('smallBannerList',$smbanner);
+        //special push
+        $special = $ad->getTypeAd(4,3);
+        $this->assign('special',$special);
         return $this->fetch();
     }
 
@@ -35,7 +41,15 @@ class Index extends Controller
         //
     }
 
+    public function articleList()
+    {
 
+    }
+
+    public function show()
+    {
+
+    }
 
 
 

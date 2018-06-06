@@ -11,7 +11,7 @@
  Target Server Version : 100213
  File Encoding         : 65001
 
- Date: 05/06/2018 19:17:55
+ Date: 06/06/2018 19:36:16
 */
 
 SET NAMES utf8mb4;
@@ -44,7 +44,7 @@ CREATE TABLE `cn_admin`  (
 -- ----------------------------
 -- Records of cn_admin
 -- ----------------------------
-INSERT INTO `cn_admin` VALUES (5, 'admin', '2d2a21b2754a45c815efa9d2e1be8459', 1, '18729309523', 'rongqiu', 'xian', 'sss', 1, '2048', 1, 'ssss', '2018-06-05 14:22:26', '127.0.0.1', '2018-06-05 14:22:26', '2018-06-05 14:22:26');
+INSERT INTO `cn_admin` VALUES (5, 'admin', '2d2a21b2754a45c815efa9d2e1be8459', 1, '18729309523', 'rongqiu', 'xian', 'sss', 1, '2048', 1, 'ssss', '2018-06-06 18:17:01', '127.0.0.1', '2018-06-06 18:17:01', '2018-06-06 18:17:01');
 
 -- ----------------------------
 -- Table structure for cn_advertisement
@@ -62,12 +62,21 @@ CREATE TABLE `cn_advertisement`  (
   `create_time` datetime(0) NULL DEFAULT NULL,
   `update_time` datetime(0) NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 2 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 11 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of cn_advertisement
 -- ----------------------------
-INSERT INTO `cn_advertisement` VALUES (1, 1, 'http://tp5.com/admin/advertisement/advertisementEdit.html', '这是百度跳转', '/upload/advertisement/20180605/de2ea706b4fb976368fe1f81a5b84631.jpg', '八度图片', 0, 'admin', '2018-06-05 17:32:59', '2018-06-05 19:10:34');
+INSERT INTO `cn_advertisement` VALUES (1, 2, 'http://tp5.com/admin/advertisement/advertisementEdit.html', '这是百度跳转', '/upload/advertisement/20180605/de2ea706b4fb976368fe1f81a5b84631.jpg', '八度图片', 0, 'admin', '2018-06-05 17:32:59', '2018-06-06 10:21:01');
+INSERT INTO `cn_advertisement` VALUES (2, 2, 'http://tp5.com', '这是一个神奇的网站', '/upload/advertisement/20180606/74cd01e3cce9b269dd7ef88644a10be3.jpg', '神奇的网站', 0, 'admin', '2018-06-06 11:14:33', NULL);
+INSERT INTO `cn_advertisement` VALUES (3, 2, 'http://tp5.com/', 'http://tp5.com/', '/upload/advertisement/20180606/d5982d16daad70bf06335e68a1bd1cc0.jpg', '描述测试', 0, 'admin', '2018-06-06 11:15:51', NULL);
+INSERT INTO `cn_advertisement` VALUES (4, 1, 'http://tp5.com', '这是一个神奇的网站', '/upload/advertisement/20180606/035da2d56daa94beaa6193cddddb884e.jpg', '描述测试', 0, 'admin', '2018-06-06 11:42:40', NULL);
+INSERT INTO `cn_advertisement` VALUES (5, 2, 'http://tp5.com', '这是一个神奇的网站', '/upload/advertisement/20180606/3c2eddcddf7e231354cf5151755632d6.jpg', '描述测试', 0, 'admin', '2018-06-06 11:46:18', '2018-06-06 11:48:46');
+INSERT INTO `cn_advertisement` VALUES (6, 2, 'http://tp5.com', '这是一个神奇的网站是是是', '/upload/advertisement/20180606/8ac4d68d7b05274ba7474948f00048eb.jpg', '神奇的网站', 0, 'admin', '2018-06-06 11:46:54', NULL);
+INSERT INTO `cn_advertisement` VALUES (7, 1, 'http://tp5.com', '这是一个神奇的网站是是是', '/upload/advertisement/20180606/173006b6868293523c042a54f2235c21.jpg', '神奇的网站', 0, 'admin', '2018-06-06 11:55:54', NULL);
+INSERT INTO `cn_advertisement` VALUES (8, 4, 'http://tp5.com', '方法获取不到值的安全替换方法', '/upload/advertisement/20180606/56c4c8a76eb7394a5b5a3e07641345a5.jpg', '方法获取不到值的安全替换方法', 0, 'admin', '2018-06-06 17:20:43', NULL);
+INSERT INTO `cn_advertisement` VALUES (9, 4, 'http://tp5.com', '测试方法获取不到值的安全替换方法', '/upload/advertisement/20180606/05148aa42ad47479e8ef314fe81be07e.jpg', '方法获取不到值的安全替换方法', 0, 'admin', '2018-06-06 17:21:11', NULL);
+INSERT INTO `cn_advertisement` VALUES (10, 4, 'http://tp5.com', '谁卡了就撒考虑进来看见', '/upload/advertisement/20180606/66b6f4387e2c8db1144968c1cbabef5a.jpg', '方法获取不到值的安全替换方法', 0, 'admin', '2018-06-06 17:22:02', NULL);
 
 -- ----------------------------
 -- Table structure for cn_advertisement_type
@@ -81,14 +90,15 @@ CREATE TABLE `cn_advertisement_type`  (
   `create_time` datetime(0) NULL DEFAULT NULL,
   `update_time` datetime(0) NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 4 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 5 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of cn_advertisement_type
 -- ----------------------------
-INSERT INTO `cn_advertisement_type` VALUES (1, 'index', 'admin', 0, '2018-06-05 15:36:26', NULL);
+INSERT INTO `cn_advertisement_type` VALUES (1, 'smallBanner', 'admin', 0, '2018-06-05 15:36:26', '2018-06-06 11:30:17');
 INSERT INTO `cn_advertisement_type` VALUES (2, 'banner', 'admin', 0, '2018-06-05 15:54:45', '2018-06-05 16:07:40');
 INSERT INTO `cn_advertisement_type` VALUES (3, 'product', 'admin', 0, '2018-06-05 16:07:27', NULL);
+INSERT INTO `cn_advertisement_type` VALUES (4, '特别推荐', 'admin', 0, '2018-06-06 17:10:07', NULL);
 
 -- ----------------------------
 -- Table structure for cn_article

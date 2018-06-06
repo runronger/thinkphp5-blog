@@ -1,4 +1,8 @@
 $(document).ready(function () {
+    //检测ie 6789
+    if (!(/msie [6|7|8|9]/i.test(navigator.userAgent))) {
+        window.scrollReveal = new scrollReveal({reset: true});
+    }
     /*nav show or hide*/
     $('.nav>li').hover(function () {
         $(this).children('ul').stop(true, true).show(400);
@@ -16,7 +20,7 @@ $(document).ready(function () {
         }
     });
     /*banner*/
-    $('#ban').easyFader();
+    $('#banner').easyFader();
 
     /*topnav select*/
     var obj = null;
@@ -29,15 +33,16 @@ $(document).ready(function () {
         }
     }
     obj.id = 'topnav_current';
+
     /*mnav dl open*/
-    var oH2 = document.getElementsByTagName("h2")[0];
-    var oUl = document.getElementsByTagName("dl")[0];
+    var oH2 = document.getElementsByTagName('h2')[0];
+    var oUl = document.getElementsByTagName('dl')[0];
     oH2.onclick = function () {
         var style = oUl.style;
-        style.display = style.display == "block" ? "none" : "block";
-        oH2.className = style.display == "block" ? "open" : ""
+        style.display = style.display == 'block' ? 'none' : 'block';
+        oH2.className = style.display == 'block' ? 'open' : '';
     };
-
+    //菜单点击效果
     $('.list_dt').on('click', function () {
         $('.list_dd').stop();
         $(this).siblings('dt').removeAttr('id');
@@ -48,14 +53,7 @@ $(document).ready(function () {
         }
     });
 
-
-    if (!(/msie [6|7|8|9]/i.test(navigator.userAgent))) {
-        (function () {
-            window.scrollReveal = new scrollReveal({reset: true});
-        })();
-    }
-
-
+    //回到顶部
     // browser window scroll (in pixels) after which the "back to top" link is shown
     var offset = 300,
         //browser window scroll (in pixels) after which the "back to top" link opacity is reduced
@@ -72,7 +70,6 @@ $(document).ready(function () {
             $back_to_top.addClass('cd-fade-out');
         }
     });
-    //www.sucaijiayuan.com
     //smooth scroll to top
     $back_to_top.on('click', function (event) {
         event.preventDefault();
@@ -81,32 +78,19 @@ $(document).ready(function () {
             }, scroll_top_duration
         );
     });
-});
 
-window.onload = function () {
-    // 固定层
-    function buffer(a,b,c){
-        var d;
-        return function(){
-            if(d)
-                return;
-            d=setTimeout(function(){
-                a.call(this),d=undefined
-            },b)
-        }
+    //设置固定关注我们
+    if ($('#follow-us')){
+        var followUsPosition = $('#follow-us').offset().top;
+        window.onscroll = function () {
+            var nowPosition =  document.documentElement.scrollTop;
+            if (nowPosition - followUsPosition > 0 ) {
+                setTimeout(function () {
+                    $('#follow-us').attr('class','guanzhu gd');
+                },150);
+            }else {
+                $('#follow-us').attr('class','guanzhu');
+            }
+        };
     }
-    (function(){
-        function e(){
-            var d=document.body.scrollTop||document.documentElement.scrollTop;
-            d>b?(a.className="guanzhu gd",c&&(a.style.top=d-b+"px")):a.className="guanzhu"
-        }
-        var a=document.getElementById("float");
-        if(a==undefined)
-            return!1;
-        var b=0,c,d=a;
-        while(d)b+=d.offsetTop,d=d.offsetParent;
-        c=window.ActiveXObject&&!window.XMLHttpRequest;
-        if(!c||!0)
-            window.onscroll=buffer(e,150,this)
-    })();
-};
+});

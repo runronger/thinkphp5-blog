@@ -17,9 +17,9 @@
 .toppic { width: 32%; float: right; overflow: hidden; position: relative; }
 .toppic li { width: 100%; background: #000; position: relative; overflow: hidden; }
 .toppic li i { display: block; opacity: 0.7; -moz-transition: all .5s ease; -webkit-transition: all .5s ease; -ms-transition: all .5s ease; -o-transition: all .5s ease; transition: all .5s ease; overflow: hidden }
-.toppic li i img { width: 100%; max-height: 220px }
-.toppic li h2 { position: absolute; bottom: 0; left: 0; right: 0; padding: 10px 20px; color: #fff; display: block; font-weight: normal; font-size: 16px; overflow: hidden; background: rgba(0,0,0,0.7); text-overflow: ellipsis; white-space: nowrap; overflow: hidden; }
-.toppic li span { position: absolute; top: 20px; left: 20px; padding: 6px 10px; background: rgba(0, 0, 0, .7); font-size: 12px; display: block; color: #FFF; border-radius: 3px; }
+.toppic li i img { width: 100%; max-height: 240px }
+.toppic li h2 { position: absolute; bottom: 0; left: 0; right: 0; padding: 10px 20px; color: #fff; display: block; font-weight: normal; font-size: 16px; overflow: hidden; background: #00000061; text-overflow: ellipsis; white-space: nowrap; overflow: hidden; }
+.toppic li span { position: absolute; top: 20px; left: 20px; padding: 6px 10px; background: rgba(108, 105, 114, 0.26);; font-size: 12px; display: block; color: #FFF; border-radius: 3px; }
 .toppic li:hover i { opacity: 1; }
 .toppic li:last-child { margin-top: 19px }
 /*blogsbox*/

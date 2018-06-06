@@ -60,8 +60,8 @@ class Advertisement extends Base
                             $picUrl=$path . $info->getSaveName(); //这个地址是图片的savepath和savename组成
                         }
                     }else{
-                        $pic = $ad->where('id='.$id)->field('image')->find();
-                        $picUrl = $pic->image;
+                        $pic = $ad->where('id='.$id)->field('ad_image')->find();
+                        $picUrl = $pic->ad_image;
                     }
                     $data=[
                         'type_id' => $adType,
@@ -148,8 +148,23 @@ class Advertisement extends Base
     }
 
 
-
-
+    /**
+     * 软删除一条广告
+     * @param Request $request
+     */
+    public function changeDelete(Request $request)
+    {
+        $id = $request->get('id');
+        if ($id){
+            $ad = new AdvertisementModel();
+            $result = $ad->deleteOneAd($id);
+            if ($result){
+                $this->success(lang('success'),url('/admin/advertisement/advertisementList'));
+            }else{
+                $this->error(lang('error'),url('/admin/advertisement/advertisementList'));
+            }
+        }
+    }
 
 
 
@@ -249,8 +264,8 @@ class Advertisement extends Base
     public function advertisementTypeDelete(Request $request)
     {
         $id = $request->get('id');
-        $article = new AdvertisementModel();
-        $hasUse = $article->checkAdvertisementUse($id);
+        $ad = new AdvertisementModel();
+        $hasUse = $ad->checkAdvertisementUse($id);
         if (!empty($hasUse)){
             $this->error("删除失败,该类型还在使用中");
         }else{

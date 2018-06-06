@@ -40,6 +40,19 @@ class Advertisement extends Model
     }
 
     /**
+     * 软删除一条广告
+     * @param $id
+     * @return $this
+     */
+    public function deleteOneAd($id)
+    {
+        if ($id){
+            $result = $this->where('id',$id)->update(['is_delete'=>1]);
+            return $result;
+        }
+    }
+
+    /**
      * 检查typeid使用情况
      * @param $typeId
      * @return array|false|\PDOStatement|string|Model
@@ -56,6 +69,15 @@ class Advertisement extends Model
     }
 
 
+    public function getTypeAd($typeId, $number)
+    {
+        if (!empty($typeId) && !empty($number)){
+            $result = $this->where('type_id',$typeId)->limit(0,$number)->select();
+            return $result;
+        }else{
+            return false;
+        }
+    }
 
 
 
