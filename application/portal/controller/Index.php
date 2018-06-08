@@ -6,10 +6,9 @@ use app\admin\model\Advertisement;
 use app\admin\model\Config;
 use app\admin\model\Article;
 use app\admin\model\Gallery;
-use think\Controller;
 use think\Request;
 
-class Index extends Controller
+class Index extends Base
 {
     public function index()
     {
@@ -46,12 +45,36 @@ class Index extends Controller
 
     }
 
-    public function show()
+    public function show(Request $request)
     {
-
+//        $id = request()->input();
+        $id = $request->param();
+            dump($id);
     }
 
+    public function echos(Request $request)
+    {
+        $id = $request->param();
+        dump($id);
+    }
+    public function about(Request $request)
+    {
+//        $id = request()->input();
+        $id = $request->param();
+        dump($id);
+    }
+    public function message(Request $request)
+    {
+//        $id = request()->input();
+        $id = $request->param();
+        dump($id);
+    }
 
-
+    public function Backend(Request $request)
+    {
+//        $id = request()->input();
+        $id = $request->param();
+        dump($id);
+    }
 
 }

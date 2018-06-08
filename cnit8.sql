@@ -11,7 +11,7 @@
  Target Server Version : 100213
  File Encoding         : 65001
 
- Date: 06/06/2018 19:36:16
+ Date: 08/06/2018 18:11:16
 */
 
 SET NAMES utf8mb4;
@@ -44,7 +44,7 @@ CREATE TABLE `cn_admin`  (
 -- ----------------------------
 -- Records of cn_admin
 -- ----------------------------
-INSERT INTO `cn_admin` VALUES (5, 'admin', '2d2a21b2754a45c815efa9d2e1be8459', 1, '18729309523', 'rongqiu', 'xian', 'sss', 1, '2048', 1, 'ssss', '2018-06-06 18:17:01', '127.0.0.1', '2018-06-06 18:17:01', '2018-06-06 18:17:01');
+INSERT INTO `cn_admin` VALUES (5, 'admin', '2d2a21b2754a45c815efa9d2e1be8459', 1, '18729309523', 'rongqiu', 'xian', 'sss', 1, '2048', 1, 'ssss', '2018-06-08 15:22:34', '127.0.0.1', '2018-06-08 15:22:34', '2018-06-08 15:22:34');
 
 -- ----------------------------
 -- Table structure for cn_advertisement
@@ -171,6 +171,30 @@ CREATE TABLE `cn_config`  (
 -- Records of cn_config
 -- ----------------------------
 INSERT INTO `cn_config` VALUES (1, 0, 'cnit8', 'cnit8', '测试的', '陕ICP10110号', 'admin', '2018-06-04 15:21:05', '2018-06-04 17:03:56');
+
+-- ----------------------------
+-- Table structure for cn_frontend_menu
+-- ----------------------------
+DROP TABLE IF EXISTS `cn_frontend_menu`;
+CREATE TABLE `cn_frontend_menu`  (
+  `id` int(3) NOT NULL AUTO_INCREMENT,
+  `number` tinyint(2) NULL DEFAULT NULL,
+  `url` varchar(200) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `name` varchar(120) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `parent_id` int(3) NOT NULL,
+  `author` varchar(60) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `is_delete` tinyint(1) NOT NULL,
+  `create_time` datetime(0) NULL DEFAULT NULL,
+  `update_time` datetime(0) NULL DEFAULT NULL,
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 4 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of cn_frontend_menu
+-- ----------------------------
+INSERT INTO `cn_frontend_menu` VALUES (1, 1, 'baidu.com', '首页', 0, 'admin', 0, NULL, NULL);
+INSERT INTO `cn_frontend_menu` VALUES (2, 0, 'tp5.com', '后端教程', 0, 'min', 0, NULL, NULL);
+INSERT INTO `cn_frontend_menu` VALUES (3, 3, 'tp5', 'php', 2, 'ss', 0, NULL, NULL);
 
 -- ----------------------------
 -- Table structure for cn_gallery

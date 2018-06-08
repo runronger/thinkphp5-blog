@@ -1,9 +1,9 @@
 @charset "gb2312";
 @media screen and (min-width: 1024px) and (max-width: 1199px) {
 header { width: 100%; margin: auto; }
-.nav { width: 90% }
+.menu { width: 90% }
 .nav li a { padding: 0 15px }
-.search_bar { display: none }
+.search_bar { }
 article { width: 90%; margin: 100px auto 0 }
 .fader { padding-top: 0; height: 360px }
 .imginfo { bottom: 15% }
@@ -14,9 +14,10 @@ article { width: 90%; margin: 100px auto 0 }
 }
 @media screen and (min-width: 960px) and (max-width: 1023px) {
 header { width: 100%; margin: auto; }
-.nav { width: 90% }
+.menu { width: 90%; }
+.logo { margin-right: 10px }
 .nav li a { padding: 0 15px }
-.search_bar { display: none }
+.search_bar { }
 article { width: 90%; margin: 100px auto 0 }
 .fader { padding-top: 0; height: 337px }
 .imginfo { bottom: 15% }
@@ -29,9 +30,16 @@ article { width: 90%; margin: 100px auto 0 }
 }
 @media screen and (min-width: 768px) and (max-width: 959px) {
 header, .blogsbox { width: 100%; margin: auto; }
-.menu { width: 90%; display: none; }
-#mnav { display: block; z-index: 99999;  }
-.search_bar { display: none }
+.menu { height: 0 }
+.menu nav { width: 90%; display: none; }
+#mnav { display: block; z-index: 99999; }
+.search_box { position: fixed; left: 120px; top: 0; z-index: 999999; width: 200px; float: left; }
+.search_bar { height: 30px }
+.search_bar .input { top: 0; left: 60px; }
+.search_ico, .search_btn { left: 0; }
+.search_ico { height: 30px }
+.search_open { width: 300px; }
+.search_bar { float: left }
 article { width: 90%; margin: 70px auto 0 }
 .imginfo { bottom: 17% }
 .fader { padding-top: 0; height: 279px }
@@ -50,13 +58,21 @@ h1.t_nav span { display: none }
 .timebox li a:after { left: -26px }
 .timebox li:hover a { padding: 0 30px }
 .infosbox { width: 100% }
-.pagebg {margin-top: 50px;}
+.pagebg { margin-top: 50px; }
 }
  @media only screen and (min-width: 480px) and (max-width: 767px) {
 header, .blogsbox, .banner { width: 100%; margin: auto; }
-.menu { width: 90%; display: none; }
+.menu { height: 0 }
+.menu nav { width: 90%; display: none; }
 #mnav { display: block; z-index: 99999; }
-.search_bar, .toppic { display: none }
+.search_box { position: fixed; left: 120px; top: 0; z-index: 999999; width: 200px; float: left; }
+.search_bar { height: 30px }
+.search_bar .input { top: 0; left: 60px; }
+.search_ico, .search_btn { left: 0; }
+.search_ico { height: 30px }
+.search_open { width: 200px; }
+.search_bar { float: left }
+.toppic { display: none }
 article { width: 90%; margin: 70px auto 0 }
 .bloginfo { width: 100%; clear: both }
 .blogs .blogpic { width: 30%; height: auto }
@@ -81,15 +97,23 @@ h1.t_nav span { display: none }
 .timebox:before { display: none }
 .timebox li:hover a { padding: 0 30px }
 .infosbox { width: 100% }
-.pagebg {margin-top: 50px;}
-.diggit{ float:none; margin-left: auto;}
-.dasbox{ display:none}
+.pagebg { margin-top: 50px; }
+.diggit { float: none; margin-left: auto; }
+.dasbox { display: none }
 }
 @media only screen and (max-width: 479px) {
 header, .blogsbox, .banner { width: 100%; margin: auto; }
-.menu { width: 90%; display: none; }
-#mnav { display: block; z-index: 99999;  }
-.search_bar, .toppic { display: none }
+.menu { height: 0 }
+.menu nav { width: 90%; display: none; }
+#mnav { display: block; z-index: 99999; }
+.search_box { position: fixed; left: 110px; top: 0; z-index: 999999; width: 200px; float: left; }
+.search_bar { height: 30px }
+.search_bar .input { top: 0; left: 60px; }
+.search_ico, .search_btn { left: 0; }
+.search_ico { height: 30px }
+.search_open { width: 200px; }
+.search_bar { float: left }
+.toppic { display: none }
 article { width: 90%; margin: 70px auto 0 }
 .imginfo { font-size: 18px; bottom: 22%; }
 .bloginfo { width: 100%; clear: both; }
@@ -117,7 +141,7 @@ footer p { padding: 0 30px }
 .timebox:before { display: none }
 .timebox li:hover a { padding: 0 30px }
 .infosbox { width: 100% }
-.pagebg {margin-top: 50px;}
-.diggit{ float:none; margin-left: auto;}
-.dasbox{ display:none}
+.pagebg { margin-top: 50px; }
+.diggit { float: none; margin-left: auto; }
+.dasbox { display: none }
 }

@@ -12,7 +12,7 @@ class Article extends Controller
      *
      * @return \think\Response
      */
-    public function index()
+    public function php()
     {
         //
     }

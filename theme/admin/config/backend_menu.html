@@ -1,0 +1,63 @@
+{extend name="layout"/}
+{block name="title"}后端菜单设置{/block}
+{block name="keywords"}后端菜单设置{/block}
+{block name="description"}后端菜单设置{/block}
+{block name="link"}
+<link rel="stylesheet" type="text/css" href="/static/lib/colorbox/colorbox.min.css">
+<style>
+    .form-group {
+        margin-bottom: 33px;
+    }
+    .form-control {
+        height: 40px;
+    }
+    .error{color: red}
+</style>
+{/block}
+{block name="navi"}后端菜单设置{/block}
+{block name="content-description"}后端菜单设置描述{/block}
+{block name="main-content"}
+<div class="row">
+    <div class="col-xs-12 col-md-12 col-md-12">
+        <div class="row">
+            <div class="col-md-12">
+                <!-- BASIC -->
+
+                <!-- /BASIC -->
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /GALLERY -->
+{/block}
+{block name="javascript"}
+<!--validation-->
+<script src="/static/lib/validation/dist/jquery.validate.min.js"></script>
+<script src="/static/lib/validation/dist/additional-methods.min.js"></script>
+<script src="/static/lib/validation/dist/localization/messages_zh.min.js"></script>
+<script>
+    jQuery(document).ready(function () {
+        App.init(); //Initialise plugins and elements
+    });
+    $(document).ready(function () {
+        $("#siteForm").validate({
+            // debug:true,
+            rules: {
+                siteURL: {
+                    required: true,
+                    url:true,
+                    maxlength:120
+                },
+                siteName: {
+                    required: true,
+                    maxlength:60
+                },
+                siteDescription: {
+                    required: true,
+                    maxlength:120
+                },
+            }
+        });
+    });
+</script>
+{/block}

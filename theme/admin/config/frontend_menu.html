@@ -1,0 +1,94 @@
+{extend name="layout"/}
+{block name="title"}前端菜单{/block}
+{block name="keywords"}前端菜单{/block}
+{block name="description"}前端菜单{/block}
+{block name="link"}
+<link rel="stylesheet" type="text/css" href="/static/lib/colorbox/colorbox.min.css">
+<style>
+    .form-group {
+        margin-bottom: 33px;
+    }
+    .form-control {
+        height: 40px;
+    }
+    .error{color: red}
+</style>
+{/block}
+{block name="navi"}前端菜单{/block}
+{block name="content-description"}前端菜单描述{/block}
+{block name="main-content"}
+<div class="row">
+    <div class="col-xs-12 col-md-12 col-md-12">
+        <div class="row">
+            <div class="col-md-12">
+                <!-- BASIC -->
+                <div class="box">
+                    <div class="box-title">
+                        <h4><i class="fa fa-table"></i>菜单列表</h4>
+                        <div class="tools">
+                            <a href="{:url('/admin/config/frontendEdit')}" class="btn btn-xs btn-primary" style="color: #ffffff;">添加菜单
+                            </a>
+                            <a href="{:url('/admin/advertisement/advertisementEdit')}" class="btn btn-xs btn-info" style="color: #ffffff;">添加广告
+                            </a>
+                        </div>
+                    </div>
+                    <div class="box-body">
+                        <table class="table table-bordered">
+                            <thead>
+                            <tr>
+                                <th width="5%">编号</th>
+                                <th width="10%">顶级导航</th>
+                                <th width="10%">次级导航</th>
+                                <th width="10%">url</th>
+                                <th width="10%">作者</th>
+                                <th width="8%">添加时间</th>
+                                <th width="8%">修改时间</th>
+                                <th width="8%">操作</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+
+
+                            </tbody>
+                        </table>
+
+                    </div>
+                </div>
+                <!-- /BASIC -->
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /GALLERY -->
+{/block}
+{block name="javascript"}
+<!--validation-->
+<script src="/static/lib/validation/dist/jquery.validate.min.js"></script>
+<script src="/static/lib/validation/dist/additional-methods.min.js"></script>
+<script src="/static/lib/validation/dist/localization/messages_zh.min.js"></script>
+<script>
+    jQuery(document).ready(function () {
+        App.init(); //Initialise plugins and elements
+    });
+    $(document).ready(function () {
+        $("#siteForm").validate({
+            // debug:true,
+            rules: {
+                siteURL: {
+                    required: true,
+                    url:true,
+                    maxlength:120
+                },
+                siteName: {
+                    required: true,
+                    maxlength:60
+                },
+                siteDescription: {
+                    required: true,
+                    maxlength:120
+                },
+            }
+        });
+    });
+</script>
+{/block}

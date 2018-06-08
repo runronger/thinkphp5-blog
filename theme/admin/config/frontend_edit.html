@@ -1,0 +1,120 @@
+{extend name="layout"/}
+{block name="title"}{if condition="($tag.edit == 0)"}添加{else/}编辑{/if}前端菜单{/block}
+{block name="keywords"}{if condition="($tag.edit == 0)"}添加{else/}编辑{/if}前端菜单{/block}
+{block name="description"}{if condition="($tag.edit == 0)"}添加{else/}编辑{/if}前端菜单{/block}
+{block name="link"}
+<link rel="stylesheet" type="text/css" href="/static/lib/colorbox/colorbox.min.css">
+<style>
+    .form-group {
+        margin-bottom: 33px;
+    }
+    .form-control {
+        height: 40px;
+    }
+    .error{color: red}
+</style>
+{/block}
+{block name="navi"}{if condition="($tag.edit == 0)"}添加{else/}编辑{/if}前端菜单{/block}
+{block name="content-description"}{if condition="($tag.edit == 0)"}添加{else/}编辑{/if}前端菜单描述{/block}
+{block name="main-content"}
+<div class="row">
+    <div class="col-xs-12 col-md-12 col-md-12">
+        <div class="row">
+            <div class="col-md-12">
+                <!-- BASIC -->
+                <div class="box">
+                    <div class="box-title">
+                        <h4><i class="fa fa-bars"></i>菜单信息</h4>
+                    </div>
+                    <div class="box-body big">
+                        <form class="form-horizontal" role="form" id="siteForm" action="{:url('/admin/config/frontendEdit')}" method="post" enctype="multipart/form-data">
+                            <input type="hidden" name="__token__" value="{$Request.token}" />
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label">选择父目录:</label>
+                                <div class="col-sm-9">
+                                    <select class="form-control">
+                                        <option value="">请选择</option>
+                                        <option value="0">顶级导航</option>
+                                        {volist name="menuList" id="vo"}
+                                            <option value="{$vo.id}">{$vo.name}</option>
+                                            {volist name="$vo.subset" id="row"}
+                                                <option value="{$row.id}">&nbsp;&nbsp;&nbsp;--- {$row.name}</option>
+                                            {/volist}
+                                        {/volist}
+                                    </select>
+                                </div>
+
+
+                                <label class="col-sm-1 btn-warning">Eg:http://www.xx.com</label>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label">url地址：</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" name="siteName" id="menuUrl" placeholder="Enter name">
+                                </div>
+                                <label class="col-sm-1 btn-warning">格式：用英文‘,’隔开，60个字符以内</label>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label">菜单名称：</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" name="siteName" id="menuName" placeholder="Enter name">
+                                </div>
+                                <label class="col-sm-1 btn-warning">格式：用英文‘,’隔开，60个字符以内</label>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label">序号：</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" name="siteName" id="menuNumber" placeholder="Enter name">
+                                </div>
+                                <label class="col-sm-1 btn-warning">格式：用英文‘,’隔开，60个字符以内</label>
+                            </div>
+
+                            <div class="form-group">
+                                <div style="margin-left: 9.3%">
+                                    <button type="submit" class="btn btn-info">提交</button>
+                                    <button type="reset" class="btn btn-default">取消</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!-- /BASIC -->
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /GALLERY -->
+{/block}
+{block name="javascript"}
+<!--validation-->
+<script src="/static/lib/validation/dist/jquery.validate.min.js"></script>
+<script src="/static/lib/validation/dist/additional-methods.min.js"></script>
+<script src="/static/lib/validation/dist/localization/messages_zh.min.js"></script>
+<script>
+    jQuery(document).ready(function () {
+        App.init(); //Initialise plugins and elements
+    });
+    $(document).ready(function () {
+        $("#siteForm").validate({
+            // debug:true,
+            rules: {
+                siteURL: {
+                    required: true,
+                    url:true,
+                    maxlength:120
+                },
+                siteName: {
+                    required: true,
+                    maxlength:60
+                },
+                siteDescription: {
+                    required: true,
+                    maxlength:120
+                },
+            }
+        });
+    });
+</script>
+{/block}

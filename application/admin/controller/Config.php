@@ -2,6 +2,7 @@
 
 namespace app\admin\controller;
 
+use app\admin\model\FrontendMenu;
 use think\Request;
 use think\Validate;
 use think\Session;
@@ -75,15 +76,17 @@ class Config extends Base
     }
 
 
-    public function save(Request $request)
+    public function frontendMenu(Request $request)
     {
         //
+        return $this->fetch();
     }
 
 
-    public function read($id)
+    public function backendMenu()
     {
         //
+        return $this->fetch();
     }
 
     /**
@@ -92,9 +95,15 @@ class Config extends Base
      * @param  int  $id
      * @return \think\Response
      */
-    public function edit($id)
+    public function frontendEdit(Request $request)
     {
         //
+        $frontMuen = new FrontendMenu();
+        $menuList = $frontMuen->getAllMenu();
+        $this->assign('menuList',$menuList);
+        $tag['edit'] = 0;
+        $this->assign('tag',$tag);
+        return $this->fetch();
     }
 
     /**
