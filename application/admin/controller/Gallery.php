@@ -48,9 +48,10 @@ class Gallery extends Base
     public function photoEdit(Request $request)
     {
         if ($request->isPost()){
-            $token = $request->token('__token__');
-            $validate = new Validate();
-            $pass = $validate->check($token);
+            $validate = new Validate([
+                '__token__'  =>  'token',
+            ]);
+            $pass = $validate->check($request->post());
             if ($pass){
                 $galleryType = $request->post('photoType');
                 $fileUrl = $request->post('photoImage/a');
@@ -152,9 +153,10 @@ class Gallery extends Base
     public function galleryEdit(Request $request)
     {
         if ($request->isPost()){
-            $token = $request->token('__token__');
-            $validate = new Validate();
-            $pass = $validate->check($token);
+            $validate = new Validate([
+                '__token__'  =>  'token',
+            ]);
+            $pass = $validate->check($request->post());
             if ($pass){
                 $id = $request->post('id');
                 $galleryType = $request->post('galleryType');

@@ -566,6 +566,27 @@ var App = function () {
         },
     };
 }();
+
+(function (a, b) {
+    a.fn.admin_tree = function (d) {
+        var c = {
+            "open-icon": "fa fa-folder-open",
+            "close-icon": "fa fa-folder",
+            selectable: true,
+            "selected-icon": "fa fa-check",
+            "unselected-icon": "tree-dot"
+        };
+        c = a.extend({}, c, d);
+        this.each(function () {
+            var e = a(this);
+            e.html('<div class = "tree-folder" style="display:none;">				<div class="tree-folder-header">					<i class="' + c["close-icon"] + '"></i>					<div class="tree-folder-name"></div>				</div>				<div class="tree-folder-content"></div>				<div class="tree-loader" style="display:none"></div>			</div>			<div class="tree-item" style="display:none;">				' + (c["unselected-icon"] == null ? "" : '<i class="' + c["unselected-icon"] + '"></i>') + '				<div class="tree-item-name"></div>			</div>');
+            e.addClass(c.selectable == true ? "tree-selectable" : "tree-unselectable");
+            e.tree(c)
+        });
+        return this
+    }
+})(window.jQuery);
+
 (function () {
     this.Theme = (function () {
         function Theme() {

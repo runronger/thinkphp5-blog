@@ -27,54 +27,53 @@
                         <h4><i class="fa fa-bars"></i>菜单信息</h4>
                     </div>
                     <div class="box-body big">
-                        <form class="form-horizontal" role="form" id="siteForm" action="{:url('/admin/config/frontendEdit')}" method="post" enctype="multipart/form-data">
+                        <form class="form-horizontal" role="form" id="menuForm" action="{:url('/admin/config/frontendEdit')}" method="post" enctype="multipart/form-data">
                             <input type="hidden" name="__token__" value="{$Request.token}" />
                             <div class="form-group">
                                 <label class="col-sm-1 control-label">选择父目录:</label>
                                 <div class="col-sm-9">
-                                    <select class="form-control">
+                                    <select class="form-control" id="menuId" name="menuId">
                                         <option value="">请选择</option>
                                         <option value="0">顶级导航</option>
                                         {volist name="menuList" id="vo"}
                                             <option value="{$vo.id}">{$vo.name}</option>
-                                            {volist name="$vo.subset" id="row"}
-                                                <option value="{$row.id}">&nbsp;&nbsp;&nbsp;--- {$row.name}</option>
-                                            {/volist}
+                                            {if condition="!empty($vo.subset)"}
+                                                {volist name="$vo.subset" id="row"}
+                                                    <option value="{$vo.id}">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ------- {$row.name} </option>
+                                                {/volist}
+                                            {/if}
                                         {/volist}
                                     </select>
                                 </div>
-
-
-                                <label class="col-sm-1 btn-warning">Eg:http://www.xx.com</label>
                             </div>
                             <div class="form-group">
                                 <label class="col-sm-1 control-label">url地址：</label>
                                 <div class="col-sm-9">
-                                    <input type="text" class="form-control" name="siteName" id="menuUrl" placeholder="Enter name">
+                                    <input type="text" class="form-control" name="menuUrl" id="menuUrl" placeholder="Enter name">
                                 </div>
-                                <label class="col-sm-1 btn-warning">格式：用英文‘,’隔开，60个字符以内</label>
+                                <label class="col-sm-1 btn-info">格式：驼峰命名法 <br>Eg:newsList</label>
                             </div>
 
                             <div class="form-group">
                                 <label class="col-sm-1 control-label">菜单名称：</label>
                                 <div class="col-sm-9">
-                                    <input type="text" class="form-control" name="siteName" id="menuName" placeholder="Enter name">
+                                    <input type="text" class="form-control" name="menuName" id="menuName" placeholder="Enter name">
                                 </div>
-                                <label class="col-sm-1 btn-warning">格式：用英文‘,’隔开，60个字符以内</label>
+                                <label class="col-sm-1 btn-info">顶级目录：新闻 <br>次级目录：新闻分类</label>
                             </div>
 
                             <div class="form-group">
                                 <label class="col-sm-1 control-label">序号：</label>
                                 <div class="col-sm-9">
-                                    <input type="text" class="form-control" name="siteName" id="menuNumber" placeholder="Enter name">
+                                    <input type="text" class="form-control" name="menuNumber" id="menuNumber" placeholder="Enter number">
                                 </div>
-                                <label class="col-sm-1 btn-warning">格式：用英文‘,’隔开，60个字符以内</label>
+                                <label class="col-sm-1 btn-info">提示：数字越低排名越靠前</label>
                             </div>
 
                             <div class="form-group">
                                 <div style="margin-left: 9.3%">
                                     <button type="submit" class="btn btn-info">提交</button>
-                                    <button type="reset" class="btn btn-default">取消</button>
+                                    <a onclick="javascript :history.back(-1);" class="btn btn-default">返回</a>
                                 </div>
                             </div>
                         </form>
@@ -97,21 +96,24 @@
         App.init(); //Initialise plugins and elements
     });
     $(document).ready(function () {
-        $("#siteForm").validate({
+        $("#menuForm").validate({
             // debug:true,
             rules: {
-                siteURL: {
+                menuId: {
                     required: true,
-                    url:true,
-                    maxlength:120
                 },
-                siteName: {
+                menuUrl: {
                     required: true,
                     maxlength:60
                 },
-                siteDescription: {
+                menuName: {
                     required: true,
                     maxlength:120
+                },
+                menuNumber: {
+                    required: true,
+                    digits:true,
+                    maxlength:2
                 },
             }
         });

@@ -39,9 +39,10 @@ class Advertisement extends Base
     public function advertisementEdit(Request $request)
     {
         if ($request->isPost()){
-            $token = $request->token('__token__');
-            $validate = new Validate();
-            $pass = $validate->check($token);
+            $validate = new Validate([
+                '__token__'  =>  'token',
+            ]);
+            $pass = $validate->check($request->post());
             if ($pass){
                 $id = $request->post('id');
                 $adType = trim($request->post('adType'));
@@ -194,9 +195,10 @@ class Advertisement extends Base
     public function advertisementTypeEdit(Request $request)
     {
         if ($request->isPost()){
-            $token = $request->token('__token__');
-            $validate = new Validate();
-            $pass = $validate->check($token);
+            $validate = new Validate([
+                '__token__'  =>  'token',
+            ]);
+            $pass = $validate->check($request->post());
             if ($pass){
                 $id = $request->post('id');
                 $advertisementType = trim($request->post('advertisementType'));

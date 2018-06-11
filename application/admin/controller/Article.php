@@ -96,9 +96,10 @@ class Article extends Base
     public function articleEdit(Request $request)
     {
         if ($request->isPost()){
-            $token = $request->post('__token__');
-            $validate = new Validate($this->rule);
-            $pass = $validate->check($token);
+            $validate = new Validate([
+                '__token__'  =>  'token',
+            ]);
+            $pass = $validate->check($request->post());
             if ($pass){
                 $id = $request->post('id');
                 $articleType = $request->post('articleType');
@@ -282,9 +283,10 @@ class Article extends Base
     public function typeEdit(Request $request)
     {
         if ($request->isPost()){
-            $token = $request->post('__token__');
-            $validate = new Validate($this->rule);
-            $pass = $validate->check($token);
+            $validate = new Validate([
+                '__token__'  =>  'token',
+            ]);
+            $pass = $validate->check($request->post());
             if ($pass){
                 $id = $request->post('id');
                 $articleType = trim($request->post('articleType'));

@@ -2,22 +2,22 @@
 
 namespace app\admin\controller;
 
-use app\admin\model\FrontendMenu;
 use think\Request;
 use think\Validate;
 use think\Session;
 use app\admin\model\Config as ConfigModel;
 use app\admin\model\Site;
+use app\admin\model\FrontendMenu;
 class Config extends Base
 {
 
     public function webSet(Request $request)
     {
         if ($request->isPost()){
-//            dump($request->post());
-            $token = $request->token('__token__');
-            $validate = new Validate();
-            $pass = $validate->check($token);
+            $validate = new Validate([
+                '__token__'  =>  'token',
+            ]);
+            $pass = $validate->check($request->post());
             if ($pass){
                 $configTitle = trim($request->post('configTitle'));
                 $configKeywords = trim($request->post('configKeywords'));
@@ -48,10 +48,10 @@ class Config extends Base
     public function siteSet(Request $request)
     {
         if ($request->isPost()){
-//            dump($request->post());
-            $token = $request->token('__token__');
-            $validate = new Validate();
-            $pass = $validate->check($token);
+            $validate = new Validate([
+                '__token__'  =>  'token',
+            ]);
+            $pass = $validate->check($request->post());
             if ($pass){
                 $siteURL = trim($request->post('siteURL'));
                 $siteName = trim($request->post('siteName'));
@@ -78,7 +78,9 @@ class Config extends Base
 
     public function frontendMenu(Request $request)
     {
-        //
+        $frontMenu = new FrontendMenu();
+        $result = $frontMenu->getMenuList();
+//        dump($result);
         return $this->fetch();
     }
 
@@ -97,13 +99,45 @@ class Config extends Base
      */
     public function frontendEdit(Request $request)
     {
-        //
-        $frontMuen = new FrontendMenu();
-        $menuList = $frontMuen->getAllMenu();
-        $this->assign('menuList',$menuList);
-        $tag['edit'] = 0;
-        $this->assign('tag',$tag);
-        return $this->fetch();
+        if ($request->isPost()){
+            $validate = new Validate([
+                '__token__'  =>  'token',
+            ]);
+            $pass = $validate->check($request->post());
+            if (true == $pass){
+                $menuId = $request->post('menuId');
+                $menuUrl = trim($request->post('menuUrl'));
+                $menuName = trim($request->post('menuName'));
+                $menuNumber = trim($request->post('menuNumber'));
+                $frontMuen = new FrontendMenu();
+                $hasUse = $frontMuen->where('url',$menuUrl)->find();
+                if ($hasUse){
+                    $this->error(lang('is_have'));
+                }
+                $frontMuen -> number = $menuNumber;
+                $frontMuen -> url = $menuUrl;
+                $frontMuen -> name = $menuName;
+                $frontMuen -> parent_id = $menuId;
+                $frontMuen -> author = Session::get('ADMIN_PASS')->user_name;
+                $frontMuen -> is_delete = 0;
+                $frontMuen -> create_time = date("Y-m-d H:i:s",time());
+                $result = $frontMuen->save();
+                if (1 == $result){
+                    $this->success(lang('success'),url('/admin/config/frontendMenu'));
+                }else{
+                    $this->error(lang('error'));
+                }
+            }else{
+                return $pass;
+            }
+        }else{
+//            $frontMuen = new FrontendMenu();
+            $menuList = FrontendMenu::getAllMenu();
+            $this->assign('menuList',$menuList);
+            $tag['edit'] = 0;
+            $this->assign('tag',$tag);
+            return $this->fetch();
+        }
     }
 
     /**
