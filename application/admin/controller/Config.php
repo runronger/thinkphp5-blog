@@ -79,9 +79,17 @@ class Config extends Base
     public function frontendMenu(Request $request)
     {
         $frontMenu = new FrontendMenu();
-        $result = $frontMenu->getMenuList();
-//        dump($result);
+        $list = $frontMenu->getMenuList();
+        $this->assign('list',$list);
         return $this->fetch();
+    }
+
+
+    public function parentMenu()
+    {
+        $frontMenu = new FrontendMenu();
+        $list = $frontMenu->getMenuList();
+        return json_encode($list);
     }
 
 

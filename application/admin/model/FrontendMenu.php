@@ -35,8 +35,17 @@ class FrontendMenu extends Model
 
     public function getMenuList()
     {
-        $list = $topMenu = Db::table('cn_frontend_menu')->where(['is_delete'=>0,'parent_id'=>0])->select();
-//        dump($list);
+        $topMenu = Db::table('cn_frontend_menu')->field('id,parent_id,name,number')->where(['is_delete'=>0,'parent_id'=>0])->select();
+        foreach ($topMenu as $v){
+            $result[$v['id']] = $v;
+        }
+        $subset = Db::table('cn_frontend_menu')->field('id,parent_id,name,number')->where('is_delete',0)
+            ->where('parent_id','>',0)->select();
+        foreach ($subset as $k){
+            $result[$k['parent_id']]['sub'][] = $k;
+        }
+//        dump($result);
+        return $result;
     }
 
 

@@ -3,21 +3,7 @@
 {block name="keywords"}前端菜单{/block}
 {block name="description"}前端菜单{/block}
 {block name="link"}
-<link rel="stylesheet" type="text/css" href="/static/lib/fuelux/css/fuelux.min.css">
-<!--<link rel="stylesheet" type="text/css" href="/static/lib/fuelux/fuelux.min.css">-->
-<style>
-    .form-group {
-        margin-bottom: 33px;
-    }
-
-    .form-control {
-        height: 40px;
-    }
-
-    .error {
-        color: red
-    }
-</style>
+<link rel="stylesheet" type="text/css" href="/static/lib/fuelux/fuelux.min.css">
 {/block}
 {block name="navi"}前端菜单{/block}
 {block name="content-description"}前端菜单描述{/block}
@@ -36,172 +22,9 @@
                             </a>
                         </div>
                     </div>
-                    <!--<div class="box-body">
-                        &lt;!&ndash;<table class="table table-bordered">
-                            <thead>
-                            <tr>
-                                <th width="5%">编号</th>
-                                <th width="10%">顶级导航</th>
-                                <th width="10%">次级导航</th>
-                                <th width="10%">url</th>
-                                <th width="10%">作者</th>
-                                <th width="8%">添加时间</th>
-                                <th width="8%">修改时间</th>
-                                <th width="8%">操作</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-
-
-                            </tbody>
-                        </table>
-&ndash;&gt;
-
-                    </div>-->
-
                     <div class="box-body">
-
-
-                        <ul id="myTree" class="tree tree-folder-select" role="tree" id="myTree">
-                            <li class="tree-branch hide" data-template="treebranch" role="treeitem" aria-expanded="false">
-                                <div class="tree-branch-header">
-                                    <button class="fa fa-play"><span class="sr-only">Open</span></button>
-                                    <button class="tree-branch-name">
-                                        <span class="glyphicon icon-folder glyphicon-folder-close"></span>
-                                        <span class="tree-label"></span>
-                                    </button>
-                                </div>
-                                <ul class="tree-branch-children" role="group"></ul>
-                                <div class="tree-loader" role="alert">Loading...</div>
-                            </li>
-                            <li class="tree-item hide" data-template="treeitem" role="treeitem">
-                                <button class="tree-item-name">
-                                    <span class="glyphicon icon-item fueluxicon-bullet"></span>
-                                    <span class="tree-label"></span>
-                                </button>
-                            </li>
-                        </ul>
-
-                        <!--<div id="tree2" class="tree tree-unselectable">
-                            <div class="tree-folder" style="display:none;">
-                                <div class="tree-folder-header"><i class="fa-folder fa"></i>
-                                    <div class="tree-folder-name"></div>
-                                </div>
-                                <div class="tree-folder-content"></div>
-                                <div class="tree-loader" style="display: none;"></div>
-                            </div>
-                            <div class="tree-item" style="display:none;">
-                                <div class="tree-item-name"></div>
-                            </div>
-                            <div class="tree-folder" style="display: block;">
-                                <div class="tree-folder-header"><i class="green fa fa-folder"></i>
-                                    <div class="tree-folder-name">Documents</div>
-                                </div>
-                                <div class="tree-folder-content" style="display: none;">
-                                    <div class="tree-item" style="display: block;">
-                                        <div class="tree-item-name"><i class="fa fa-file-text"></i> document1.pdf</div>
-                                    </div>
-                                    <div class="tree-item" style="display: block;">
-                                        <div class="tree-item-name"><i class="fa fa-file-text"></i> document2.doc</div>
-                                    </div>
-                                    <div class="tree-item" style="display: block;">
-                                        <div class="tree-item-name"><i class="fa fa-file-text"></i> document3.doc</div>
-                                    </div>
-                                    <div class="tree-item" style="display: block;">
-                                        <div class="tree-item-name"><i class="fa fa-file-text"></i> document4.pdf</div>
-                                    </div>
-                                </div>
-                                <div class="tree-loader" style="display: none;">
-                                    <div class="tree-loading"><i class="fa fa-spinner fa-2x fa-spin"></i></div>
-                                </div>
-                            </div>
-                            <div class="tree-folder" style="display: block;">
-                                <div class="tree-folder-header"><i class="red fa fa-folder"></i>
-                                    <div class="tree-folder-name">Pictures</div>
-                                </div>
-                                <div class="tree-folder-content" style="display: none;">
-                                    <div class="tree-folder" style="display: block;">
-                                        <div class="tree-folder-header"><i class="fa-folder fa pink"></i>
-                                            <div class="tree-folder-name">Camera</div>
-                                        </div>
-                                        <div class="tree-folder-content"></div>
-                                        <div class="tree-loader" style="display: none;">
-                                            <div class="tree-loading"><i class="fa fa-spinner fa-2x fa-spin"></i></div>
-                                        </div>
-                                    </div>
-                                    <div class="tree-folder" style="display: block;">
-                                        <div class="tree-folder-header"><i class="fa-folder fa pink"></i>
-                                            <div class="tree-folder-name">Picasa</div>
-                                        </div>
-                                        <div class="tree-folder-content"></div>
-                                        <div class="tree-loader" style="display: none;">
-                                            <div class="tree-loading"><i class="fa fa-spinner fa-2x fa-spin"></i></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="tree-loader" style="display: none;">
-                                    <div class="tree-loading"><i class="fa fa-spinner fa-2x fa-spin"></i></div>
-                                </div>
-                            </div>
-                            <div class="tree-folder" style="display: block;">
-                                <div class="tree-folder-header"><i class="orange fa fa-folder"></i>
-                                    <div class="tree-folder-name">Music</div>
-                                </div>
-                                <div class="tree-folder-content" style="display: none;">
-                                    <div class="tree-item" style="display: block;">
-                                        <div class="tree-item-name"><i class="fa fa-music"></i> song1.mp3</div>
-                                    </div>
-                                    <div class="tree-item" style="display: block;">
-                                        <div class="tree-item-name"><i class="fa fa-music"></i> song2.mp3</div>
-                                    </div>
-                                    <div class="tree-item" style="display: block;">
-                                        <div class="tree-item-name"><i class="fa fa-music"></i> song3.mp3</div>
-                                    </div>
-                                    <div class="tree-item" style="display: block;">
-                                        <div class="tree-item-name"><i class="fa fa-music"></i> song4.mp3</div>
-                                    </div>
-                                    <div class="tree-item" style="display: block;">
-                                        <div class="tree-item-name"><i class="fa fa-music"></i> song5.mp3</div>
-                                    </div>
-                                    <div class="tree-item" style="display: block;">
-                                        <div class="tree-item-name"><i class="fa fa-music"></i> song6.mp3</div>
-                                    </div>
-                                </div>
-                                <div class="tree-loader" style="display: none;">
-                                    <div class="tree-loading"><i class="fa fa-spinner fa-2x fa-spin"></i></div>
-                                </div>
-                            </div>
-                            <div class="tree-folder" style="display: block;">
-                                <div class="tree-folder-header"><i class="fa-folder blue fa"></i>
-                                    <div class="tree-folder-name">Videos</div>
-                                </div>
-                                <div class="tree-folder-content"></div>
-                                <div class="tree-loader" style="display: none;">
-                                    <div class="tree-loading"><i class="fa fa-spinner fa-2x fa-spin"></i></div>
-                                </div>
-                            </div>
-                            <div class="tree-folder" style="display: block;">
-                                <div class="tree-folder-header"><i class="fa-folder fa"></i>
-                                    <div class="tree-folder-name">Contacts</div>
-                                </div>
-                                <div class="tree-folder-content"></div>
-                                <div class="tree-loader" style="display: none;">
-                                    <div class="tree-loading"><i class="fa fa-spinner fa-2x fa-spin"></i></div>
-                                </div>
-                            </div>
-                            <div class="tree-item" style="display: block;">
-                                <div class="tree-item-name"><i class="fa fa-file-text"></i> Sample.txt</div>
-                            </div>
-                            <div class="tree-item" style="display: block;">
-                                <div class="tree-item-name"><i class="fa fa-archive"></i> Sample.zip</div>
-                            </div>
-                            <div class="tree-item" style="display: block;">
-                                <div class="tree-item-name"><i class="fa fa-book"></i> Sample.html</div>
-                            </div>
-                        </div>-->
+                        <div id="tree2" class="tree"></div>
                     </div>
-
-
                 </div>
                 <!-- /BASIC -->
             </div>
@@ -211,75 +34,182 @@
 <!-- /GALLERY -->
 {/block}
 {block name="javascript"}
-<!--validation-->
-<script src="/static/lib/fuelux/js/fuelux.min.js"></script>
-<script src="/static/lib/fuelux/fuelux.tree-sampledata.js"></script>
-
-<!--<script src="/static/lib/fuelux/fuelux.tree.min.js"></script>-->
-<!--<script src="/static/lib/fuelux/fuelux.tree-sampledata.js"></script>-->
-
+<script src="/static/lib/fuelux/fuelux.tree.min.js"></script>
 <script>
     jQuery(document).ready(function () {
         App.init(); //Initialise plugins and elements
-        /*$('#tree1').admin_tree({
-            dataSource: treeDataSource ,
-            multiSelect:true,
-            loadingHTML:'<div class="tree-loading"><i class="fa fa-spinner fa-2x fa-spin"></i></div>',
-            'open-icon' : 'fa-minus',
-            'close-icon' : 'fa-plus',
-            'selectable' : true,
-            'selected-icon' : 'fa-check',
-            'unselected-icon' : 'fa-times'
-        });
-        $('#tree3').admin_tree({
-            dataSource: treeDataSource3 ,
-            multiSelect:true,
-            loadingHTML:'<div class="tree-loading"><i class="fa fa-spinner fa-2x fa-spin"></i></div>',
-            'open-icon' : 'fa-minus-square',
-            'close-icon' : 'fa-plus-square',
-            'selectable' : true,
-            'selected-icon' : 'fa-check',
-            'unselected-icon' : 'fa-times'
-        });
         $('#tree2').admin_tree({
             dataSource: treeDataSource2 ,
             loadingHTML:'<div class="tree-loading"><i class="fa fa-spinner fa-2x fa-spin"></i></div>',
-            'open-icon' : 'fa-folder-open',
-            'close-icon' : 'fa-folder',
+            'open-icon' : 'fa-minus-square',
+            'close-icon' : 'fa-plus-square',
             'selectable' : false,
             'selected-icon' : null,
             'unselected-icon' : null
         });
-
-
         //To add font awesome support
-        $('.tree').find('[class*="fa-"]').addClass("fa");*/
+        $('.tree').find('[class*="fa-"]').addClass("fa");
     });
-
-
-    function staticDataSource(openedParentData, callback) {
-        childNodesArray = [
-            {"name": "Ascending and Descending", "type": "folder"},
-            {"name": "Sky and Water I", "type": "item"},
-            {"name": "Drawing Hands", "type": "folder"},
-            {"name": "waterfall", "type": "item"},
-            {"name": "Belvedere", "type": "folder"},
-            {"name": "Relativity", "type": "item"},
-            {"name": "House of Stairs", "type": "folder"},
-            {"name": "Convex and Concave", "type": "item"}
-        ];
-
-        callback({
-            data: childNodesArray
-        });
+    var DataSourceTree = function(options) {
+        this._data 	= options.data;
+        this._delay = options.delay;
     }
 
-    $(function () {
-        $('#myTree').tree({
-            dataSource: staticDataSource,
-            multiSelect: false,
-            folderSelect: true
-        });
-    });
+    DataSourceTree.prototype.data = function(options, callback) {
+        var self = this;
+        var $data = null;
+
+        if(!("name" in options) && !("type" in options)){
+            $data = this._data;//the root tree
+            callback({ data: $data });
+            return;
+        }
+        else if("type" in options && options.type == "folder") {
+            if("additionalParameters" in options && "children" in options.additionalParameters)
+                $data = options.additionalParameters.children;
+            else $data = {}//no data
+        }
+
+        if($data != null)//this setTimeout is only for mimicking some random delay
+            setTimeout(function(){callback({ data: $data });} , parseInt(Math.random() * 500) + 200);
+
+        //we have used static data here
+        //but you can retrieve your data dynamically from a server using ajax call
+        //checkout examples/treeview.html and examples/treeview.js for more info
+    };
+    /*var tree_data_2 ={
+            {foreach name="list" item="vo"}
+                '{$vo.name}' : {name: '{$vo.name}' {if condition="!empty($vo.sub)"},type:'folder'{else/},type:'item'{/if}},
+            {/foreach}
+    }
+*/
+
+    {
+        var tree_data_2 = {
+            '刑侦': {
+                'text': '刑侦',
+                'type': 'folder',
+                'additionalParameters': {
+                    'id': '1',
+                    'children': {
+                        '痕迹检验': {
+                            'text': '痕迹检验',
+                            'type': 'item',
+                            'additionalParameters': {
+                                'id': '10'
+                            }
+                        },
+                        '声像技术': {
+                            'text': '声像技术',
+                            'type': 'item',
+                            'additionalParameters': {
+                                'id': '9',
+                                'item-selected': true
+                            }
+                        }
+                    }
+                }
+            },
+            '交警': {
+                'text': '交警',
+                'type': 'folder',
+                'additionalParameters': {
+                    'id': '32',
+                    'children': {
+                        '交通事故': {
+                            'text': '交通事故',
+                            'type': 'item',
+                            'additionalParameters': {
+                                'id': '33'
+                            }
+                        },
+                        '交通道理管理': {
+                            'text': '交通道理管理',
+                            'type': 'item',
+                            'additionalParameters': {
+                                'id': '34'
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        /*{
+
+
+
+        'documents' : {name: 'Documents', type: 'folder', 'icon-class':'green'}	,
+        'pictures' : {name: 'Pictures', type: 'folder', 'icon-class':'red'}	,
+        'music' : {name: 'Music', type: 'folder', 'icon-class':'orange'}	,
+        'videos' : {name: 'Videos', type: 'folder', 'icon-class':'blue'}	,
+        'contacts' : {name: 'Contacts', type: 'folder'}	,
+        'sample-txt' : {name: '<i class="fa fa-file-text"></i> Sample.txt', type: 'item'},
+        'sample-zip' : {name: '<i class="fa fa-archive"></i> Sample.zip', type: 'item'},
+        'sample-html' : {name: '<i class="fa fa-book"></i> Sample.html', type: 'item'}
+    }*/
+
+    /*tree_data_2['documents']['additionalParameters'] = {
+        'children' : [
+            {name: '<i class="fa fa-file-text"></i> document1.pdf', type: 'item'},
+            {name: '<i class="fa fa-file-text"></i> document2.doc', type: 'item'},
+            {name: '<i class="fa fa-file-text"></i> document3.doc', type: 'item'},
+            {name: '<i class="fa fa-file-text"></i> document4.pdf', type: 'item'}
+        ]
+    }
+
+    tree_data_2['pictures']['additionalParameters'] = {
+        'children' : {
+            'camera' : {name: 'Camera', type: 'folder', 'icon-class':'pink'},
+            'picasa' : {name: 'Picasa', type: 'folder', 'icon-class':'pink'}
+        }
+    }
+    tree_data_2['pictures']['additionalParameters']['children']['camera']['additionalParameters'] = {
+        'children' : [
+            {name: '<i class="fa fa-picture-o"></i> photo1.jpg', type: 'item'},
+            {name: '<i class="fa fa-picture-o"></i> photo2.jpg', type: 'item'},
+            {name: '<i class="fa fa-picture-o"></i> photo3.jpg', type: 'item'},
+            {name: '<i class="fa fa-picture-o"></i> photo4.jpg', type: 'item'}
+        ]
+    }
+    tree_data_2['pictures']['additionalParameters']['children']['picasa']['additionalParameters'] = {
+        'children' : [
+            {name: '<i class="fa fa-picture-o"></i> photo1.jpg', type: 'item'},
+            {name: '<i class="fa fa-picture-o"></i> photo2.jpg', type: 'item'},
+            {name: '<i class="fa fa-picture-o"></i> photo3.jpg', type: 'item'},
+            {name: '<i class="fa fa-picture-o"></i> photo4.jpg', type: 'item'},
+            {name: '<i class="fa fa-picture-o"></i> photo5.jpg', type: 'item'}
+        ]
+    }
+
+    tree_data_2['music']['additionalParameters'] = {
+        'children' : [
+            {name: '<i class="fa fa-music"></i> song1.mp3', type: 'item'},
+            {name: '<i class="fa fa-music"></i> song2.mp3', type: 'item'},
+            {name: '<i class="fa fa-music"></i> song3.mp3', type: 'item'},
+            {name: '<i class="fa fa-music"></i> song4.mp3', type: 'item'},
+            {name: '<i class="fa fa-music"></i> song5.mp3', type: 'item'},
+            {name: '<i class="fa fa-music"></i> song6.mp3', type: 'item'}
+        ]
+    }
+    tree_data_2['videos']['additionalParameters'] = {
+        'children' : [
+            {name: '<i class="fa fa-film"></i> movie1.wmv', type: 'item'},
+            {name: '<i class="fa fa-film"></i> movie2.wmv', type: 'item'},
+            {name: '<i class="fa fa-film"></i> movie3.avi', type: 'item'},
+            {name: '<i class="fa fa-film"></i> movie4.mp4', type: 'item'},
+            {name: '<i class="fa fa-film"></i> movie5.avi', type: 'item'}
+        ]
+    }
+
+    tree_data_2['contacts']['additionalParameters'] = {
+        'children' : [
+            {name: '<i class="fa fa-book"></i> address.zip', type: 'item'},
+            {name: '<i class="fa fa-envelope"></i> email.zip', type: 'item'},
+            {name: '<i class="fa fa-phone"></i> phone.zip', type: 'item'}
+        ]
+    }*/
+
+    console.log(JSON.stringify(tree_data_2));
+    var treeDataSource2 = new DataSourceTree({data: tree_data_2});
 </script>
 {/block}
