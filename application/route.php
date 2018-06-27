@@ -19,12 +19,12 @@ use think\Route;
 Route::rule('index/','portal/index/index');
 //后端
 Route::rule('backend$','portal/index/backend');
-    Route::rule('php$','portal/article/php');
-    Route::rule('mysql$','portal/article/mysql');
-    Route::rule('redis$','portal/article/redis');
-    Route::rule('composer$','portal/article/composer');
-    Route::rule('thinkphp$','portal/article/thinkphp');
-    Route::rule('laravel$','portal/article/laravel');
+Route::rule('php$','portal/article/php');
+Route::rule('mysql$','portal/article/mysql');
+Route::rule('redis$','portal/article/redis');
+Route::rule('composer$','portal/article/composer');
+Route::rule('thinkphp$','portal/article/thinkphp');
+Route::rule('laravel$','portal/article/laravel');
 
 //前端
 Route::rule('frontend$','portal/index/frontend');

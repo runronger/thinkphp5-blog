@@ -7,11 +7,12 @@
  */
 namespace app\admin\behavior;
 
+
 class CheckLang
 {
     public function run(&$params)
     {
-        echo $params;
+
     }
 
 }

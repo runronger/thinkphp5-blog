@@ -77,14 +77,7 @@
         //but you can retrieve your data dynamically from a server using ajax call
         //checkout examples/treeview.html and examples/treeview.js for more info
     };
-    /*var tree_data_2 ={
-            {foreach name="list" item="vo"}
-                '{$vo.name}' : {name: '{$vo.name}' {if condition="!empty($vo.sub)"},type:'folder'{else/},type:'item'{/if}},
-            {/foreach}
-    }
-*/
 
-    {
         var tree_data_2 = {
             '刑侦': {
                 'text': '刑侦',
@@ -134,82 +127,8 @@
                 }
             }
         }
-        /*{
+        console.log(JSON.stringify(tree_data_2));
+        var treeDataSource2 = new DataSourceTree({data: tree_data_2});
 
-
-
-        'documents' : {name: 'Documents', type: 'folder', 'icon-class':'green'}	,
-        'pictures' : {name: 'Pictures', type: 'folder', 'icon-class':'red'}	,
-        'music' : {name: 'Music', type: 'folder', 'icon-class':'orange'}	,
-        'videos' : {name: 'Videos', type: 'folder', 'icon-class':'blue'}	,
-        'contacts' : {name: 'Contacts', type: 'folder'}	,
-        'sample-txt' : {name: '<i class="fa fa-file-text"></i> Sample.txt', type: 'item'},
-        'sample-zip' : {name: '<i class="fa fa-archive"></i> Sample.zip', type: 'item'},
-        'sample-html' : {name: '<i class="fa fa-book"></i> Sample.html', type: 'item'}
-    }*/
-
-    /*tree_data_2['documents']['additionalParameters'] = {
-        'children' : [
-            {name: '<i class="fa fa-file-text"></i> document1.pdf', type: 'item'},
-            {name: '<i class="fa fa-file-text"></i> document2.doc', type: 'item'},
-            {name: '<i class="fa fa-file-text"></i> document3.doc', type: 'item'},
-            {name: '<i class="fa fa-file-text"></i> document4.pdf', type: 'item'}
-        ]
-    }
-
-    tree_data_2['pictures']['additionalParameters'] = {
-        'children' : {
-            'camera' : {name: 'Camera', type: 'folder', 'icon-class':'pink'},
-            'picasa' : {name: 'Picasa', type: 'folder', 'icon-class':'pink'}
-        }
-    }
-    tree_data_2['pictures']['additionalParameters']['children']['camera']['additionalParameters'] = {
-        'children' : [
-            {name: '<i class="fa fa-picture-o"></i> photo1.jpg', type: 'item'},
-            {name: '<i class="fa fa-picture-o"></i> photo2.jpg', type: 'item'},
-            {name: '<i class="fa fa-picture-o"></i> photo3.jpg', type: 'item'},
-            {name: '<i class="fa fa-picture-o"></i> photo4.jpg', type: 'item'}
-        ]
-    }
-    tree_data_2['pictures']['additionalParameters']['children']['picasa']['additionalParameters'] = {
-        'children' : [
-            {name: '<i class="fa fa-picture-o"></i> photo1.jpg', type: 'item'},
-            {name: '<i class="fa fa-picture-o"></i> photo2.jpg', type: 'item'},
-            {name: '<i class="fa fa-picture-o"></i> photo3.jpg', type: 'item'},
-            {name: '<i class="fa fa-picture-o"></i> photo4.jpg', type: 'item'},
-            {name: '<i class="fa fa-picture-o"></i> photo5.jpg', type: 'item'}
-        ]
-    }
-
-    tree_data_2['music']['additionalParameters'] = {
-        'children' : [
-            {name: '<i class="fa fa-music"></i> song1.mp3', type: 'item'},
-            {name: '<i class="fa fa-music"></i> song2.mp3', type: 'item'},
-            {name: '<i class="fa fa-music"></i> song3.mp3', type: 'item'},
-            {name: '<i class="fa fa-music"></i> song4.mp3', type: 'item'},
-            {name: '<i class="fa fa-music"></i> song5.mp3', type: 'item'},
-            {name: '<i class="fa fa-music"></i> song6.mp3', type: 'item'}
-        ]
-    }
-    tree_data_2['videos']['additionalParameters'] = {
-        'children' : [
-            {name: '<i class="fa fa-film"></i> movie1.wmv', type: 'item'},
-            {name: '<i class="fa fa-film"></i> movie2.wmv', type: 'item'},
-            {name: '<i class="fa fa-film"></i> movie3.avi', type: 'item'},
-            {name: '<i class="fa fa-film"></i> movie4.mp4', type: 'item'},
-            {name: '<i class="fa fa-film"></i> movie5.avi', type: 'item'}
-        ]
-    }
-
-    tree_data_2['contacts']['additionalParameters'] = {
-        'children' : [
-            {name: '<i class="fa fa-book"></i> address.zip', type: 'item'},
-            {name: '<i class="fa fa-envelope"></i> email.zip', type: 'item'},
-            {name: '<i class="fa fa-phone"></i> phone.zip', type: 'item'}
-        ]
-    }*/
-
-    console.log(JSON.stringify(tree_data_2));
-    var treeDataSource2 = new DataSourceTree({data: tree_data_2});
 </script>
 {/block}
