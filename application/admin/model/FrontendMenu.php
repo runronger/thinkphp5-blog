@@ -33,18 +33,26 @@ class FrontendMenu extends Model
         return $result;
     }
 
-    public function getMenuList()
+    /**
+     * 前端菜单列表
+     * @return mixed
+     * @throws \think\db\exception\DataNotFoundException
+     * @throws \think\db\exception\ModelNotFoundException
+     * @throws \think\exception\DbException
+     */
+    public function getFrontendMenuList()
     {
-        $topMenu = Db::table('cn_frontend_menu')->field('id,parent_id,name,number')->where(['is_delete'=>0,'parent_id'=>0])->select();
-        foreach ($topMenu as $v){
-            $result[$v['id']] = $v;
-        }
-        $subset = Db::table('cn_frontend_menu')->field('id,parent_id,name,number')->where('is_delete',0)
-            ->where('parent_id','>',0)->select();
-        foreach ($subset as $k){
-            $result[$k['parent_id']]['sub'][] = $k;
-        }
-//        dump($result);
+//        $topMenu = Db::table('cn_frontend_menu')->field('id,parent_id,name,sort')->where(['is_delete'=>0,'parent_id'=>0])->select();
+//        foreach ($topMenu as $v){
+//            $result[$v['id']] = $v;
+//        }
+//        $subset = Db::table('cn_frontend_menu')->field('id,parent_id,name,sort')->where('is_delete',0)
+//            ->where('parent_id','>',0)->select();
+//        foreach ($subset as $k){
+//            $result[$k['parent_id']]['sub'][] = $k;
+//        }
+        $result = Db::table('cn_frontend_menu')->field('id,parent_id,name')->where(['is_delete'=>0])->order('sort','desc')->select();
+//        dump(($result));
         return $result;
     }
 

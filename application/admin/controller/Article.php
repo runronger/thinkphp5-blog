@@ -71,13 +71,10 @@ class Article extends Base
         if (!empty($isTop)){
             $where['is_top'] = ['like',"%$isTop%"];
         }
-//            $result = Db::name('article')->where($where)->paginate(10);
         $result = ArticleModel::where($where)->paginate(20,false,['query'=>request()->param()]);
-//            dump($result);
         $this->assign('isSearch',1);
         $this->assign('allArticle',$result);
         return $this->fetch('article_list');
-
     }
 
 

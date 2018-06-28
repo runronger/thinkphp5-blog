@@ -3,7 +3,7 @@
 {block name="keywords"}前端菜单{/block}
 {block name="description"}前端菜单{/block}
 {block name="link"}
-<link rel="stylesheet" type="text/css" href="/static/lib/fuelux/fuelux.min.css">
+<link rel="stylesheet" type="text/css" href="/static/lib/zTree/css/zTreeStyle/zTreeStyle.css">
 {/block}
 {block name="navi"}前端菜单{/block}
 {block name="content-description"}前端菜单描述{/block}
@@ -23,7 +23,7 @@
                         </div>
                     </div>
                     <div class="box-body">
-                        <div id="tree2" class="tree"></div>
+                        <ul id="treeDemo" class="ztree"></ul>
                     </div>
                 </div>
                 <!-- /BASIC -->
@@ -34,101 +34,70 @@
 <!-- /GALLERY -->
 {/block}
 {block name="javascript"}
-<script src="/static/lib/fuelux/fuelux.tree.min.js"></script>
+<script src="/static/lib/zTree/js/jquery.ztree.core.min.js"></script>
 <script>
     jQuery(document).ready(function () {
         App.init(); //Initialise plugins and elements
-        $('#tree2').admin_tree({
-            dataSource: treeDataSource2 ,
-            loadingHTML:'<div class="tree-loading"><i class="fa fa-spinner fa-2x fa-spin"></i></div>',
-            'open-icon' : 'fa-minus-square',
-            'close-icon' : 'fa-plus-square',
-            'selectable' : false,
-            'selected-icon' : null,
-            'unselected-icon' : null
-        });
-        //To add font awesome support
-        $('.tree').find('[class*="fa-"]').addClass("fa");
     });
-    var DataSourceTree = function(options) {
-        this._data 	= options.data;
-        this._delay = options.delay;
+    var zTreeObj;
+    // zTree 的参数配置，深入使用请参考 API 文档（setting 配置详解）
+    var setting = {
+        edit: {
+            enable: true
+        },
+        data: {
+            simpleData: {
+                enable: true
+            }
+        },
+        callback: {
+            beforeDrag: beforeDrag
+        }
+
+    };
+    // zTree 的数据属性，深入使用请参考 API 文档（zTreeNode 节点数据详解）
+    var zNodes = [
+        {foreach name="list" item="vo"}
+            {id:"{$vo.id}",pId:"{$vo.parent_id}",name:"{$vo.name}",},
+        {/foreach}
+    ];
+
+    function beforeDrag(treeId, treeNodes) {
+        return false;
     }
 
-    DataSourceTree.prototype.data = function(options, callback) {
-        var self = this;
-        var $data = null;
-
-        if(!("name" in options) && !("type" in options)){
-            $data = this._data;//the root tree
-            callback({ data: $data });
-            return;
+    function setEdit() {
+        var zTree = $.fn.zTree.getZTreeObj("treeDemo"),
+            remove = $("#remove").attr("checked"),
+            rename = $("#rename").attr("checked"),
+            removeTitle = $.trim($("#removeTitle").get(0).value),
+            renameTitle = $.trim($("#renameTitle").get(0).value);
+        zTree.setting.edit.showRemoveBtn = remove;
+        zTree.setting.edit.showRenameBtn = rename;
+        zTree.setting.edit.removeTitle = removeTitle;
+        zTree.setting.edit.renameTitle = renameTitle;
+        showCode(['setting.edit.showRemoveBtn = ' + remove, 'setting.edit.showRenameBtn = ' + rename,
+            'setting.edit.removeTitle = "' + removeTitle +'"', 'setting.edit.renameTitle = "' + renameTitle + '"']);
+    }
+    function showCode(str) {
+        var code = $("#code");
+        code.empty();
+        for (var i=0, l=str.length; i<l; i++) {
+            code.append("<li>"+str[i]+"</li>");
         }
-        else if("type" in options && options.type == "folder") {
-            if("additionalParameters" in options && "children" in options.additionalParameters)
-                $data = options.additionalParameters.children;
-            else $data = {}//no data
-        }
+    }
 
-        if($data != null)//this setTimeout is only for mimicking some random delay
-            setTimeout(function(){callback({ data: $data });} , parseInt(Math.random() * 500) + 200);
 
-        //we have used static data here
-        //but you can retrieve your data dynamically from a server using ajax call
-        //checkout examples/treeview.html and examples/treeview.js for more info
-    };
+    $(document).ready(function(){
+        zTreeObj = $.fn.zTree.init($("#treeDemo"), setting, zNodes);
+        setEdit();
+        $("#remove").bind("change", setEdit);
+        $("#rename").bind("change", setEdit);
+        $("#removeTitle").bind("propertychange", setEdit)
+            .bind("input", setEdit);
+        $("#renameTitle").bind("propertychange", setEdit)
+            .bind("input", setEdit);
 
-        var tree_data_2 = {
-            '刑侦': {
-                'text': '刑侦',
-                'type': 'folder',
-                'additionalParameters': {
-                    'id': '1',
-                    'children': {
-                        '痕迹检验': {
-                            'text': '痕迹检验',
-                            'type': 'item',
-                            'additionalParameters': {
-                                'id': '10'
-                            }
-                        },
-                        '声像技术': {
-                            'text': '声像技术',
-                            'type': 'item',
-                            'additionalParameters': {
-                                'id': '9',
-                                'item-selected': true
-                            }
-                        }
-                    }
-                }
-            },
-            '交警': {
-                'text': '交警',
-                'type': 'folder',
-                'additionalParameters': {
-                    'id': '32',
-                    'children': {
-                        '交通事故': {
-                            'text': '交通事故',
-                            'type': 'item',
-                            'additionalParameters': {
-                                'id': '33'
-                            }
-                        },
-                        '交通道理管理': {
-                            'text': '交通道理管理',
-                            'type': 'item',
-                            'additionalParameters': {
-                                'id': '34'
-                            }
-                        }
-                    }
-                }
-            }
-        }
-        console.log(JSON.stringify(tree_data_2));
-        var treeDataSource2 = new DataSourceTree({data: tree_data_2});
-
+    });
 </script>
 {/block}

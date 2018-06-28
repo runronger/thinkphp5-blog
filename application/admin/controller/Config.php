@@ -10,7 +10,11 @@ use app\admin\model\Site;
 use app\admin\model\FrontendMenu;
 class Config extends Base
 {
-
+    /**
+     * 网站设置
+     * @param Request $request
+     * @return mixed
+     */
     public function webSet(Request $request)
     {
         if ($request->isPost()){
@@ -44,7 +48,11 @@ class Config extends Base
         }
     }
 
-
+    /**
+     * 站点设置
+     * @param Request $request
+     * @return mixed
+     */
     public function siteSet(Request $request)
     {
         if ($request->isPost()){
@@ -75,11 +83,15 @@ class Config extends Base
         }
     }
 
-
+    /**
+     * 前端菜单
+     * @param Request $request
+     * @return mixed
+     */
     public function frontendMenu(Request $request)
     {
         $frontMenu = new FrontendMenu();
-        $list = $frontMenu->getMenuList();
+        $list = $frontMenu->getFrontendMenuList();
         $this->assign('list',$list);
         return $this->fetch();
     }
@@ -100,10 +112,12 @@ class Config extends Base
     }
 
     /**
-     * 显示编辑资源表单页.
-     *
-     * @param  int  $id
-     * @return \think\Response
+     * 编辑菜单
+     * @param Request $request
+     * @return bool|mixed
+     * @throws \think\db\exception\DataNotFoundException
+     * @throws \think\db\exception\ModelNotFoundException
+     * @throws \think\exception\DbException
      */
     public function frontendEdit(Request $request)
     {
@@ -116,13 +130,13 @@ class Config extends Base
                 $menuId = $request->post('menuId');
                 $menuUrl = trim($request->post('menuUrl'));
                 $menuName = trim($request->post('menuName'));
-                $menuNumber = trim($request->post('menuNumber'));
+                $menuSort = trim($request->post('menuSort'));
                 $frontMuen = new FrontendMenu();
                 $hasUse = $frontMuen->where('url',$menuUrl)->find();
                 if ($hasUse){
                     $this->error(lang('is_have'));
                 }
-                $frontMuen -> number = $menuNumber;
+                $frontMuen -> sort = $menuSort;
                 $frontMuen -> url = $menuUrl;
                 $frontMuen -> name = $menuName;
                 $frontMuen -> parent_id = $menuId;
