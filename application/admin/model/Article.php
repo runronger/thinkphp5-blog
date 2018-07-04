@@ -3,6 +3,7 @@
 namespace app\admin\model;
 
 use think\Model;
+use think\Db;
 class Article extends Model
 {
     // 是否需要自动写入时间戳 如果设置为字符串 则表示时间字段的类型
@@ -94,7 +95,14 @@ class Article extends Model
 
 
 
-
+    public function getOneArticle($id)
+    {
+        if ($id){
+            $resulst = Db::table('cn_article')->where('id',$id)->select();
+            dump($resulst);
+            return $resulst;
+        }
+    }
 
 
 

@@ -18,3 +18,5 @@ function ajaxReturn($msg,$status = -1,$data = []){
     }
     return $result;
 }
+
+error_reporting(E_ERROR | E_WARNING | E_PARSE);

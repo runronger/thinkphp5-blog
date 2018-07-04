@@ -7,7 +7,7 @@ use app\admin\model\Config;
 use app\admin\model\Article;
 use app\admin\model\Gallery;
 use think\Request;
-
+use think\Db;
 class Index extends Base
 {
     public function index()
@@ -47,9 +47,11 @@ class Index extends Base
 
     public function show(Request $request)
     {
-//        $id = request()->input();
         $id = $request->param();
-            dump($id);
+        $result = Db::table('cn_article')->where(['id'=>$id['id']])->select();
+        dump($result);
+        $this->assign('info',$result);
+        return $this->fetch();
     }
 
     public function echos(Request $request)
@@ -77,4 +79,8 @@ class Index extends Base
         dump($id);
     }
 
+    public function test()
+    {
+        return $this->fetch();
+    }
 }

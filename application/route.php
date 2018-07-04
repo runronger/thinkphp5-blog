@@ -38,6 +38,9 @@ Route::rule('life$','portal/index/life');
 Route::rule('message/','portal/index/message');
 //about
 Route::rule('about/','portal/index/about');
+
+//Route::rule('show/id','portal/index/show');
+
 return [
     '__pattern__' => [
         'name' => '\w+',

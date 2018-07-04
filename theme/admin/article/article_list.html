@@ -128,7 +128,7 @@
                     {/if}
                 </div>
                 <div class="box-body">
-                    <table class="table table-bordered">
+                    <table class="table table-bordered table-hover">
                         <thead>
                         <tr>
                             <th width="3%">编号</th>
@@ -147,8 +147,8 @@
                         <tr>
                             <td>{$vo.id}</td>
                             <td><img src="{$vo.image}" style="width: 30px; height: 30px"></td>
-                            <td id="title">{$vo.title}</td>
-                            <td>{$vo.description}</td>
+                            <td id="title"><abbr title="{$vo.title}" class="text-overflow">{$vo.title}</abbr></td>
+                            <td><abbr title="{$vo.description}" class="text-overflow">{$vo.description}</abbr></td>
                             <td>
                                 {switch name="$vo.is_top" }
                                     {case value="1"}<button class="btn btn-danger">已置顶</button>{/case}
@@ -162,7 +162,7 @@
                                 <a href="{:url('/admin/article/changeTop')}?id={$vo.id}" class="btn btn-primary">
                                     {if condition="($vo.is_top == 1)"}取消置顶{else/}设置置顶{/if}
                                 </a>
-                                <a href="{:url('/portal/article/show')}?id={$vo.id}" class="btn btn-info">预览</a>
+                                <a href="/portal/index/show/id/{$vo.id}" class="btn btn-info">预览</a>
                                 <a href="{:url('/admin/article/articleEdit')}?id={$vo.id}" class="btn btn-success">编辑</a>
                                 <a href="{:url('/admin/article/changeDelete')}?id={$vo.id}" class="btn btn-warning">删除</a>
                             </td>
